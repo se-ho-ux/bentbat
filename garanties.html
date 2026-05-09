@@ -8,6 +8,30 @@
   <meta property="og:title" content="Garanties &amp; Assurances — Ben&amp;Bat">
   <meta property="og:description" content="Tous nos chantiers sont couverts par une assurance décennale et RC Pro. Garantie post-chantier 30 jours incluse. France &amp; Belgique.">
   <meta property="og:type" content="website">
+  <!-- ── Analytics & Tracking ───────────────────────────────────────────── -->
+  <!-- Google Search Console — remplacez le content par votre code de vérification -->
+  <meta name="google-site-verification" content="REPLACE_WITH_GSC_VERIFICATION_CODE">
+  <!-- Google Analytics GA4 — remplacez G-XXXXXXXXXX par votre Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
+  <!-- Meta Pixel — remplacez XXXXXXXXXXXXXXXXXX par votre Pixel ID -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','XXXXXXXXXXXXXXXXXX');
+    fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -226,9 +250,9 @@
         <div class="footer-bottom-inner">
           <p>&copy; 2026 Ben&amp;Bat. Tous droits réservés.</p>
           <div class="footer-legal">
-            <a href="#">Mentions légales</a>
-            <a href="#">Politique de confidentialité</a>
-            <a href="#">RGPD</a>
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="mentions-legales.html#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales.html#rgpd">Données &amp; RGPD</a>
           </div>
         </div>
       </div>

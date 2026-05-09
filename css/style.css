@@ -1407,3 +1407,11 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .reassurance-grid { grid-template-columns: 1fr; }
   .values-grid { grid-template-columns: 1fr; }
 }
+
+/* ── Mentions légales ─────────────────────────────────────────────────────── */
+.legal-content { max-width: 800px; }
+.legal-content h3 { margin: 48px 0 16px; font-size: 1.1rem; }
+.legal-content p { margin-bottom: 12px; color: var(--text-muted); }
+.legal-content ul { margin: 12px 0 12px 24px; }
+.legal-content ul li { color: var(--text-muted); margin-bottom: 6px; line-height: 1.75; }
+.legal-content a { color: var(--accent); text-decoration: underline; }

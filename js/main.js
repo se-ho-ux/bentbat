@@ -107,11 +107,32 @@
       const btn = form.querySelector('.form-submit');
       btn.disabled = true;
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>&nbsp; Envoi en cours…';
-      // Replace setTimeout with fetch() to a real endpoint
-      setTimeout(() => {
-        form.style.display = 'none';
-        success.style.display = 'block';
-      }, 1500);
+      // Formspree endpoint — remplacez YOUR_FORM_ID par l'ID obtenu sur formspree.io
+      fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(res => {
+        if (res.ok) {
+          form.style.display = 'none';
+          success.style.display = 'block';
+        } else {
+          throw new Error('server');
+        }
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.innerHTML = 'Envoyer ma demande &nbsp;<i class="fas fa-paper-plane"></i>';
+        let errEl = form.querySelector('.form-send-error');
+        if (!errEl) {
+          errEl = document.createElement('p');
+          errEl.className = 'form-send-error';
+          errEl.style.cssText = 'color:#dc2626;margin-top:12px;font-size:.9rem;text-align:center;';
+          form.querySelector('.form-note').before(errEl);
+        }
+        errEl.textContent = "Une erreur s'est produite. Veuillez réessayer ou nous appeler directement.";
+      });
     });
   }
 })();

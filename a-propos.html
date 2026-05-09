@@ -8,6 +8,30 @@
   <meta property="og:title" content="À propos — Ben&amp;Bat">
   <meta property="og:description" content="25 ans d'expertise BTP en France et en Belgique. Découvrez notre histoire, nos valeurs et notre équipe.">
   <meta property="og:type" content="website">
+  <!-- ── Analytics & Tracking ───────────────────────────────────────────── -->
+  <!-- Google Search Console — remplacez le content par votre code de vérification -->
+  <meta name="google-site-verification" content="REPLACE_WITH_GSC_VERIFICATION_CODE">
+  <!-- Google Analytics GA4 — remplacez G-XXXXXXXXXX par votre Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
+  <!-- Meta Pixel — remplacez XXXXXXXXXXXXXXXXXX par votre Pixel ID -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','XXXXXXXXXXXXXXXXXX');
+    fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
@@ -74,7 +98,7 @@
         <div>
           <span class="eyebrow">Notre histoire</span>
           <h2>Nés du terrain,<br>bâtis sur la confiance</h2>
-          <p style="margin-top:16px; margin-bottom:16px;">Fondée il y a 25 ans par deux compagnons du bâtiment passionnés, Ben&amp;Bat est née d'une vision simple : offrir un service BTP tous corps de métier de qualité professionnelle, avec la proximité et le soin d'un artisan. Ce qui nous distingue ? Nos savoir-faire maîtrisés en interne — béton ciré, mobilier sur mesure, vasques — fabriqués et posés par nos propres équipes depuis 1999.</p>
+          <p style="margin-top:16px; margin-bottom:16px;">Fondée il y a 25 ans par deux compagnons du bâtiment passionnés, Ben&amp;Bat est née d'une vision simple : offrir un service BTP tous corps de métier de qualité professionnelle, avec la proximité et le soin d'un artisan. Entreprise accessible à tous les profils de clients, du particulier au promoteur. Ce qui nous distingue ? Nos savoir-faire maîtrisés en interne — béton ciré, mobilier sur mesure, vasques — fabriqués et posés par nos propres équipes depuis 1999.</p>
           <p style="margin-bottom:32px;">Aujourd'hui, nos équipes de professionnels qualifiés interviennent sur toute la France et en Belgique pour des particuliers, des copropriétés et des entreprises. Chaque chantier est traité avec le même niveau d'exigence — qu'il s'agisse d'un simple remplacement de robinet ou d'une rénovation complète d'appartement haussmannien.</p>
           <div class="about-values">
             <div class="value-card">
@@ -439,9 +463,9 @@
         <div class="footer-bottom-inner">
           <p>&copy; 2026 Ben&amp;Bat. Tous droits réservés.</p>
           <div class="footer-legal">
-            <a href="#">Mentions légales</a>
-            <a href="#">Politique de confidentialité</a>
-            <a href="#">RGPD</a>
+            <a href="mentions-legales.html">Mentions légales</a>
+            <a href="mentions-legales.html#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales.html#rgpd">Données &amp; RGPD</a>
           </div>
         </div>
       </div>
