@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Devis — Ben&amp;Bat</title>
+  <meta name="description" content="Contactez Ben&amp;Bat pour un devis gratuit et personnalisé. Réponse sous 24h pour tous vos projets de construction et rénovation en Île-de-France.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header id="header" class="scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-text">Ben<span>&amp;</span>Bat</span>
+      </a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-menu">
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="a-propos.html">À propos</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="tel:+33600000000" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; 06 00 00 00 00</a>
+        <a href="contact.html" class="btn btn-primary">Devis gratuit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MENU MOBILE ===== -->
+  <div class="mobile-menu-overlay" id="mobileMenu" role="dialog" aria-label="Menu navigation">
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fermer le menu">
+      <i class="fas fa-times"></i>
+    </button>
+    <a href="index.html">Accueil</a>
+    <a href="index.html#services">Services</a>
+    <a href="a-propos.html">À propos</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn-primary" style="margin-top: 24px; justify-content: center;">Devis gratuit</a>
+  </div>
+
+  <!-- ===== PAGE HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero-content">
+        <div class="breadcrumb">
+          <a href="index.html">Accueil</a>
+          <span>/</span>
+          <span class="breadcrumb-current">Contact</span>
+        </div>
+        <h1>Parlons de<br>votre projet</h1>
+        <p>Demandez votre devis gratuit ou contactez-nous directement. Notre équipe répond sous 24 heures ouvrées.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Informations de contact -->
+        <div class="contact-info">
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-info-text">
+              <h4>Téléphone</h4>
+              <a href="tel:+33600000000">06 00 00 00 00</a>
+              <p>Du lundi au vendredi, 8h&ndash;18h</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-info-text">
+              <h4>Email</h4>
+              <a href="mailto:contact@benbat.fr">contact@benbat.fr</a>
+              <p>Réponse sous 24h ouvrées</p>
+            </div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-info-text">
+              <h4>Adresse</h4>
+              <p>123 Rue du Bâtiment<br>75001 Paris, France</p>
+            </div>
+          </div>
+          <div class="contact-hours">
+            <h4><i class="fas fa-clock"></i> Horaires d'ouverture</h4>
+            <div class="hours-row"><span>Lundi &ndash; Vendredi</span><span>8h00 &ndash; 18h00</span></div>
+            <div class="hours-row"><span>Samedi</span><span>9h00 &ndash; 13h00</span></div>
+            <div class="hours-row"><span>Dimanche</span><span>Fermé</span></div>
+          </div>
+          <div class="contact-note">
+            <i class="fas fa-info-circle"></i>
+            <p>Devis gratuit et sans engagement. Nous nous déplaçons pour évaluer votre projet sur site en Île-de-France.</p>
+          </div>
+        </div>
+
+        <!-- Formulaire -->
+        <div class="form-container">
+          <h3 class="form-title">Demande de devis ou de contact</h3>
+          <p class="form-subtitle">Remplissez le formulaire et nous vous recontacterons dans les plus brefs délais.</p>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nom">Nom <span>*</span></label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required autocomplete="family-name">
+              </div>
+              <div class="form-group">
+                <label for="prenom">Prénom <span>*</span></label>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required autocomplete="given-name">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email <span>*</span></label>
+                <input type="email" id="email" name="email" placeholder="votre@email.fr" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="telephone">Téléphone <span>*</span></label>
+                <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00" required autocomplete="tel">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="type">Type de demande <span>*</span></label>
+              <select id="type" name="type" required>
+                <option value="">— Sélectionnez —</option>
+                <option value="devis">Demande de devis</option>
+                <option value="renseignement">Renseignement général</option>
+                <option value="urgence">Intervention urgente</option>
+                <option value="partenariat">Partenariat / Sous-traitance</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="service">Service concerné</label>
+              <select id="service" name="service">
+                <option value="">— Sélectionnez (optionnel) —</option>
+                <option value="maconnerie">Maçonnerie &amp; Gros Œuvre</option>
+                <option value="menuiserie">Menuiserie &amp; Charpente</option>
+                <option value="plomberie">Plomberie &amp; Sanitaire</option>
+                <option value="electricite">Électricité</option>
+                <option value="peinture">Peinture &amp; Revêtements</option>
+                <option value="isolation">Isolation &amp; Cloisons</option>
+                <option value="multi">Plusieurs corps de métier</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Description du projet <span>*</span></label>
+              <textarea id="message" name="message" placeholder="Décrivez votre projet : surface, type de travaux, contraintes éventuelles…" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">
+              Envoyer ma demande &nbsp;<i class="fas fa-paper-plane"></i>
+            </button>
+            <p class="form-note"><i class="fas fa-lock" style="color: var(--gray-400); margin-right: 4px;"></i>Vos données sont confidentielles et ne seront jamais partagées.</p>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i>
+            <h3>Demande envoyée !</h3>
+            <p>Merci pour votre message. Nous vous répondrons dans les 24 heures ouvrées.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <span class="nav-logo-text">Ben<span>&amp;</span>Bat</span>
+          </a>
+          <p>Votre partenaire tous corps d'état depuis plus de 15 ans. Qualité, sérieux et engagement sur chaque chantier en Île-de-France.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#services">Nos services</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="a-propos.html#temoignages">Témoignages</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="index.html#services">Maçonnerie</a></li>
+            <li><a href="index.html#services">Menuiserie</a></li>
+            <li><a href="index.html#services">Plomberie</a></li>
+            <li><a href="index.html#services">Électricité</a></li>
+            <li><a href="index.html#services">Peinture</a></li>
+            <li><a href="index.html#services">Isolation</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>123 Rue du Bâtiment<br>75001 Paris</span></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33600000000">06 00 00 00 00</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@benbat.fr">contact@benbat.fr</a></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Ven : 8h–18h</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; 2026 Ben&amp;Bat. Tous droits réservés.</p>
+          <div class="footer-bottom-links">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
