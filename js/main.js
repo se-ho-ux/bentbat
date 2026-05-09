@@ -1,13 +1,17 @@
 (() => {
   'use strict';
 
-  // ── Header scroll (transparent → solid) ───────────────────────────────────
+  // ── Header scroll — glass effect on home, stays solid on inner pages ──────
   const header = document.getElementById('header');
   if (header) {
-    const isSolid = header.classList.contains('solid');
-    const onScroll = () => header.classList.toggle('solid', window.scrollY > 60);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    if (!isSolid) onScroll();
+    const initSolid = header.classList.contains('solid');
+    if (!initSolid) {
+      // Home page: transparent → light frosted glass on scroll
+      const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 60);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll(); // apply immediately if page loads already scrolled
+    }
+    // Inner pages keep their .solid (dark glass) class untouched
   }
 
   // ── Mobile menu ────────────────────────────────────────────────────────────
