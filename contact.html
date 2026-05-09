@@ -4,169 +4,187 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact &amp; Devis — Ben&amp;Bat</title>
-  <meta name="description" content="Contactez Ben&amp;Bat pour un devis gratuit et personnalisé. Réponse sous 24h pour tous vos projets de construction et rénovation en Île-de-France.">
+  <meta name="description" content="Contactez Ben&amp;Bat pour un devis gratuit. France : +33 6 58 59 41 47 — Belgique : +32 465 86 63 72. Réponse sous 24h.">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 </head>
 <body>
 
-  <!-- ===== HEADER ===== -->
-  <header id="header" class="scrolled">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <span class="nav-logo-text">Ben<span>&amp;</span>Bat</span>
-      </a>
+  <header id="header" class="solid">
+    <div class="nav-wrap">
+      <a href="index.html" class="nav-logo">Ben<em>&amp;</em>Bat</a>
       <nav aria-label="Navigation principale">
-        <ul class="nav-menu">
+        <ul class="nav-links">
           <li><a href="index.html">Accueil</a></li>
-          <li><a href="index.html#services">Services</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="a-propos.html">À propos</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
-      <div class="nav-cta">
-        <a href="tel:+33600000000" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; 06 00 00 00 00</a>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
         <a href="contact.html" class="btn btn-primary">Devis gratuit</a>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- ===== MENU MOBILE ===== -->
-  <div class="mobile-menu-overlay" id="mobileMenu" role="dialog" aria-label="Menu navigation">
-    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fermer le menu">
-      <i class="fas fa-times"></i>
-    </button>
+  <div class="mobile-menu" id="mobileMenu" role="dialog">
+    <button class="mobile-menu-close" id="mobileClose"><i class="fas fa-times"></i></button>
     <a href="index.html">Accueil</a>
-    <a href="index.html#services">Services</a>
+    <a href="services.html">Services</a>
     <a href="a-propos.html">À propos</a>
     <a href="contact.html">Contact</a>
-    <a href="contact.html" class="btn btn-primary" style="margin-top: 24px; justify-content: center;">Devis gratuit</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact.html" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
   </div>
 
-  <!-- ===== PAGE HERO ===== -->
+  <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <div class="page-hero-content">
+      <div class="page-hero-inner">
         <div class="breadcrumb">
-          <a href="index.html">Accueil</a>
-          <span>/</span>
-          <span class="breadcrumb-current">Contact</span>
+          <a href="index.html">Accueil</a><span class="sep">/</span><span class="cur">Contact</span>
         </div>
         <h1>Parlons de<br>votre projet</h1>
-        <p>Demandez votre devis gratuit ou contactez-nous directement. Notre équipe répond sous 24 heures ouvrées.</p>
+        <p>Devis gratuit, réponse sous 24h ouvrées. France &amp; Belgique.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTACT ===== -->
-  <section class="section-pad">
+  <!-- CONTACT -->
+  <section class="section">
     <div class="container">
-      <div class="contact-grid">
+      <div class="contact-layout">
 
-        <!-- Informations de contact -->
-        <div class="contact-info">
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
-            <div class="contact-info-text">
-              <h4>Téléphone</h4>
-              <a href="tel:+33600000000">06 00 00 00 00</a>
-              <p>Du lundi au vendredi, 8h&ndash;18h</p>
+        <!-- Informations -->
+        <div class="contact-col">
+          <div class="contact-card reveal">
+            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-card-text">
+              <h4>France</h4>
+              <a href="tel:+33658594147">+33 6 58 59 41 47</a>
+              <p>Lun–Ven, 8h–18h</p>
             </div>
           </div>
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
-            <div class="contact-info-text">
+          <div class="contact-card reveal">
+            <div class="contact-card-icon"><i class="fas fa-phone"></i></div>
+            <div class="contact-card-text">
+              <h4>Belgique</h4>
+              <a href="tel:+32465866372">+32 465 86 63 72</a>
+              <p>Lun–Ven, 8h–18h</p>
+            </div>
+          </div>
+          <div class="contact-card reveal">
+            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-card-text">
               <h4>Email</h4>
-              <a href="mailto:contact@benbat.fr">contact@benbat.fr</a>
+              <a href="mailto:contact@ben-bat.com">contact@ben-bat.com</a>
               <p>Réponse sous 24h ouvrées</p>
             </div>
           </div>
-          <div class="contact-info-card">
-            <div class="contact-info-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div class="contact-info-text">
-              <h4>Adresse</h4>
-              <p>123 Rue du Bâtiment<br>75001 Paris, France</p>
+          <div class="contact-card reveal">
+            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-card-text">
+              <h4>Zone d'intervention</h4>
+              <p>France entière &amp; Belgique</p>
             </div>
           </div>
-          <div class="contact-hours">
-            <h4><i class="fas fa-clock"></i> Horaires d'ouverture</h4>
+          <div class="hours-card reveal">
+            <h4><i class="fas fa-clock"></i> Horaires</h4>
             <div class="hours-row"><span>Lundi &ndash; Vendredi</span><span>8h00 &ndash; 18h00</span></div>
             <div class="hours-row"><span>Samedi</span><span>9h00 &ndash; 13h00</span></div>
             <div class="hours-row"><span>Dimanche</span><span>Fermé</span></div>
           </div>
-          <div class="contact-note">
+          <div class="contact-note reveal">
             <i class="fas fa-info-circle"></i>
-            <p>Devis gratuit et sans engagement. Nous nous déplaçons pour évaluer votre projet sur site en Île-de-France.</p>
+            <p>Devis gratuit et sans engagement. Nous nous déplaçons sur site en France et en Belgique pour évaluer votre projet.</p>
           </div>
         </div>
 
         <!-- Formulaire -->
-        <div class="form-container">
-          <h3 class="form-title">Demande de devis ou de contact</h3>
-          <p class="form-subtitle">Remplissez le formulaire et nous vous recontacterons dans les plus brefs délais.</p>
-
+        <div class="form-wrap reveal">
+          <h3>Demande de devis ou de contact</h3>
+          <p>Remplissez le formulaire — nous vous répondons sous 24 heures ouvrées.</p>
           <form id="contactForm" novalidate>
             <div class="form-row">
               <div class="form-group">
-                <label for="nom">Nom <span>*</span></label>
-                <input type="text" id="nom" name="nom" placeholder="Votre nom" required autocomplete="family-name">
+                <label for="nom">Nom <span class="req">*</span></label>
+                <input type="text" id="nom" name="nom" placeholder="Dupont" required autocomplete="family-name">
               </div>
               <div class="form-group">
-                <label for="prenom">Prénom <span>*</span></label>
-                <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required autocomplete="given-name">
+                <label for="prenom">Prénom <span class="req">*</span></label>
+                <input type="text" id="prenom" name="prenom" placeholder="Jean" required autocomplete="given-name">
               </div>
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="email">Email <span>*</span></label>
-                <input type="email" id="email" name="email" placeholder="votre@email.fr" required autocomplete="email">
+                <label for="email">Email <span class="req">*</span></label>
+                <input type="email" id="email" name="email" placeholder="jean@email.fr" required autocomplete="email">
               </div>
               <div class="form-group">
-                <label for="telephone">Téléphone <span>*</span></label>
-                <input type="tel" id="telephone" name="telephone" placeholder="06 00 00 00 00" required autocomplete="tel">
+                <label for="telephone">Téléphone <span class="req">*</span></label>
+                <input type="tel" id="telephone" name="telephone" placeholder="+33 6 …" required autocomplete="tel">
               </div>
             </div>
-            <div class="form-group">
-              <label for="type">Type de demande <span>*</span></label>
-              <select id="type" name="type" required>
-                <option value="">— Sélectionnez —</option>
-                <option value="devis">Demande de devis</option>
-                <option value="renseignement">Renseignement général</option>
-                <option value="urgence">Intervention urgente</option>
-                <option value="partenariat">Partenariat / Sous-traitance</option>
-              </select>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="pays">Pays</label>
+                <select id="pays" name="pays">
+                  <option value="france">France</option>
+                  <option value="belgique">Belgique</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="type">Type de demande <span class="req">*</span></label>
+                <select id="type" name="type" required>
+                  <option value="">— Sélectionnez —</option>
+                  <option value="devis">Demande de devis</option>
+                  <option value="renseignement">Renseignement</option>
+                  <option value="urgence">Intervention urgente</option>
+                  <option value="partenariat">Partenariat</option>
+                </select>
+              </div>
             </div>
             <div class="form-group">
               <label for="service">Service concerné</label>
               <select id="service" name="service">
-                <option value="">— Sélectionnez (optionnel) —</option>
-                <option value="maconnerie">Maçonnerie &amp; Gros Œuvre</option>
-                <option value="menuiserie">Menuiserie &amp; Charpente</option>
-                <option value="plomberie">Plomberie &amp; Sanitaire</option>
+                <option value="">— Optionnel —</option>
+                <option value="beton-cire">Béton ciré premium</option>
+                <option value="mobilier">Mobilier sur mesure</option>
+                <option value="vasque">Vasque sur mesure</option>
+                <option value="renovation">Rénovation intérieure complète</option>
+                <option value="maconnerie">Maçonnerie</option>
                 <option value="electricite">Électricité</option>
-                <option value="peinture">Peinture &amp; Revêtements</option>
-                <option value="isolation">Isolation &amp; Cloisons</option>
+                <option value="plomberie">Plomberie</option>
+                <option value="menuiserie">Menuiserie</option>
+                <option value="peinture">Peinture &amp; revêtements</option>
+                <option value="isolation">Isolation &amp; cloisons</option>
+                <option value="nettoyage">Nettoyage de chantier</option>
                 <option value="multi">Plusieurs corps de métier</option>
               </select>
             </div>
             <div class="form-group">
-              <label for="message">Description du projet <span>*</span></label>
-              <textarea id="message" name="message" placeholder="Décrivez votre projet : surface, type de travaux, contraintes éventuelles…" required></textarea>
+              <label for="message">Description du projet <span class="req">*</span></label>
+              <textarea id="message" name="message" placeholder="Décrivez votre projet : type de travaux, surface, délais souhaités, contraintes…" required></textarea>
             </div>
-            <button type="submit" class="btn btn-primary form-submit">
+            <button type="submit" class="btn btn-dark form-submit">
               Envoyer ma demande &nbsp;<i class="fas fa-paper-plane"></i>
             </button>
-            <p class="form-note"><i class="fas fa-lock" style="color: var(--gray-400); margin-right: 4px;"></i>Vos données sont confidentielles et ne seront jamais partagées.</p>
+            <p class="form-note"><i class="fas fa-lock" style="margin-right:4px; color:var(--text-muted);"></i>Données confidentielles — jamais partagées.</p>
           </form>
-
           <div class="form-success" id="formSuccess">
             <i class="fas fa-check-circle"></i>
             <h3>Demande envoyée !</h3>
-            <p>Merci pour votre message. Nous vous répondrons dans les 24 heures ouvrées.</p>
+            <p>Merci. Nous vous répondrons dans les 24 heures ouvrées à l'adresse ou au numéro indiqué.</p>
           </div>
         </div>
 
@@ -174,15 +192,12 @@
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
   <footer>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="nav-logo">
-            <span class="nav-logo-text">Ben<span>&amp;</span>Bat</span>
-          </a>
-          <p>Votre partenaire tous corps d'état depuis plus de 15 ans. Qualité, sérieux et engagement sur chaque chantier en Île-de-France.</p>
+          <a href="index.html" class="nav-logo">Ben<em>&amp;</em>Bat</a>
+          <p>25 ans d'expertise BTP — béton ciré premium, mobilier sur mesure et tous corps de métier. France entière &amp; Belgique.</p>
           <div class="footer-socials">
             <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -193,29 +208,25 @@
           <h5>Navigation</h5>
           <ul class="footer-links">
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="index.html#services">Nos services</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="a-propos.html">À propos</a></li>
-            <li><a href="a-propos.html#temoignages">Témoignages</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact &amp; Devis</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Services</h5>
           <ul class="footer-links">
-            <li><a href="index.html#services">Maçonnerie</a></li>
-            <li><a href="index.html#services">Menuiserie</a></li>
-            <li><a href="index.html#services">Plomberie</a></li>
-            <li><a href="index.html#services">Électricité</a></li>
-            <li><a href="index.html#services">Peinture</a></li>
-            <li><a href="index.html#services">Isolation</a></li>
+            <li><a href="services.html#beton-cire">Béton ciré premium</a></li>
+            <li><a href="services.html#mobilier">Mobilier sur mesure</a></li>
+            <li><a href="services.html#vasques">Vasques sur mesure</a></li>
+            <li><a href="services.html#renovation">Rénovation intérieure</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Contact</h5>
-          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>123 Rue du Bâtiment<br>75001 Paris</span></div>
-          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33600000000">06 00 00 00 00</a></div>
-          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@benbat.fr">contact@benbat.fr</a></div>
-          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Ven : 8h–18h</span></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@ben-bat.com">contact@ben-bat.com</a></div>
         </div>
       </div>
     </div>
@@ -223,15 +234,15 @@
       <div class="container">
         <div class="footer-bottom-inner">
           <p>&copy; 2026 Ben&amp;Bat. Tous droits réservés.</p>
-          <div class="footer-bottom-links">
+          <div class="footer-legal">
             <a href="#">Mentions légales</a>
             <a href="#">Politique de confidentialité</a>
+            <a href="#">RGPD</a>
           </div>
         </div>
       </div>
     </div>
   </footer>
-
   <script src="js/main.js"></script>
 </body>
 </html>

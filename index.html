@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ben&amp;Bat — Entreprise Tous Corps d'État en Île-de-France</title>
-  <meta name="description" content="Ben&amp;Bat, votre partenaire tous corps d'état pour la construction et la rénovation en Île-de-France. Maçonnerie, électricité, plomberie, menuiserie, peinture, isolation.">
-  <meta property="og:title" content="Ben&amp;Bat — Tous Corps d'État">
-  <meta property="og:description" content="Votre partenaire de confiance pour tous vos travaux de construction et rénovation.">
+  <title>Ben&amp;Bat — Experts BTP &amp; Béton Ciré Premium | France &amp; Belgique</title>
+  <meta name="description" content="Ben&amp;Bat, 25 ans d'expertise BTP tous corps de métier. Spécialistes du béton ciré premium, mobilier sur mesure et rénovation intérieure. France &amp; Belgique.">
+  <meta property="og:title" content="Ben&amp;Bat — Experts BTP &amp; Béton Ciré Premium">
+  <meta property="og:description" content="25 ans d'expertise en rénovation intérieure, béton ciré premium et tous corps de métier. France &amp; Belgique.">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
@@ -14,193 +14,237 @@
 </head>
 <body>
 
-  <!-- ===== HEADER ===== -->
+  <!-- ══════════ HEADER ══════════ -->
   <header id="header">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <span class="nav-logo-text">Ben<span>&amp;</span>Bat</span>
-      </a>
+    <div class="nav-wrap">
+      <a href="index.html" class="nav-logo">Ben<em>&amp;</em>Bat</a>
       <nav aria-label="Navigation principale">
-        <ul class="nav-menu">
+        <ul class="nav-links">
           <li><a href="index.html" class="active">Accueil</a></li>
-          <li><a href="#services">Services</a></li>
+          <li><a href="services.html">Services</a></li>
           <li><a href="a-propos.html">À propos</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <div class="nav-cta">
-        <a href="tel:+33600000000" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; 06 00 00 00 00</a>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
         <a href="contact.html" class="btn btn-primary">Devis gratuit</a>
       </div>
-      <button class="hamburger" id="hamburger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- ===== MENU MOBILE ===== -->
-  <div class="mobile-menu-overlay" id="mobileMenu" role="dialog" aria-label="Menu navigation">
-    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fermer le menu">
-      <i class="fas fa-times"></i>
-    </button>
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
     <a href="index.html">Accueil</a>
-    <a href="#services" id="mobileServicesLink">Services</a>
+    <a href="services.html">Services</a>
     <a href="a-propos.html">À propos</a>
     <a href="contact.html">Contact</a>
-    <a href="contact.html" class="btn btn-primary" style="margin-top: 24px; justify-content: center;">Devis gratuit</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact.html" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
   </div>
 
-  <!-- ===== HERO ===== -->
+  <!-- ══════════ HERO ══════════ -->
   <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-label">
-          <i class="fas fa-hard-hat"></i>
-          Tous corps d'état &mdash; Île-de-France
+    <div class="hero-left">
+      <div class="hero-flag">
+        <i class="fas fa-hard-hat"></i>
+        BTP · France &amp; Belgique
+      </div>
+      <h1>25 ans de <em>béton ciré</em><br>et d'expertise BTP</h1>
+      <p>Ben&amp;Bat couvre l'ensemble des corps de métier du bâtiment. Spécialistes du béton ciré premium fabriqué en interne depuis 25 ans — chaque rendu est unique, 100&nbsp;% sur mesure.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-alt"></i> Demander un devis</a>
+        <a href="services.html" class="btn btn-ghost">Nos services <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="hero-kpis">
+        <div>
+          <span class="hero-kpi-number"><em>25</em>+</span>
+          <span class="hero-kpi-label">Ans d'expérience</span>
         </div>
-        <h1>Construisons <span>votre projet</span> ensemble</h1>
-        <p>Ben&amp;Bat est votre partenaire de confiance pour tous vos travaux de construction, rénovation et aménagement. Qualité, rigueur et engagement à chaque chantier.</p>
-        <div class="hero-actions">
-          <a href="contact.html" class="btn btn-primary">
-            <i class="fas fa-file-alt"></i> Demander un devis
-          </a>
-          <a href="#services" class="btn btn-outline">
-            <i class="fas fa-chevron-down"></i> Nos services
-          </a>
+        <div>
+          <span class="hero-kpi-number"><em>2</em></span>
+          <span class="hero-kpi-label">Pays couverts</span>
         </div>
-        <div class="hero-badges">
-          <div class="hero-badge">
-            <span class="hero-badge-number">15+</span>
-            <span class="hero-badge-label">Ans d'expérience</span>
-          </div>
-          <div class="hero-badge">
-            <span class="hero-badge-number">500+</span>
-            <span class="hero-badge-label">Chantiers réalisés</span>
-          </div>
-          <div class="hero-badge">
-            <span class="hero-badge-number">98%</span>
-            <span class="hero-badge-label">Clients satisfaits</span>
-          </div>
-          <div class="hero-badge">
-            <span class="hero-badge-number">30</span>
-            <span class="hero-badge-label">Professionnels</span>
-          </div>
+        <div>
+          <span class="hero-kpi-number"><em>98</em>%</span>
+          <span class="hero-kpi-label">Satisfaction client</span>
         </div>
       </div>
     </div>
+    <div class="hero-right">
+      <img src="images/image3.jpeg" alt="Réalisation Ben&amp;Bat — béton ciré premium" loading="eager">
+      <div class="hero-right-overlay"></div>
+    </div>
   </section>
 
-  <!-- ===== SERVICES ===== -->
-  <section class="section-pad" id="services">
+  <!-- ══════════ SERVICES ══════════ -->
+  <section class="section" id="services">
     <div class="container">
-      <div class="text-center">
-        <span class="section-label">Nos savoir-faire</span>
-        <h2 class="section-title">Des services complets<br>pour tous vos projets</h2>
-        <p class="section-subtitle" style="margin: 0 auto 0;">
-          De la construction neuve à la rénovation complète, nos équipes qualifiées interviennent sur tous les corps de métier.
-        </p>
+      <div class="section-intro">
+        <span class="eyebrow">Nos savoir-faire</span>
+        <h2>Tous corps de métier,<br>un seul interlocuteur</h2>
+        <p>De la maçonnerie aux finitions, nos équipes spécialisées interviennent sur l'ensemble des corps de métier. Pas de généralistes — chaque intervenant est expert de sa discipline.</p>
       </div>
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card reveal">
           <div class="service-icon"><i class="fas fa-layer-group"></i></div>
           <h3>Maçonnerie &amp; Gros Œuvre</h3>
-          <p>Construction de murs, fondations, dalles et voiles béton. Nous réalisons tous vos travaux de structure avec les matériaux les plus adaptés.</p>
+          <p>Construction de murs, fondations, dalles, voiles béton et reprises en sous-œuvre. Structure solide, matériaux adaptés.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card reveal">
           <div class="service-icon"><i class="fas fa-hammer"></i></div>
           <h3>Menuiserie &amp; Charpente</h3>
-          <p>Pose de fenêtres, portes, escaliers et charpentes sur mesure. Travail du bois traditionnel et matériaux modernes selon vos besoins.</p>
+          <p>Fenêtres, portes, escaliers et charpentes sur mesure. Travail du bois traditionnel et matériaux modernes.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card reveal">
           <div class="service-icon"><i class="fas fa-faucet"></i></div>
           <h3>Plomberie &amp; Sanitaire</h3>
-          <p>Installation et rénovation de salles de bains, cuisine, réseaux d'eau et assainissement. Intervention rapide en dépannage.</p>
+          <p>Installation et rénovation complète : salle de bain, cuisine, réseaux d'eau et assainissement.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card reveal">
           <div class="service-icon"><i class="fas fa-bolt"></i></div>
           <h3>Électricité</h3>
-          <p>Mise aux normes, création et rénovation d'installations électriques. Tableaux, prises, éclairage et domotique pour particuliers et professionnels.</p>
+          <p>Mise aux normes, tableaux électriques, domotique. Installations pour particuliers, professionnels et collectivités.</p>
         </div>
-        <div class="service-card">
+        <div class="service-card reveal">
           <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
           <h3>Peinture &amp; Revêtements</h3>
-          <p>Peinture intérieure et extérieure, pose de papier peint, carrelage, parquet et revêtements de sol. Finitions soignées garanties.</p>
+          <p>Enduits décoratifs, peintures de finition, carrelage, parquet, résine. Finitions haut de gamme garanties.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon"><i class="fas fa-thermometer-half"></i></div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fas fa-th-large"></i></div>
           <h3>Isolation &amp; Cloisons</h3>
-          <p>Isolation thermique et phonique, création et suppression de cloisons, faux-plafonds. Améliorez votre confort et réduisez vos factures.</p>
+          <p>Isolation thermique et phonique, faux-plafonds, cloisons Placo. Confort amélioré, factures réduites.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:40px;">
+        <a href="services.html" class="btn btn-ghost-dark">Voir tous les services <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ SPÉCIALITÉS SIGNATURE ══════════ -->
+  <section class="section specialties-section">
+    <div class="container">
+      <div class="specialties-header">
+        <div>
+          <span class="eyebrow">Spécialités Signature</span>
+          <h2 style="color:#fff;">Ce que personne<br>ne fait comme nous</h2>
+        </div>
+        <p style="color:rgba(250,250,249,0.60); max-width:380px; font-size:1.0625rem;">Nos savoir-faire distinctifs, maîtrisés en interne depuis 25 ans. Pas de sous-traitance sur ces prestations — chaque réalisation sort de nos ateliers.</p>
+      </div>
+      <div class="specialties-grid">
+        <div class="specialty-card featured reveal">
+          <div class="specialty-content">
+            <span class="specialty-num">01</span>
+            <div class="specialty-icon"><i class="fas fa-layer-group"></i></div>
+            <h3>Béton Ciré Premium</h3>
+            <p>Fabriqué et posé en interne depuis 25 ans. Chaque teinte, chaque rendu est unique et conçu sur mesure selon les souhaits du client. Applicable sur sols, murs, plans de travail, vasques et mobilier. Un résultat que vous ne trouverez nulle part ailleurs.</p>
+            <div class="specialty-tag"><i class="fas fa-star"></i> Savoir-faire exclusif depuis 1999</div>
+          </div>
+          <div class="specialty-image">
+            <img src="images/image3.jpeg" alt="Béton ciré Ben&amp;Bat — salle de bains">
+          </div>
+        </div>
+        <div class="specialty-card reveal">
+          <span class="specialty-num">02</span>
+          <div class="specialty-icon"><i class="fas fa-couch"></i></div>
+          <h3>Mobilier Sur Mesure</h3>
+          <p>Conçu et fabriqué par nos propres artisans. Pas de sous-traitance. Chaque pièce est unique, créée selon vos plans et vos envies.</p>
+          <div class="specialty-tag"><i class="fas fa-tools"></i> 100% fabriqué en atelier</div>
+        </div>
+        <div class="specialty-card reveal">
+          <span class="specialty-num">03</span>
+          <div class="specialty-icon"><i class="fas fa-sink"></i></div>
+          <h3>Vasques Sur Mesure</h3>
+          <p>Vasques en béton ciré et résine, dessinées et réalisées par nos artisans. Une pièce unique qui sublime votre salle de bain ou cuisine.</p>
+          <div class="specialty-tag"><i class="fas fa-drafting-compass"></i> Design exclusif</div>
+        </div>
+        <div class="specialty-card reveal">
+          <span class="specialty-num">04</span>
+          <div class="specialty-icon"><i class="fas fa-broom"></i></div>
+          <h3>Nettoyage de Chantier</h3>
+          <p>Service de nettoyage de fin de chantier haute qualité. Nous livrons votre bien prêt à habiter, sans résidus ni poussières.</p>
+          <div class="specialty-tag"><i class="fas fa-check-circle"></i> Livraison clé en main</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== STATS ===== -->
-  <section class="stats-section">
+  <!-- ══════════ STATS ══════════ -->
+  <section class="section-sm stats-section">
     <div class="container">
       <div class="stats-grid">
-        <div class="stat-item">
-          <span class="stat-number"><span class="counter" data-target="15">0</span>+</span>
-          <span class="stat-label">Ans d'expérience dans le bâtiment</span>
+        <div class="stat-card">
+          <div class="stat-number"><span class="counter" data-target="25">0</span><span class="stat-suffix">+</span></div>
+          <div class="stat-label">Ans d'expérience dans le béton ciré et le BTP</div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number"><span class="counter" data-target="500">0</span>+</span>
-          <span class="stat-label">Chantiers réalisés avec succès</span>
+        <div class="stat-card">
+          <div class="stat-number"><span class="counter" data-target="2">0</span></div>
+          <div class="stat-label">Pays couverts — France entière &amp; Belgique</div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number"><span class="counter" data-target="98">0</span>%</span>
-          <span class="stat-label">Taux de satisfaction client</span>
+        <div class="stat-card">
+          <div class="stat-number"><span class="counter" data-target="100">0</span><span class="stat-suffix">%</span></div>
+          <div class="stat-label">Sur mesure — chaque réalisation est unique</div>
         </div>
-        <div class="stat-item">
-          <span class="stat-number"><span class="counter" data-target="30">0</span></span>
-          <span class="stat-label">Professionnels qualifiés</span>
+        <div class="stat-card">
+          <div class="stat-number"><span class="counter" data-target="98">0</span><span class="stat-suffix">%</span></div>
+          <div class="stat-label">Taux de satisfaction client constaté</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== POURQUOI NOUS ===== -->
-  <section class="section-pad">
+  <!-- ══════════ POURQUOI NOUS ══════════ -->
+  <section class="section">
     <div class="container">
-      <div class="why-us-grid">
-        <div class="why-us-image">
-          <img src="images/image6.jpeg" alt="Artisan Ben&amp;Bat au travail" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-lg);display:block;">
+      <div class="why-grid">
+        <div class="why-image">
+          <img src="images/image6.jpeg" alt="Artisan Ben&amp;Bat au travail">
           <div class="why-badge">
-            <span class="why-badge-number">15+</span>
-            <span class="why-badge-text">ans d'expertise</span>
+            <strong>25+</strong>
+            <span>ans d'expertise</span>
           </div>
         </div>
-        <div class="why-us-content">
-          <span class="section-label">Pourquoi nous choisir</span>
-          <h2 class="section-title">L'excellence du bâtiment,<br>l'engagement du terrain</h2>
-          <p>Chez Ben&amp;Bat, chaque chantier est une signature. Nos équipes allient maîtrise technique et sens du détail pour livrer des travaux qui durent.</p>
-          <div class="why-us-points">
-            <div class="why-point">
+        <div class="why-content">
+          <span class="eyebrow">Pourquoi Ben&amp;Bat</span>
+          <h2>L'exigence artisanale,<br>la puissance du collectif</h2>
+          <p>Chaque chantier est une signature. Nos équipes allient maîtrise technique et sens du détail pour livrer des travaux qui durent — en France comme en Belgique.</p>
+          <div class="why-points">
+            <div class="why-point reveal">
               <div class="why-point-icon"><i class="fas fa-certificate"></i></div>
-              <div class="why-point-content">
-                <h4>Artisans certifiés &amp; assurés</h4>
-                <p>Tous nos compagnons sont qualifiés, nos chantiers couverts par une assurance décennale.</p>
+              <div>
+                <h4>Artisans certifiés, chantiers assurés</h4>
+                <p>Assurance décennale + RC Pro. Chaque intervenant est spécialiste de sa discipline — pas de généralistes.</p>
               </div>
             </div>
-            <div class="why-point">
+            <div class="why-point reveal">
               <div class="why-point-icon"><i class="fas fa-clock"></i></div>
-              <div class="why-point-content">
-                <h4>Respect des délais</h4>
-                <p>Nous planifions chaque étape et tenons nos engagements de livraison, sans mauvaise surprise.</p>
+              <div>
+                <h4>Respect absolu des délais</h4>
+                <p>Planification rigoureuse à chaque étape. Nos engagements de livraison sont tenus, sans mauvaise surprise.</p>
               </div>
             </div>
-            <div class="why-point">
+            <div class="why-point reveal">
               <div class="why-point-icon"><i class="fas fa-euro-sign"></i></div>
-              <div class="why-point-content">
-                <h4>Devis transparent &amp; détaillé</h4>
-                <p>Gratuit, précis et sans frais cachés. Vous savez exactement pour quoi vous payez.</p>
+              <div>
+                <h4>Devis gratuit, transparent et détaillé</h4>
+                <p>Prix clairs, sans frais cachés. Vous savez exactement pour quoi vous payez, avant le premier coup de marteau.</p>
               </div>
             </div>
-            <div class="why-point">
-              <div class="why-point-icon"><i class="fas fa-headset"></i></div>
-              <div class="why-point-content">
-                <h4>Suivi de chantier personnalisé</h4>
-                <p>Un interlocuteur unique dédié à votre projet, disponible tout au long du chantier.</p>
+            <div class="why-point reveal">
+              <div class="why-point-icon"><i class="fas fa-shield-alt"></i></div>
+              <div>
+                <h4>Garantie post-chantier</h4>
+                <p>Suivi après livraison assuré par Ben&amp;Bat. Un bilan de fin de chantier pour garantir votre satisfaction.</p>
               </div>
             </div>
           </div>
@@ -209,85 +253,78 @@
     </div>
   </section>
 
-  <!-- ===== TÉMOIGNAGES ===== -->
-  <section class="section-pad testimonials-section">
+  <!-- ══════════ TÉMOIGNAGES ══════════ -->
+  <section class="section" style="background: var(--bg-alt);">
     <div class="container">
-      <div class="text-center">
-        <span class="section-label">Témoignages</span>
-        <h2 class="section-title">Ce que disent nos clients</h2>
+      <div class="section-intro center">
+        <span class="eyebrow">Témoignages</span>
+        <h2>Ce que disent nos clients</h2>
+        <p>France et Belgique confondues — des centaines de chantiers livrés, des clients qui reviennent.</p>
       </div>
       <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="testimonial-text">« Excellent travail pour la rénovation complète de mon appartement. L'équipe Ben&amp;Bat est professionnelle, ponctuelle et soigneuse. Le résultat dépasse mes attentes ! »</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">MR</div>
-            <div class="testimonial-author-info">
-              <h4>Marie Rousseau</h4>
-              <span>Rénovation appartement &mdash; Paris 11e</span>
+        <div class="testimonial-card reveal">
+          <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="t-text">« Le béton ciré de Ben&amp;Bat est absolument magnifique. Ils ont recréé exactement la teinte que j'avais en tête. Un savoir-faire rare, une équipe au top. »</p>
+          <div class="t-author">
+            <div class="t-avatar">MR</div>
+            <div>
+              <div class="t-name">Marie Rousseau</div>
+              <div class="t-location">Béton ciré sol &amp; murs — Paris 11e</div>
             </div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-          </div>
-          <p class="testimonial-text">« Nous avons confié notre extension de maison à Ben&amp;Bat. Devis clair, travail impeccable et livraison dans les délais. Je recommande sans hésiter. »</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">TM</div>
-            <div class="testimonial-author-info">
-              <h4>Thomas Mercier</h4>
-              <span>Extension maison &mdash; Versailles</span>
+        <div class="testimonial-card reveal">
+          <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="t-text">« Rénovation complète de notre maison en Belgique. Un seul interlocuteur pour tous les corps de métier, c'est un vrai confort. Résultat impeccable, dans les délais. »</p>
+          <div class="t-author">
+            <div class="t-avatar">TM</div>
+            <div>
+              <div class="t-name">Thomas Mercier</div>
+              <div class="t-location">Rénovation complète — Bruxelles</div>
             </div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">
-            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-          </div>
-          <p class="testimonial-text">« Très bonne entreprise. Ils ont refait notre salle de bains et la cuisine en un temps record. Équipe sympathique, travail soigné, prix honnête. »</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar">SL</div>
-            <div class="testimonial-author-info">
-              <h4>Sophie Laurent</h4>
-              <span>Rénovation cuisine &amp; SDB &mdash; Boulogne</span>
+        <div class="testimonial-card reveal">
+          <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          <p class="t-text">« La vasque sur mesure en béton ciré est une œuvre d'art. Chaque visiteur me demande d'où elle vient. Merci Ben&amp;Bat pour ce travail d'exception. »</p>
+          <div class="t-author">
+            <div class="t-avatar">SL</div>
+            <div>
+              <div class="t-name">Sophie Laurent</div>
+              <div class="t-location">Vasque &amp; SDB sur mesure — Lyon</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="text-center" style="margin-top: 40px;">
-        <a href="a-propos.html#temoignages" class="btn btn-outline-dark">Voir tous les témoignages</a>
+      <div style="text-align:center; margin-top:40px;">
+        <a href="a-propos.html#temoignages" class="btn btn-ghost-dark">Tous les témoignages <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
-  <section class="cta-section">
+  <!-- ══════════ CTA ══════════ -->
+  <section class="section cta-section">
     <div class="container">
       <div class="cta-inner">
-        <div class="cta-text">
-          <h2>Votre projet mérite le meilleur</h2>
-          <p>Contactez-nous pour un devis gratuit et sans engagement. Réponse sous 24h.</p>
+        <div>
+          <h2>Votre projet mérite<br>une réalisation unique</h2>
+          <p>Devis gratuit, réponse sous 24h. France &amp; Belgique.</p>
         </div>
-        <div class="cta-actions">
-          <a href="contact.html" class="btn btn-white">Devis gratuit &nbsp;<i class="fas fa-arrow-right"></i></a>
-          <a href="tel:+33600000000" class="btn btn-outline"><i class="fas fa-phone"></i> Nous appeler</a>
+        <div class="cta-btns">
+          <a href="contact.html" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ══════════ FOOTER ══════════ -->
   <footer>
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="nav-logo">
-            <span class="nav-logo-text">Ben<span>&amp;</span>Bat</span>
-          </a>
-          <p>Votre partenaire tous corps d'état depuis plus de 15 ans. Qualité, sérieux et engagement sur chaque chantier en Île-de-France.</p>
+          <a href="index.html" class="nav-logo">Ben<em>&amp;</em>Bat</a>
+          <p>25 ans d'expertise BTP — béton ciré premium, mobilier sur mesure et tous corps de métier. France entière &amp; Belgique.</p>
           <div class="footer-socials">
             <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -298,28 +335,28 @@
           <h5>Navigation</h5>
           <ul class="footer-links">
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="#services">Nos services</a></li>
+            <li><a href="services.html">Services</a></li>
             <li><a href="a-propos.html">À propos</a></li>
             <li><a href="a-propos.html#temoignages">Témoignages</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact &amp; Devis</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Services</h5>
+          <h5>Spécialités</h5>
           <ul class="footer-links">
-            <li><a href="#services">Maçonnerie</a></li>
-            <li><a href="#services">Menuiserie</a></li>
-            <li><a href="#services">Plomberie</a></li>
-            <li><a href="#services">Électricité</a></li>
-            <li><a href="#services">Peinture</a></li>
-            <li><a href="#services">Isolation</a></li>
+            <li><a href="services.html#beton-cire">Béton ciré premium</a></li>
+            <li><a href="services.html#mobilier">Mobilier sur mesure</a></li>
+            <li><a href="services.html#vasques">Vasques sur mesure</a></li>
+            <li><a href="services.html#renovation">Rénovation intérieure</a></li>
+            <li><a href="services.html#nettoyage">Nettoyage de chantier</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Contact</h5>
-          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>123 Rue du Bâtiment<br>75001 Paris</span></div>
-          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33600000000">06 00 00 00 00</a></div>
-          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@benbat.fr">contact@benbat.fr</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@ben-bat.com">contact@ben-bat.com</a></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>France &amp; Belgique</span></div>
           <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Ven : 8h–18h</span></div>
         </div>
       </div>
@@ -328,9 +365,10 @@
       <div class="container">
         <div class="footer-bottom-inner">
           <p>&copy; 2026 Ben&amp;Bat. Tous droits réservés.</p>
-          <div class="footer-bottom-links">
+          <div class="footer-legal">
             <a href="#">Mentions légales</a>
             <a href="#">Politique de confidentialité</a>
+            <a href="#">RGPD</a>
           </div>
         </div>
       </div>

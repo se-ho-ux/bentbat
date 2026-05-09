@@ -1,132 +1,117 @@
 (() => {
   'use strict';
 
-  // ── Header scroll ──────────────────────────────────────────────────────────
+  // ── Header scroll (transparent → solid) ───────────────────────────────────
   const header = document.getElementById('header');
-  const isInnerPage = header && header.classList.contains('scrolled');
-
-  if (header && !isInnerPage) {
-    const onScroll = () => {
-      header.classList.toggle('scrolled', window.scrollY > 60);
-    };
+  if (header) {
+    const isSolid = header.classList.contains('solid');
+    const onScroll = () => header.classList.toggle('solid', window.scrollY > 60);
     window.addEventListener('scroll', onScroll, { passive: true });
+    if (!isSolid) onScroll();
   }
 
   // ── Mobile menu ────────────────────────────────────────────────────────────
-  const hamburger = document.getElementById('hamburger');
-  const mobileMenu = document.getElementById('mobileMenu');
-  const mobileMenuClose = document.getElementById('mobileMenuClose');
+  const hamburger   = document.getElementById('hamburger');
+  const mobileMenu  = document.getElementById('mobileMenu');
+  const mobileClose = document.getElementById('mobileClose');
 
   const openMenu = () => {
-    mobileMenu.classList.add('open');
+    mobileMenu?.classList.add('open');
     document.body.style.overflow = 'hidden';
-    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger?.setAttribute('aria-expanded', 'true');
   };
-
   const closeMenu = () => {
-    mobileMenu.classList.remove('open');
+    mobileMenu?.classList.remove('open');
     document.body.style.overflow = '';
-    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger?.setAttribute('aria-expanded', 'false');
   };
 
-  if (hamburger) hamburger.addEventListener('click', openMenu);
-  if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMenu);
-  if (mobileMenu) {
-    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-  }
+  hamburger?.addEventListener('click', openMenu);
+  mobileClose?.addEventListener('click', closeMenu);
+  mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
   // ── Smooth scroll ──────────────────────────────────────────────────────────
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', e => {
-      const id = anchor.getAttribute('href');
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
       if (id === '#') return;
       const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      const top = target.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({ top, behavior: 'smooth' });
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
     });
   });
 
+  // ── Scroll reveal ──────────────────────────────────────────────────────────
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach((entry, i) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const delay = (parseInt(el.dataset.delay ?? 0)) + (Array.from(el.parentElement?.querySelectorAll('.reveal') ?? []).indexOf(el) % 3) * 80;
+      setTimeout(() => el.classList.add('visible'), delay);
+      revealObs.unobserve(el);
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
   // ── Stats counter ──────────────────────────────────────────────────────────
-  const animateCounter = el => {
+  const animateCount = el => {
     const target = parseInt(el.dataset.target, 10);
-    const duration = 1200;
-    const step = target / (duration / 16);
-    let current = 0;
+    const dur = 1200;
+    const step = target / (dur / 16);
+    let cur = 0;
     const tick = () => {
-      current = Math.min(current + step, target);
-      el.textContent = Math.floor(current);
-      if (current < target) requestAnimationFrame(tick);
+      cur = Math.min(cur + step, target);
+      el.textContent = Math.floor(cur);
+      if (cur < target) requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);
   };
 
-  const statsObserver = new IntersectionObserver(entries => {
+  const statsObs = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
-      entry.target.querySelectorAll('.counter').forEach(animateCounter);
-      statsObserver.unobserve(entry.target);
+      entry.target.querySelectorAll('.counter').forEach(animateCount);
+      statsObs.unobserve(entry.target);
     });
   }, { threshold: 0.3 });
 
-  const statsSection = document.querySelector('.stats-section');
-  if (statsSection) statsObserver.observe(statsSection);
-
-  // ── Scroll reveal ──────────────────────────────────────────────────────────
-  const revealTargets = document.querySelectorAll(
-    '.service-card, .testimonial-card, .value-card, .team-card, .why-point, .contact-info-card'
-  );
-
-  revealTargets.forEach((el, i) => {
-    el.style.cssText += `opacity:0;transform:translateY(24px);transition:opacity .5s ease ${(i % 3) * 80}ms,transform .5s ease ${(i % 3) * 80}ms`;
-  });
-
-  const revealObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-      revealObserver.unobserve(entry.target);
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-  revealTargets.forEach(el => revealObserver.observe(el));
+  document.querySelector('.stats-section')?.let?.(el => statsObs.observe(el));
+  // fallback for environments without .let
+  const statsSec = document.querySelector('.stats-section');
+  if (statsSec) statsObs.observe(statsSec);
 
   // ── Contact form ───────────────────────────────────────────────────────────
-  const contactForm = document.getElementById('contactForm');
-  const formSuccess = document.getElementById('formSuccess');
+  const form    = document.getElementById('contactForm');
+  const success = document.getElementById('formSuccess');
 
-  if (contactForm && formSuccess) {
-    const requiredFields = contactForm.querySelectorAll('[required]');
+  if (form && success) {
+    const required = form.querySelectorAll('[required]');
 
     const validate = () => {
       let ok = true;
-      requiredFields.forEach(field => {
-        const valid = field.value.trim() !== '';
-        field.classList.toggle('error', !valid);
+      required.forEach(f => {
+        const valid = f.value.trim() !== '';
+        f.classList.toggle('err', !valid);
         if (!valid) ok = false;
       });
       return ok;
     };
 
-    requiredFields.forEach(field => {
-      field.addEventListener('input', () => field.classList.remove('error'));
-    });
+    required.forEach(f => f.addEventListener('input', () => f.classList.remove('err')));
 
-    contactForm.addEventListener('submit', e => {
+    form.addEventListener('submit', e => {
       e.preventDefault();
       if (!validate()) return;
-
-      const btn = contactForm.querySelector('.form-submit');
+      const btn = form.querySelector('.form-submit');
       btn.disabled = true;
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>&nbsp; Envoi en cours…';
-
-      // Simulated submission — replace with fetch() to a real endpoint
+      // Replace setTimeout with fetch() to a real endpoint
       setTimeout(() => {
-        contactForm.style.display = 'none';
-        formSuccess.style.display = 'block';
-      }, 1400);
+        form.style.display = 'none';
+        success.style.display = 'block';
+      }, 1500);
     });
   }
 })();
