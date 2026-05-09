@@ -15,13 +15,17 @@
   const mobileMenu  = document.getElementById('mobileMenu');
   const mobileClose = document.getElementById('mobileClose');
 
+  if (mobileMenu) mobileMenu.setAttribute('aria-hidden', 'true');
+
   const openMenu = () => {
     mobileMenu?.classList.add('open');
+    mobileMenu?.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
     hamburger?.setAttribute('aria-expanded', 'true');
   };
   const closeMenu = () => {
     mobileMenu?.classList.remove('open');
+    mobileMenu?.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
     hamburger?.setAttribute('aria-expanded', 'false');
   };
