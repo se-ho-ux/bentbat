@@ -187,18 +187,30 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 
 .section-intro { max-width: 620px; }
 .section-intro p { margin-top: 12px; }
-#services .section-intro p {
-  font-size: 1rem;
-  font-weight: 300;
-  color: var(--text);
+/* ── Services "Nos savoir-faire" — header éditorial ── */
+.services-section-head {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: end;
+  padding-bottom: 56px;
+  border-bottom: 1px solid var(--border);
 }
-#services .section-intro h2 {
+.services-section-head h2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   font-size: clamp(1.875rem, 3.2vw, 3rem);
+  margin-top: 12px;
 }
-#services .section-intro h2 span { display: block !important; }
+.services-section-head h2 span { display: block !important; }
+.services-section-head > p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  align-self: end;
+  margin: 0;
+}
 .section-intro.center { margin: 0 auto; text-align: center; }
 .section-intro.center .eyebrow { justify-content: center; }
 .section-intro.center .eyebrow::before { display: none; }
@@ -668,26 +680,24 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 /* ─────────────────────────────────────────────────────────────
    SERVICES
 ───────────────────────────────────────────────────────────── */
-.services-grid {
+/* ── Services list — layout éditorial numéroté ── */
+.services-list { margin-top: 0; }
+
+.service-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  margin-top: 64px;
-  border: 1px solid var(--border);
-  overflow: hidden;
-  border-radius: var(--r-md);
-}
-.service-card {
-  background: var(--bg);
-  padding: 40px 32px;
-  transition: background var(--t) var(--ease-out);
-  cursor: default;
+  grid-template-columns: 32px 40px 1fr auto;
+  gap: 0 20px;
+  align-items: center;
+  padding: 26px 12px;
+  margin: 0 -12px;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
   position: relative;
   overflow: hidden;
+  transition: background var(--t) var(--ease-out);
 }
-/* Line reveals from left on hover — editorial detail */
-.service-card::before {
+.service-row::before {
   content: '';
   position: absolute;
   left: 0; top: 0; bottom: 0;
@@ -698,28 +708,65 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   transition: transform var(--t-md) var(--ease-out);
 }
 @media (hover: hover) and (pointer: fine) {
-  .service-card:hover { background: var(--bg-alt); }
-  .service-card:hover::before { transform: scaleY(1); }
-}
-.service-icon {
-  width: 48px; height: 48px;
-  border: 1.5px solid var(--border);
-  border-radius: var(--r-sm);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.25rem;
-  color: var(--accent);
-  margin-bottom: 24px;
-  transition: border-color var(--t) var(--ease-out), background var(--t) var(--ease-out), color var(--t) var(--ease-out);
-}
-@media (hover: hover) and (pointer: fine) {
-  .service-card:hover .service-icon {
-    background: var(--bg-dark);
-    border-color: var(--bg-dark);
-    color: #C89968;
+  .service-row:hover { background: var(--bg-alt); }
+  .service-row:hover::before { transform: scaleY(1); }
+  .service-row:hover .sr-num { color: var(--text); }
+  .service-row:hover .sr-icon {
+    background: var(--text);
+    border-color: var(--text);
+    color: var(--text-inv);
+  }
+  .service-row:hover .sr-arrow {
+    transform: translateX(5px);
+    color: var(--text);
+    opacity: 1;
   }
 }
-.service-card h3 { margin-bottom: 10px; font-size: 1.0625rem; }
-.service-card p { font-size: 1rem; font-weight: 300; color: var(--text); line-height: 1.3125; }
+.sr-num {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  line-height: 1;
+  transition: color var(--t) var(--ease-out);
+  align-self: center;
+}
+.sr-icon {
+  width: 38px; height: 38px;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.875rem;
+  color: var(--text);
+  background: var(--bg);
+  flex-shrink: 0;
+  transition: background var(--t) var(--ease-out), border-color var(--t) var(--ease-out), color var(--t) var(--ease-out);
+}
+.sr-body { min-width: 0; }
+.sr-body h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 3px;
+  color: var(--text);
+  line-height: 1.2;
+}
+.sr-body p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.3125;
+}
+.sr-arrow {
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+  opacity: 0.45;
+  flex-shrink: 0;
+  padding-left: 8px;
+  transition: transform var(--t) var(--ease-out), color var(--t) var(--ease-out), opacity var(--t) var(--ease-out);
+}
+.services-cta { text-align: center; margin-top: 48px; }
 
 /* ─────────────────────────────────────────────────────────────
    SPECIALTIES (signature section)
@@ -1421,7 +1468,8 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .hero-left { padding: 52px 48px; }
   .hero-left h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
   .hero-right { height: 45vw; }
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .services-section-head { gap: 40px; }
+  .service-row { padding: 24px 8px; margin: 0 -8px; }
   .why-grid, .about-grid { grid-template-columns: 1fr; gap: 56px; }
   .why-badge { bottom: -16px; right: -8px; }
   .footer-grid {
@@ -1465,7 +1513,10 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .hamburger { display: flex; }
 
   /* Grids */
-  .services-grid { grid-template-columns: 1fr; }
+  .services-section-head { grid-template-columns: 1fr; gap: 16px; padding-bottom: 40px; }
+  .service-row { grid-template-columns: 28px 34px 1fr; padding: 20px 0; margin: 0; gap: 0 14px; }
+  .sr-arrow { display: none; }
+  .sr-body h3 { font-size: 1rem; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .about-values { grid-template-columns: 1fr; }
   .why-grid, .about-grid { grid-template-columns: 1fr; gap: 40px; }
