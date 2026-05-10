@@ -80,23 +80,6 @@
     });
   });
 
-  // ── Scroll reveal ──────────────────────────────────────────────────────────
-  const revealObs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      if (prefersReducedMotion) {
-        el.classList.add('visible');
-      } else {
-        const siblings = Array.from(el.parentElement?.querySelectorAll('.reveal') ?? []);
-        const delay = (parseInt(el.dataset.delay ?? 0)) + (siblings.indexOf(el) % 3) * 80;
-        setTimeout(() => el.classList.add('visible'), delay);
-      }
-      revealObs.unobserve(el);
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
   // ── Stats counter — respects prefers-reduced-motion ───────────────────────
   const animateCount = el => {

@@ -1584,25 +1584,9 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
 }
 
 /* ─────────────────────────────────────────────────────────────
-   SCROLL REVEAL
+   SCROLL REVEAL — désactivé (éléments toujours visibles)
 ───────────────────────────────────────────────────────────── */
-.reveal {
-  opacity: 0;
-  transform: translateY(12px);
-  /* ease-out: fast start, smooth settle — correct for entering elements */
-  transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* Reduced motion: skip translate, keep opacity */
-@media (prefers-reduced-motion: reduce) {
-  .reveal {
-    transform: none;
-    transition: opacity 0.3s ease;
-  }
-}
+.reveal, .reveal.visible { opacity: 1; transform: none; transition: none; }
 
 /* Process steps grid */
 .process-grid {
@@ -1848,35 +1832,6 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
 
 /* Responsive additions — merged into main breakpoints above */
 
-/* ─────────────────────────────────────────────────────────────
-   HERO ENTRANCE — stagger on page load
-───────────────────────────────────────────────────────────── */
-@keyframes heroFadeUp {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.hero-flag    { animation: heroFadeUp 0.55s var(--ease-out) 0.05s both; }
-.hero-left h1 { animation: heroFadeUp 0.60s var(--ease-out) 0.15s both; }
-.hero-left > p { animation: heroFadeUp 0.55s var(--ease-out) 0.25s both; }
-.hero-actions { animation: heroFadeUp 0.55s var(--ease-out) 0.35s both; }
-.hero-kpis    { animation: heroFadeUp 0.50s var(--ease-out) 0.45s both; }
-@media (prefers-reduced-motion: reduce) {
-  .hero-flag, .hero-left h1, .hero-left > p, .hero-actions, .hero-kpis {
-    animation: none;
-  }
-}
-
-/* ─────────────────────────────────────────────────────────────
-   PAGE HERO (inner pages) — entrance
-───────────────────────────────────────────────────────────── */
-.page-hero-inner .breadcrumb { animation: heroFadeUp 0.45s var(--ease-out) 0.05s both; }
-.page-hero-inner h1           { animation: heroFadeUp 0.55s var(--ease-out) 0.12s both; }
-.page-hero-inner p            { animation: heroFadeUp 0.50s var(--ease-out) 0.22s both; }
-@media (prefers-reduced-motion: reduce) {
-  .page-hero-inner .breadcrumb,
-  .page-hero-inner h1,
-  .page-hero-inner p { animation: none; }
-}
 
 /* ── Mentions légales ─────────────────────────────────────────────────────── */
 .legal-content { max-width: 800px; }
