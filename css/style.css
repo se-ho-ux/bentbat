@@ -691,13 +691,13 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
   position: relative;
   overflow: hidden;
 }
-/* Accent line reveals from left on hover — editorial detail */
+/* Line reveals from left on hover — editorial detail */
 .service-card::before {
   content: '';
   position: absolute;
   left: 0; top: 0; bottom: 0;
   width: 2px;
-  background: var(--accent);
+  background: var(--text);
   transform: scaleY(0);
   transform-origin: bottom;
   transition: transform var(--t-md) var(--ease-out);
