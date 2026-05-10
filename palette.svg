@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <defs></defs>
+  <rect width="1200" height="600" fill="#f4f0ea"></rect>
+  <text x="48" y="60" class="l" fill="#171514">— BEN &amp; BAT / PALETTE</text>
+  <text x="48" y="100" class="h" fill="#171514">Couleurs de la maison</text>
+  
+    <rect x="48" y="150" width="260" height="120" fill="#171514" stroke="#171514" stroke-opacity="0.08"></rect>
+    <text x="48" y="298" class="t" fill="#171514">Carbone</text>
+    <text x="48" y="320" class="m" fill="#171514" opacity="0.7">#171514</text>
+    <text x="48" y="342" class="s" fill="#171514">Primaire / texte / logo</text>
+    <rect x="330" y="150" width="260" height="120" fill="#2d3338" stroke="#171514" stroke-opacity="0.08"></rect>
+    <text x="330" y="298" class="t" fill="#171514">Acier</text>
+    <text x="330" y="320" class="m" fill="#171514" opacity="0.7">#2D3338</text>
+    <text x="330" y="342" class="s" fill="#171514">Secondaire / surfaces tech</text>
+    <rect x="612" y="150" width="260" height="120" fill="#847a6e" stroke="#171514" stroke-opacity="0.08"></rect>
+    <text x="612" y="298" class="t" fill="#171514">Béton</text>
+    <text x="612" y="320" class="m" fill="#171514" opacity="0.7">#847A6E</text>
+    <text x="612" y="342" class="s" fill="#171514">Neutre / blocs chauds</text>
+    <rect x="894" y="150" width="260" height="120" fill="#d6cfc4" stroke="#171514" stroke-opacity="0.08"></rect>
+    <text x="894" y="298" class="t" fill="#171514">Calque</text>
+    <text x="894" y="320" class="m" fill="#171514" opacity="0.7">#D6CFC4</text>
+    <text x="894" y="342" class="s" fill="#171514">Neutre / fonds doux</text>
+    <rect x="48" y="370" width="260" height="120" fill="#f4f0ea" stroke="#171514" stroke-opacity="0.08"></rect>
+    <text x="48" y="518" class="t" fill="#171514">Chaux</text>
+    <text x="48" y="540" class="m" fill="#171514" opacity="0.7">#F4F0EA</text>
+    <text x="48" y="562" class="s" fill="#171514">Surface principale</text>
+    <rect x="330" y="370" width="260" height="120" fill="#fbf9f5" stroke="#171514" stroke-opacity="0.08"></rect>
+    <text x="330" y="518" class="t" fill="#171514">Papier</text>
+    <text x="330" y="540" class="m" fill="#171514" opacity="0.7">#FBF9F5</text>
+    <text x="330" y="562" class="s" fill="#171514">Surface claire / devis</text>
+    <rect x="612" y="370" width="260" height="120" fill="#b85c38" stroke="#171514" stroke-opacity="0.08"></rect>
+    <text x="612" y="518" class="t" fill="#171514">Terre cuite</text>
+    <text x="612" y="540" class="m" fill="#171514" opacity="0.7">#B85C38</text>
+    <text x="612" y="562" class="s" fill="#171514">Accent / signature</text>
+    <rect x="894" y="370" width="260" height="120" fill="#c89968" stroke="#171514" stroke-opacity="0.08"></rect>
+    <text x="894" y="518" class="t" fill="#171514">Ocre</text>
+    <text x="894" y="540" class="m" fill="#171514" opacity="0.7">#C89968</text>
+    <text x="894" y="562" class="s" fill="#171514">Accent chaud / matières</text>
+</svg>
