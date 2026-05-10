@@ -1609,8 +1609,11 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .section-head { grid-template-columns: 1fr; gap: 16px; padding-bottom: 40px; }
   .service-row, .list-row { grid-template-columns: 28px 34px 1fr; padding: 20px 0; margin: 0; gap: 0 14px; }
   .sr-arrow { display: none; }
+  .sr-icon { width: 34px; height: 34px; font-size: 0.875rem; }
   .sr-body h3 { font-size: 1rem; }
-  .testimonials-grid { grid-template-columns: 1fr; }
+  .page-hero h1 { font-size: clamp(1.875rem, 5vw, 2.5rem); }
+  .service-page-card { padding: 32px 28px; }
+  .services-page-grid { margin-top: 48px; }
   .about-values { grid-template-columns: 1fr; }
   .why-grid, .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .why-badge { display: none; }
@@ -1740,6 +1743,42 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
 
   /* Page hero */
   .page-hero { padding: 100px 0 48px; }
+  .page-hero h1 { font-size: 1.75rem; }
+
+  /* Section head — titre plus compact sur petits écrans */
+  .section-head h2 { font-size: 1.5rem; }
+  .section-head { padding-bottom: 24px; gap: 10px; }
+
+  /* Rows plus compacts */
+  .service-row, .list-row { grid-template-columns: 20px 28px 1fr; padding: 14px 0; gap: 0 10px; }
+  .sr-icon { width: 28px; height: 28px; font-size: 0.75rem; }
+  .sr-num { width: 20px; font-size: 0.625rem; }
+  .sr-body p { font-size: 0.9375rem; }
+  .specialty-tag { font-size: 0.5625rem; padding: 3px 8px; gap: 4px; }
+  .services-cta { margin-top: 28px; }
+
+  /* Service page cards */
+  .service-page-card { padding: 24px 18px; }
+  .services-page-grid { margin-top: 32px; }
+  .service-page-card h3 { font-size: 1rem; margin: 14px 0 8px; }
+
+  /* Hero compact */
+  .hero-left { padding: 32px 20px; }
+  .hero-flag { font-size: 0.6875rem; }
+
+  /* Why section points */
+  .why-point { gap: 14px; }
+
+  /* Stats */
+  .stat-number { font-size: 2.25rem; }
+  .stat-label { font-size: 0.8125rem; }
+
+  /* Trust bar — plus compact */
+  .trust-bar-inner { gap: 12px 20px; }
+  .trust-item { font-size: 0.8125rem; gap: 6px; }
+
+  /* Testimonials */
+  .t-text { font-size: 0.9375rem; }
 
 }
 
@@ -1991,7 +2030,29 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
 .not-found p { color: var(--text-inv-muted); margin-bottom: 40px; }
 .not-found-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
-/* Responsive additions — merged into main breakpoints above */
+/* ── TRÈS PETIT MOBILE (max-width: 375px) ───────────────────── */
+@media (max-width: 375px) {
+  .container { padding: 0 14px; }
+  .section    { padding: 48px 0; }
+  .section-sm { padding: 36px 0; }
+
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.375rem; }
+  .section-head h2 { font-size: 1.375rem; }
+
+  .service-row, .list-row { grid-template-columns: 18px 26px 1fr; gap: 0 8px; padding: 13px 0; }
+  .sr-icon { width: 26px; height: 26px; font-size: 0.6875rem; }
+  .sr-num { width: 18px; font-size: 0.5625rem; }
+  .sr-body h3 { font-size: 0.875rem; }
+  .sr-body p { font-size: 0.875rem; }
+  .specialty-tag { font-size: 0.5rem; padding: 2px 6px; }
+
+  .service-page-card { padding: 20px 16px; }
+  .hero-left { padding: 28px 16px; }
+  .page-hero h1 { font-size: 1.5rem; }
+  .stat-number { font-size: 2rem; }
+  .cta-inner h2 { font-size: 1.5rem; }
+}
 
 
 /* ── Mentions légales ─────────────────────────────────────────────────────── */
