@@ -909,6 +909,30 @@ p  { color: var(--text); font-weight: 300; line-height: 1.75; font-size: 1rem; }
 /* ─────────────────────────────────────────────────────────────
    TESTIMONIALS
 ───────────────────────────────────────────────────────────── */
+/* Google rating badge — displayed in testimonials section intro */
+.google-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  padding: 12px 20px;
+  margin-top: 24px;
+}
+.google-badge-icon { font-size: 1.375rem; color: #4285F4; flex-shrink: 0; }
+.google-badge-score {
+  font-family: var(--font-mono);
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.google-badge-right { display: flex; flex-direction: column; gap: 3px; }
+.google-badge-stars { color: #FBBC04; font-size: 0.8125rem; letter-spacing: 2px; }
+.google-badge-label { font-size: 0.75rem; font-weight: 500; color: var(--text-muted); letter-spacing: 0.02em; }
+
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
