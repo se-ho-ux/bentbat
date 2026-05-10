@@ -596,30 +596,11 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: clamp(16px, 2.4vh, 32px);
-  position: relative;
-  z-index: 1;
-}
-.hero-kpis {
-  display: flex;
-  gap: 32px;
-  padding-top: clamp(12px, 1.8vh, 22px);
   border-top: 1px solid var(--border);
+  padding-top: clamp(20px, 3vh, 36px);
   position: relative;
   z-index: 1;
 }
-.hero-kpi-number {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: -0.03em;
-  line-height: 1;
-  margin-bottom: 4px;
-}
-.hero-kpi-number em { font-style: normal; color: var(--text); }
-.hero-kpi-label { font-size: 0.8125rem; color: var(--text); }
 
 .hero-right {
   position: relative;
@@ -1443,10 +1424,6 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .hero-left { padding: 40px 32px 40px; }
   .hero-left h1 { font-size: clamp(2rem, 6vw, 3rem); }
   .hero-right { height: 45vw; }
-  .hero-kpis { gap: 20px; flex-wrap: wrap; }
-  .hero-kpi-number { font-size: 1.75rem; }
-  .hero-kpi-label { font-size: 0.75rem; }
-
   /* Nav — padding symétrique quand seuls logo + hamburger visibles */
   .nav-wrap { padding: 0 20px; }
   .nav-links, .nav-actions { display: none; }
@@ -1527,7 +1504,6 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .footer-links a { font-size: 0.9375rem; }
 
   /* Hero */
-  .hero-kpis { display: none; }
   .hero-actions .btn { width: 100%; justify-content: center; }
 
   /* Gallery */
