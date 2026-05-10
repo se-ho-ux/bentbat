@@ -266,7 +266,7 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
   width: 100%;
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 16px 0 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -356,11 +356,12 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
 .nav-links a.active { color: var(--text); }
 #header.solid .nav-links a.active { color: #fff; }
 
-.nav-actions { display: flex; align-items: center; gap: 12px; }
+.nav-actions { display: flex; align-items: center; gap: 10px; }
 /* CTA nav — forme pill + contenu dans les limites du header */
 .nav-actions .btn-primary {
   border-radius: 100px;
-  padding: 11px 22px;
+  padding: 9px 18px;
+  font-size: 0.8125rem;
 }
 @media (hover: hover) and (pointer: fine) {
   .nav-actions .btn-primary:hover {
@@ -369,17 +370,15 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
   }
 }
 .nav-phone {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
-  color: rgba(23,21,20,0.50);
+  color: var(--text);
   text-decoration: none;
   transition: color var(--t) var(--ease-out);
   letter-spacing: -0.01em;
 }
-#header.solid .nav-phone { color: rgba(255,255,255,0.65); }
 @media (hover: hover) and (pointer: fine) {
-  .nav-phone:hover { color: var(--text); }
-  #header.solid .nav-phone:hover { color: #fff; }
+  .nav-phone:hover { color: var(--accent); }
 }
 
 /* hamburger */
