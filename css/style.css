@@ -424,9 +424,10 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
   background: var(--bg);
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  /* Padding vh-responsive — se réduit automatiquement sur petits écrans */
-  padding: clamp(24px, 4vh, 56px) clamp(32px, 5vw, 80px);
+  /* flex-start : le contenu s'ancre en haut → ne déborde jamais en bas */
+  justify-content: flex-start;
+  /* Padding vh-responsive — top plus grand pour l'effet centré visuel */
+  padding: clamp(28px, 6vh, 80px) clamp(32px, 5vw, 80px) clamp(16px, 3vh, 36px);
   position: relative;
   z-index: 1;
 }
@@ -454,26 +455,26 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
   text-transform: uppercase;
   padding: 5px 12px;
   border-radius: 100px;
-  margin-bottom: clamp(12px, 2vh, 24px);
+  margin-bottom: clamp(10px, 1.6vh, 18px);
   width: fit-content;
   position: relative;
   z-index: 1;
 }
 .hero-left h1 {
-  /* Taille réduite par rapport au h1 global pour garantir le fit */
-  font-size: clamp(2.25rem, 4.5vw, 4.5rem);
-  line-height: 1.06;
+  /* 3.2vw max → "25 ans de béton ciré" tient sur une ligne dans ~530px de colonne */
+  font-size: clamp(1.875rem, 3.2vw, 3.2rem);
+  line-height: 1.08;
   color: var(--text);
-  margin-bottom: clamp(12px, 1.8vh, 22px);
+  margin-bottom: clamp(10px, 1.6vh, 18px);
   position: relative;
   z-index: 1;
 }
 .hero-left h1 em { font-style: normal; color: var(--accent); }
 .hero-left > p {
   color: var(--text-muted);
-  font-size: clamp(0.9375rem, 1.2vw, 1.0625rem);
+  font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);
   line-height: 1.65;
-  margin-bottom: clamp(20px, 2.8vh, 36px);
+  margin-bottom: clamp(16px, 2.2vh, 28px);
   max-width: 480px;
   position: relative;
   z-index: 1;
@@ -482,14 +483,14 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: clamp(20px, 3vh, 44px);
+  margin-bottom: clamp(16px, 2.4vh, 32px);
   position: relative;
   z-index: 1;
 }
 .hero-kpis {
   display: flex;
   gap: 32px;
-  padding-top: clamp(16px, 2.4vh, 32px);
+  padding-top: clamp(12px, 1.8vh, 22px);
   border-top: 1px solid var(--border);
   position: relative;
   z-index: 1;
@@ -497,7 +498,7 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
 .hero-kpi-number {
   display: block;
   font-family: var(--font-mono);
-  font-size: 2.25rem;
+  font-size: 1.875rem;
   font-weight: 700;
   color: var(--text);
   letter-spacing: -0.03em;
@@ -1268,7 +1269,8 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
 
 /* ── LARGE DESKTOP (min-width: 1440px) ──────────────────── */
 @media (min-width: 1440px) {
-  .hero-left { padding: 80px 96px; }
+  /* Padding responsive même à large — préserve le fit vertical */
+  .hero-left { padding: clamp(40px, 6vh, 80px) 96px clamp(20px, 3vh, 40px); }
 }
 
 /* ── TABLETTE PAYSAGE / PETIT DESKTOP (max-width: 1100px) ── */
@@ -1277,7 +1279,6 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .hero-left { padding: 52px 48px; }
   .hero-left h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
   .hero-right { height: 45vw; }
-  .nav-logo { font-size: 1.375rem; }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .why-grid, .about-grid { grid-template-columns: 1fr; gap: 56px; }
   .why-badge { bottom: -16px; right: -8px; }
