@@ -1,42 +1,72 @@
 (() => {
   'use strict';
 
-  // ── Header scroll — glass effect on home, stays solid on inner pages ──────
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ── Header scroll — glass effect ──────────────────────────────────────────
   const header = document.getElementById('header');
-  if (header) {
-    const initSolid = header.classList.contains('solid');
-    if (!initSolid) {
-      // Home page: transparent → light frosted glass on scroll
-      const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 60);
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll(); // apply immediately if page loads already scrolled
-    }
-    // Inner pages keep their .solid (dark glass) class untouched
+  if (header && !header.classList.contains('solid')) {
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 60);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
   }
 
-  // ── Mobile menu ────────────────────────────────────────────────────────────
+  // ── Mobile menu — with focus trap, Escape, click-outside, focus return ────
   const hamburger   = document.getElementById('hamburger');
   const mobileMenu  = document.getElementById('mobileMenu');
   const mobileClose = document.getElementById('mobileClose');
 
   if (mobileMenu) mobileMenu.setAttribute('aria-hidden', 'true');
 
+  const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
   const openMenu = () => {
     mobileMenu?.classList.add('open');
     mobileMenu?.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
     hamburger?.setAttribute('aria-expanded', 'true');
+    // Move focus to close button
+    setTimeout(() => mobileClose?.focus(), 50);
   };
+
   const closeMenu = () => {
     mobileMenu?.classList.remove('open');
     mobileMenu?.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
     hamburger?.setAttribute('aria-expanded', 'false');
+    // Return focus to trigger
+    hamburger?.focus();
   };
 
   hamburger?.addEventListener('click', openMenu);
   mobileClose?.addEventListener('click', closeMenu);
+
+  // Close on nav link click
   mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  // Escape key closes menu
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && mobileMenu?.classList.contains('open')) closeMenu();
+  });
+
+  // Click outside closes menu
+  mobileMenu?.addEventListener('click', e => {
+    if (e.target === mobileMenu) closeMenu();
+  });
+
+  // Focus trap inside mobile menu
+  mobileMenu?.addEventListener('keydown', e => {
+    if (e.key !== 'Tab') return;
+    const focusable = [...mobileMenu.querySelectorAll(FOCUSABLE)];
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last  = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last)  { e.preventDefault(); first.focus(); }
+    }
+  });
 
   // ── Smooth scroll ──────────────────────────────────────────────────────────
   document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -46,25 +76,34 @@
       const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+      target.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', block: 'start' });
     });
   });
 
   // ── Scroll reveal ──────────────────────────────────────────────────────────
   const revealObs = new IntersectionObserver(entries => {
-    entries.forEach((entry, i) => {
+    entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       const el = entry.target;
-      const delay = (parseInt(el.dataset.delay ?? 0)) + (Array.from(el.parentElement?.querySelectorAll('.reveal') ?? []).indexOf(el) % 3) * 80;
-      setTimeout(() => el.classList.add('visible'), delay);
+      if (prefersReducedMotion) {
+        el.classList.add('visible');
+      } else {
+        const siblings = Array.from(el.parentElement?.querySelectorAll('.reveal') ?? []);
+        const delay = (parseInt(el.dataset.delay ?? 0)) + (siblings.indexOf(el) % 3) * 80;
+        setTimeout(() => el.classList.add('visible'), delay);
+      }
       revealObs.unobserve(el);
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-  // ── Stats counter ──────────────────────────────────────────────────────────
+  // ── Stats counter — respects prefers-reduced-motion ───────────────────────
   const animateCount = el => {
+    if (prefersReducedMotion) {
+      el.textContent = el.dataset.target;
+      return;
+    }
     const target = parseInt(el.dataset.target, 10);
     const dur = 1200;
     const step = target / (dur / 16);
@@ -85,29 +124,70 @@
     });
   }, { threshold: 0.3 });
 
-  document.querySelector('.stats-section')?.let?.(el => statsObs.observe(el));
-  // fallback for environments without .let
   const statsSec = document.querySelector('.stats-section');
   if (statsSec) statsObs.observe(statsSec);
 
-  // ── Contact form ───────────────────────────────────────────────────────────
+  // ── Contact form — inline validation + aria-live errors ───────────────────
   const form    = document.getElementById('contactForm');
   const success = document.getElementById('formSuccess');
 
   if (form && success) {
     const required = form.querySelectorAll('[required]');
 
-    const validate = () => {
-      let ok = true;
-      required.forEach(f => {
-        const valid = f.value.trim() !== '';
-        f.classList.toggle('err', !valid);
-        if (!valid) ok = false;
-      });
-      return ok;
+    const ERROR_MESSAGES = {
+      nom:       'Veuillez indiquer votre nom.',
+      prenom:    'Veuillez indiquer votre prénom.',
+      email:     'Veuillez indiquer une adresse email valide.',
+      telephone: 'Veuillez indiquer votre numéro de téléphone.',
+      type:      'Veuillez sélectionner un type de demande.',
+      message:   'Veuillez décrire votre projet.',
     };
 
-    required.forEach(f => f.addEventListener('input', () => f.classList.remove('err')));
+    const getError = field => ERROR_MESSAGES[field.name] ?? 'Ce champ est requis.';
+
+    const showError = field => {
+      field.classList.add('err');
+      field.setAttribute('aria-invalid', 'true');
+      let errEl = field.parentElement.querySelector('.field-error');
+      if (!errEl) {
+        errEl = document.createElement('span');
+        errEl.className = 'field-error';
+        errEl.setAttribute('role', 'alert');
+        field.after(errEl);
+      }
+      errEl.textContent = getError(field);
+    };
+
+    const clearError = field => {
+      field.classList.remove('err');
+      field.removeAttribute('aria-invalid');
+      field.parentElement.querySelector('.field-error')?.remove();
+    };
+
+    // Validate on blur (not on every keystroke)
+    required.forEach(f => {
+      f.addEventListener('blur', () => {
+        if (f.value.trim() === '') showError(f);
+        else clearError(f);
+      });
+      f.addEventListener('input', () => {
+        if (f.value.trim() !== '') clearError(f);
+      });
+    });
+
+    const validate = () => {
+      let firstInvalid = null;
+      required.forEach(f => {
+        if (f.value.trim() === '') {
+          showError(f);
+          if (!firstInvalid) firstInvalid = f;
+        } else {
+          clearError(f);
+        }
+      });
+      if (firstInvalid) firstInvalid.focus();
+      return !firstInvalid;
+    };
 
     form.addEventListener('submit', e => {
       e.preventDefault();
@@ -115,7 +195,7 @@
       const btn = form.querySelector('.form-submit');
       btn.disabled = true;
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>&nbsp; Envoi en cours…';
-      // Formspree endpoint — remplacez YOUR_FORM_ID par l'ID obtenu sur formspree.io
+
       fetch('https://formspree.io/f/YOUR_FORM_ID', {
         method: 'POST',
         body: new FormData(form),
@@ -125,6 +205,8 @@
         if (res.ok) {
           form.style.display = 'none';
           success.style.display = 'block';
+          success.setAttribute('tabindex', '-1');
+          success.focus();
         } else {
           throw new Error('server');
         }
@@ -136,7 +218,9 @@
         if (!errEl) {
           errEl = document.createElement('p');
           errEl.className = 'form-send-error';
-          errEl.style.cssText = 'color:#dc2626;margin-top:12px;font-size:.9rem;text-align:center;';
+          errEl.setAttribute('role', 'alert');
+          errEl.setAttribute('aria-live', 'assertive');
+          errEl.style.cssText = 'color:#dc2626;margin-top:12px;font-size:.9rem;text-align:center;font-weight:600;';
           form.querySelector('.form-note').before(errEl);
         }
         errEl.textContent = "Une erreur s'est produite. Veuillez réessayer ou nous appeler directement.";

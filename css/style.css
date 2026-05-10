@@ -47,6 +47,63 @@ img { display: block; max-width: 100%; }
 a { color: inherit; }
 button { font-family: inherit; }
 
+/* ── Focus visible — keyboard navigation ────────────────── */
+:focus { outline: none; }
+:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.btn:focus-visible,
+.nav-logo:focus-visible,
+.nav-links a:focus-visible,
+.footer-social:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+/* Inputs use border+shadow as focus indicator — no extra outline */
+.form-group input:focus-visible,
+.form-group select:focus-visible,
+.form-group textarea:focus-visible { outline: none; }
+
+/* ── Skip link — keyboard first-tab ────────────────────── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 16px;
+  z-index: 9999;
+  padding: 10px 20px;
+  background: var(--text);
+  color: var(--text-inv);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-decoration: none;
+  border-radius: var(--r-sm);
+  transition: top 0.18s var(--ease-out);
+}
+.skip-link:focus-visible {
+  top: 16px;
+  outline: 2px solid var(--bg);
+  outline-offset: 3px;
+}
+
+/* ── Touch action — reduce 300ms tap delay ──────────────── */
+.btn, .nav-links a, .nav-logo, .hamburger,
+.footer-social, .pf-btn, .mobile-menu a,
+.gallery-item, .nav-phone { touch-action: manipulation; }
+
+/* ── Cursor pointer on non-button interactive elements ──── */
+.pf-btn, .gallery-item { cursor: pointer; }
+
+/* ── Form inline error text ─────────────────────────────── */
+.field-error {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  color: #DC2626;
+  font-weight: 600;
+}
+
 /* ─────────────────────────────────────────────────────────────
    TOKENS
 ───────────────────────────────────────────────────────────── */
@@ -57,7 +114,7 @@ button { font-family: inherit; }
   --bg-dark:        #171514; /* Carbone     — fond sombre */
   --bg-dark-2:      #2D3338; /* Acier       — surfaces tech */
   --text:           #171514; /* Carbone     — texte principal */
-  --text-muted:     #847A6E; /* Béton       — texte secondaire */
+  --text-muted:     #6B6157; /* Béton foncé — texte secondaire WCAG AA */
   --text-inv:       #FBF9F5; /* Papier      — texte sur fond sombre */
   --text-inv-muted: rgba(251,249,245,0.60);
   --accent:         #B85C38; /* Terre cuite — accent signature */
