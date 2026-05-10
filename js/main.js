@@ -6,7 +6,17 @@
   // ── Header scroll — glass effect ──────────────────────────────────────────
   const header = document.getElementById('header');
   if (header && !header.classList.contains('solid')) {
-    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 60);
+    let isScrolled = false;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (!isScrolled && y > 60) {
+        isScrolled = true;
+        header.classList.add('scrolled');
+      } else if (isScrolled && y < 40) {
+        isScrolled = false;
+        header.classList.remove('scrolled');
+      }
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }

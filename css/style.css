@@ -288,19 +288,18 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
   position: fixed;
   inset: 0 0 auto;
   z-index: 900;
-  /* Hauteur fixe — le contenu ne déborde jamais dans le hero */
   height: var(--header-h);
   display: flex;
   align-items: center;
-  overflow: hidden;
   background: transparent;
   border-bottom: 1px solid transparent;
+  will-change: background, backdrop-filter;
   transition:
-    background      var(--t-md) var(--ease-out),
-    backdrop-filter var(--t-md) var(--ease-out),
-    -webkit-backdrop-filter var(--t-md) var(--ease-out),
-    border-color    var(--t-md) var(--ease-out),
-    box-shadow      var(--t-md) var(--ease-out);
+    background      var(--t) var(--ease-out),
+    backdrop-filter var(--t) var(--ease-out),
+    -webkit-backdrop-filter var(--t) var(--ease-out),
+    border-color    var(--t) var(--ease-out),
+    box-shadow      var(--t) var(--ease-out);
 }
 
 /* Inner pages — always pinned dark glass */
@@ -534,10 +533,8 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
   background: var(--bg);
   display: flex;
   flex-direction: column;
-  /* flex-start : le contenu s'ancre en haut → ne déborde jamais en bas */
   justify-content: flex-start;
-  /* Padding vh-responsive — top plus grand pour l'effet centré visuel */
-  padding: clamp(28px, 6vh, 80px) clamp(32px, 5vw, 80px) clamp(16px, 3vh, 36px);
+  padding: clamp(40px, 7.5vh, 96px) clamp(32px, 5vw, 80px) clamp(16px, 3vh, 36px);
   position: relative;
   z-index: 1;
 }
@@ -565,7 +562,7 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
   text-transform: uppercase;
   padding: 5px 12px;
   border-radius: 100px;
-  margin-bottom: clamp(10px, 1.6vh, 18px);
+  margin-bottom: clamp(18px, 2.8vh, 32px);
   width: fit-content;
   position: relative;
   z-index: 1;
@@ -581,10 +578,11 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
 }
 .hero-left h1 em { font-style: normal; color: var(--accent); }
 .hero-left > p {
-  color: var(--text-muted);
+  color: var(--text);
+  font-weight: 300;
   font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);
   line-height: 1.65;
-  margin-bottom: clamp(16px, 2.2vh, 28px);
+  margin-bottom: clamp(24px, 3.6vh, 44px);
   max-width: 480px;
   position: relative;
   z-index: 1;
@@ -615,8 +613,8 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
   line-height: 1;
   margin-bottom: 4px;
 }
-.hero-kpi-number em { font-style: normal; color: var(--accent); }
-.hero-kpi-label { font-size: 0.8125rem; color: var(--text-muted); }
+.hero-kpi-number em { font-style: normal; color: var(--text); }
+.hero-kpi-label { font-size: 0.8125rem; color: var(--text); }
 
 .hero-right {
   position: relative;
@@ -1392,8 +1390,7 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
 
 /* ── LARGE DESKTOP (min-width: 1440px) ──────────────────── */
 @media (min-width: 1440px) {
-  /* Padding responsive même à large — préserve le fit vertical */
-  .hero-left { padding: clamp(40px, 6vh, 80px) 96px clamp(20px, 3vh, 40px); }
+  .hero-left { padding: clamp(48px, 7vh, 96px) 96px clamp(20px, 3vh, 40px); }
 }
 
 /* ── TABLETTE PAYSAGE / PETIT DESKTOP (max-width: 1100px) ── */
