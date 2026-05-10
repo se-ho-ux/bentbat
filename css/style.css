@@ -187,8 +187,8 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 
 .section-intro { max-width: 620px; }
 .section-intro p { margin-top: 12px; }
-/* ── Services "Nos savoir-faire" — header éditorial ── */
-.services-section-head {
+/* ── Header éditorial deux colonnes — réutilisable partout ── */
+.section-head {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
@@ -196,15 +196,15 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   padding-bottom: 56px;
   border-bottom: 1px solid var(--border);
 }
-.services-section-head h2 {
+.section-head h2 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   font-size: clamp(1.875rem, 3.2vw, 3rem);
   margin-top: 12px;
 }
-.services-section-head h2 span { display: block !important; }
-.services-section-head > p {
+.section-head h2 span { display: block !important; }
+.section-head > p, .section-head > div > p.section-head-desc {
   font-size: 1rem;
   font-weight: 300;
   color: var(--text-muted);
@@ -680,24 +680,32 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 /* ─────────────────────────────────────────────────────────────
    SERVICES
 ───────────────────────────────────────────────────────────── */
-/* ── Services list — layout éditorial numéroté ── */
+/* ── Liste éditorial numérotée — base partagée ── */
 .services-list { margin-top: 0; }
 
-.service-row {
+/* Styles communs aux deux variantes */
+.service-row, .list-row {
   display: grid;
-  grid-template-columns: 32px 40px 1fr auto;
   gap: 0 20px;
   align-items: center;
   padding: 26px 12px;
   margin: 0 -12px;
   border-bottom: 1px solid var(--border);
-  text-decoration: none;
   color: inherit;
   position: relative;
   overflow: hidden;
   transition: background var(--t) var(--ease-out);
 }
-.service-row::before {
+/* Lien navigable — avec flèche */
+.service-row {
+  grid-template-columns: 32px 40px 1fr auto;
+  text-decoration: none;
+}
+/* Informatif — sans flèche */
+.list-row {
+  grid-template-columns: 32px 40px 1fr;
+}
+.service-row::before, .list-row::before {
   content: '';
   position: absolute;
   left: 0; top: 0; bottom: 0;
@@ -708,10 +716,10 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   transition: transform var(--t-md) var(--ease-out);
 }
 @media (hover: hover) and (pointer: fine) {
-  .service-row:hover { background: var(--bg-alt); }
-  .service-row:hover::before { transform: scaleY(1); }
-  .service-row:hover .sr-num { color: var(--text); }
-  .service-row:hover .sr-icon {
+  .service-row:hover, .list-row:hover { background: var(--bg-alt); }
+  .service-row:hover::before, .list-row:hover::before { transform: scaleY(1); }
+  .service-row:hover .sr-num, .list-row:hover .sr-num { color: var(--text); }
+  .service-row:hover .sr-icon, .list-row:hover .sr-icon {
     background: var(--text);
     border-color: var(--text);
     color: var(--text-inv);
@@ -758,6 +766,30 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   margin: 0;
   line-height: 1.3125;
 }
+/* Sous-liste dans les rows (garanties) */
+.sr-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 16px;
+  margin-top: 8px;
+  padding: 0;
+  list-style: none;
+}
+.sr-list li {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.sr-list li::before {
+  content: '';
+  display: inline-block;
+  width: 4px; height: 4px;
+  background: var(--calque);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
 .sr-arrow {
   color: var(--text-muted);
   font-size: 0.8125rem;
@@ -769,9 +801,70 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 .services-cta { text-align: center; margin-top: 48px; }
 
 /* ─────────────────────────────────────────────────────────────
-   SPECIALTIES (signature section)
+   SECTION DARK — dark-background editorial sections
 ───────────────────────────────────────────────────────────── */
-.specialties-section { background: var(--bg-section-alt); }
+.section-dark { background: var(--bg-dark); }
+
+.section-dark .eyebrow { color: rgba(250,249,247,0.45); }
+.section-dark .eyebrow::before { background: rgba(250,249,247,0.45); }
+
+.section-dark .section-head { border-bottom-color: rgba(255,255,255,0.1); }
+.section-dark .section-head h2 { color: var(--text-inv); }
+.section-dark .section-head > p,
+.section-dark .section-head > div > p.section-head-desc {
+  color: rgba(250,249,247,0.55);
+}
+
+.section-dark .services-list .list-row,
+.section-dark .services-list .service-row {
+  border-bottom-color: rgba(255,255,255,0.08);
+  color: var(--text-inv);
+}
+.section-dark .list-row::before,
+.section-dark .service-row::before { background: var(--accent); }
+
+.section-dark .sr-num { color: rgba(250,249,247,0.3); }
+.section-dark .sr-icon {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.13);
+  color: rgba(250,249,247,0.75);
+}
+.section-dark .sr-body h3 { color: var(--text-inv); }
+.section-dark .sr-body p { color: rgba(250,249,247,0.6); }
+.section-dark .sr-list li { color: rgba(250,249,247,0.5); }
+.section-dark .sr-list li::before { background: rgba(250,249,247,0.3); }
+
+.section-dark .specialty-tag {
+  color: rgba(250,249,247,0.65);
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.13);
+}
+.section-dark .sr-arrow {
+  color: rgba(250,249,247,0.4);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .section-dark .service-row:hover,
+  .section-dark .list-row:hover { background: rgba(255,255,255,0.04); }
+  .section-dark .service-row:hover .sr-num,
+  .section-dark .list-row:hover .sr-num { color: rgba(250,249,247,0.75); }
+  .section-dark .service-row:hover .sr-icon,
+  .section-dark .list-row:hover .sr-icon {
+    background: var(--text-inv);
+    border-color: var(--text-inv);
+    color: var(--bg-dark);
+  }
+  .section-dark .service-row:hover .sr-arrow {
+    transform: translateX(5px);
+    color: var(--text-inv);
+    opacity: 1;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SPECIALTIES (signature section — legacy)
+───────────────────────────────────────────────────────────── */
+.specialties-section { background: var(--bg-dark); }
 .specialties-header {
   display: flex;
   justify-content: space-between;
@@ -779,10 +872,10 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   gap: 40px;
   margin-bottom: 64px;
 }
-.specialties-header .eyebrow { color: var(--text); }
-.specialties-header .eyebrow::before { background: var(--text); }
-.specialties-header h2 { color: var(--text); }
-.specialties-header p { color: var(--text); font-weight: 300; font-size: 1rem; max-width: 420px; }
+.specialties-header .eyebrow { color: rgba(250,249,247,0.45); }
+.specialties-header .eyebrow::before { background: rgba(250,249,247,0.45); }
+.specialties-header h2 { color: var(--text-inv); }
+.specialties-header p { color: rgba(250,249,247,0.55); font-weight: 300; font-size: 1rem; max-width: 420px; }
 
 .specialties-grid {
   display: grid;
@@ -1468,8 +1561,8 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .hero-left { padding: 52px 48px; }
   .hero-left h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
   .hero-right { height: 45vw; }
-  .services-section-head { gap: 40px; }
-  .service-row { padding: 24px 8px; margin: 0 -8px; }
+  .section-head { gap: 40px; }
+  .service-row, .list-row { padding: 24px 8px; margin: 0 -8px; }
   .why-grid, .about-grid { grid-template-columns: 1fr; gap: 56px; }
   .why-badge { bottom: -16px; right: -8px; }
   .footer-grid {
@@ -1513,8 +1606,8 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .hamburger { display: flex; }
 
   /* Grids */
-  .services-section-head { grid-template-columns: 1fr; gap: 16px; padding-bottom: 40px; }
-  .service-row { grid-template-columns: 28px 34px 1fr; padding: 20px 0; margin: 0; gap: 0 14px; }
+  .section-head { grid-template-columns: 1fr; gap: 16px; padding-bottom: 40px; }
+  .service-row, .list-row { grid-template-columns: 28px 34px 1fr; padding: 20px 0; margin: 0; gap: 0 14px; }
   .sr-arrow { display: none; }
   .sr-body h3 { font-size: 1rem; }
   .testimonials-grid { grid-template-columns: 1fr; }
