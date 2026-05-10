@@ -144,7 +144,7 @@ button { font-family: inherit; }
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
   --ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
   --t:           0.22s;
-  --t-md:        0.42s;
+  --t-md:        0.24s;
   --t-fast:      0.14s;
 }
 
@@ -672,7 +672,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   font-size: 0.8125rem;
   margin-bottom: 20px;
 }
-.breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color var(--t); }
+.breadcrumb a { color: var(--text-muted); text-decoration: none; transition: color var(--t) var(--ease-out); }
 .breadcrumb a:hover { color: var(--accent); }
 .breadcrumb .sep { color: var(--calque); }
 .breadcrumb .cur { color: var(--accent); font-weight: 600; }
@@ -888,7 +888,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  transition: background var(--t) var(--ease);
+  transition: background var(--t) var(--ease-out);
   position: relative;
   overflow: hidden;
   border: 1px solid var(--border);
@@ -1031,7 +1031,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   gap: 20px;
   padding: 24px 0;
   border-bottom: 1px solid var(--border);
-  transition: background var(--t);
+  transition: background var(--t) var(--ease-out);
 }
 .why-point-icon {
   width: 40px; height: 40px;
@@ -1041,7 +1041,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   color: var(--accent);
   font-size: 1rem;
   flex-shrink: 0;
-  transition: background var(--t), border-color var(--t), color var(--t);
+  transition: background var(--t) var(--ease-out), border-color var(--t) var(--ease-out), color var(--t) var(--ease-out);
 }
 @media (hover: hover) and (pointer: fine) {
   .why-point:hover .why-point-icon {
@@ -1239,9 +1239,11 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   background: var(--bg);
   padding: 36px 28px;
   text-align: center;
-  transition: background var(--t);
+  transition: background var(--t) var(--ease-out);
 }
-.team-card:hover { background: var(--bg-alt); }
+@media (hover: hover) and (pointer: fine) {
+  .team-card:hover { background: var(--bg-alt); }
+}
 .team-avatar {
   width: 80px; height: 80px;
   background: var(--bg-dark);
@@ -1290,7 +1292,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   font-weight: 300;
   color: var(--text);
   text-decoration: none;
-  transition: color var(--t);
+  transition: color var(--t) var(--ease-out);
   line-height: 1.3125;
 }
 .contact-card-text a:hover { color: var(--accent); }
@@ -1364,7 +1366,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   color: var(--text);
   background: var(--bg);
   outline: none;
-  transition: border-color var(--t), box-shadow var(--t);
+  transition: border-color var(--t) var(--ease-out), box-shadow var(--t) var(--ease-out);
 }
 .form-group input:focus,
 .form-group select:focus,
@@ -1433,7 +1435,7 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   color: #fff;
   text-decoration: none;
   font-size: 0.875rem;
-  transition: background var(--t), color var(--t);
+  transition: background var(--t) var(--ease-out), color var(--t) var(--ease-out);
 }
 .footer-social:hover { background: var(--accent); color: #fff; }
 .footer-col h5 {
@@ -1463,7 +1465,7 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   color: #fff;
 }
 .footer-contact-item i { color: #fff; font-size: 0.875rem; margin-top: 2px; width: 14px; flex-shrink: 0; }
-.footer-contact-item a { color: #fff; text-decoration: none; transition: color var(--t); }
+.footer-contact-item a { color: #fff; text-decoration: none; transition: color var(--t) var(--ease-out); }
 .footer-contact-item a:hover { color: rgba(255,255,255,0.70); }
 .footer-bottom {
   border-top: 1px solid var(--border-inv);
@@ -1477,7 +1479,7 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
 }
 .footer-bottom-inner p { color: #fff; font-size: 0.875rem; }
 .footer-legal { display: flex; gap: 24px; }
-.footer-legal a { color: #fff; text-decoration: none; font-size: 0.875rem; transition: color var(--t); }
+.footer-legal a { color: #fff; text-decoration: none; font-size: 0.875rem; transition: color var(--t) var(--ease-out); }
 .footer-legal a:hover { color: rgba(255,255,255,0.70); }
 
 /* ─────────────────────────────────────────────────────────────
@@ -1496,9 +1498,11 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
 .service-page-card {
   background: var(--bg);
   padding: 48px 40px;
-  transition: background var(--t);
+  transition: background var(--t) var(--ease-out);
 }
-.service-page-card:hover { background: var(--bg-alt); }
+@media (hover: hover) and (pointer: fine) {
+  .service-page-card:hover { background: var(--bg-alt); }
+}
 .service-page-card h3 { margin: 20px 0 12px; }
 .service-page-card p { font-size: 1rem; font-weight: 300; color: var(--text); line-height: 1.3125; }
 .service-list {
@@ -1801,9 +1805,11 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
 .process-card {
   background: var(--bg);
   padding: 36px 28px;
-  transition: background var(--t);
+  transition: background var(--t) var(--ease-out);
 }
-.process-card:hover { background: var(--bg-alt); }
+@media (hover: hover) and (pointer: fine) {
+  .process-card:hover { background: var(--bg-alt); }
+}
 .process-card-num {
   font-family: var(--font-mono);
   font-size: 2.5rem;
@@ -1829,9 +1835,11 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
 .reassurance-item {
   background: var(--bg);
   padding: 32px 24px;
-  transition: background var(--t);
+  transition: background var(--t) var(--ease-out);
 }
-.reassurance-item:hover { background: var(--bg-alt); }
+@media (hover: hover) and (pointer: fine) {
+  .reassurance-item:hover { background: var(--bg-alt); }
+}
 .reassurance-icon {
   font-size: 1.375rem;
   color: var(--accent);
@@ -1916,9 +1924,11 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   background: var(--bg);
   padding: 36px 24px;
   text-align: center;
-  transition: background var(--t);
+  transition: background var(--t) var(--ease-out);
 }
-.value-block:hover { background: var(--bg-alt); }
+@media (hover: hover) and (pointer: fine) {
+  .value-block:hover { background: var(--bg-alt); }
+}
 .value-block-icon {
   font-size: 1.75rem;
   color: var(--accent);
@@ -1941,9 +1951,11 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
 .garantie-card {
   background: var(--bg);
   padding: 48px 40px;
-  transition: background var(--t);
+  transition: background var(--t) var(--ease-out);
 }
-.garantie-card:hover { background: var(--bg-alt); }
+@media (hover: hover) and (pointer: fine) {
+  .garantie-card:hover { background: var(--bg-alt); }
+}
 .garantie-card-icon {
   width: 52px; height: 52px;
   background: var(--bg-dark);
@@ -2062,3 +2074,13 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
 .legal-content ul { margin: 12px 0 12px 24px; }
 .legal-content ul li { color: var(--text); font-weight: 300; margin-bottom: 6px; line-height: 1.3125; }
 .legal-content a { color: var(--accent); text-decoration: underline; }
+
+/* ── Prefers reduced motion ─────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
