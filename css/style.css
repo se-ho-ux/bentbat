@@ -186,6 +186,11 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
 
 .section-intro { max-width: 620px; }
 .section-intro p { margin-top: 12px; }
+#services .section-intro p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text);
+}
 .section-intro.center { margin: 0 auto; text-align: center; }
 .section-intro.center .eyebrow { justify-content: center; }
 .section-intro.center .eyebrow::before { display: none; }
