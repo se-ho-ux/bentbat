@@ -230,7 +230,11 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
   position: fixed;
   inset: 0 0 auto;
   z-index: 900;
-  padding: 18px 0;
+  /* Hauteur fixe — le contenu ne déborde jamais dans le hero */
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
   background: transparent;
   border-bottom: 1px solid transparent;
   transition:
@@ -238,29 +242,27 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
     backdrop-filter var(--t-md) var(--ease-out),
     -webkit-backdrop-filter var(--t-md) var(--ease-out),
     border-color    var(--t-md) var(--ease-out),
-    padding         var(--t)    var(--ease-out),
     box-shadow      var(--t-md) var(--ease-out);
 }
 
 /* Inner pages — always pinned dark glass */
 #header.solid {
-  background: rgba(28, 25, 23, 0.86);
+  background: rgba(23,21,20,0.88);
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
-  padding: 13px 0;
   border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 
 /* Home page — light frosted glass on scroll */
 #header.scrolled {
-  background: rgba(250, 250, 249, 0.88);
+  background: rgba(251,249,245,0.90);
   backdrop-filter: blur(20px) saturate(160%);
   -webkit-backdrop-filter: blur(20px) saturate(160%);
-  padding: 13px 0;
-  border-bottom: 1px solid rgba(28, 25, 23, 0.07);
-  box-shadow: 0 2px 32px rgba(28, 25, 23, 0.06);
+  border-bottom: 1px solid rgba(23,21,20,0.07);
+  box-shadow: 0 2px 32px rgba(23,21,20,0.06);
 }
 .nav-wrap {
+  width: 100%;
   max-width: var(--container);
   margin: 0 auto;
   padding: 0 32px;
@@ -275,11 +277,33 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
   text-decoration: none;
   line-height: 1;
   flex-shrink: 0;
+  /* Pill glass — fond translucide sur header transparent */
+  padding: 6px 14px;
+  border-radius: 14px;
+  background: rgba(251,249,245,0.75);
+  border: 1px solid rgba(251,249,245,0.50);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  box-shadow: 0 1px 8px rgba(23,21,20,0.06);
+  transition:
+    background     var(--t-md) var(--ease-out),
+    border-color   var(--t-md) var(--ease-out),
+    box-shadow     var(--t-md) var(--ease-out),
+    backdrop-filter var(--t-md) var(--ease-out);
+}
+/* Pill disparaît quand le header a son propre fond */
+#header.scrolled .nav-logo,
+#header.solid    .nav-logo {
+  background:        transparent;
+  border-color:      transparent;
+  box-shadow:        none;
+  backdrop-filter:   none;
+  -webkit-backdrop-filter: none;
 }
 /* Logo images — light/dark swap */
 .nav-logo .logo-light,
 .nav-logo .logo-dark {
-  height: 28px;
+  height: 34px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -327,6 +351,17 @@ p  { color: var(--text-muted); line-height: 1.75; font-size: 1.0625rem; }
 #header.solid .nav-links a.active { color: #fff; }
 
 .nav-actions { display: flex; align-items: center; gap: 12px; }
+/* CTA nav — forme pill + contenu dans les limites du header */
+.nav-actions .btn-primary {
+  border-radius: 100px;
+  padding: 11px 22px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .nav-actions .btn-primary:hover {
+    transform: none;    /* pas de déplacement vertical dans le header */
+    box-shadow: none;   /* pas d'ombre qui déborde dans le hero */
+  }
+}
 .nav-phone {
   font-size: 0.875rem;
   font-weight: 600;
