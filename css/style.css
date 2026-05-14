@@ -647,6 +647,13 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 }
 .mobile-menu-actions .btn::before,
 .mobile-menu-actions .btn::after { display: none; }
+/* Phone buttons — visible enclosure on dark background */
+.mobile-menu-actions .btn-ghost {
+  border-color: rgba(251,249,245,0.28);
+  background: rgba(251,249,245,0.06);
+  justify-content: flex-start;
+  gap: 12px;
+}
 .mobile-menu-actions .btn-primary {
   background: var(--accent);
   border-color: var(--accent);
@@ -1193,29 +1200,29 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2px;
   background: var(--border);
   border: 1px solid var(--border);
   border-radius: var(--r-md);
   overflow: hidden;
-  margin-top: 56px;
+  margin-top: 40px;
 }
 .testimonial-card {
   background: var(--bg);
-  padding: 40px 32px;
+  padding: 28px 24px;
   transition: background var(--t) var(--ease-out);
 }
 @media (hover: hover) and (pointer: fine) {
   .testimonial-card:hover { background: var(--bg-alt); }
 }
-.t-stars { display: flex; gap: 3px; color: var(--accent); margin-bottom: 20px; font-size: 0.875rem; }
+.t-stars { display: flex; gap: 3px; color: var(--accent); margin-bottom: 12px; font-size: 0.875rem; }
 .t-text {
   font-size: 0.9375rem;
   font-style: italic;
   color: var(--text);
   line-height: 1.3125;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
 }
 .t-author { display: flex; align-items: center; gap: 12px; }
 .t-avatar {
@@ -1895,8 +1902,9 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
 }
 
 @keyframes arrow-hint {
-  0%, 100% { transform: translateX(0);   opacity: 0.85; }
-  50%       { transform: translateX(4px); opacity: 1;    }
+  0%, 55%, 100% { transform: translateX(0);   opacity: 0.85; }
+  25%            { transform: translateX(6px); opacity: 1;    }
+  40%            { transform: translateX(2px); opacity: 0.9;  }
 }
 
 /* ── MOBILE PORTRAIT (max-width: 480px) ─────────────────── */
@@ -1961,7 +1969,7 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   }
   /* Animation nudge — déclenchée par JS (.arrows-ready) au scroll */
   .services-list.arrows-ready > .service-row .sr-arrow {
-    animation: arrow-hint 1.4s var(--ease-out) var(--arrow-delay, 0ms) 2;
+    animation: arrow-hint 2.6s var(--ease-out) var(--arrow-delay, 0ms) infinite;
   }
   .services-list.arrows-ready > .service-row:nth-child(1) .sr-arrow { --arrow-delay: 60ms;  }
   .services-list.arrows-ready > .service-row:nth-child(2) .sr-arrow { --arrow-delay: 150ms; }
