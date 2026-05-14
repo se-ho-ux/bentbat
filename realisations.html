@@ -158,38 +158,52 @@
         <button class="pf-btn" data-filter="amenagement">Aménagement</button>
         <button class="pf-btn" data-filter="nettoyage">Nettoyage</button>
       </div>
-      <div class="gallery-grid" id="portfolioGrid">
-        <div class="gallery-item span-2" data-category="beton-cire">
-          <img src="images/image3.jpeg" alt="Salle de bains béton ciré, Paris, Ben&amp;Bat" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">Salle de bains béton ciré, Paris</span></div>
+      <div class="hp-carousel-wrap rl-carousel">
+        <div class="hp-carousel">
+          <div class="hp-track" id="rlTrack">
+            <div class="gallery-item" data-category="beton-cire">
+              <img src="images/image3.jpeg" alt="Salle de bains béton ciré, Paris, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Salle de bains béton ciré, Paris</span></div>
+            </div>
+            <div class="gallery-item" data-category="cuisine">
+              <img src="images/image0.jpeg" alt="Rénovation cuisine moderne, Paris, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Rénovation cuisine moderne, Paris</span></div>
+            </div>
+            <div class="gallery-item" data-category="beton-cire">
+              <img src="images/image4.jpeg" alt="Salon béton poli, Bruxelles, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Salon béton poli, Bruxelles</span></div>
+            </div>
+            <div class="gallery-item" data-category="cuisine">
+              <img src="images/image7.jpeg" alt="Cuisine avec îlot, Neuilly, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Cuisine avec îlot, Neuilly</span></div>
+            </div>
+            <div class="gallery-item" data-category="amenagement">
+              <img src="images/image2.jpeg" alt="Chambre parquet point de Hongrie, Versailles, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Chambre parquet point de Hongrie, Versailles</span></div>
+            </div>
+            <div class="gallery-item" data-category="salle-de-bains">
+              <img src="images/image9.jpeg" alt="Salle de bains, Lyon, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Salle de bains, Lyon</span></div>
+            </div>
+            <div class="gallery-item" data-category="salle-de-bains">
+              <img src="images/image8.jpeg" alt="WC faïence marbre, Boulogne, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">WC faïence marbre, Boulogne</span></div>
+            </div>
+            <div class="gallery-item" data-category="amenagement">
+              <img src="images/image1.jpeg" alt="Détail robinetterie terrazzo, Paris, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Détail robinetterie terrazzo, Paris</span></div>
+            </div>
+          </div>
         </div>
-        <div class="gallery-item" data-category="cuisine">
-          <img src="images/image0.jpeg" alt="Rénovation cuisine moderne, Paris, Ben&amp;Bat" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">Rénovation cuisine moderne, Paris</span></div>
-        </div>
-        <div class="gallery-item" data-category="beton-cire">
-          <img src="images/image4.jpeg" alt="Salon béton poli, Bruxelles, Ben&amp;Bat" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">Salon béton poli, Bruxelles</span></div>
-        </div>
-        <div class="gallery-item span-2" data-category="cuisine">
-          <img src="images/image7.jpeg" alt="Cuisine avec îlot, Neuilly, Ben&amp;Bat" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">Cuisine avec îlot, Neuilly</span></div>
-        </div>
-        <div class="gallery-item" data-category="amenagement">
-          <img src="images/image2.jpeg" alt="Chambre parquet point de Hongrie, Versailles, Ben&amp;Bat" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">Chambre parquet point de Hongrie, Versailles</span></div>
-        </div>
-        <div class="gallery-item" data-category="salle-de-bains">
-          <img src="images/image9.jpeg" alt="Salle de bains, Lyon, Ben&amp;Bat" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">Salle de bains, Lyon</span></div>
-        </div>
-        <div class="gallery-item" data-category="salle-de-bains">
-          <img src="images/image8.jpeg" alt="WC faïence marbre, Boulogne, Ben&amp;Bat" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">WC faïence marbre, Boulogne</span></div>
-        </div>
-        <div class="gallery-item" data-category="amenagement">
-          <img src="images/image1.jpeg" alt="Détail robinetterie terrazzo, Paris, Ben&amp;Bat" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">Détail robinetterie terrazzo, Paris</span></div>
+        <div class="hp-nav">
+          <div class="hp-progress"><div class="hp-progress-fill" id="rlFill"></div></div>
+          <button class="hp-btn" id="rlPrev" aria-label="Photo précédente" disabled>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="10 3 5 8 10 13"/></svg>
+          </button>
+          <span class="hp-counter" id="rlCounter" aria-live="polite">1 / 8</span>
+          <button class="hp-btn" id="rlNext" aria-label="Photo suivante">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 3 11 8 6 13"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -305,109 +319,132 @@
   <script src="js/main.js"></script>
   <script>
     (function() {
-      // ── Portfolio filter ──────────────────────────────────────
-      const btns  = document.querySelectorAll('.pf-btn');
-      const items = document.querySelectorAll('#portfolioGrid .gallery-item');
+      const btns      = document.querySelectorAll('.pf-btn');
+      const rlTrack   = document.getElementById('rlTrack');
+      const items     = rlTrack ? Array.from(rlTrack.querySelectorAll('.gallery-item')) : [];
+      const rlPrevBtn = document.getElementById('rlPrev');
+      const rlNextBtn = document.getElementById('rlNext');
+      const rlFillEl  = document.getElementById('rlFill');
+      const rlCntEl   = document.getElementById('rlCounter');
+      const RL_GAP    = 12;
+      let rlCurrent   = 0;
 
+      function rlGetVis() { return items.filter(s => !s.classList.contains('rl-hidden')); }
+
+      function rlGoTo(idx) {
+        if (!rlTrack) return;
+        const vis = rlGetVis();
+        if (!vis.length) {
+          rlTrack.style.transform = 'translateX(0)';
+          if (rlPrevBtn) rlPrevBtn.disabled = true;
+          if (rlNextBtn) rlNextBtn.disabled = true;
+          return;
+        }
+        const sw  = vis[0].offsetWidth + RL_GAP;
+        const tw  = vis.length * sw - RL_GAP;
+        const cw  = rlTrack.parentElement.offsetWidth;
+        const max = Math.max(0, Math.ceil((tw - cw) / sw));
+        rlCurrent = Math.max(0, Math.min(idx, max));
+        rlTrack.style.transform = 'translateX(-' + (rlCurrent * sw) + 'px)';
+        if (rlPrevBtn) rlPrevBtn.disabled = rlCurrent === 0;
+        if (rlNextBtn) rlNextBtn.disabled = rlCurrent >= max;
+        if (rlFillEl) {
+          const vf = max === 0 ? 1 : (vis.length - max) / vis.length;
+          rlFillEl.style.width = (max === 0 ? 100 : (vf + (1 - vf) * rlCurrent / max) * 100) + '%';
+        }
+        if (rlCntEl) rlCntEl.textContent = (rlCurrent + 1) + ' / ' + (max + 1);
+      }
+
+      // ── Filters ──────────────────────────────────────────────
       btns.forEach(btn => {
         btn.addEventListener('click', () => {
           btns.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          const filter = btn.dataset.filter;
-          items.forEach(item => {
-            item.style.display = (filter === 'all' || item.dataset.category === filter) ? '' : 'none';
-          });
+          const f = btn.dataset.filter;
+          items.forEach(item => item.classList.toggle('rl-hidden', f !== 'all' && item.dataset.category !== f));
+          rlGoTo(0);
         });
       });
 
-      // ── Lightbox carousel ────────────────────────────────────
+      if (rlPrevBtn) rlPrevBtn.addEventListener('click', () => rlGoTo(rlCurrent - 1));
+      if (rlNextBtn) rlNextBtn.addEventListener('click', () => rlGoTo(rlCurrent + 1));
+
+      let rlTx = 0;
+      if (rlTrack) {
+        rlTrack.addEventListener('touchstart', e => { rlTx = e.changedTouches[0].clientX; }, { passive: true });
+        rlTrack.addEventListener('touchend', e => {
+          const dx = e.changedTouches[0].clientX - rlTx;
+          if (Math.abs(dx) > 48) rlGoTo(dx < 0 ? rlCurrent + 1 : rlCurrent - 1);
+        }, { passive: true });
+      }
+
+      window.addEventListener('resize', () => {
+        const vis = rlGetVis();
+        if (!vis.length) return;
+        const sw  = vis[0].offsetWidth + RL_GAP;
+        const max = Math.max(0, Math.ceil((vis.length * sw - RL_GAP - rlTrack.parentElement.offsetWidth) / sw));
+        rlGoTo(Math.min(rlCurrent, max));
+      }, { passive: true });
+
+      rlGoTo(0);
+
+      // ── Lightbox ─────────────────────────────────────────────
       const overlay   = document.getElementById('lightbox');
       const lbImg     = document.getElementById('lbImg');
       const lbLabel   = document.getElementById('lbLabel');
       const lbCounter = document.getElementById('lbCounter');
-      const lbClose   = document.getElementById('lbClose');
-      const lbPrev    = document.getElementById('lbPrev');
-      const lbNext    = document.getElementById('lbNext');
+      const lbCloseBtn = document.getElementById('lbClose');
+      const lbPrevBtn  = document.getElementById('lbPrev');
+      const lbNextBtn  = document.getElementById('lbNext');
+      let lbIdx = 0;
 
-      let visibleItems = [];
-      let currentIdx   = 0;
+      function lbGetVis() { return items.filter(i => !i.classList.contains('rl-hidden')); }
 
-      function getVisible() {
-        return Array.from(items).filter(item => item.style.display !== 'none');
-      }
-
-      function updateSlide(dir) {
-        const item = visibleItems[currentIdx];
+      function lbUpdate(dir) {
+        const vis = lbGetVis();
+        const item = vis[lbIdx];
         if (!item) return;
         const img = item.querySelector('img');
         lbImg.src = img.src;
         lbImg.alt = img.alt;
         lbLabel.textContent   = (item.querySelector('.gallery-label') || {}).textContent || '';
-        lbCounter.textContent = (currentIdx + 1) + ' / ' + visibleItems.length;
-
+        lbCounter.textContent = (lbIdx + 1) + ' / ' + vis.length;
         lbImg.classList.remove('slide-left', 'slide-right');
         void lbImg.offsetWidth;
         if (dir === 'left')  lbImg.classList.add('slide-left');
         if (dir === 'right') lbImg.classList.add('slide-right');
       }
 
-      function open(idx) {
-        visibleItems = getVisible();
-        currentIdx   = idx;
-        updateSlide('left');
-        overlay.classList.add('is-open');
-        document.body.style.overflow = 'hidden';
-      }
+      function lbOpen(idx) { lbIdx = idx; lbUpdate('left'); overlay.classList.add('is-open'); document.body.style.overflow = 'hidden'; }
+      function lbClose()   { overlay.classList.remove('is-open'); document.body.style.overflow = ''; }
+      function lbNext()    { const vis = lbGetVis(); lbIdx = (lbIdx + 1) % vis.length; lbUpdate('left'); }
+      function lbPrev()    { const vis = lbGetVis(); lbIdx = (lbIdx - 1 + vis.length) % vis.length; lbUpdate('right'); }
 
-      function close() {
-        overlay.classList.remove('is-open');
-        document.body.style.overflow = '';
-      }
-
-      function next() {
-        visibleItems = getVisible();
-        currentIdx   = (currentIdx + 1) % visibleItems.length;
-        updateSlide('left');
-      }
-
-      function prev() {
-        visibleItems = getVisible();
-        currentIdx   = (currentIdx - 1 + visibleItems.length) % visibleItems.length;
-        updateSlide('right');
-      }
-
-      // Open on gallery item click
       items.forEach(item => {
         item.addEventListener('click', () => {
-          const vis = getVisible();
+          const vis = lbGetVis();
           const idx = vis.indexOf(item);
-          if (idx !== -1) open(idx);
+          if (idx !== -1) lbOpen(idx);
         });
       });
 
-      lbClose.addEventListener('click', close);
-      lbNext.addEventListener('click',  next);
-      lbPrev.addEventListener('click',  prev);
+      lbCloseBtn.addEventListener('click', lbClose);
+      lbNextBtn.addEventListener('click',  lbNext);
+      lbPrevBtn.addEventListener('click',  lbPrev);
+      overlay.addEventListener('click', e => { if (e.target === overlay) lbClose(); });
 
-      // Click on backdrop
-      overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
-
-      // Keyboard
       document.addEventListener('keydown', e => {
         if (!overlay.classList.contains('is-open')) return;
-        if (e.key === 'Escape')      close();
-        if (e.key === 'ArrowRight')  next();
-        if (e.key === 'ArrowLeft')   prev();
+        if (e.key === 'Escape')     lbClose();
+        if (e.key === 'ArrowRight') lbNext();
+        if (e.key === 'ArrowLeft')  lbPrev();
       });
 
-      // Touch swipe
-      let touchX = 0;
-      overlay.addEventListener('touchstart', e => {
-        touchX = e.changedTouches[0].clientX;
-      }, { passive: true });
+      let lbTouchX = 0;
+      overlay.addEventListener('touchstart', e => { lbTouchX = e.changedTouches[0].clientX; }, { passive: true });
       overlay.addEventListener('touchend', e => {
-        const dx = e.changedTouches[0].clientX - touchX;
-        if (Math.abs(dx) > 48) { if (dx < 0) next(); else prev(); }
+        const dx = e.changedTouches[0].clientX - lbTouchX;
+        if (Math.abs(dx) > 48) { if (dx < 0) lbNext(); else lbPrev(); }
       }, { passive: true });
     })();
   </script>

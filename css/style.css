@@ -152,8 +152,8 @@ button { font-family: inherit; }
    LAYOUT UTILITIES
 ───────────────────────────────────────────────────────────── */
 .container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
-.section    { padding: 112px 0; }
-.section-sm { padding: 72px 0; }
+.section    { padding: 80px 0; }
+.section-sm { padding: 52px 0; }
 .text-center { text-align: center; }
 
 /* ─────────────────────────────────────────────────────────────
@@ -192,7 +192,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   justify-content: space-between;
   align-items: flex-end;
   gap: 32px;
-  margin-bottom: 56px;
+  margin-bottom: 40px;
 }
 .portfolio-header .btn { flex-shrink: 0; }
 /* ── Header éditorial deux colonnes — réutilisable partout ── */
@@ -201,7 +201,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: end;
-  padding-bottom: 56px;
+  padding-bottom: 40px;
   border-bottom: 1px solid var(--border);
 }
 .section-head h2 {
@@ -762,7 +762,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 ───────────────────────────────────────────────────────────── */
 .page-hero {
   background: var(--bg-section-alt);
-  padding: 160px 0 80px;
+  padding: 130px 0 64px;
   position: relative;
   overflow: hidden;
 }
@@ -1317,6 +1317,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   gap: 12px;
   transition: transform 0.52s var(--ease-spring);
   will-change: transform;
+  position: relative;
 }
 .hp-slide {
   flex: 0 0 calc((100% - 24px) / 2.5);
@@ -1413,6 +1414,39 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   }
   #hpNext    { order: 3; }
   .hp-btn    { width: 48px; height: 48px; }
+}
+
+/* ─────────────────────────────────────────────────────────────
+   REALISATIONS CAROUSEL
+───────────────────────────────────────────────────────────── */
+.rl-hidden { display: none !important; }
+.rl-carousel { margin-top: 40px; }
+.rl-carousel .hp-track .gallery-item {
+  flex: 0 0 calc((100% - 24px) / 3);
+  grid-column: unset;
+}
+.rl-carousel .hp-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+@media (max-width: 900px) {
+  .rl-carousel .hp-track .gallery-item { flex: 0 0 calc((100% - 12px) / 2); }
+}
+@media (max-width: 600px) {
+  .rl-carousel .hp-track .gallery-item { flex: 0 0 calc(100% - 40px); }
+  .rl-carousel .hp-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 20px;
+    row-gap: 0;
+    margin-top: 20px;
+  }
+  .rl-carousel .hp-nav .hp-progress { order: 10; flex: 0 0 100%; height: 2px; margin-top: 16px; }
+  .rl-carousel #rlPrev { order: 1; }
+  .rl-carousel .hp-counter { order: 2; }
+  .rl-carousel #rlNext { order: 3; }
 }
 
 /* ─────────────────────────────────────────────────────────────
@@ -1634,12 +1668,12 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 /* ─────────────────────────────────────────────────────────────
    FOOTER
 ───────────────────────────────────────────────────────────── */
-footer { background: var(--bg-dark); padding: 96px 0 0; }
+footer { background: var(--bg-dark); padding: 72px 0 0; }
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.2fr;
   gap: 56px;
-  padding-bottom: 72px;
+  padding-bottom: 56px;
 }
 .footer-brand p {
   color: #fff;
