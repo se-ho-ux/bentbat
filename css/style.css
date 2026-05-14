@@ -2010,8 +2010,9 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .nav-links, .nav-actions { display: none; }
   .hamburger { display: flex; }
 
-  /* Why badge hidden */
+  /* Why badge + image hidden on mobile */
   .why-badge { display: none; }
+  .why-image { display: none; }
 
   /* Footer — 2 colonnes sur mobile */
   footer { padding-top: 48px; }
