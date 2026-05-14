@@ -25,8 +25,16 @@
   const hamburger   = document.getElementById('hamburger');
   const mobileMenu  = document.getElementById('mobileMenu');
   const mobileClose = document.getElementById('mobileClose');
-  const stickyCta   = document.getElementById('stickyCta');
-  let   heroPassed  = false;
+  const stickyCta      = document.getElementById('stickyCta');
+  let   heroPassed     = false;
+  let   ctaSecVisible  = false;
+
+  const refreshStickyCta = () => {
+    if (!stickyCta) return;
+    const show = heroPassed && !ctaSecVisible && !mobileMenu?.classList.contains('open');
+    stickyCta.classList.toggle('is-visible', show);
+    stickyCta.setAttribute('aria-hidden', String(!show));
+  };
 
   if (mobileMenu) mobileMenu.setAttribute('aria-hidden', 'true');
 
@@ -47,8 +55,7 @@
     document.body.style.overflow = 'hidden';
     hamburger?.setAttribute('aria-expanded', 'true');
     // Hide sticky CTA while menu is open
-    stickyCta?.classList.remove('is-visible');
-    if (stickyCta) stickyCta.setAttribute('aria-hidden', 'true');
+    refreshStickyCta();
     setTimeout(() => mobileClose?.focus(), 50);
   };
 
@@ -57,11 +64,8 @@
     mobileMenu?.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
     hamburger?.setAttribute('aria-expanded', 'false');
-    // Restore sticky CTA if hero was already scrolled past
-    if (heroPassed && stickyCta) {
-      stickyCta.classList.add('is-visible');
-      stickyCta.setAttribute('aria-hidden', 'false');
-    }
+    // Restore sticky CTA if conditions still met
+    refreshStickyCta();
     hamburger?.focus();
   };
 
@@ -111,15 +115,25 @@
   // ── Sticky mobile CTA — appears when hero CTA button leaves viewport ─────
   const heroDevis = document.getElementById('heroDevis');
   if (stickyCta && heroDevis) {
-    const ctaObs = new IntersectionObserver(entries => {
+    const heroObs = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         heroPassed = !entry.isIntersecting;
-        const show = heroPassed && !mobileMenu?.classList.contains('open');
-        stickyCta.classList.toggle('is-visible', show);
-        stickyCta.setAttribute('aria-hidden', String(!show));
+        refreshStickyCta();
       });
     }, { threshold: 0 });
-    ctaObs.observe(heroDevis);
+    heroObs.observe(heroDevis);
+  }
+
+  // ── Hide sticky CTA when the page CTA section ("Votre projet...") is visible ─
+  const ctaSection = document.getElementById('ctaSection');
+  if (stickyCta && ctaSection) {
+    const ctaSecObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        ctaSecVisible = entry.isIntersecting;
+        refreshStickyCta();
+      });
+    }, { threshold: 0 });
+    ctaSecObs.observe(ctaSection);
   }
 
   // ── Stats counter — respects prefers-reduced-motion ───────────────────────
