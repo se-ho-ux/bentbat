@@ -25,8 +25,19 @@
   const hamburger   = document.getElementById('hamburger');
   const mobileMenu  = document.getElementById('mobileMenu');
   const mobileClose = document.getElementById('mobileClose');
+  const stickyCta   = document.getElementById('stickyCta');
+  let   heroPassed  = false;
 
   if (mobileMenu) mobileMenu.setAttribute('aria-hidden', 'true');
+
+  // Mark active page link
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  mobileMenu?.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href').split('#')[0];
+    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+      a.classList.add('active');
+    }
+  });
 
   const FOCUSABLE = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
@@ -35,7 +46,9 @@
     mobileMenu?.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
     hamburger?.setAttribute('aria-expanded', 'true');
-    // Move focus to close button
+    // Hide sticky CTA while menu is open
+    stickyCta?.classList.remove('is-visible');
+    if (stickyCta) stickyCta.setAttribute('aria-hidden', 'true');
     setTimeout(() => mobileClose?.focus(), 50);
   };
 
@@ -44,7 +57,11 @@
     mobileMenu?.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
     hamburger?.setAttribute('aria-expanded', 'false');
-    // Return focus to trigger
+    // Restore sticky CTA if hero was already scrolled past
+    if (heroPassed && stickyCta) {
+      stickyCta.classList.add('is-visible');
+      stickyCta.setAttribute('aria-hidden', 'false');
+    }
     hamburger?.focus();
   };
 
@@ -90,6 +107,20 @@
     });
   });
 
+
+  // ── Sticky mobile CTA — appears after hero scrolls out ───────────────────
+  const heroSection = document.getElementById('main-content');
+  if (stickyCta && heroSection) {
+    const ctaObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        heroPassed = !entry.isIntersecting;
+        const show = heroPassed && !mobileMenu?.classList.contains('open');
+        stickyCta.classList.toggle('is-visible', show);
+        stickyCta.setAttribute('aria-hidden', String(!show));
+      });
+    }, { threshold: 0 });
+    ctaObs.observe(heroSection);
+  }
 
   // ── Stats counter — respects prefers-reduced-motion ───────────────────────
   const animateCount = el => {
