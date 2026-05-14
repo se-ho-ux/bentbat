@@ -2022,8 +2022,8 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .stats-grid .stat-card:nth-child(4) { border-right: none; }
   .stats-grid .stat-card:nth-child(-n+2) { border-bottom: none; }
   .stat-card { padding: 14px 8px; text-align: center; }
-  .stat-label { font-size: 0.5625rem; line-height: 1.2;
-    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .stat-label { font-size: 0.5rem; line-height: 1.2; font-weight: 400;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
   /* Nav */
   .nav-links, .nav-actions { display: none; }
@@ -2093,9 +2093,7 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   /* Why section points */
   .why-point { gap: 14px; }
 
-  /* Stats */
-  .stat-number { font-size: 2.25rem; }
-  .stat-label { font-size: 0.8125rem; }
+  /* Stats — sizes handled in KPI single-row block above */
 
   /* Trust bar — plus compact */
   .trust-bar-inner { gap: 12px 20px; }
@@ -2549,7 +2547,7 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .service-page-card { padding: 20px 16px; }
   .hero-left { padding: 28px 16px; }
   .page-hero h1 { font-size: 1.5rem; }
-  .stat-number { font-size: 2rem; }
+  .stat-number { font-size: 1.25rem; }
   .cta-inner h2 { font-size: 1.5rem; }
 }
 
