@@ -108,18 +108,18 @@
   });
 
 
-  // ── Sticky mobile CTA — appears when savoir-faire section reaches view ───
-  const savoirFaire = document.getElementById('services');
-  if (stickyCta && savoirFaire) {
+  // ── Sticky mobile CTA — appears when hero CTA button leaves viewport ─────
+  const heroDevis = document.getElementById('heroDevis');
+  if (stickyCta && heroDevis) {
     const ctaObs = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        heroPassed = entry.isIntersecting || entry.boundingClientRect.top < 0;
+        heroPassed = !entry.isIntersecting;
         const show = heroPassed && !mobileMenu?.classList.contains('open');
         stickyCta.classList.toggle('is-visible', show);
         stickyCta.setAttribute('aria-hidden', String(!show));
       });
     }, { threshold: 0 });
-    ctaObs.observe(savoirFaire);
+    ctaObs.observe(heroDevis);
   }
 
   // ── Stats counter — respects prefers-reduced-motion ───────────────────────
