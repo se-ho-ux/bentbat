@@ -2013,9 +2013,12 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   /* Why badge hidden */
   .why-badge { display: none; }
 
-  /* Footer — single column */
-  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-  .footer-brand { grid-column: auto; }
+  /* Footer — 2 colonnes sur mobile */
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px 20px; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-col:last-child { grid-column: 1 / -1; }
+  .footer-col h5 { font-size: 0.6875rem; }
+  .footer-links a, .footer-contact-item { font-size: 0.8125rem; }
   .footer-bottom-inner { flex-direction: column; text-align: center; }
 
   /* Trust bar */
