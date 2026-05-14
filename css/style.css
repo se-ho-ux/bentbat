@@ -1929,10 +1929,33 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
     border-bottom: 1px solid var(--border);
   }
   .services-list .sr-num  { display: none; }
-  .services-list .sr-arrow { display: none; }
   .services-list .sr-body p { display: none; }
   .services-list .sr-icon { width: 32px; height: 32px; font-size: 0.8125rem; }
   .services-list .sr-body h3 { font-size: 0.875rem; letter-spacing: -0.01em; }
+
+  /* Flèche repositionnée en haut à droite — indique que la carte est un lien */
+  .services-list > .service-row .sr-arrow {
+    display: flex;
+    position: absolute;
+    top: 10px; right: 10px;
+    font-size: 0.5rem;
+    color: var(--accent);
+    opacity: 0.85;
+    transform: none;
+    width: auto; height: auto;
+  }
+  /* Feedback tactile */
+  .services-list > .service-row:active {
+    background: var(--bg-alt);
+  }
+  .services-list > .service-row:active .sr-icon {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .section-dark .services-list > .service-row:active {
+    background: rgba(255,255,255,0.07);
+  }
   /* Dark section border override */
   .section-dark .services-list {
     border-color: var(--border-inv);
