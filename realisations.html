@@ -267,11 +267,39 @@
     </div>
   </footer>
 
+  <!-- ══════════ LIGHTBOX CAROUSEL ══════════ -->
+  <div class="lb-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo agrandie">
+    <button class="lb-close" id="lbClose" aria-label="Fermer">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+        <line x1="2" y1="2" x2="14" y2="14"/><line x1="14" y1="2" x2="2" y2="14"/>
+      </svg>
+    </button>
+    <div class="lb-body">
+      <button class="lb-prev" id="lbPrev" aria-label="Photo précédente">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="11 3 5 9 11 15"/>
+        </svg>
+      </button>
+      <div class="lb-stage">
+        <img class="lb-img" id="lbImg" src="" alt="">
+      </div>
+      <button class="lb-next" id="lbNext" aria-label="Photo suivante">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="7 3 13 9 7 15"/>
+        </svg>
+      </button>
+    </div>
+    <div class="lb-meta">
+      <span class="lb-label" id="lbLabel"></span>
+      <span class="lb-counter" id="lbCounter"></span>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
   <script>
-    // Portfolio filter
     (function() {
-      const btns = document.querySelectorAll('.pf-btn');
+      // ── Portfolio filter ──────────────────────────────────────
+      const btns  = document.querySelectorAll('.pf-btn');
       const items = document.querySelectorAll('#portfolioGrid .gallery-item');
 
       btns.forEach(btn => {
@@ -280,14 +308,100 @@
           btn.classList.add('active');
           const filter = btn.dataset.filter;
           items.forEach(item => {
-            if (filter === 'all' || item.dataset.category === filter) {
-              item.style.display = '';
-            } else {
-              item.style.display = 'none';
-            }
+            item.style.display = (filter === 'all' || item.dataset.category === filter) ? '' : 'none';
           });
         });
       });
+
+      // ── Lightbox carousel ────────────────────────────────────
+      const overlay   = document.getElementById('lightbox');
+      const lbImg     = document.getElementById('lbImg');
+      const lbLabel   = document.getElementById('lbLabel');
+      const lbCounter = document.getElementById('lbCounter');
+      const lbClose   = document.getElementById('lbClose');
+      const lbPrev    = document.getElementById('lbPrev');
+      const lbNext    = document.getElementById('lbNext');
+
+      let visibleItems = [];
+      let currentIdx   = 0;
+
+      function getVisible() {
+        return Array.from(items).filter(item => item.style.display !== 'none');
+      }
+
+      function updateSlide(dir) {
+        const item = visibleItems[currentIdx];
+        if (!item) return;
+        const img = item.querySelector('img');
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lbLabel.textContent   = (item.querySelector('.gallery-label') || {}).textContent || '';
+        lbCounter.textContent = (currentIdx + 1) + ' / ' + visibleItems.length;
+
+        lbImg.classList.remove('slide-left', 'slide-right');
+        void lbImg.offsetWidth;
+        if (dir === 'left')  lbImg.classList.add('slide-left');
+        if (dir === 'right') lbImg.classList.add('slide-right');
+      }
+
+      function open(idx) {
+        visibleItems = getVisible();
+        currentIdx   = idx;
+        updateSlide('left');
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        overlay.classList.remove('is-open');
+        document.body.style.overflow = '';
+      }
+
+      function next() {
+        visibleItems = getVisible();
+        currentIdx   = (currentIdx + 1) % visibleItems.length;
+        updateSlide('left');
+      }
+
+      function prev() {
+        visibleItems = getVisible();
+        currentIdx   = (currentIdx - 1 + visibleItems.length) % visibleItems.length;
+        updateSlide('right');
+      }
+
+      // Open on gallery item click
+      items.forEach(item => {
+        item.addEventListener('click', () => {
+          const vis = getVisible();
+          const idx = vis.indexOf(item);
+          if (idx !== -1) open(idx);
+        });
+      });
+
+      lbClose.addEventListener('click', close);
+      lbNext.addEventListener('click',  next);
+      lbPrev.addEventListener('click',  prev);
+
+      // Click on backdrop
+      overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+
+      // Keyboard
+      document.addEventListener('keydown', e => {
+        if (!overlay.classList.contains('is-open')) return;
+        if (e.key === 'Escape')      close();
+        if (e.key === 'ArrowRight')  next();
+        if (e.key === 'ArrowLeft')   prev();
+      });
+
+      // Touch swipe
+      let touchX = 0;
+      overlay.addEventListener('touchstart', e => {
+        touchX = e.changedTouches[0].clientX;
+      }, { passive: true });
+      overlay.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - touchX;
+        if (Math.abs(dx) > 48) { if (dx < 0) next(); else prev(); }
+      }, { passive: true });
     })();
   </script>
 </body>
