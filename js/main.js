@@ -108,18 +108,18 @@
   });
 
 
-  // ── Sticky mobile CTA — appears after hero scrolls out ───────────────────
-  const heroSection = document.getElementById('main-content');
-  if (stickyCta && heroSection) {
+  // ── Sticky mobile CTA — appears when savoir-faire section reaches view ───
+  const savoirFaire = document.getElementById('services');
+  if (stickyCta && savoirFaire) {
     const ctaObs = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        heroPassed = !entry.isIntersecting;
+        heroPassed = entry.isIntersecting || entry.boundingClientRect.top < 0;
         const show = heroPassed && !mobileMenu?.classList.contains('open');
         stickyCta.classList.toggle('is-visible', show);
         stickyCta.setAttribute('aria-hidden', String(!show));
       });
     }, { threshold: 0 });
-    ctaObs.observe(heroSection);
+    ctaObs.observe(savoirFaire);
   }
 
   // ── Stats counter — respects prefers-reduced-motion ───────────────────────

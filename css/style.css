@@ -2273,7 +2273,7 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
     pointer-events: auto;
   }
   .sticky-cta .btn {
-    background: var(--bg-dark);
+    background: var(--accent);
     border-radius: 100px;
     padding: 10px 20px;
     min-height: 44px;
@@ -2282,10 +2282,10 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
     font-weight: 700;
     color: #fff;
     letter-spacing: -0.01em;
-    box-shadow: 0 4px 20px rgba(23,21,20,0.28);
+    box-shadow: 0 4px 20px rgba(184,92,56,0.35);
     border-color: transparent;
   }
-  .sticky-cta .btn:hover { background: var(--accent); border-color: transparent; }
+  .sticky-cta .btn:hover { background: var(--accent-h); border-color: transparent; }
   .sticky-cta .btn .fa-arrow-right { font-size: 0.75rem; }
 }
 
