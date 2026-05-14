@@ -1894,8 +1894,8 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
 /* ── MOBILE PORTRAIT (max-width: 480px) ─────────────────── */
 @media (max-width: 480px) {
   .container  { padding: 0 16px; }
-  .section    { padding: 56px 0; }
-  .section-sm { padding: 40px 0; }
+  .section    { padding: 48px 0; }
+  .section-sm { padding: 32px 0; }
 
   /* Typography */
   h1 { font-size: 2rem; }
@@ -2004,7 +2004,7 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .stats-grid .stat-card:nth-child(2) { border-right: none; }
   .stats-grid .stat-card:nth-child(4) { border-right: none; }
   .stats-grid .stat-card:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
-  .stat-card { padding: 32px 20px; }
+  .stat-card { padding: 24px 16px; }
 
   /* Nav */
   .nav-links, .nav-actions { display: none; }
@@ -2014,8 +2014,11 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .why-badge { display: none; }
 
   /* Footer — 2 colonnes sur mobile */
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px 20px; }
+  footer { padding-top: 48px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px 20px; padding-bottom: 40px; }
   .footer-brand { grid-column: 1 / -1; }
+  .footer-brand .nav-logo img { height: 42px !important; }
+  .footer-brand p { margin: 12px 0 18px; font-size: 0.875rem; }
   .footer-col:last-child { grid-column: 1 / -1; }
   .footer-col h5 { font-size: 0.6875rem; }
   .footer-links a, .footer-contact-item { font-size: 0.8125rem; }
@@ -2045,7 +2048,7 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
 
   /* Section head — titre plus compact sur petits écrans */
   .section-head h2 { font-size: 1.5rem; }
-  .section-head { padding-bottom: 24px; gap: 10px; }
+  .section-head { padding-bottom: 18px; gap: 8px; }
 
   /* Rows plus compacts */
   .service-row, .list-row { grid-template-columns: 20px 28px 1fr; padding: 14px 0; gap: 0 10px; }
@@ -2053,7 +2056,8 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .sr-num { width: 20px; font-size: 0.625rem; }
   .sr-body p { font-size: 0.9375rem; }
   .specialty-tag { font-size: 0.5625rem; padding: 3px 8px; gap: 4px; }
-  .services-cta { margin-top: 28px; }
+  .services-cta { margin-top: 20px; }
+  .process-grid { margin-top: 32px; }
 
   /* Service page cards */
   .service-page-card { padding: 24px 18px; }
