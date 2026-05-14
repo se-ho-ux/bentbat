@@ -1886,6 +1886,11 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .section-intro { max-width: 100%; }
 }
 
+@keyframes arrow-hint {
+  0%, 100% { transform: translateX(0);   opacity: 0.85; }
+  50%       { transform: translateX(4px); opacity: 1;    }
+}
+
 /* ── MOBILE PORTRAIT (max-width: 480px) ─────────────────── */
 @media (max-width: 480px) {
   .container  { padding: 0 16px; }
@@ -1933,7 +1938,7 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
   .services-list .sr-icon { width: 32px; height: 32px; font-size: 0.8125rem; }
   .services-list .sr-body h3 { font-size: 0.875rem; letter-spacing: -0.01em; }
 
-  /* Flèche repositionnée en haut à droite — indique que la carte est un lien */
+  /* Flèche repositionnée en haut à droite */
   .services-list > .service-row .sr-arrow {
     display: flex;
     position: absolute;
@@ -1941,10 +1946,26 @@ footer { background: var(--bg-dark); padding: 96px 0 0; }
     font-size: 0.5rem;
     color: var(--accent);
     opacity: 0.85;
-    transform: none;
     width: auto; height: auto;
+    transform: translateX(0);
+    transition: transform 0.14s var(--ease-out), opacity 0.14s;
   }
-  /* Feedback tactile */
+  /* Animation nudge — déclenchée par JS (.arrows-ready) au scroll */
+  .services-list.arrows-ready > .service-row .sr-arrow {
+    animation: arrow-hint 1.4s var(--ease-out) var(--arrow-delay, 0ms) 2;
+  }
+  .services-list.arrows-ready > .service-row:nth-child(1) .sr-arrow { --arrow-delay: 60ms;  }
+  .services-list.arrows-ready > .service-row:nth-child(2) .sr-arrow { --arrow-delay: 150ms; }
+  .services-list.arrows-ready > .service-row:nth-child(3) .sr-arrow { --arrow-delay: 240ms; }
+  .services-list.arrows-ready > .service-row:nth-child(4) .sr-arrow { --arrow-delay: 330ms; }
+  .services-list.arrows-ready > .service-row:nth-child(5) .sr-arrow { --arrow-delay: 420ms; }
+  .services-list.arrows-ready > .service-row:nth-child(6) .sr-arrow { --arrow-delay: 510ms; }
+  /* Feedback tactile : flèche avance au press */
+  .services-list > .service-row:active .sr-arrow {
+    transform: translateX(5px);
+    opacity: 1;
+    animation: none;
+  }
   .services-list > .service-row:active {
     background: var(--bg-alt);
   }

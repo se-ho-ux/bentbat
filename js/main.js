@@ -251,4 +251,17 @@
       });
     });
   }
+
+  // ── Arrow hint animation — triggered when savoir-faire list enters viewport ─
+  document.querySelectorAll('.services-list').forEach(list => {
+    if (!list.querySelector('.sr-arrow')) return;
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('arrows-ready');
+        obs.unobserve(entry.target);
+      });
+    }, { threshold: 0.15 });
+    obs.observe(list);
+  });
 })();
