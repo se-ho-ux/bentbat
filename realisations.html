@@ -386,6 +386,19 @@
         rlGoTo(Math.min(rlCurrent, max));
       }, { passive: true });
 
+      // ── Horizontal scroll (trackpad / mouse wheel) ───────────
+      const rlWrap = rlTrack ? rlTrack.closest('.hp-carousel-wrap') : null;
+      let rlAccum = 0;
+      if (rlWrap) {
+        rlWrap.addEventListener('wheel', e => {
+          if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+          e.preventDefault();
+          rlAccum += e.deltaX;
+          if (rlAccum > 50)  { rlGoTo(rlCurrent + 1); rlAccum = 0; }
+          if (rlAccum < -50) { rlGoTo(rlCurrent - 1); rlAccum = 0; }
+        }, { passive: false });
+      }
+
       rlGoTo(0);
 
       // ── Lightbox ─────────────────────────────────────────────

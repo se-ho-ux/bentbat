@@ -668,23 +668,16 @@
 
       window.addEventListener('resize', function() { goTo(Math.min(current, maxIdx())); }, { passive: true });
 
-      // ── Mouse-driven scroll (desktop hover) ──────────────────
+      // ── Horizontal scroll (trackpad / mouse wheel) ───────────
       var wrap = track.parentElement.parentElement;
-      wrap.addEventListener('mousemove', function(e) {
-        if (window.matchMedia('(hover: none)').matches) return;
-        var rect = wrap.getBoundingClientRect();
-        var frac = Math.max(0, Math.min((e.clientX - rect.left) / rect.width, 1));
-        var maxScroll = maxIdx() * slideW();
-        if (maxScroll <= 0) return;
-        track.style.transition = 'none';
-        track.style.transform  = 'translateX(-' + (frac * maxScroll) + 'px)';
-      });
-      wrap.addEventListener('mouseleave', function() {
-        track.style.transition = '';
-        var m = track.style.transform.match(/-?[\d.]+/);
-        var off = m ? -parseFloat(m[0]) : 0;
-        goTo(Math.round(off / slideW()));
-      });
+      var hpAccum = 0;
+      wrap.addEventListener('wheel', function(e) {
+        if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+        e.preventDefault();
+        hpAccum += e.deltaX;
+        if (hpAccum > 50)  { goTo(current + 1); hpAccum = 0; }
+        if (hpAccum < -50) { goTo(current - 1); hpAccum = 0; }
+      }, { passive: false });
 
       goTo(0);
     })();
