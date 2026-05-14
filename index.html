@@ -315,26 +315,59 @@
         </div>
         <a href="realisations.html" class="btn btn-ghost-dark" style="flex-shrink:0;">Voir tout le portfolio <i class="fas fa-arrow-right"></i></a>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-item span-2">
-          <img src="images/image0.jpeg" alt="Rénovation cuisine, Ben&amp;Bat" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">Cuisine moderne, Paris</span></div>
+      <div class="hp-carousel-wrap">
+        <div class="hp-carousel">
+          <div class="hp-track" id="hpTrack">
+            <div class="hp-slide">
+              <img src="images/image0.jpeg" alt="Rénovation cuisine moderne, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Cuisine moderne, Paris</span></div>
+            </div>
+            <div class="hp-slide">
+              <img src="images/image3.jpeg" alt="Béton ciré salle de bains, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Béton ciré, Salle de bains</span></div>
+            </div>
+            <div class="hp-slide">
+              <img src="images/image4.jpeg" alt="Salon béton poli, Bruxelles, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Salon béton poli, Bruxelles</span></div>
+            </div>
+            <div class="hp-slide">
+              <img src="images/image7.jpeg" alt="Cuisine avec îlot, Neuilly, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Cuisine avec îlot, Neuilly</span></div>
+            </div>
+            <div class="hp-slide">
+              <img src="images/image2.jpeg" alt="Parquet point de Hongrie, Versailles, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Parquet point de Hongrie, Versailles</span></div>
+            </div>
+            <div class="hp-slide">
+              <img src="images/image9.jpeg" alt="Salle de bains, Lyon, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Salle de bains, Lyon</span></div>
+            </div>
+            <div class="hp-slide">
+              <img src="images/image8.jpeg" alt="Faïence marbre, Boulogne, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Faïence marbre, Boulogne</span></div>
+            </div>
+            <div class="hp-slide">
+              <img src="images/image1.jpeg" alt="Terrazzo sur mesure, Paris, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Terrazzo sur mesure, Paris</span></div>
+            </div>
+            <div class="hp-slide">
+              <img src="images/image5.jpeg" alt="Réalisation intérieure, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Aménagement intérieur</span></div>
+            </div>
+            <div class="hp-slide">
+              <img src="images/image6.jpeg" alt="Réalisation intérieure, Ben&amp;Bat" loading="lazy">
+              <div class="gallery-overlay"><span class="gallery-label">Rénovation sur mesure</span></div>
+            </div>
+          </div>
         </div>
-        <div class="gallery-item">
-          <img src="images/image3.jpeg" alt="Béton ciré salle de bains, Ben&amp;Bat" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">Béton ciré, Salle de bains</span></div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/image2.jpeg" alt="Parquet point de Hongrie, Ben&amp;Bat" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">Parquet &amp; moulures</span></div>
-        </div>
-        <div class="gallery-item">
-          <img src="images/image9.jpeg" alt="Salle de bains, Ben&amp;Bat" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">Salle de bains</span></div>
-        </div>
-        <div class="gallery-item span-2">
-          <img src="images/image7.jpeg" alt="Cuisine avec îlot, Ben&amp;Bat" loading="lazy">
-          <div class="gallery-overlay"><span class="gallery-label">Cuisine avec îlot, Bruxelles</span></div>
+        <div class="hp-nav">
+          <div class="hp-progress"><div class="hp-progress-fill" id="hpFill"></div></div>
+          <button class="hp-btn" id="hpPrev" aria-label="Photo précédente" disabled>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="10 3 5 8 10 13"/></svg>
+          </button>
+          <button class="hp-btn" id="hpNext" aria-label="Photo suivante">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 3 11 8 6 13"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -592,5 +625,54 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    (function() {
+      const track   = document.getElementById('hpTrack');
+      if (!track) return;
+      const prevBtn = document.getElementById('hpPrev');
+      const nextBtn = document.getElementById('hpNext');
+      const fill    = document.getElementById('hpFill');
+      const slides  = Array.from(track.querySelectorAll('.hp-slide'));
+      const total   = slides.length;
+      const GAP     = 12;
+      let current   = 0;
+
+      function slideW() { return slides[0].offsetWidth + GAP; }
+
+      function maxIdx() {
+        const tw = total * slideW() - GAP;
+        const cw = track.parentElement.offsetWidth;
+        return Math.max(0, Math.ceil((tw - cw) / slideW()));
+      }
+
+      function goTo(idx) {
+        const max = maxIdx();
+        current = Math.max(0, Math.min(idx, max));
+        track.style.transform = 'translateX(-' + (current * slideW()) + 'px)';
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current >= max;
+        if (max === 0) {
+          fill.style.width = '100%';
+        } else {
+          var visibleFrac = (total - max) / total;
+          fill.style.width = (visibleFrac + (1 - visibleFrac) * (current / max)) * 100 + '%';
+        }
+      }
+
+      prevBtn.addEventListener('click', function() { goTo(current - 1); });
+      nextBtn.addEventListener('click', function() { goTo(current + 1); });
+
+      var tx = 0;
+      track.addEventListener('touchstart', function(e) { tx = e.changedTouches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend',   function(e) {
+        var dx = e.changedTouches[0].clientX - tx;
+        if (Math.abs(dx) > 48) { if (dx < 0) goTo(current + 1); else goTo(current - 1); }
+      }, { passive: true });
+
+      window.addEventListener('resize', function() { goTo(Math.min(current, maxIdx())); }, { passive: true });
+
+      goTo(0);
+    })();
+  </script>
 </body>
 </html>

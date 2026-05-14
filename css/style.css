@@ -1190,6 +1190,81 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 }
 
 /* ─────────────────────────────────────────────────────────────
+   HOME PORTFOLIO CAROUSEL
+───────────────────────────────────────────────────────────── */
+.hp-carousel-wrap { position: relative; }
+.hp-carousel { overflow: hidden; }
+.hp-track {
+  display: flex;
+  gap: 12px;
+  transition: transform 0.52s var(--ease-spring);
+  will-change: transform;
+}
+.hp-slide {
+  flex: 0 0 calc((100% - 24px) / 2.5);
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r-sm);
+  aspect-ratio: 4/3;
+  background: var(--bg-alt);
+}
+.hp-slide img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease-out);
+  display: block;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hp-slide:hover img { transform: scale(1.05); }
+  .hp-slide:hover .gallery-overlay { opacity: 1; }
+}
+.hp-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+.hp-progress {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  border-radius: 1px;
+  overflow: hidden;
+}
+.hp-progress-fill {
+  height: 100%;
+  background: var(--text);
+  border-radius: 1px;
+  transition: width 0.42s var(--ease-out);
+  width: 0%;
+}
+.hp-btn {
+  flex-shrink: 0;
+  width: 46px;
+  height: 46px;
+  background: none;
+  border: 1.5px solid var(--border);
+  border-radius: 50%;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.18s var(--ease-out), background 0.18s var(--ease-out), color 0.18s var(--ease-out), transform 0.12s var(--ease-out), opacity 0.18s;
+}
+@media (hover: hover) and (pointer: fine) {
+  .hp-btn:not(:disabled):hover { border-color: var(--text); background: var(--bg-dark); color: #fff; }
+}
+.hp-btn:not(:disabled):active { transform: scale(0.91); }
+.hp-btn:disabled { opacity: 0.28; cursor: not-allowed; }
+@media (max-width: 900px) {
+  .hp-slide { flex: 0 0 calc((100% - 12px) / 1.6); }
+}
+@media (max-width: 600px) {
+  .hp-slide { flex: 0 0 calc(100% - 44px); }
+}
+
+/* ─────────────────────────────────────────────────────────────
    ABOUT PAGE
 ───────────────────────────────────────────────────────────── */
 .about-grid {
