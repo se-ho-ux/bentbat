@@ -1849,7 +1849,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .services-page-grid { grid-template-columns: 1fr; }
   .signature-showcase { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
-  .zone-inner { grid-template-columns: 1fr; gap: 48px; }
+  .zone-countries { gap: 16px; }
   .garanties-grid { grid-template-columns: 1fr; }
   .reassurance-grid { grid-template-columns: repeat(3, 1fr); }
   .values-grid { grid-template-columns: repeat(3, 1fr); }
@@ -1890,10 +1890,9 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .values-grid { grid-template-columns: repeat(2, 1fr); }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
-  .zone-inner { grid-template-columns: 1fr; gap: 32px; }
+  .zone-countries { grid-template-columns: 1fr; gap: 14px; }
   .zone-map-placeholder { display: none; }
-  .zone-flag-card { padding: 16px 18px; gap: 12px; }
-  .zone-flag-card p { font-size: 0.875rem; }
+  .zone-country { padding: 24px; gap: 16px; }
   .garanties-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid .stat-card:nth-child(2) { border-right: none; }
@@ -1965,11 +1964,11 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .hero-actions .btn { width: 100%; justify-content: center; }
 
   /* Binationale */
-  .zone-flags { margin-top: 20px; gap: 12px; }
-  .zone-flag-card { padding: 12px 14px; gap: 10px; }
-  .zone-flag-card h4 { font-size: 0.9375rem; }
-  .zone-flag-card p { font-size: 0.8125rem; }
-  .zone-flag-card a { font-size: 0.875rem; }
+  .zone-countries { margin-top: 32px; }
+  .zone-country { padding: 20px 18px; gap: 14px; }
+  .zone-country-title { font-size: 1rem; }
+  .zone-desc { font-size: 0.875rem; }
+  .zone-tel { font-size: 0.875rem; }
 
   /* Gallery */
   .gallery-grid { grid-template-columns: 1fr; }
@@ -2240,29 +2239,86 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 
 /* Zone section */
 .zone-section { background: var(--bg-alt); }
-.zone-inner {
+.zone-countries {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+  gap: 20px;
+  margin-top: 48px;
 }
-.zone-inner > div > h2 { margin-bottom: 24px; }
-.zone-flags { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
-.zone-flag-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
+.zone-country {
   background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: var(--r-sm);
-  padding: 20px 24px;
-}
-.zone-flag-card h4 { font-size: 1rem; margin-bottom: 4px; }
-.zone-flag-card p { font-size: 1rem; font-weight: 300; color: var(--text); }
-.zone-flag-card a { font-size: 0.9375rem; color: var(--accent); text-decoration: none; font-weight: 600; display: block; margin-top: 2px; }
-.zone-map-placeholder {
   border-radius: var(--r-md);
-  aspect-ratio: 4/3;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.zone-country::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--text);
+}
+.zone-country-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.zone-badge {
+  width: 44px; height: 44px;
+  background: var(--bg-dark);
+  color: var(--text-inv);
+  border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  flex-shrink: 0;
+}
+.zone-country-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+  color: var(--text);
+}
+.zone-regions {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+.zone-desc {
+  font-size: 0.9375rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+  flex: 1;
+}
+.zone-tel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  margin-top: auto;
+  transition: color var(--t) var(--ease-out);
+}
+@media (hover: hover) and (pointer: fine) {
+  .zone-tel:hover { color: var(--accent-h); }
+}
+.zone-map-placeholder {
+  margin-top: 20px;
+  border-radius: var(--r-md);
+  aspect-ratio: 16/5;
   overflow: hidden;
   position: relative;
 }
