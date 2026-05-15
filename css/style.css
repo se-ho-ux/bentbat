@@ -815,7 +815,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 }
 /* Lien navigable — avec flèche */
 .service-row {
-  grid-template-columns: 32px 40px 1fr auto;
+  grid-template-columns: 32px 40px 1fr;
   text-decoration: none;
 }
 /* Informatif — sans flèche */
@@ -842,7 +842,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
     color: var(--text-inv);
   }
   .service-row:hover .sr-arrow {
-    transform: translateX(5px);
+    transform: translateY(-50%) translateX(5px);
     color: var(--text);
     opacity: 1;
   }
@@ -908,11 +908,14 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   flex-shrink: 0;
 }
 .sr-arrow {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
   color: var(--text-muted);
   font-size: 0.8125rem;
   opacity: 0.45;
   flex-shrink: 0;
-  padding-left: 8px;
   transition: transform var(--t) var(--ease-out), color var(--t) var(--ease-out), opacity var(--t) var(--ease-out);
 }
 .services-cta { text-align: center; margin-top: 48px; }
@@ -972,7 +975,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
     color: var(--bg-dark);
   }
   .section-dark .service-row:hover .sr-arrow {
-    transform: translateX(5px);
+    transform: translateY(-50%) translateX(5px);
     color: var(--text-inv);
     opacity: 1;
   }
