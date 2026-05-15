@@ -1850,7 +1850,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .signature-showcase { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .zone-inner { grid-template-columns: 1fr; gap: 40px; }
-  .zone-flags { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .zone-flags { flex-direction: column; gap: 14px; }
   .garanties-grid { grid-template-columns: 1fr; }
   .reassurance-grid { grid-template-columns: repeat(3, 1fr); }
   .values-grid { grid-template-columns: repeat(3, 1fr); }
@@ -1893,9 +1893,11 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .zone-inner { grid-template-columns: 1fr; gap: 0; }
   .zone-map-placeholder { display: none; }
-  .zone-flags { grid-template-columns: 1fr; gap: 14px; margin-top: 28px; }
-  .zone-flag-card { padding: 24px 20px; gap: 12px; }
-  .zone-flag-card a { word-break: break-word; }
+  .zone-flags { flex-direction: column; gap: 14px; margin-top: 28px; }
+  .zone-flag-card { flex-direction: column; align-items: flex-start; padding: 24px 20px; gap: 12px; }
+  .zone-flag-body { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .zone-flag-card h4 { white-space: normal; min-width: unset; }
+  .zone-flag-card a { margin-left: 0; white-space: normal; word-break: break-word; }
   .garanties-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid .stat-card:nth-child(2) { border-right: none; }
@@ -2246,25 +2248,28 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 80px;
-  align-items: center;
+  align-items: start;
 }
+.zone-content { width: 100%; }
 .zone-content > h2 { margin-bottom: 16px; }
 .zone-content > p  { margin-bottom: 0; color: var(--text-muted); }
 .zone-flags {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
   margin-top: 32px;
 }
 .zone-flag-card {
   display: flex;
-  flex-direction: column;
-  gap: 14px;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--r-md);
-  padding: 22px 20px;
+  padding: 22px 24px;
   position: relative;
+  width: 100%;
 }
 .zone-flag-card::before {
   content: '';
@@ -2285,13 +2290,15 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   letter-spacing: 0.12em;
   flex-shrink: 0;
 }
-.zone-flag-body { display: flex; flex-direction: column; gap: 6px; }
+.zone-flag-body { display: flex; flex-direction: row; align-items: center; gap: 32px; flex: 1; }
 .zone-flag-card h4 {
   font-size: 0.9375rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   margin: 0;
   color: var(--text);
+  white-space: nowrap;
+  min-width: 120px;
 }
 .zone-flag-card p {
   font-size: 0.8125rem;
@@ -2299,6 +2306,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   color: var(--text-muted);
   margin: 0;
   line-height: 1.5;
+  flex: 1;
 }
 .zone-flag-card a {
   display: inline-flex;
@@ -2308,7 +2316,10 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   font-weight: 600;
   color: var(--accent);
   text-decoration: none;
-  margin-top: 4px;
+  margin-top: 0;
+  white-space: nowrap;
+  margin-left: auto;
+  flex-shrink: 0;
   transition: color var(--t) var(--ease-out);
 }
 @media (hover: hover) and (pointer: fine) {
