@@ -632,6 +632,7 @@
       const total   = slides.length;
       const GAP     = 12;
       let current   = 0;
+      let hpOffset  = 0;
 
       function slideW() { return slides[0].offsetWidth + GAP; }
 
@@ -644,7 +645,9 @@
       function goTo(idx) {
         const max = maxIdx();
         current = Math.max(0, Math.min(idx, max));
-        track.style.transform = 'translateX(-' + (current * slideW()) + 'px)';
+        hpOffset = current * slideW();
+        track.style.transition = '';
+        track.style.transform = 'translateX(-' + hpOffset + 'px)';
         prevBtn.disabled = current === 0;
         nextBtn.disabled = current >= max;
         if (max === 0) {
@@ -668,15 +671,20 @@
 
       window.addEventListener('resize', function() { goTo(Math.min(current, maxIdx())); }, { passive: true });
 
-      // ── Horizontal scroll (trackpad / mouse wheel) ───────────
+      // ── Horizontal scroll fluide (trackpad / molette) ────────
       var wrap = track.parentElement.parentElement;
-      var hpAccum = 0;
+      var hpSnapTimer = null;
       wrap.addEventListener('wheel', function(e) {
         if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
         e.preventDefault();
-        hpAccum += e.deltaX;
-        if (hpAccum > 50)  { goTo(current + 1); hpAccum = 0; }
-        if (hpAccum < -50) { goTo(current - 1); hpAccum = 0; }
+        clearTimeout(hpSnapTimer);
+        var maxOff = maxIdx() * slideW();
+        hpOffset = Math.max(0, Math.min(hpOffset + e.deltaX, maxOff));
+        track.style.transition = 'none';
+        track.style.transform  = 'translateX(-' + hpOffset + 'px)';
+        hpSnapTimer = setTimeout(function() {
+          goTo(Math.round(hpOffset / slideW()));
+        }, 180);
       }, { passive: false });
 
       goTo(0);

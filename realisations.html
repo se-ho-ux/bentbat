@@ -328,6 +328,7 @@
       const rlCntEl   = document.getElementById('rlCounter');
       const RL_GAP    = 12;
       let rlCurrent   = 0;
+      let rlOffset    = 0;
 
       function rlGetVis() { return items.filter(s => !s.classList.contains('rl-hidden')); }
 
@@ -345,7 +346,9 @@
         const cw  = rlTrack.parentElement.offsetWidth;
         const max = Math.max(0, Math.ceil((tw - cw) / sw));
         rlCurrent = Math.max(0, Math.min(idx, max));
-        rlTrack.style.transform = 'translateX(-' + (rlCurrent * sw) + 'px)';
+        rlOffset  = rlCurrent * sw;
+        rlTrack.style.transition = '';
+        rlTrack.style.transform  = 'translateX(-' + rlOffset + 'px)';
         if (rlPrevBtn) rlPrevBtn.disabled = rlCurrent === 0;
         if (rlNextBtn) rlNextBtn.disabled = rlCurrent >= max;
         if (rlFillEl) {
@@ -386,16 +389,22 @@
         rlGoTo(Math.min(rlCurrent, max));
       }, { passive: true });
 
-      // ── Horizontal scroll (trackpad / mouse wheel) ───────────
+      // ── Horizontal scroll fluide (trackpad / molette) ────────
       const rlWrap = rlTrack ? rlTrack.closest('.hp-carousel-wrap') : null;
-      let rlAccum = 0;
+      let rlSnapTimer = null;
       if (rlWrap) {
         rlWrap.addEventListener('wheel', e => {
           if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
           e.preventDefault();
-          rlAccum += e.deltaX;
-          if (rlAccum > 50)  { rlGoTo(rlCurrent + 1); rlAccum = 0; }
-          if (rlAccum < -50) { rlGoTo(rlCurrent - 1); rlAccum = 0; }
+          clearTimeout(rlSnapTimer);
+          const vis = rlGetVis();
+          if (!vis.length) return;
+          const sw     = vis[0].offsetWidth + RL_GAP;
+          const maxOff = Math.max(0, vis.length * sw - RL_GAP - rlTrack.parentElement.offsetWidth);
+          rlOffset = Math.max(0, Math.min(rlOffset + e.deltaX, maxOff));
+          rlTrack.style.transition = 'none';
+          rlTrack.style.transform  = 'translateX(-' + rlOffset + 'px)';
+          rlSnapTimer = setTimeout(() => rlGoTo(Math.round(rlOffset / sw)), 180);
         }, { passive: false });
       }
 
