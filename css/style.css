@@ -1894,10 +1894,11 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .zone-inner { grid-template-columns: 1fr; gap: 0; }
   .zone-map-placeholder { display: none; }
   .zone-flags { flex-direction: column; gap: 14px; margin-top: 28px; }
-  .zone-flag-card { flex-direction: column; align-items: flex-start; padding: 24px 20px; gap: 12px; }
-  .zone-flag-body { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .zone-flag-card { flex-direction: column; align-items: flex-start; padding: 24px 20px; gap: 12px; width: 100%; box-sizing: border-box; }
+  .zone-flag-body { flex-direction: column; align-items: flex-start; gap: 8px; flex: unset; width: 100%; }
   .zone-flag-card h4 { white-space: normal; min-width: unset; }
-  .zone-flag-card a { margin-left: 0; white-space: normal; word-break: break-word; }
+  .zone-flag-card p { flex: unset; }
+  .zone-flag-card a { margin-left: 0; white-space: normal; word-break: break-word; flex-shrink: 1; }
   .garanties-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid .stat-card:nth-child(2) { border-right: none; }
@@ -2270,6 +2271,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   padding: 22px 24px;
   position: relative;
   width: 100%;
+  box-sizing: border-box;
 }
 .zone-flag-card::before {
   content: '';
