@@ -1110,9 +1110,9 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 96px;
-  align-items: center;
+  align-items: start;
 }
-.why-image { position: relative; }
+.why-image { position: relative; padding-top: 2rem; }
 .why-image img {
   width: 100%;
   aspect-ratio: 4/3;
