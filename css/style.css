@@ -1894,11 +1894,8 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .zone-inner { grid-template-columns: 1fr; gap: 0; }
   .zone-map-placeholder { display: none; }
   .zone-flags { flex-direction: column; gap: 14px; margin-top: 28px; }
-  .zone-flag-card { flex-direction: column; align-items: flex-start; padding: 24px 20px; gap: 12px; width: 100%; box-sizing: border-box; }
-  .zone-flag-body { flex-direction: column; align-items: flex-start; gap: 8px; flex: unset; width: 100%; }
-  .zone-flag-card h4 { white-space: normal; min-width: unset; }
-  .zone-flag-card p { flex: unset; }
-  .zone-flag-card a { margin-left: 0; white-space: normal; word-break: break-word; flex-shrink: 1; }
+  .zone-flag-card { padding: 20px 16px; gap: 10px; }
+  .zone-flag-card a { word-break: break-word; }
   .garanties-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid .stat-card:nth-child(2) { border-right: none; }
@@ -1971,10 +1968,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 
   /* Binationale */
   .zone-flags { gap: 12px; margin-top: 24px; }
-  .zone-flag-card { padding: 20px 16px; gap: 10px; }
-  .zone-flag-card h4 { font-size: 0.9375rem; }
-  .zone-flag-card p  { font-size: 0.8125rem; }
-  .zone-flag-card a  { font-size: 0.875rem; }
+  .zone-flag-card { padding: 16px 14px; gap: 8px; }
 
   /* Gallery */
   .gallery-grid { grid-template-columns: 1fr; }
@@ -2260,15 +2254,16 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   gap: 14px;
   margin-top: 32px;
 }
+/* Mobile-first : carte en colonne par défaut */
 .zone-flag-card {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--r-md);
-  padding: 22px 24px;
+  padding: 22px 20px;
   position: relative;
   width: 100%;
   box-sizing: border-box;
@@ -2292,15 +2287,19 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   letter-spacing: 0.12em;
   flex-shrink: 0;
 }
-.zone-flag-body { display: flex; flex-direction: row; align-items: center; gap: 32px; flex: 1; }
+.zone-flag-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+}
 .zone-flag-card h4 {
   font-size: 0.9375rem;
   font-weight: 700;
   letter-spacing: -0.02em;
   margin: 0;
   color: var(--text);
-  white-space: nowrap;
-  min-width: 120px;
 }
 .zone-flag-card p {
   font-size: 0.8125rem;
@@ -2308,7 +2307,6 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   color: var(--text-muted);
   margin: 0;
   line-height: 1.5;
-  flex: 1;
 }
 .zone-flag-card a {
   display: inline-flex;
@@ -2318,14 +2316,37 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   font-weight: 600;
   color: var(--accent);
   text-decoration: none;
-  margin-top: 0;
-  white-space: nowrap;
-  margin-left: auto;
-  flex-shrink: 0;
+  margin-top: 4px;
   transition: color var(--t) var(--ease-out);
 }
 @media (hover: hover) and (pointer: fine) {
   .zone-flag-card a:hover { color: var(--accent-h); }
+}
+/* Desktop (≥769px) : carte en ligne horizontale pleine largeur */
+@media (min-width: 769px) {
+  .zone-flag-card {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 24px;
+  }
+  .zone-flag-body {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    flex: 1;
+  }
+  .zone-flag-card h4 {
+    white-space: nowrap;
+    min-width: 120px;
+  }
+  .zone-flag-card p { flex: 1; }
+  .zone-flag-card a {
+    white-space: nowrap;
+    margin-left: auto;
+    flex-shrink: 0;
+    margin-top: 0;
+  }
 }
 .zone-map-placeholder {
   border-radius: var(--r-md);
