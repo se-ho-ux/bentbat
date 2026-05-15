@@ -909,7 +909,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 }
 .sr-arrow {
   position: absolute;
-  right: 8px;
+  right: 24px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--text-muted);
