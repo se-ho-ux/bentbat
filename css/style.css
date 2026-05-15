@@ -1892,6 +1892,8 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .zone-inner { grid-template-columns: 1fr; gap: 32px; }
   .zone-map-placeholder { display: none; }
+  .zone-flags { grid-template-columns: 1fr; gap: 12px; }
+  .zone-flag-card { padding: 20px 18px; }
   .garanties-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid .stat-card:nth-child(2) { border-right: none; }
@@ -1961,10 +1963,6 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 
   /* Hero */
   .hero-actions .btn { width: 100%; justify-content: center; }
-
-  /* Binationale */
-  .zone-flags { grid-template-columns: 1fr; gap: 12px; }
-  .zone-flag-card { padding: 18px 16px; }
 
   /* Gallery */
   .gallery-grid { grid-template-columns: 1fr; }
