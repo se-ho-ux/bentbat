@@ -1456,7 +1456,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 96px;
-  align-items: center;
+  align-items: start;
 }
 .about-img {
   width: 100%;
@@ -2234,6 +2234,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   gap: 80px;
   align-items: center;
 }
+.zone-inner > div > h2 { margin-bottom: 24px; }
 .zone-flags { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
 .zone-flag-card {
   display: flex;
@@ -2248,18 +2249,19 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 .zone-flag-card p { font-size: 1rem; font-weight: 300; color: var(--text); }
 .zone-flag-card a { font-size: 0.9375rem; color: var(--accent); text-decoration: none; font-weight: 600; display: block; margin-top: 2px; }
 .zone-map-placeholder {
-  background: var(--bg-dark);
   border-radius: var(--r-md);
   aspect-ratio: 4/3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  color: rgba(255,255,255,0.35);
-  font-size: 0.9375rem;
+  overflow: hidden;
+  position: relative;
 }
-.zone-map-placeholder i { font-size: 2.5rem; color: var(--accent); }
+.zone-map-placeholder iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
 
 /* Values grid */
 .values-grid {
