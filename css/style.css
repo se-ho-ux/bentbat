@@ -1850,6 +1850,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .signature-showcase { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .zone-inner { grid-template-columns: 1fr; gap: 40px; }
+  .zone-flags { grid-template-columns: 1fr 1fr; gap: 14px; }
   .garanties-grid { grid-template-columns: 1fr; }
   .reassurance-grid { grid-template-columns: repeat(3, 1fr); }
   .values-grid { grid-template-columns: repeat(3, 1fr); }
@@ -1893,7 +1894,8 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .zone-inner { grid-template-columns: 1fr; gap: 32px; }
   .zone-map-placeholder { display: none; }
   .zone-flags { grid-template-columns: 1fr; gap: 12px; }
-  .zone-flag-card { padding: 20px 18px; }
+  .zone-flag-card { flex-direction: row; align-items: flex-start; padding: 20px 18px; gap: 16px; }
+  .zone-flag-body { gap: 4px; }
   .garanties-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
   .stats-grid .stat-card:nth-child(2) { border-right: none; }
