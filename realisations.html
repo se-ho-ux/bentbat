@@ -385,6 +385,16 @@
           const f = btn.dataset.filter;
           items.forEach(item => item.classList.toggle('rl-hidden', f !== 'all' && item.dataset.category !== f));
           rlGoTo(0);
+          const wrap = rlTrack ? rlTrack.closest('.hp-carousel-wrap') : null;
+          if (wrap) {
+            setTimeout(() => {
+              const rect = wrap.getBoundingClientRect();
+              if (rect.top > window.innerHeight * 0.55 || rect.top < 88) {
+                const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+                window.scrollTo({ top: rect.top + window.scrollY - 88, behavior });
+              }
+            }, 50);
+          }
         });
       });
 
