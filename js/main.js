@@ -279,3 +279,263 @@
     obs.observe(list);
   });
 })();
+
+
+// ── Carrousel homepage (hpTrack) ─────────────────────────────────────────────
+(function() {
+      const track   = document.getElementById('hpTrack');
+      if (!track) return;
+      const prevBtn = document.getElementById('hpPrev');
+      const nextBtn = document.getElementById('hpNext');
+      const fill    = document.getElementById('hpFill');
+      const counter = document.getElementById('hpCounter');
+      const slides  = Array.from(track.querySelectorAll('.hp-slide'));
+      const total   = slides.length;
+      const GAP     = 12;
+      let current   = 0;
+      let hpOffset  = 0;
+
+      function slideW() { return slides[0].offsetWidth + GAP; }
+
+      function maxIdx() {
+        const tw = total * slideW() - GAP;
+        const cw = track.parentElement.offsetWidth;
+        return Math.max(0, Math.ceil((tw - cw) / slideW()));
+      }
+
+      function goTo(idx) {
+        const max = maxIdx();
+        current = Math.max(0, Math.min(idx, max));
+        hpOffset = current * slideW();
+        track.style.transition = '';
+        track.style.transform = 'translateX(-' + hpOffset + 'px)';
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current >= max;
+        if (max === 0) {
+          fill.style.width = '100%';
+        } else {
+          var visibleFrac = (total - max) / total;
+          fill.style.width = (visibleFrac + (1 - visibleFrac) * (current / max)) * 100 + '%';
+        }
+        if (counter) counter.textContent = (current + 1) + ' / ' + total;
+      }
+
+      prevBtn.addEventListener('click', function() { goTo(current - 1); });
+      nextBtn.addEventListener('click', function() { goTo(current + 1); });
+
+      var tx = 0, dragging = false;
+      track.addEventListener('touchstart', function(e) {
+        tx = e.changedTouches[0].clientX;
+        dragging = true;
+        track.style.transition = 'none';
+      }, { passive: true });
+      track.addEventListener('touchmove', function(e) {
+        if (!dragging) return;
+        var dx = e.changedTouches[0].clientX - tx;
+        track.style.transform = 'translateX(' + (-hpOffset + dx) + 'px)';
+      }, { passive: true });
+      track.addEventListener('touchend', function(e) {
+        if (!dragging) return;
+        dragging = false;
+        var dx = e.changedTouches[0].clientX - tx;
+        track.style.transition = '';
+        if (Math.abs(dx) > 32) { if (dx < 0) goTo(current + 1); else goTo(current - 1); }
+        else goTo(current);
+      }, { passive: true });
+
+      window.addEventListener('resize', function() { goTo(Math.min(current, maxIdx())); }, { passive: true });
+
+      // ── Horizontal scroll fluide (trackpad / molette) ────────
+      var wrap = track.parentElement.parentElement;
+      var hpSnapTimer = null;
+      wrap.addEventListener('wheel', function(e) {
+        if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+        e.preventDefault();
+        clearTimeout(hpSnapTimer);
+        var maxOff = maxIdx() * slideW();
+        hpOffset = Math.max(0, Math.min(hpOffset + e.deltaX, maxOff));
+        track.style.transition = 'none';
+        track.style.transform  = 'translateX(-' + hpOffset + 'px)';
+        hpSnapTimer = setTimeout(function() {
+          goTo(Math.round(hpOffset / slideW()));
+        }, 180);
+      }, { passive: false });
+
+      goTo(0);
+    })();
+
+// ── Carrousel & lightbox réalisations (rlTrack) ──────────────────────────────
+(function() {
+      const btns      = document.querySelectorAll('.pf-btn');
+      const rlTrack   = document.getElementById('rlTrack');
+      const items     = rlTrack ? Array.from(rlTrack.querySelectorAll('.gallery-item')) : [];
+      const rlPrevBtn = document.getElementById('rlPrev');
+      const rlNextBtn = document.getElementById('rlNext');
+      const rlFillEl  = document.getElementById('rlFill');
+      const rlCntEl   = document.getElementById('rlCounter');
+      const RL_GAP    = 12;
+      let rlCurrent   = 0;
+      let rlOffset    = 0;
+
+      function rlGetVis() { return items.filter(s => !s.classList.contains('rl-hidden')); }
+
+      function rlGoTo(idx) {
+        if (!rlTrack) return;
+        const vis = rlGetVis();
+        if (!vis.length) {
+          rlTrack.style.transform = 'translateX(0)';
+          if (rlPrevBtn) rlPrevBtn.disabled = true;
+          if (rlNextBtn) rlNextBtn.disabled = true;
+          return;
+        }
+        const sw  = vis[0].offsetWidth + RL_GAP;
+        const tw  = vis.length * sw - RL_GAP;
+        const cw  = rlTrack.parentElement.offsetWidth;
+        const max = Math.max(0, Math.ceil((tw - cw) / sw));
+        rlCurrent = Math.max(0, Math.min(idx, max));
+        rlOffset  = rlCurrent * sw;
+        rlTrack.style.transition = '';
+        rlTrack.style.transform  = 'translateX(-' + rlOffset + 'px)';
+        if (rlPrevBtn) rlPrevBtn.disabled = rlCurrent === 0;
+        if (rlNextBtn) rlNextBtn.disabled = rlCurrent >= max;
+        if (rlFillEl) {
+          const vf = max === 0 ? 1 : (vis.length - max) / vis.length;
+          rlFillEl.style.width = (max === 0 ? 100 : (vf + (1 - vf) * rlCurrent / max) * 100) + '%';
+        }
+        if (rlCntEl) rlCntEl.textContent = (rlCurrent + 1) + ' / ' + (max + 1);
+      }
+
+      // ── Filters ──────────────────────────────────────────────
+      btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          btns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const f = btn.dataset.filter;
+          items.forEach(item => item.classList.toggle('rl-hidden', f !== 'all' && item.dataset.category !== f));
+          rlGoTo(0);
+          const wrap = rlTrack ? rlTrack.closest('.hp-carousel-wrap') : null;
+          if (wrap) {
+            setTimeout(() => {
+              const rect = wrap.getBoundingClientRect();
+              if (rect.top > window.innerHeight * 0.55 || rect.top < 88) {
+                const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+                window.scrollTo({ top: rect.top + window.scrollY - 88, behavior });
+              }
+            }, 50);
+          }
+        });
+      });
+
+      if (rlPrevBtn) rlPrevBtn.addEventListener('click', () => rlGoTo(rlCurrent - 1));
+      if (rlNextBtn) rlNextBtn.addEventListener('click', () => rlGoTo(rlCurrent + 1));
+
+      let rlTx = 0, rlDragging = false;
+      if (rlTrack) {
+        rlTrack.addEventListener('touchstart', e => {
+          rlTx = e.changedTouches[0].clientX;
+          rlDragging = true;
+          rlTrack.style.transition = 'none';
+        }, { passive: true });
+        rlTrack.addEventListener('touchmove', e => {
+          if (!rlDragging) return;
+          const dx = e.changedTouches[0].clientX - rlTx;
+          rlTrack.style.transform = 'translateX(' + (-rlOffset + dx) + 'px)';
+        }, { passive: true });
+        rlTrack.addEventListener('touchend', e => {
+          if (!rlDragging) return;
+          rlDragging = false;
+          const dx = e.changedTouches[0].clientX - rlTx;
+          rlTrack.style.transition = '';
+          if (Math.abs(dx) > 32) rlGoTo(dx < 0 ? rlCurrent + 1 : rlCurrent - 1);
+          else rlGoTo(rlCurrent);
+        }, { passive: true });
+      }
+
+      window.addEventListener('resize', () => {
+        const vis = rlGetVis();
+        if (!vis.length) return;
+        const sw  = vis[0].offsetWidth + RL_GAP;
+        const max = Math.max(0, Math.ceil((vis.length * sw - RL_GAP - rlTrack.parentElement.offsetWidth) / sw));
+        rlGoTo(Math.min(rlCurrent, max));
+      }, { passive: true });
+
+      // ── Horizontal scroll fluide (trackpad / molette) ────────
+      const rlWrap = rlTrack ? rlTrack.closest('.hp-carousel-wrap') : null;
+      let rlSnapTimer = null;
+      if (rlWrap) {
+        rlWrap.addEventListener('wheel', e => {
+          if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
+          e.preventDefault();
+          clearTimeout(rlSnapTimer);
+          const vis = rlGetVis();
+          if (!vis.length) return;
+          const sw     = vis[0].offsetWidth + RL_GAP;
+          const maxOff = Math.max(0, vis.length * sw - RL_GAP - rlTrack.parentElement.offsetWidth);
+          rlOffset = Math.max(0, Math.min(rlOffset + e.deltaX, maxOff));
+          rlTrack.style.transition = 'none';
+          rlTrack.style.transform  = 'translateX(-' + rlOffset + 'px)';
+          rlSnapTimer = setTimeout(() => rlGoTo(Math.round(rlOffset / sw)), 180);
+        }, { passive: false });
+      }
+
+      rlGoTo(0);
+
+      // ── Lightbox ─────────────────────────────────────────────
+      const overlay   = document.getElementById('lightbox');
+      const lbImg     = document.getElementById('lbImg');
+      const lbLabel   = document.getElementById('lbLabel');
+      const lbCounter = document.getElementById('lbCounter');
+      const lbCloseBtn = document.getElementById('lbClose');
+      const lbPrevBtn  = document.getElementById('lbPrev');
+      const lbNextBtn  = document.getElementById('lbNext');
+      let lbIdx = 0;
+
+      function lbGetVis() { return items.filter(i => !i.classList.contains('rl-hidden')); }
+
+      function lbUpdate(dir) {
+        const vis = lbGetVis();
+        const item = vis[lbIdx];
+        if (!item) return;
+        const img = item.querySelector('img');
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lbLabel.textContent   = (item.querySelector('.gallery-label') || {}).textContent || '';
+        lbCounter.textContent = (lbIdx + 1) + ' / ' + vis.length;
+        lbImg.classList.remove('slide-left', 'slide-right');
+        void lbImg.offsetWidth;
+        if (dir === 'left')  lbImg.classList.add('slide-left');
+        if (dir === 'right') lbImg.classList.add('slide-right');
+      }
+
+      function lbOpen(idx) { lbIdx = idx; lbUpdate('left'); overlay.classList.add('is-open'); document.body.style.overflow = 'hidden'; }
+      function lbClose()   { overlay.classList.remove('is-open'); document.body.style.overflow = ''; }
+      function lbNext()    { const vis = lbGetVis(); lbIdx = (lbIdx + 1) % vis.length; lbUpdate('left'); }
+      function lbPrev()    { const vis = lbGetVis(); lbIdx = (lbIdx - 1 + vis.length) % vis.length; lbUpdate('right'); }
+
+      items.forEach(item => {
+        item.addEventListener('click', () => {
+          const vis = lbGetVis();
+          const idx = vis.indexOf(item);
+          if (idx !== -1) lbOpen(idx);
+        });
+      });
+
+      lbCloseBtn.addEventListener('click', lbClose);
+      lbNextBtn.addEventListener('click',  lbNext);
+      lbPrevBtn.addEventListener('click',  lbPrev);
+      overlay.addEventListener('click', e => { if (e.target === overlay) lbClose(); });
+
+      document.addEventListener('keydown', e => {
+        if (!overlay.classList.contains('is-open')) return;
+        if (e.key === 'Escape')     lbClose();
+        if (e.key === 'ArrowRight') lbNext();
+        if (e.key === 'ArrowLeft')  lbPrev();
+      });
+
+      let lbTouchX = 0;
+      overlay.addEventListener('touchstart', e => { lbTouchX = e.changedTouches[0].clientX; }, { passive: true });
+      overlay.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - lbTouchX;
+        if (Math.abs(dx) > 48) { if (dx < 0) lbNext(); else lbPrev(); }
+      }, { passive: true });
+    })();

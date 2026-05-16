@@ -132,7 +132,6 @@ button { font-family: inherit; }
   --font-mono: 'Geist Mono', ui-monospace, monospace;
   --container: 1280px;
   --header-h:  72px;
-  --r:         0px;
   --r-sm:      4px;
   --r-md:      8px;
   --shadow:    0 4px 32px rgba(23,21,20,0.08);
