@@ -1831,6 +1831,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .section-head { gap: 40px; }
   .service-row, .list-row { padding: 24px 8px; margin: 0 -8px; }
   .why-grid, .about-grid { grid-template-columns: 1fr; gap: 56px; }
+  .about-img { display: none; }
   .why-badge { bottom: -16px; right: -8px; }
   .footer-grid {
     grid-template-columns: 2fr 1fr 1fr;
