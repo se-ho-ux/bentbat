@@ -359,10 +359,6 @@
               <div class="gallery-overlay"><span class="gallery-label">Salon bibliothèque, Paris</span></div>
             </div>
             <div class="hp-slide">
-              <img src="images/image11.jpg" alt="Salon béton ciré, vue panoramique, Ben&amp;Bat" loading="lazy">
-              <div class="gallery-overlay"><span class="gallery-label">Salon béton ciré, vue panoramique</span></div>
-            </div>
-            <div class="hp-slide">
               <img src="images/image12.jpg" alt="Salle de bains pierre naturelle, baignoire îlot, Ben&amp;Bat" loading="lazy">
               <div class="gallery-overlay"><span class="gallery-label">Salle de bains pierre, baignoire îlot</span></div>
             </div>
@@ -682,11 +678,24 @@
       prevBtn.addEventListener('click', function() { goTo(current - 1); });
       nextBtn.addEventListener('click', function() { goTo(current + 1); });
 
-      var tx = 0;
-      track.addEventListener('touchstart', function(e) { tx = e.changedTouches[0].clientX; }, { passive: true });
-      track.addEventListener('touchend',   function(e) {
+      var tx = 0, dragging = false;
+      track.addEventListener('touchstart', function(e) {
+        tx = e.changedTouches[0].clientX;
+        dragging = true;
+        track.style.transition = 'none';
+      }, { passive: true });
+      track.addEventListener('touchmove', function(e) {
+        if (!dragging) return;
         var dx = e.changedTouches[0].clientX - tx;
-        if (Math.abs(dx) > 48) { if (dx < 0) goTo(current + 1); else goTo(current - 1); }
+        track.style.transform = 'translateX(' + (-hpOffset + dx) + 'px)';
+      }, { passive: true });
+      track.addEventListener('touchend', function(e) {
+        if (!dragging) return;
+        dragging = false;
+        var dx = e.changedTouches[0].clientX - tx;
+        track.style.transition = '';
+        if (Math.abs(dx) > 32) { if (dx < 0) goTo(current + 1); else goTo(current - 1); }
+        else goTo(current);
       }, { passive: true });
 
       window.addEventListener('resize', function() { goTo(Math.min(current, maxIdx())); }, { passive: true });

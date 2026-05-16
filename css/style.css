@@ -152,8 +152,8 @@ button { font-family: inherit; }
    LAYOUT UTILITIES
 ───────────────────────────────────────────────────────────── */
 .container { max-width: var(--container); margin: 0 auto; padding: 0 32px; }
-.section    { padding: 80px 0; }
-.section-sm { padding: 52px 0; }
+.section    { padding: 64px 0; }
+.section-sm { padding: 40px 0; }
 .text-center { text-align: center; }
 
 /* ─────────────────────────────────────────────────────────────
@@ -1313,11 +1313,11 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
    HOME PORTFOLIO CAROUSEL
 ───────────────────────────────────────────────────────────── */
 .hp-carousel-wrap { position: relative; }
-.hp-carousel { overflow: hidden; }
+.hp-carousel { overflow: hidden; touch-action: pan-y; }
 .hp-track {
   display: flex;
   gap: 12px;
-  transition: transform 0.52s var(--ease-spring);
+  transition: transform 0.38s var(--ease-spring);
   will-change: transform;
   position: relative;
 }
@@ -1858,8 +1858,8 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 
 /* ── TABLETTE PORTRAIT (max-width: 768px) ───────────────── */
 @media (max-width: 768px) {
-  .section    { padding: 72px 0; }
-  .section-sm { padding: 52px 0; }
+  .section    { padding: 52px 0; }
+  .section-sm { padding: 36px 0; }
   .container  { padding: 0 20px; }
 
   /* Hero — 1 colonne, hauteur auto sur tablette */

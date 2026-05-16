@@ -196,10 +196,6 @@
               <img src="images/image10.jpg" alt="Salon bibliothèque, parquet point de Hongrie, Ben&amp;Bat" loading="lazy">
               <div class="gallery-overlay"><span class="gallery-label">Salon bibliothèque, Paris</span></div>
             </div>
-            <div class="gallery-item" data-category="amenagement">
-              <img src="images/image11.jpg" alt="Salon béton ciré, vue panoramique, Ben&amp;Bat" loading="lazy">
-              <div class="gallery-overlay"><span class="gallery-label">Salon béton ciré, vue panoramique</span></div>
-            </div>
             <div class="gallery-item" data-category="salle-de-bains">
               <img src="images/image12.jpg" alt="Salle de bains pierre naturelle, baignoire îlot, Ben&amp;Bat" loading="lazy">
               <div class="gallery-overlay"><span class="gallery-label">Salle de bains pierre, baignoire îlot</span></div>
@@ -395,12 +391,25 @@
       if (rlPrevBtn) rlPrevBtn.addEventListener('click', () => rlGoTo(rlCurrent - 1));
       if (rlNextBtn) rlNextBtn.addEventListener('click', () => rlGoTo(rlCurrent + 1));
 
-      let rlTx = 0;
+      let rlTx = 0, rlDragging = false;
       if (rlTrack) {
-        rlTrack.addEventListener('touchstart', e => { rlTx = e.changedTouches[0].clientX; }, { passive: true });
-        rlTrack.addEventListener('touchend', e => {
+        rlTrack.addEventListener('touchstart', e => {
+          rlTx = e.changedTouches[0].clientX;
+          rlDragging = true;
+          rlTrack.style.transition = 'none';
+        }, { passive: true });
+        rlTrack.addEventListener('touchmove', e => {
+          if (!rlDragging) return;
           const dx = e.changedTouches[0].clientX - rlTx;
-          if (Math.abs(dx) > 48) rlGoTo(dx < 0 ? rlCurrent + 1 : rlCurrent - 1);
+          rlTrack.style.transform = 'translateX(' + (-rlOffset + dx) + 'px)';
+        }, { passive: true });
+        rlTrack.addEventListener('touchend', e => {
+          if (!rlDragging) return;
+          rlDragging = false;
+          const dx = e.changedTouches[0].clientX - rlTx;
+          rlTrack.style.transition = '';
+          if (Math.abs(dx) > 32) rlGoTo(dx < 0 ? rlCurrent + 1 : rlCurrent - 1);
+          else rlGoTo(rlCurrent);
         }, { passive: true });
       }
 
