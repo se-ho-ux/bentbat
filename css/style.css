@@ -2322,6 +2322,16 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 @media (hover: hover) and (pointer: fine) {
   .zone-flag-card a:hover { color: var(--accent-h); }
 }
+/* Mobile (≤768px) : zone-inner en colonne unique, cartes pleine largeur */
+@media (max-width: 768px) {
+  .zone-inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .zone-map-placeholder {
+    aspect-ratio: 16/9;
+  }
+}
 /* Desktop (≥769px) : carte en ligne horizontale pleine largeur */
 @media (min-width: 769px) {
   .zone-flag-card {
