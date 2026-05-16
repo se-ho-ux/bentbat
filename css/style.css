@@ -1885,6 +1885,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .about-values { grid-template-columns: 1fr; }
   .why-grid, .about-grid { grid-template-columns: 1fr; gap: 40px; }
   .why-badge { display: none; }
+  .about-img { aspect-ratio: 4/3; max-height: none; }
   .specialties-grid { grid-template-columns: 1fr; }
   .specialty-card.featured { flex-direction: column; }
   .specialty-image { width: 100%; }
@@ -2058,6 +2059,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .garanties-grid { grid-template-columns: 1fr; }
   .testimonials-grid { grid-template-columns: 1fr 1fr; }
   .about-grid { grid-template-columns: 1fr; }
+  .about-img { aspect-ratio: 16/9; }
   .zone-inner { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
   .contact-layout { grid-template-columns: 1fr; }
