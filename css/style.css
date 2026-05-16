@@ -1455,14 +1455,16 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 ───────────────────────────────────────────────────────────── */
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 96px;
+  grid-template-columns: 5fr 7fr;
+  gap: 72px;
   align-items: start;
 }
 .about-img {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/4;
+  max-height: 500px;
   object-fit: cover;
+  object-position: center top;
   border-radius: var(--r-md);
   display: block;
 }
