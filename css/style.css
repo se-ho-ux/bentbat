@@ -1898,6 +1898,8 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .zone-flag-card a { word-break: break-word; }
   .garanties-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: 1fr 1fr; }
+  .stats-section { padding-bottom: 20px; }
+  #realisations  { padding-top: 40px; }
   .stats-grid .stat-card:nth-child(2) { border-right: none; }
   .stats-grid .stat-card:nth-child(4) { border-right: none; }
   .stats-grid .stat-card:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
