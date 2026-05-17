@@ -561,7 +561,7 @@
   // ── Hero word cycling ──────────────────────────────────────────────────────
   (() => {
     const pill = document.getElementById('cyclePill');
-    if (!pill || prefersReducedMotion) return;
+    if (!pill || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const words = ['Bâtir', 'Rénover', 'Conseiller'];
     let idx = 0;
     const HALF = 200;
