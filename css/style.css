@@ -379,10 +379,17 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
     box-shadow     var(--t-md) var(--ease-out),
     backdrop-filter var(--t-md) var(--ease-out);
 }
-/* Pill disparaît quand le header a son propre fond ou dans le footer */
+/* Pill disparaît quand le header a son propre fond — padding inchangé pour éviter tout décalage */
 #header.scrolled .nav-logo,
-#header.solid    .nav-logo,
-.footer-brand    .nav-logo {
+#header.solid    .nav-logo {
+  background:        transparent;
+  border-color:      transparent;
+  box-shadow:        none;
+  backdrop-filter:   none;
+  -webkit-backdrop-filter: none;
+}
+/* Footer : logo compact, sans pill */
+.footer-brand .nav-logo {
   background:        transparent;
   border-color:      transparent;
   box-shadow:        none;
