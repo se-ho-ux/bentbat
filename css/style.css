@@ -2470,8 +2470,8 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .zone-map-placeholder iframe {
     height: 220px;
   }
-  .zone-section { padding-bottom: 0; }
-  .section-equipe { padding-top: 0; }
+  .zone-section { padding-bottom: 0 !important; }
+  .section-equipe { padding-top: 0 !important; }
 }
 /* Desktop (≥769px) : carte en ligne horizontale pleine largeur */
 @media (min-width: 769px) {
