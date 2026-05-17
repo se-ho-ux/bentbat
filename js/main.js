@@ -9,10 +9,10 @@
     let isScrolled = false;
     const onScroll = () => {
       const y = window.scrollY;
-      if (!isScrolled && y > 60) {
+      if (!isScrolled && y > 10) {
         isScrolled = true;
         header.classList.add('scrolled');
-      } else if (isScrolled && y < 40) {
+      } else if (isScrolled && y < 5) {
         isScrolled = false;
         header.classList.remove('scrolled');
       }
