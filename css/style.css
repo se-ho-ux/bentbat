@@ -2917,3 +2917,19 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
     background: var(--bg);
   }
 }
+
+/* ── Pilule animée — hero ────────────────────────────────── */
+.cycle-pill {
+  display: inline-block;
+  background: #B85D38;
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.05em 0.38em 0.1em;
+  line-height: inherit;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transform-origin: center center;
+  white-space: nowrap;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cycle-pill { transition: none; }
+}

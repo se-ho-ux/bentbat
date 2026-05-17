@@ -557,3 +557,23 @@
         if (Math.abs(dx) > 48) { if (dx < 0) lbNext(); else lbPrev(); }
       }, { passive: true });
     })();
+
+  // ── Hero word cycling ──────────────────────────────────────────────────────
+  (() => {
+    const pill = document.getElementById('cyclePill');
+    if (!pill || prefersReducedMotion) return;
+    const words = ['Bâtir', 'Rénover', 'Conseiller'];
+    let idx = 0;
+    const HALF = 200;
+    setInterval(() => {
+      pill.style.transform = 'scale(0.6)';
+      pill.style.opacity = '0';
+      setTimeout(() => {
+        idx = (idx + 1) % words.length;
+        pill.textContent = words[idx];
+        pill.offsetWidth; // force reflow
+        pill.style.transform = '';
+        pill.style.opacity = '';
+      }, HALF);
+    }, 1500);
+  })();
