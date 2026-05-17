@@ -2465,10 +2465,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
     gap: 24px;
   }
   .zone-map-placeholder {
-    height: 220px;
-  }
-  .zone-map-placeholder iframe {
-    height: 220px;
+    display: none;
   }
   .zone-section { padding-bottom: 0 !important; }
   .section-equipe { padding-top: 0 !important; }
