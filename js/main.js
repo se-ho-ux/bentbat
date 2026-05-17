@@ -295,19 +295,7 @@
     obs.observe(list);
   });
 
-  // ── Scroll reveal — IntersectionObserver ─────────────────────────────────
-  if (!prefersReducedMotion) {
-    const revealObs = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        revealObs.unobserve(entry.target);
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -32px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
-  } else {
-    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
-  }
+
 })();
 
 
