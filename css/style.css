@@ -34,7 +34,7 @@
    RESET & BASE
 ───────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; overscroll-behavior: none; }
 body {
   font-family: var(--font);
   background: var(--bg);
@@ -43,6 +43,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  overscroll-behavior: none;
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
