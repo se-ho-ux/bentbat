@@ -88,10 +88,8 @@ button { font-family: inherit; }
   outline-offset: 3px;
 }
 
-/* ── Touch action — reduce 300ms tap delay ──────────────── */
-.btn, .nav-links a, .nav-logo, .hamburger,
-.footer-social, .pf-btn, .mobile-menu a,
-.gallery-item, .nav-phone { touch-action: manipulation; }
+/* ── Touch action — supprime le zoom double-tap sur tout le site ── */
+* { touch-action: manipulation; }
 
 /* ── Cursor pointer on non-button interactive elements ──── */
 .pf-btn, .gallery-item { cursor: pointer; }
