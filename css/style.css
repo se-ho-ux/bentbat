@@ -1902,8 +1902,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .values-grid { grid-template-columns: repeat(2, 1fr); }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
-  .zone-inner { grid-template-columns: 1fr; gap: 0; }
-  .zone-map-placeholder { display: none; }
+  .zone-inner { grid-template-columns: 1fr; gap: 32px; }
   .zone-flags { flex-direction: column; gap: 14px; margin-top: 28px; }
   .zone-flag-card { padding: 20px 16px; gap: 10px; }
   .zone-flag-card a { word-break: break-word; }
