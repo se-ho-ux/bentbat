@@ -2467,7 +2467,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .zone-map-placeholder {
     display: none;
   }
-  .zone-section { padding-bottom: 0 !important; }
+  .zone-section { padding-bottom: 32px !important; }
   .section-equipe { padding-top: 0 !important; }
 }
 /* Desktop (≥769px) : carte en ligne horizontale pleine largeur */
