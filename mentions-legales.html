@@ -2,14 +2,18 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io; frame-src https://maps.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <link rel="canonical" href="https://www.ben-bat.com/mentions-legales.html">
   <title>Mentions légales | Ben&amp;Bat</title>
   <meta name="description" content="Mentions légales, politique de confidentialité et RGPD | Ben&amp;Bat, entreprise BTP France et Belgique.">
   <!-- ── Analytics & Tracking ───────────────────────────────────────────── -->
-  <!-- Google Search Console — remplacez le content par votre code de vérification -->
+  <!-- IMPORTANT : remplacez les ID ci-dessous par vos vrais identifiants     -->
+  <!-- avant d'activer ces scripts. Laissez-les commentés tant que les ID     -->
+  <!-- sont des valeurs fictives (GDPR + sécurité).                           -->
+  <!--
   <meta name="google-site-verification" content="REPLACE_WITH_GSC_VERIFICATION_CODE">
-  <!-- Google Analytics GA4 — remplacez G-XXXXXXXXXX par votre Measurement ID -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,7 +21,6 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
   </script>
-  <!-- Meta Pixel — remplacez XXXXXXXXXXXXXXXXXX par votre Pixel ID -->
   <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -29,9 +32,10 @@
   </script>
   <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
+  -->
   <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="stylesheet" href="css/style.css?v=3">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -295,7 +299,7 @@
           <li>Durée de conservation : 3 ans à compter du dernier contact</li>
           <li>Destinataires : équipes internes Ben&amp;Bat uniquement, aucune cession à des tiers</li>
           <li>Droits : accès, rectification, suppression, portabilité, opposition : exercer via <a href="mailto:contact@ben-bat.com">contact@ben-bat.com</a></li>
-          <li>Réclamation : CNIL (France) : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a> / APD (Belgique) : <a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener">www.autoriteprotectiondonnees.be</a></li>
+          <li>Réclamation : CNIL (France) : <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">www.cnil.fr</a> / APD (Belgique) : <a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener noreferrer">www.autoriteprotectiondonnees.be</a></li>
         </ul>
 
         <h3>Article 5 : Cookies</h3>
