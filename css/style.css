@@ -89,8 +89,9 @@ button { font-family: inherit; }
   outline-offset: 3px;
 }
 
-/* ── Touch action — supprime zoom (double-tap + pinch) sur tout le site ── */
-* { touch-action: pan-y; }
+/* ── Touch action — desktop : supprime délai 300ms / mobile : supprime zoom ── */
+* { touch-action: manipulation; }
+@media (pointer: coarse) { * { touch-action: pan-y; } }
 
 /* ── Cursor pointer on non-button interactive elements ──── */
 .pf-btn, .gallery-item { cursor: pointer; }
