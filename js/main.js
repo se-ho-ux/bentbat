@@ -21,6 +21,23 @@
     onScroll();
   }
 
+  // ── Touch intent — bloque scroll si déplacement < 10 px (tap accidentel) ──
+  let _tx = 0, _ty = 0, _tMoved = false;
+  document.addEventListener('touchstart', e => {
+    _tx = e.touches[0].clientX;
+    _ty = e.touches[0].clientY;
+    _tMoved = false;
+  }, { passive: true });
+  document.addEventListener('touchmove', e => {
+    if (_tMoved) return;
+    if (Math.abs(e.touches[0].clientX - _tx) > 10 ||
+        Math.abs(e.touches[0].clientY - _ty) > 10) {
+      _tMoved = true;
+    } else {
+      e.preventDefault();
+    }
+  }, { passive: false });
+
   // ── Mobile menu — with focus trap, Escape, click-outside, focus return ────
   const hamburger   = document.getElementById('hamburger');
   const mobileMenu  = document.getElementById('mobileMenu');
