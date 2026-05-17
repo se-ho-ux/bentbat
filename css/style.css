@@ -43,7 +43,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  overscroll-behavior: none;
 }
 img { display: block; max-width: 100%; }
 a { color: inherit; }
@@ -325,7 +324,6 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   align-items: center;
   background: transparent;
   border-bottom: 1px solid transparent;
-  will-change: background, backdrop-filter;
   transition:
     background      var(--t) var(--ease-out),
     backdrop-filter var(--t) var(--ease-out),
