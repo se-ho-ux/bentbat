@@ -250,7 +250,7 @@
       btn.disabled = true;
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>&nbsp; Envoi en cours…';
 
-      fetch('https://formspree.io/f/mvzlelko', {
+      fetch('https://formspree.io/f/xaqkjnao', {
         method: 'POST',
         body: new FormData(form),
         headers: { 'Accept': 'application/json' }
