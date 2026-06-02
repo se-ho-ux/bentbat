@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Ben&amp;Bat — Plaquette Commerciale 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400;1,14..32,700;1,14..32,800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --carbone: #171514;
+  --acier:   #2D3338;
+  --beton:   #847A6E;
+  --calque:  #D6CFC4;
+  --chaux:   #F4F0EA;
+  --papier:  #FBF9F5;
+  --terre:   #B85C38;
+  --ocre:    #C89968;
+}
+
+@page { size: A4; margin: 0; }
+
+*, *::before, *::after {
+  margin: 0; padding: 0; box-sizing: border-box;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  position: relative;
+  overflow: hidden;
+  page-break-after: always;
+  display: flex;
+  flex-direction: column;
+}
+.page:last-child { page-break-after: avoid; }
+
+/* ── Typographie ── */
+.eyebrow {
+  font-size: 7.5pt; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+}
+.display-xl {
+  font-size: 64pt; font-weight: 800;
+  line-height: 0.97; letter-spacing: -0.03em;
+}
+.display-lg {
+  font-size: 44pt; font-weight: 800;
+  line-height: 1.03; letter-spacing: -0.025em;
+}
+.display-md {
+  font-size: 26pt; font-weight: 800;
+  line-height: 1.1; letter-spacing: -0.015em;
+}
+em { font-style: italic; }
+
+/* ── Couleurs utilitaires ── */
+.c-carbone { color: var(--carbone); }
+.c-beton   { color: var(--beton); }
+.c-terre   { color: var(--terre); }
+.c-white   { color: #fff; }
+.c-muted   { color: rgba(255,255,255,0.45); }
+
+/* ── Structure de page commune ── */
+.topbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14pt 16pt 0;
+  flex-shrink: 0;
+}
+.body {
+  flex: 1; padding: 0 16pt;
+  display: flex; flex-direction: column;
+}
+.footer {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10pt 16pt;
+  flex-shrink: 0;
+}
+.logo { height: 17pt; width: auto; }
+.pagenum { font-size: 7pt; letter-spacing: 0.08em; color: var(--beton); }
+.hr {
+  border: none;
+  border-top: 0.6pt solid rgba(23,21,20,0.14);
+  margin: 14pt 0;
+}
+
+/* ════════════════════════════════════════
+   P1 — COUVERTURE
+════════════════════════════════════════ */
+.cover {
+  background: var(--carbone);
+  justify-content: space-between;
+  padding: 0;
+}
+.cover-top {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14pt 16pt;
+}
+.cover-mid {
+  flex: 1; display: flex; flex-direction: column;
+  justify-content: center; padding: 0 16pt;
+}
+.cover-sub {
+  font-size: 8pt; font-weight: 400; letter-spacing: 0.22em;
+  text-transform: uppercase; color: rgba(255,255,255,0.4);
+  margin-bottom: 14pt;
+}
+.cover-title {
+  font-size: 68pt; font-weight: 800;
+  line-height: 0.97; letter-spacing: -0.03em;
+  color: #fff;
+}
+.cover-title em { color: var(--terre); font-style: italic; }
+.cover-bot {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  padding: 14pt 16pt;
+}
+.cover-since {
+  font-size: 6.5pt; font-weight: 500; letter-spacing: 0.22em;
+  text-transform: uppercase; color: rgba(255,255,255,0.35);
+  text-align: right; line-height: 2;
+}
+
+/* ════════════════════════════════════════
+   P2 — ÉDITO
+════════════════════════════════════════ */
+.edito-quote {
+  font-size: 20pt; font-weight: 800; line-height: 1.22;
+  letter-spacing: -0.01em; color: var(--carbone);
+  margin-bottom: 18pt;
+}
+.body-reg {
+  font-size: 10.5pt; font-weight: 400; line-height: 1.68;
+  color: var(--carbone);
+}
+.body-sm {
+  font-size: 9pt; font-weight: 400; line-height: 1.65;
+  color: var(--carbone);
+}
+.sig-name { font-size: 10pt; font-style: italic; color: var(--carbone); }
+.sig-role {
+  font-size: 7pt; font-weight: 500; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--beton); margin-top: 3pt;
+}
+
+/* ════════════════════════════════════════
+   P3 — SOMMAIRE
+════════════════════════════════════════ */
+.toc-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 9.5pt 0;
+  border-bottom: 0.5pt solid rgba(23,21,20,0.11);
+}
+.toc-num { font-size: 7pt; color: var(--beton); letter-spacing: 0.08em; width: 18pt; }
+.toc-label { font-size: 11pt; font-weight: 600; color: var(--carbone); flex: 1; }
+.toc-page { font-size: 8pt; color: var(--beton); }
+
+/* ════════════════════════════════════════
+   P4 — LA MAISON / STATS
+════════════════════════════════════════ */
+.stats-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-top: 0.6pt solid rgba(23,21,20,0.14);
+  border-left: 0.6pt solid rgba(23,21,20,0.14);
+}
+.stat-cell {
+  padding: 16pt 14pt;
+  border-right: 0.6pt solid rgba(23,21,20,0.14);
+  border-bottom: 0.6pt solid rgba(23,21,20,0.14);
+}
+.stat-big {
+  font-size: 54pt; font-weight: 800;
+  line-height: 1.0; letter-spacing: -0.04em;
+  color: var(--carbone); margin-bottom: 7pt;
+}
+.stat-desc {
+  font-size: 8.5pt; color: var(--beton);
+  line-height: 1.5; max-width: 38mm;
+}
+
+/* ════════════════════════════════════════
+   P5 — SAVOIR-FAIRE
+════════════════════════════════════════ */
+.svc-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0 22pt;
+}
+.svc-col {}
+.svc-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 8.5pt 0;
+  border-bottom: 0.5pt solid rgba(23,21,20,0.10);
+}
+.svc-name { font-size: 10pt; font-weight: 600; color: var(--carbone); }
+.svc-name.sig { color: var(--terre); }
+.svc-num { font-size: 7.5pt; color: var(--beton); }
+.sig-note {
+  display: flex; align-items: center; gap: 7pt;
+  font-size: 7pt; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--beton); margin-top: 12pt;
+}
+.sig-dot {
+  width: 5pt; height: 5pt; border-radius: 50%;
+  background: var(--terre); flex-shrink: 0;
+}
+
+/* ════════════════════════════════════════
+   P6 — BÉTON CIRÉ
+════════════════════════════════════════ */
+.beton-page {
+  background: var(--terre);
+  padding: 16pt;
+  justify-content: space-between;
+}
+.beton-title {
+  flex: 1; display: flex; flex-direction: column; justify-content: center;
+  font-size: 64pt; font-weight: 800;
+  line-height: 0.97; letter-spacing: -0.03em; color: #fff;
+}
+.beton-title em { color: rgba(255,255,255,0.72); }
+.beton-cols {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16pt;
+  padding-top: 16pt;
+  border-top: 0.6pt solid rgba(255,255,255,0.22);
+}
+.beton-p { font-size: 8.5pt; line-height: 1.65; color: rgba(255,255,255,0.82); }
+
+/* ════════════════════════════════════════
+   P7 — TEINTES
+════════════════════════════════════════ */
+.swatches {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10pt;
+}
+.swatch-color { height: 36mm; border-radius: 2pt; }
+.swatch-name { font-size: 9pt; font-weight: 700; color: var(--carbone); margin-top: 6pt; }
+.swatch-code { font-size: 7.5pt; color: var(--beton); margin-top: 1pt; }
+
+/* ════════════════════════════════════════
+   P8 — MOBILIER (split)
+════════════════════════════════════════ */
+.split { display: flex; height: 100%; }
+.split-img {
+  width: 50%; position: relative; background: var(--acier); overflow: hidden;
+}
+.split-img img {
+  width: 100%; height: 100%; object-fit: cover; opacity: 0.75;
+}
+.split-img-label {
+  position: absolute; bottom: 12pt; left: 12pt;
+  font-size: 6.5pt; letter-spacing: 0.18em; text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+.split-content {
+  width: 50%; background: var(--papier);
+  display: flex; flex-direction: column;
+  justify-content: space-between; padding: 18pt 16pt;
+}
+.mob-list { list-style: none; display: flex; flex-direction: column; }
+.mob-list li {
+  font-size: 10pt; font-weight: 500; color: var(--carbone);
+  padding: 9pt 0;
+  border-bottom: 0.5pt solid rgba(23,21,20,0.11);
+  display: flex; align-items: center; gap: 10pt;
+}
+.mob-list li::before {
+  content: ''; display: block;
+  width: 14pt; height: 1pt; background: var(--terre); flex-shrink: 0;
+}
+
+/* ════════════════════════════════════════
+   P9 — PROCESSUS
+════════════════════════════════════════ */
+.proc-list { display: flex; flex-direction: column; }
+.proc-step {
+  display: grid; grid-template-columns: 20pt 1fr;
+  gap: 12pt; padding: 11pt 0;
+  border-bottom: 0.5pt solid rgba(23,21,20,0.10);
+  align-items: start;
+}
+.proc-step:last-child { border-bottom: none; }
+.step-n { font-size: 7.5pt; color: var(--beton); padding-top: 2pt; }
+.step-h { font-size: 12pt; font-weight: 800; color: var(--carbone); margin-bottom: 2pt; letter-spacing: -0.01em; }
+.step-p { font-size: 8.5pt; color: var(--beton); line-height: 1.55; }
+
+/* ════════════════════════════════════════
+   P10 — RÉALISATIONS
+════════════════════════════════════════ */
+.reals {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 7pt; flex: 1;
+}
+.real {
+  border-radius: 3pt; overflow: hidden;
+  position: relative; display: flex;
+  flex-direction: column; justify-content: flex-end;
+  padding: 9pt;
+}
+.real img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+}
+.real-grad {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(23,21,20,0.88) 0%, rgba(23,21,20,0) 55%);
+}
+.real-city {
+  font-size: 6pt; font-weight: 500; letter-spacing: 0.2em;
+  text-transform: uppercase; color: rgba(255,255,255,0.55);
+  position: relative; z-index: 1; margin-bottom: 2pt;
+}
+.real-title {
+  font-size: 9.5pt; font-weight: 700; color: #fff;
+  position: relative; z-index: 1; line-height: 1.2; margin-bottom: 2pt;
+}
+.real-sub { font-size: 7.5pt; color: rgba(255,255,255,0.65); position: relative; z-index: 1; }
+
+/* for color-only cards */
+.real-city.dark { color: rgba(23,21,20,0.5); }
+.real-title.dark { color: var(--carbone); }
+.real-sub.dark { color: rgba(23,21,20,0.55); }
+
+/* ════════════════════════════════════════
+   P11 — GARANTIES
+════════════════════════════════════════ */
+.gar-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+.gar-cell {
+  padding: 16pt 14pt 16pt 0;
+  border-bottom: 0.6pt solid rgba(23,21,20,0.13);
+}
+.gar-cell.right {
+  padding-left: 14pt; padding-right: 0;
+  border-left: 0.6pt solid rgba(23,21,20,0.13);
+}
+.gar-dot {
+  width: 7pt; height: 7pt; border-radius: 50%;
+  background: var(--terre); margin-bottom: 9pt;
+}
+.gar-h { font-size: 11.5pt; font-weight: 700; color: var(--carbone); margin-bottom: 5pt; }
+.gar-p { font-size: 8.5pt; color: var(--beton); line-height: 1.6; }
+
+/* ════════════════════════════════════════
+   P12 — CONTACT
+════════════════════════════════════════ */
+.contact-page {
+  background: var(--carbone); justify-content: space-between; padding: 0;
+}
+.contact-top {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14pt 16pt;
+}
+.contact-mid {
+  flex: 1; display: flex; align-items: center; padding: 0 16pt;
+}
+.contact-title {
+  font-size: 54pt; font-weight: 800;
+  line-height: 1.0; letter-spacing: -0.03em; color: #fff;
+}
+.contact-title em { color: var(--terre); }
+.contact-cols {
+  display: grid; grid-template-columns: 1fr 1fr;
+  border-top: 0.6pt solid rgba(255,255,255,0.1);
+  padding: 14pt 16pt;
+  gap: 0;
+}
+.contact-col { padding-right: 14pt; }
+.contact-col.right {
+  padding-left: 14pt; padding-right: 0;
+  border-left: 0.6pt solid rgba(255,255,255,0.1);
+}
+.contact-region {
+  font-size: 6.5pt; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.38); margin-bottom: 6pt;
+}
+.contact-phone {
+  font-size: 17pt; font-weight: 700; color: #fff;
+  letter-spacing: -0.01em; margin-bottom: 4pt;
+}
+.contact-info { font-size: 8.5pt; color: rgba(255,255,255,0.55); line-height: 1.8; }
+.contact-bar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10pt 16pt;
+  border-top: 0.6pt solid rgba(255,255,255,0.1);
+}
+.contact-web { font-size: 8pt; color: rgba(255,255,255,0.38); letter-spacing: 0.06em; }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     P1 — COUVERTURE
+══════════════════════════════════════ -->
+<div class="page cover">
+  <div class="cover-top">
+    <span class="eyebrow c-muted">Plaquette commerciale</span>
+    <span class="eyebrow c-muted">FR · BE — 2026</span>
+  </div>
+  <div class="cover-mid">
+    <p class="cover-sub">Entreprise générale du bâtiment</p>
+    <h1 class="cover-title">
+      Bâtir comme<br><em>on sculpte.</em>
+    </h1>
+  </div>
+  <div class="cover-bot">
+    <img src="logos-png/wordmark-inverse.png" class="logo" alt="Ben&amp;Bat" style="height:24pt;">
+    <p class="cover-since">DEPUIS 2001<br>FR · BE</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     P2 — ÉDITO
+══════════════════════════════════════ -->
+<div class="page" style="background:var(--papier);">
+  <div class="topbar">
+    <span class="eyebrow c-beton">— Édito</span>
+  </div>
+  <div class="body" style="justify-content:center; padding-top:8pt; padding-bottom:8pt;">
+    <p class="edito-quote">
+      Vingt-cinq ans à fabriquer du béton ciré nous ont appris une chose : le bâtiment n'est pas un produit, c'est une matière.
+    </p>
+    <div class="hr"></div>
+    <p class="body-reg" style="margin-bottom:12pt;">
+      Chez Ben&amp;Bat, nous travaillons toutes les disciplines du bâtiment — du gros œuvre au second œuvre, de la rénovation à l'agencement. Nos artisans signent eux-mêmes les pièces qui nous distinguent : béton ciré, mobilier sur mesure, vasques. Aucune sous-traitance sur ces savoir-faire.
+    </p>
+    <p class="body-reg">
+      Nous intervenons en France et en Belgique pour les particuliers, les architectes, les promoteurs et les enseignes. Chaque chantier — quelle que soit sa taille — est mené avec la même exigence.
+    </p>
+    <div style="margin-top:28pt; text-align:right;">
+      <p class="sig-name">Sébastien Benali</p>
+      <p class="sig-role">Fondateur</p>
+    </div>
+  </div>
+  <div class="footer">
+    <img src="logos-png/wordmark-noir-transparent.png" class="logo" alt="Ben&amp;Bat">
+    <span class="pagenum">02 / 12</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     P3 — SOMMAIRE
+══════════════════════════════════════ -->
+<div class="page" style="background:var(--papier);">
+  <div class="topbar">
+    <span class="eyebrow c-beton">— Sommaire</span>
+  </div>
+  <div class="body" style="padding-top:16pt;">
+    <div class="display-lg c-carbone" style="margin-bottom:28pt;">
+      Au fil<br>du chantier.
+    </div>
+    <div style="border-top:0.6pt solid rgba(23,21,20,0.12);">
+      <div class="toc-row"><span class="toc-num">01</span><span class="toc-label">La maison</span><span class="toc-page">p. 04</span></div>
+      <div class="toc-row"><span class="toc-num">02</span><span class="toc-label">Savoir-faire</span><span class="toc-page">p. 05</span></div>
+      <div class="toc-row"><span class="toc-num">03</span><span class="toc-label">Béton ciré — la signature</span><span class="toc-page">p. 06</span></div>
+      <div class="toc-row"><span class="toc-num">04</span><span class="toc-label">Teintes de référence</span><span class="toc-page">p. 07</span></div>
+      <div class="toc-row"><span class="toc-num">05</span><span class="toc-label">Mobilier &amp; vasques</span><span class="toc-page">p. 08</span></div>
+      <div class="toc-row"><span class="toc-num">06</span><span class="toc-label">Notre processus</span><span class="toc-page">p. 09</span></div>
+      <div class="toc-row"><span class="toc-num">07</span><span class="toc-label">Réalisations choisies</span><span class="toc-page">p. 10</span></div>
+      <div class="toc-row"><span class="toc-num">08</span><span class="toc-label">Garanties &amp; engagements</span><span class="toc-page">p. 11</span></div>
+      <div class="toc-row" style="border-bottom:none;"><span class="toc-num">09</span><span class="toc-label">Nous contacter</span><span class="toc-page">p. 12</span></div>
+    </div>
+  </div>
+  <div class="footer">
+    <img src="logos-png/wordmark-noir-transparent.png" class="logo" alt="Ben&amp;Bat">
+    <span class="pagenum">03 / 12</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     P4 — LA MAISON / STATS
+══════════════════════════════════════ -->
+<div class="page" style="background:var(--chaux);">
+  <div class="topbar">
+    <span class="eyebrow c-beton">— 01 / La maison</span>
+  </div>
+  <div class="body" style="padding-top:10pt;">
+    <div class="display-md c-carbone" style="margin-bottom:14pt;">
+      Une équipe d'artisans,<br>deux pays,<br>un seul interlocuteur.
+    </div>
+    <div class="hr"></div>
+    <div class="stats-grid">
+      <div class="stat-cell">
+        <div class="stat-big">25</div>
+        <div class="stat-desc">années de béton ciré, fabriqué en interne depuis 2001</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-big">+312</div>
+        <div class="stat-desc">chantiers livrés en France et en Belgique</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-big">100%</div>
+        <div class="stat-desc">des vasques et mobiliers réalisés par nos propres artisans</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-big">0</div>
+        <div class="stat-desc">sous-traitance sur nos spécialités signature</div>
+      </div>
+    </div>
+    <p class="body-sm c-beton" style="margin-top:12pt;">
+      Ben&amp;Bat entame un nouveau chapitre avec sa reprise familiale. Notre vision reste inchangée : offrir un service BTP tous corps d'état de qualité professionnelle, alliant la force d'une structure solide à la proximité d'un artisan. Du particulier au promoteur, chaque chantier est traité avec la même exigence.
+    </p>
+  </div>
+  <div class="footer">
+    <img src="logos-png/wordmark-noir-transparent.png" class="logo" alt="Ben&amp;Bat">
+    <span class="pagenum">04 / 12</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     P5 — SAVOIR-FAIRE
+══════════════════════════════════════ -->
+<div class="page" style="background:var(--papier);">
+  <div class="topbar">
+    <span class="eyebrow c-beton">— 02 / Savoir-faire</span>
+  </div>
+  <div class="body" style="padding-top:10pt;">
+    <div class="display-md c-carbone" style="margin-bottom:8pt;">
+      Tous corps de métier.<br>Chacun, un spécialiste.
+    </div>
+    <p class="body-sm c-beton" style="margin-bottom:14pt;">
+      Pas de généralistes. Chaque intervenant est expert de sa discipline, formé en interne et fidèle à la maison.
+    </p>
+    <div class="svc-grid">
+      <div class="svc-col">
+        <div class="svc-row"><span class="svc-name">Gros œuvre</span><span class="svc-num">/01</span></div>
+        <div class="svc-row"><span class="svc-name">Plâtrerie</span><span class="svc-num">/03</span></div>
+        <div class="svc-row"><span class="svc-name">Plomberie</span><span class="svc-num">/05</span></div>
+        <div class="svc-row"><span class="svc-name">Carrelage &amp; Faïence</span><span class="svc-num">/07</span></div>
+        <div class="svc-row"><span class="svc-name">Revêtements de sols</span><span class="svc-num">/09</span></div>
+        <div class="svc-row"><span class="svc-name sig">♦ Béton ciré</span><span class="svc-num">/11</span></div>
+        <div class="svc-row"><span class="svc-name sig">♦ Vasques sur mesure</span><span class="svc-num">/13</span></div>
+      </div>
+      <div class="svc-col">
+        <div class="svc-row"><span class="svc-name">Maçonnerie</span><span class="svc-num">/02</span></div>
+        <div class="svc-row"><span class="svc-name">Électricité</span><span class="svc-num">/04</span></div>
+        <div class="svc-row"><span class="svc-name">Menuiserie</span><span class="svc-num">/06</span></div>
+        <div class="svc-row"><span class="svc-name">Peinture &amp; Enduits</span><span class="svc-num">/08</span></div>
+        <div class="svc-row"><span class="svc-name">Cuisine &amp; Salle de bain</span><span class="svc-num">/10</span></div>
+        <div class="svc-row"><span class="svc-name sig">♦ Mobilier sur mesure</span><span class="svc-num">/12</span></div>
+        <div class="svc-row"><span class="svc-name sig">♦ Nettoyage chantier</span><span class="svc-num">/14</span></div>
+      </div>
+    </div>
+    <div class="sig-note">
+      <span class="sig-dot"></span>
+      Nos signatures — réalisées par nos propres artisans, sans sous-traitance
+    </div>
+  </div>
+  <div class="footer">
+    <img src="logos-png/wordmark-noir-transparent.png" class="logo" alt="Ben&amp;Bat">
+    <span class="pagenum">05 / 12</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     P6 — BÉTON CIRÉ
+══════════════════════════════════════ -->
+<div class="page beton-page">
+  <span class="eyebrow" style="color:rgba(255,255,255,0.42);">— 03 / Signature</span>
+  <h2 class="beton-title">
+    Béton ciré,<br><em>fait</em> maison.
+  </h2>
+  <div class="beton-cols">
+    <p class="beton-p">
+      Notre béton ciré est fabriqué dans nos ateliers depuis vingt-cinq ans. Aucune formule générique : chaque mélange est pesé, teinté et appliqué en fonction du support, de la lumière et du rendu souhaité.
+    </p>
+    <p class="beton-p">
+      Sols, murs, plans de travail, douches, cuisines, mobilier — toujours 100&nbsp;% sur mesure. Échantillonnage avant chantier systématique pour valider la teinte exacte avec vous.
+    </p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     P7 — TEINTES
+══════════════════════════════════════ -->
+<div class="page" style="background:var(--papier);">
+  <div class="topbar">
+    <span class="eyebrow c-beton">— 04 / Teintes de référence</span>
+  </div>
+  <div class="body" style="padding-top:10pt;">
+    <div class="display-md c-carbone" style="margin-bottom:6pt;">
+      Six familles,<br>mille rendus.
+    </div>
+    <p class="body-sm c-beton" style="margin-bottom:18pt;">
+      Chaque teinte est un point de départ — modulable en intensité, finition (mate, satin, cire douce) et texture.
+    </p>
+    <div class="swatches">
+      <div>
+        <div class="swatch-color" style="background:#F0EBE0;border:0.5pt solid rgba(23,21,20,0.12);"></div>
+        <p class="swatch-name">Chaux</p><p class="swatch-code">BC-01</p>
+      </div>
+      <div>
+        <div class="swatch-color" style="background:#C9B99A;"></div>
+        <p class="swatch-name">Sable</p><p class="swatch-code">BC-02</p>
+      </div>
+      <div>
+        <div class="swatch-color" style="background:#A08060;"></div>
+        <p class="swatch-name">Argile</p><p class="swatch-code">BC-03</p>
+      </div>
+      <div>
+        <div class="swatch-color" style="background:#9B4F28;"></div>
+        <p class="swatch-name">Terre</p><p class="swatch-code">BC-04</p>
+      </div>
+      <div>
+        <div class="swatch-color" style="background:#5C5850;"></div>
+        <p class="swatch-name">Ardoise</p><p class="swatch-code">BC-05</p>
+      </div>
+      <div>
+        <div class="swatch-color" style="background:#1A1816;"></div>
+        <p class="swatch-name">Carbone</p><p class="swatch-code">BC-06</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <img src="logos-png/wordmark-noir-transparent.png" class="logo" alt="Ben&amp;Bat">
+    <span class="pagenum">07 / 12</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     P8 — MOBILIER & VASQUES
+══════════════════════════════════════ -->
+<div class="page" style="padding:0;">
+  <div class="split">
+    <div class="split-img">
+      <img src="images/image7.webp" alt="Atelier Ben&amp;Bat">
+      <span class="split-img-label">Atelier · sur mesure</span>
+    </div>
+    <div class="split-content">
+      <div>
+        <span class="eyebrow c-beton" style="display:block;margin-bottom:14pt;">— 05 / Mobilier</span>
+        <div class="display-md c-carbone" style="margin-bottom:12pt;">
+          Conçus,<br>coulés,<br>signés.
+        </div>
+        <p class="body-sm c-beton">
+          Plans vasques, plans de travail, meubles bas, consoles, tables. Nos artisans dessinent et réalisent chaque pièce dans notre atelier — du gabarit au coulage, jusqu'à la cire de finition.
+        </p>
+      </div>
+      <div>
+        <ul class="mob-list" style="margin-bottom:18pt;">
+          <li>Vasques sur mesure</li>
+          <li>Plans de travail béton ciré</li>
+          <li>Meubles &amp; consoles</li>
+          <li>Tables &amp; assises</li>
+          <li>Dressings &amp; bibliothèques</li>
+        </ul>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <img src="logos-png/wordmark-noir-transparent.png" class="logo" alt="Ben&amp;Bat">
+          <span class="pagenum">08 / 12</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     P9 — PROCESSUS
+══════════════════════════════════════ -->
+<div class="page" style="background:var(--papier);">
+  <div class="topbar">
+    <span class="eyebrow c-beton">— 06 / Processus</span>
+  </div>
+  <div class="body" style="padding-top:10pt;">
+    <div class="display-md c-carbone" style="margin-bottom:16pt;">
+      Six étapes,<br>jamais bâclées.
+    </div>
+    <div class="proc-list">
+      <div class="proc-step">
+        <span class="step-n">01</span>
+        <div><div class="step-h">Rencontre</div><div class="step-p">Visite sur site, écoute du besoin, premières orientations. Sans frais ni engagement.</div></div>
+      </div>
+      <div class="proc-step">
+        <span class="step-n">02</span>
+        <div><div class="step-h">Devis détaillé</div><div class="step-p">Chiffrage poste par poste, planning prévisionnel, échantillons matières. Réponse sous 24h.</div></div>
+      </div>
+      <div class="proc-step">
+        <span class="step-n">03</span>
+        <div><div class="step-h">Coordination</div><div class="step-p">Un chef de chantier dédié. Reporting hebdomadaire, accès permanent à l'avancement.</div></div>
+      </div>
+      <div class="proc-step">
+        <span class="step-n">04</span>
+        <div><div class="step-h">Réalisation</div><div class="step-p">Nos artisans interviennent. Contrôle qualité à chaque jalon, photos de suivi partagées.</div></div>
+      </div>
+      <div class="proc-step">
+        <span class="step-n">05</span>
+        <div><div class="step-h">Livraison</div><div class="step-p">Nettoyage de chantier inclus. Réception en votre présence, dossier complet remis.</div></div>
+      </div>
+      <div class="proc-step">
+        <span class="step-n">06</span>
+        <div><div class="step-h">Suivi</div><div class="step-p">Bilan à 30 jours. Garantie après chantier active. Un appel suffit, on revient.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <img src="logos-png/wordmark-noir-transparent.png" class="logo" alt="Ben&amp;Bat">
+    <span class="pagenum">09 / 12</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     P10 — RÉALISATIONS
+══════════════════════════════════════ -->
+<div class="page" style="background:var(--papier);">
+  <div class="topbar" style="align-items:flex-end; padding-bottom:10pt;">
+    <div>
+      <span class="eyebrow c-beton" style="display:block;margin-bottom:5pt;">— 07 / Réalisations</span>
+      <div style="font-size:20pt;font-weight:800;letter-spacing:-0.015em;color:var(--carbone);line-height:1.1;">Quelques chantiers récents.</div>
+    </div>
+    <span class="eyebrow c-beton">+312 livrés</span>
+  </div>
+  <div class="body" style="padding-bottom:0; padding-top:0; flex:1;">
+    <div class="reals">
+      <div class="real" style="background:var(--terre);">
+        <div class="real-city">Paris XVI</div>
+        <div class="real-title">Villa Saint-Cloud</div>
+        <div class="real-sub">Béton ciré · 240m²</div>
+      </div>
+      <div class="real" style="background:var(--acier);">
+        <img src="images/image1.webp" alt="Réalisation Bruxelles">
+        <div class="real-grad"></div>
+        <div class="real-city">Bruxelles</div>
+        <div class="real-title">Loft Châtelain</div>
+        <div class="real-sub">Rénovation totale · 180m²</div>
+      </div>
+      <div class="real" style="background:var(--ocre);">
+        <img src="images/image3.webp" alt="Réalisation Lille">
+        <div class="real-grad"></div>
+        <div class="real-city">Lille</div>
+        <div class="real-title">Maison Vauban</div>
+        <div class="real-sub">Cuisine + SDB sur mesure</div>
+      </div>
+      <div class="real" style="background:var(--beton);">
+        <img src="images/image5.webp" alt="Réalisation Anvers">
+        <div class="real-grad"></div>
+        <div class="real-city">Anvers</div>
+        <div class="real-title">Bureaux Studio M</div>
+        <div class="real-sub">Agencement pro · 320m²</div>
+      </div>
+      <div class="real" style="background:var(--calque);">
+        <div class="real-city dark">Bordeaux</div>
+        <div class="real-title dark">Commerce Saint-Émilion</div>
+        <div class="real-sub dark">Concept-store</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer" style="padding-top:8pt;">
+    <img src="logos-png/wordmark-noir-transparent.png" class="logo" alt="Ben&amp;Bat">
+    <span class="pagenum">10 / 12</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     P11 — GARANTIES
+══════════════════════════════════════ -->
+<div class="page" style="background:var(--chaux);">
+  <div class="topbar">
+    <span class="eyebrow c-beton">— 08 / Garanties</span>
+  </div>
+  <div class="body" style="padding-top:10pt;">
+    <div class="display-md c-carbone" style="margin-bottom:14pt;">
+      Le chantier ne s'arrête<br>pas à la livraison.
+    </div>
+    <div class="hr"></div>
+    <div class="gar-grid">
+      <div class="gar-cell">
+        <div class="gar-dot"></div>
+        <div class="gar-h">Assurance Décennale</div>
+        <p class="gar-p">Tous nos chantiers couverts, en France comme en Belgique. Protège votre bien 10 ans après livraison. Attestation fournie sur demande.</p>
+      </div>
+      <div class="gar-cell right">
+        <div class="gar-dot"></div>
+        <div class="gar-h">RC Professionnelle</div>
+        <p class="gar-p">Responsabilité civile professionnelle couvrant l'intégralité des dommages matériels et corporels pouvant survenir en cours de chantier.</p>
+      </div>
+      <div class="gar-cell" style="border-bottom:none;">
+        <div class="gar-dot"></div>
+        <div class="gar-h">Garantie Post-Chantier</div>
+        <p class="gar-p">Bilan à 30 jours après livraison inclus. Retour gratuit et sans discussion si quelque chose ne vous convient pas.</p>
+      </div>
+      <div class="gar-cell right" style="border-bottom:none;">
+        <div class="gar-dot"></div>
+        <div class="gar-h">Engagement Satisfaction</div>
+        <p class="gar-p">Devis transparent, aucune mauvaise surprise en cours de chantier. Interlocuteur dédié de la première rencontre au bilan final.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <img src="logos-png/wordmark-noir-transparent.png" class="logo" alt="Ben&amp;Bat">
+    <span class="pagenum">11 / 12</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     P12 — CONTACT
+══════════════════════════════════════ -->
+<div class="page contact-page">
+  <div class="contact-top">
+    <span class="eyebrow c-muted">— 09 / Contact</span>
+    <span class="eyebrow c-muted">Fin</span>
+  </div>
+  <div class="contact-mid">
+    <h2 class="contact-title">
+      Parlons de<br>votre <em>chantier.</em>
+    </h2>
+  </div>
+  <div class="contact-bottom">
+    <div class="contact-cols">
+      <div class="contact-col">
+        <p class="contact-region">France</p>
+        <p class="contact-phone">+33 6 58 59 41 47</p>
+        <p class="contact-info">
+          contact@ben-bat.com<br>
+          60 Rue François 1er<br>
+          75008 Paris
+        </p>
+      </div>
+      <div class="contact-col right">
+        <p class="contact-region">Belgique</p>
+        <p class="contact-phone">+32 465 86 63 72</p>
+        <p class="contact-info">
+          contact@ben-bat.com<br>
+          Interventions sur toute<br>la Belgique
+        </p>
+      </div>
+    </div>
+    <div class="contact-bar">
+      <img src="logos-png/wordmark-inverse.png" class="logo" alt="Ben&amp;Bat" style="height:20pt;">
+      <span class="contact-web">www.ben-bat.com</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
