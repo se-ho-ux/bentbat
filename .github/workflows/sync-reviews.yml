@@ -1,8 +1,11 @@
 name: Sync Google Reviews
 
+# Cron désactivé : le secret GOOGLE_PLACES_API_KEY n'est pas configuré,
+# les avis affichés sur le site sont ceux écrits en dur dans les pages HTML.
+# Pour réactiver : ajouter le secret puis décommenter le bloc schedule.
 on:
-  schedule:
-    - cron: '0 6 * * *'
+  # schedule:
+  #   - cron: '0 6 * * *'
   workflow_dispatch:
 
 jobs:
