@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /404.html
 
-Sitemap: https://www.ben-bat.com/sitemap.xml
+Sitemap: https://benbat.fr/sitemap.xml
