@@ -5,13 +5,22 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io; frame-src https://maps.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="canonical" href="https://benbat.fr/beton-cire-bruxelles.html">
+  <script>
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
+    }
+  </script>
+  <link rel="canonical" href="https://benbat.fr/beton-cire-bruxelles">
   <title>Béton Ciré à Bruxelles &amp; en Belgique | Ben&amp;Bat</title>
   <meta name="description" content="Pose de béton ciré à Bruxelles, Liège, Anvers et Gand : sols, murs, cuisines et salles de bains. Compatible sol chauffant. Ligne belge dédiée, devis gratuit sous 24h.">
   <meta property="og:title" content="Béton ciré à Bruxelles &amp; en Belgique | Ben&amp;Bat">
   <meta property="og:description" content="Sols continus, cuisines et pièces d'eau en béton ciré à Bruxelles et partout en Belgique. Équipes internes, teintes sur mesure, devis gratuit.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://benbat.fr/beton-cire-bruxelles.html">
+  <meta property="og:url" content="https://benbat.fr/beton-cire-bruxelles">
   <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -56,7 +65,7 @@
     "name": "Béton ciré à Bruxelles et en Belgique",
     "serviceType": "Application de béton ciré décoratif",
     "description": "Pose de béton ciré sur sols, murs, cuisines, plans de travail et salles de bains à Bruxelles, Liège, Anvers et Gand. Compatible chauffage par le sol.",
-    "url": "https://benbat.fr/beton-cire-bruxelles.html",
+    "url": "https://benbat.fr/beton-cire-bruxelles",
     "provider": {
       "@type": "GeneralContractor",
       "name": "Ben&Bat",
@@ -110,13 +119,13 @@
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://benbat.fr/services.html"
+        "item": "https://benbat.fr/services"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Béton ciré à Bruxelles",
-        "item": "https://benbat.fr/beton-cire-bruxelles.html"
+        "item": "https://benbat.fr/beton-cire-bruxelles"
       }
     ]
   }
@@ -181,15 +190,15 @@
       <nav aria-label="Navigation principale">
         <ul class="nav-links">
           <li><a href="/">Accueil</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="realisations.html">Réalisations</a></li>
-          <li><a href="a-propos.html">À propos</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
         </ul>
       </nav>
       <div class="nav-actions">
         <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
-        <a href="contact.html" class="btn btn-primary">Devis gratuit</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -201,15 +210,15 @@
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
     <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
     <a href="/">Accueil</a>
-    <a href="services.html">Services</a>
-    <a href="realisations.html">Réalisations</a>
-    <a href="a-propos.html">À propos</a>
-    <a href="contact.html">Contact</a>
+    <a href="services">Services</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
     <div class="mobile-menu-sep"></div>
     <div class="mobile-menu-actions">
       <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
       <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
-      <a href="contact.html" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
     </div>
   </div>
 
@@ -218,7 +227,7 @@
     <div class="container">
       <div class="page-hero-inner">
         <div class="breadcrumb">
-          <a href="/">Accueil</a><span class="sep">/</span><a href="services.html">Services</a><span class="sep">/</span><span class="cur">Béton ciré à Bruxelles</span>
+          <a href="/">Accueil</a><span class="sep">/</span><a href="services">Services</a><span class="sep">/</span><span class="cur">Béton ciré à Bruxelles</span>
         </div>
         <h1>Béton ciré à Bruxelles<br>et partout en Belgique</h1>
         <p>Sols sans joint, cuisines et pièces d'eau en béton ciré, à Bruxelles comme à Liège, Anvers ou Gand. Ligne belge dédiée : +32 465 86 63 72.</p>
@@ -365,7 +374,7 @@
           <p>Le déplacement pour le relevé est gratuit partout en Belgique, et le devis détaillé vous parvient sous 24h ouvrées.</p>
         </div>
       </div>
-      <p style="margin-top:2rem;">Découvrez <a href="realisations.html#rl-beton-cire">nos chantiers béton ciré</a>, <a href="services.html">nos services tous corps de métier</a> et nos <a href="garanties.html">garanties</a>. En France, voir notre page <a href="beton-cire-paris.html">béton ciré à Paris</a>.</p>
+      <p style="margin-top:2rem;">Découvrez <a href="realisations#rl-beton-cire">nos chantiers béton ciré</a>, <a href="services">nos services tous corps de métier</a> et nos <a href="garanties">garanties</a>. En France, voir notre page <a href="beton-cire-paris">béton ciré à Paris</a>.</p>
     </div>
   </section>
 
@@ -428,7 +437,7 @@
           <p>Relevé et devis gratuits partout en Belgique. Réponse sous 24h.</p>
         </div>
         <div class="cta-btns">
-          <a href="contact.html" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+          <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
           <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
         </div>
       </div>
@@ -452,25 +461,25 @@
           <h5>Navigation</h5>
           <ul class="footer-links">
             <li><a href="/">Accueil</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="realisations.html">Réalisations</a></li>
-            <li><a href="a-propos.html">À propos</a></li>
-            <li><a href="a-propos.html#temoignages">Témoignages</a></li>
-            <li><a href="garanties.html">Garanties</a></li>
-            <li><a href="contact.html">Contact &amp; Devis</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Témoignages</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Spécialités</h5>
           <ul class="footer-links">
-            <li><a href="services.html#beton-cire">Béton ciré premium</a></li>
-            <li><a href="services.html#mobilier">Mobilier sur mesure</a></li>
-            <li><a href="services.html#vasques">Vasques sur mesure</a></li>
-            <li><a href="services.html#renovation">Rénovation intérieure</a></li>
-            <li><a href="services.html#nettoyage">Nettoyage de chantier</a></li>
-            <li><a href="beton-cire-paris.html">Béton ciré à Paris</a></li>
-            <li><a href="beton-cire-bruxelles.html">Béton ciré à Bruxelles</a></li>
-            <li><a href="renovation-appartement-paris.html">Rénovation appartement Paris</a></li>
+            <li><a href="services#beton-cire">Béton ciré premium</a></li>
+            <li><a href="services#mobilier">Mobilier sur mesure</a></li>
+            <li><a href="services#vasques">Vasques sur mesure</a></li>
+            <li><a href="services#renovation">Rénovation intérieure</a></li>
+            <li><a href="services#nettoyage">Nettoyage de chantier</a></li>
+            <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+            <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+            <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -488,9 +497,9 @@
         <div class="footer-bottom-inner">
           <p>&copy; 2026 Ben&amp;Bat. Tous droits réservés.</p>
           <div class="footer-legal">
-            <a href="mentions-legales.html">Mentions légales</a>
-            <a href="mentions-legales.html#confidentialite">Politique de confidentialité</a>
-            <a href="mentions-legales.html#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
           </div>
         </div>
       </div>
@@ -498,15 +507,15 @@
   </footer>
 
   <div class="sticky-cta" id="stickyCta" aria-hidden="true">
-    <a href="contact.html" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+    <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
     <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat"><i class="fas fa-phone"></i></a>
   </div>
 
   <div class="sticky-cta" id="stickyCta" aria-hidden="true">
-    <a href="contact.html" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+    <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
     <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat"><i class="fas fa-phone"></i></a>
   </div>
 
-  <script src="js/main.js?v=3"></script>
+  <script src="js/main.js?v=4"></script>
 </body>
 </html>

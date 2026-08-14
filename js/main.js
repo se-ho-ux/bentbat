@@ -41,9 +41,12 @@
   // Mark active page link.
   // Les liens vers l'accueil s'écrivent "/" (URL canonique), mais le fichier
   // servi reste index.html : on ramène les deux formes à une même clé.
+  // Les URLs du site s'écrivent sans extension ("/services"), mais GitHub Pages
+  // sert aussi "/services.html" : on retire l'extension pour que les deux
+  // formes correspondent, et on ramène l'accueil à "/".
   const pageKey = path => {
-    const file = path.split('/').pop().split('#')[0].split('?')[0];
-    return (file === '' || file === 'index.html') ? '/' : file;
+    const file = path.split('/').pop().split('#')[0].split('?')[0].replace(/\.html$/, '');
+    return (file === '' || file === 'index') ? '/' : file;
   };
   const currentPage = pageKey(window.location.pathname);
   mobileMenu?.querySelectorAll('a[href]').forEach(a => {

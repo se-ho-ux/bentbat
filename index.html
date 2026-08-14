@@ -6,12 +6,12 @@
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
-    // GitHub Pages sert /index.html et / comme la même page et ne permet aucune
-    // redirection serveur. On nettoie l'URL affichée sans recharger la page
-    // (favoris, anciens résultats Google, liens partagés).
-    if (location.pathname.endsWith('/index.html')) {
-      history.replaceState(null, '',
-        location.pathname.slice(0, -'index.html'.length) + location.search + location.hash);
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
     }
   </script>
   <link rel="canonical" href="https://benbat.fr/">
@@ -300,15 +300,15 @@
       <nav aria-label="Navigation principale">
         <ul class="nav-links">
           <li><a href="/" class="active">Accueil</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="realisations.html">Réalisations</a></li>
-          <li><a href="a-propos.html">À propos</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
         </ul>
       </nav>
       <div class="nav-actions">
         <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
-        <a href="contact.html" class="btn btn-primary">Devis gratuit</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
       </div>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -320,15 +320,15 @@
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
     <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
     <a href="/">Accueil</a>
-    <a href="services.html">Services</a>
-    <a href="realisations.html">Réalisations</a>
-    <a href="a-propos.html">À propos</a>
-    <a href="contact.html">Contact</a>
+    <a href="services">Services</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
     <div class="mobile-menu-sep"></div>
     <div class="mobile-menu-actions">
       <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
       <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
-      <a href="contact.html" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
     </div>
   </div>
 
@@ -342,8 +342,8 @@
       <h1>Béton ciré et rénovation<br>intérieure avec <em>exigence</em><br>depuis plus de 25 ans</h1>
       <p>Ben&amp;Bat couvre l'ensemble des corps de métier du bâtiment. Spécialistes du béton ciré premium depuis 25 ans, artisanat d'excellence <strong style="font-weight:700;">accessible à tous les budgets</strong>, du petit réaménagement à la rénovation complète.</p>
       <div class="hero-actions" id="heroDevis">
-        <a href="contact.html" class="btn btn-primary"><i class="fas fa-file-alt"></i> Demander un devis</a>
-        <a href="services.html" class="btn btn-ghost-dark">Nos services <i class="fas fa-arrow-right"></i></a>
+        <a href="contact" class="btn btn-primary"><i class="fas fa-file-alt"></i> Demander un devis</a>
+        <a href="services" class="btn btn-ghost-dark">Nos services <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="hero-trust">
         <span><i class="fas fa-check-circle"></i> Réponse sous 24h</span>
@@ -368,7 +368,7 @@
         <p>De la maçonnerie aux finitions, nos équipes spécialisées interviennent sur l'ensemble des corps de métier. Pas de généralistes : chaque intervenant est expert de sa discipline.</p>
       </div>
       <div class="services-list">
-        <a href="services.html" class="service-row">
+        <a href="services" class="service-row">
           <span class="sr-num">01</span>
           <span class="sr-icon"><i class="fas fa-layer-group"></i></span>
           <div class="sr-body">
@@ -377,7 +377,7 @@
           </div>
           <span class="sr-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="services.html" class="service-row">
+        <a href="services" class="service-row">
           <span class="sr-num">02</span>
           <span class="sr-icon"><i class="fas fa-hammer"></i></span>
           <div class="sr-body">
@@ -386,7 +386,7 @@
           </div>
           <span class="sr-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="services.html" class="service-row">
+        <a href="services" class="service-row">
           <span class="sr-num">03</span>
           <span class="sr-icon"><i class="fas fa-faucet"></i></span>
           <div class="sr-body">
@@ -395,7 +395,7 @@
           </div>
           <span class="sr-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="services.html" class="service-row">
+        <a href="services" class="service-row">
           <span class="sr-num">04</span>
           <span class="sr-icon"><i class="fas fa-bolt"></i></span>
           <div class="sr-body">
@@ -404,7 +404,7 @@
           </div>
           <span class="sr-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="services.html" class="service-row">
+        <a href="services" class="service-row">
           <span class="sr-num">05</span>
           <span class="sr-icon"><i class="fas fa-paint-roller"></i></span>
           <div class="sr-body">
@@ -413,7 +413,7 @@
           </div>
           <span class="sr-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="services.html" class="service-row">
+        <a href="services" class="service-row">
           <span class="sr-num">06</span>
           <span class="sr-icon"><i class="fas fa-th-large"></i></span>
           <div class="sr-body">
@@ -424,7 +424,7 @@
         </a>
       </div>
       <div class="services-cta">
-        <a href="services.html" class="btn btn-ghost-dark">Voir tous les services <i class="fas fa-arrow-right"></i></a>
+        <a href="services" class="btn btn-ghost-dark">Voir tous les services <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
@@ -440,7 +440,7 @@
         <p>Nos savoir-faire distinctifs, maîtrisés en interne depuis 25 ans. Pas de sous-traitance sur ces prestations : chaque réalisation sort de nos ateliers.</p>
       </div>
       <div class="services-list">
-        <a href="services.html#beton-cire" class="service-row">
+        <a href="services#beton-cire" class="service-row">
           <span class="sr-num">01</span>
           <span class="sr-icon"><i class="fas fa-layer-group"></i></span>
           <div class="sr-body">
@@ -450,7 +450,7 @@
           </div>
           <span class="sr-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="services.html#mobilier" class="service-row">
+        <a href="services#mobilier" class="service-row">
           <span class="sr-num">02</span>
           <span class="sr-icon"><i class="fas fa-couch"></i></span>
           <div class="sr-body">
@@ -460,7 +460,7 @@
           </div>
           <span class="sr-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="services.html#vasques" class="service-row">
+        <a href="services#vasques" class="service-row">
           <span class="sr-num">03</span>
           <span class="sr-icon"><i class="fas fa-sink"></i></span>
           <div class="sr-body">
@@ -470,7 +470,7 @@
           </div>
           <span class="sr-arrow"><i class="fas fa-arrow-right"></i></span>
         </a>
-        <a href="services.html#nettoyage" class="service-row">
+        <a href="services#nettoyage" class="service-row">
           <span class="sr-num">04</span>
           <span class="sr-icon"><i class="fas fa-broom"></i></span>
           <div class="sr-body">
@@ -517,7 +517,7 @@
           <h2>Quelques réalisations</h2>
           <p>Béton ciré, rénovation intérieure, salles de bains : chaque chantier est unique.</p>
         </div>
-        <a href="realisations.html" class="btn btn-ghost-dark">Voir tout le portfolio <i class="fas fa-arrow-right"></i></a>
+        <a href="realisations" class="btn btn-ghost-dark">Voir tout le portfolio <i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="hp-carousel-wrap">
         <div class="hp-carousel">
@@ -747,7 +747,7 @@
         </div>
       </div>
       <div style="text-align:center; margin-top:32px;">
-        <a href="a-propos.html#temoignages" class="btn btn-ghost-dark">Tous les témoignages <i class="fas fa-arrow-right"></i></a>
+        <a href="a-propos#temoignages" class="btn btn-ghost-dark">Tous les témoignages <i class="fas fa-arrow-right"></i></a>
       </div>
     </div>
   </section>
@@ -831,7 +831,7 @@
           <p>Devis gratuit, transparent et détaillé. France &amp; Belgique.</p>
         </div>
         <div class="cta-btns">
-          <a href="contact.html" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+          <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
           <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
         </div>
       </div>
@@ -855,25 +855,25 @@
           <h5>Navigation</h5>
           <ul class="footer-links">
             <li><a href="/">Accueil</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="realisations.html">Réalisations</a></li>
-            <li><a href="a-propos.html">À propos</a></li>
-            <li><a href="a-propos.html#temoignages">Témoignages</a></li>
-            <li><a href="garanties.html">Garanties</a></li>
-            <li><a href="contact.html">Contact &amp; Devis</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Témoignages</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h5>Spécialités</h5>
           <ul class="footer-links">
-            <li><a href="services.html#beton-cire">Béton ciré premium</a></li>
-            <li><a href="services.html#mobilier">Mobilier sur mesure</a></li>
-            <li><a href="services.html#vasques">Vasques sur mesure</a></li>
-            <li><a href="services.html#renovation">Rénovation intérieure</a></li>
-            <li><a href="services.html#nettoyage">Nettoyage de chantier</a></li>
-            <li><a href="beton-cire-paris.html">Béton ciré à Paris</a></li>
-            <li><a href="beton-cire-bruxelles.html">Béton ciré à Bruxelles</a></li>
-            <li><a href="renovation-appartement-paris.html">Rénovation appartement Paris</a></li>
+            <li><a href="services#beton-cire">Béton ciré premium</a></li>
+            <li><a href="services#mobilier">Mobilier sur mesure</a></li>
+            <li><a href="services#vasques">Vasques sur mesure</a></li>
+            <li><a href="services#renovation">Rénovation intérieure</a></li>
+            <li><a href="services#nettoyage">Nettoyage de chantier</a></li>
+            <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+            <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+            <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -891,9 +891,9 @@
         <div class="footer-bottom-inner">
           <p>&copy; 2026 Ben&amp;Bat. Tous droits réservés.</p>
           <div class="footer-legal">
-            <a href="mentions-legales.html">Mentions légales</a>
-            <a href="mentions-legales.html#confidentialite">Politique de confidentialité</a>
-            <a href="mentions-legales.html#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
           </div>
         </div>
       </div>
@@ -902,11 +902,11 @@
 
   <!-- ══════════ STICKY MOBILE CTA ══════════ -->
   <div class="sticky-cta" id="stickyCta" aria-hidden="true">
-    <a href="contact.html" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+    <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
     <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat"><i class="fas fa-phone"></i></a>
   </div>
 
-  <script src="js/main.js?v=3"></script>
+  <script src="js/main.js?v=4"></script>
   <script src="js/reviews.js" defer></script>
   <div class="grain-overlay" aria-hidden="true"></div>
 </body>
