@@ -7,3 +7,7 @@ node_modules/
 .agents/
 skills-lock.json
 geist-font-1.8.0/
+
+# Documents de travail internes : le dépôt est public et servi par GitHub Pages,
+# tout fichier commité ici devient téléchargeable depuis benbat.fr
+Brief-*
