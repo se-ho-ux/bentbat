@@ -506,6 +506,11 @@
       const lbCloseBtn = document.getElementById('lbClose');
       const lbPrevBtn  = document.getElementById('lbPrev');
       const lbNextBtn  = document.getElementById('lbNext');
+
+      // La lightbox n'existe que sur la page Réalisations : sans ce garde-fou,
+      // toutes les autres pages lèvent une TypeError en fin de script.
+      if (!overlay || !lbCloseBtn || !lbPrevBtn || !lbNextBtn) return;
+
       let lbIdx = 0;
 
       function lbGetVis() { return items.filter(i => !i.classList.contains('rl-hidden')); }
