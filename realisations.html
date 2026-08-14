@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io; frame-src https://maps.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://benbat.fr/realisations.html">
   <title>Réalisations BTP Paris &amp; Belgique | Béton Ciré, Cuisine, Salle de Bains | Ben&amp;Bat</title>
   <meta name="description" content="Photos de chantiers livrés : béton ciré Paris &amp; Bruxelles, rénovation cuisine, salle de bains. Aménagements intérieurs haut de gamme France &amp; Belgique.">
@@ -15,6 +15,7 @@
   <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <!-- ── Analytics & Tracking ───────────────────────────────────────────── -->
   <!-- IMPORTANT : remplacez les ID ci-dessous par vos vrais identifiants     -->
   <!-- avant d'activer ces scripts. Laissez-les commentés tant que les ID     -->
@@ -41,6 +42,8 @@
     src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXXXXX&ev=PageView&noscript=1"/></noscript>
   -->
   <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=3">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico" sizes="any">
@@ -249,10 +252,10 @@
   <!-- ══════════ HEADER ══════════ -->
   <header id="header">
     <div class="nav-wrap">
-      <a href="index.html" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.png" alt="Ben&amp;Bat" class="logo-primary" width="1800" height="600"><img src="logos-png/wordmark-noir-transparent.png" alt="Ben&amp;Bat" class="logo-scrolled" width="1800" height="600"></a>
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.png" alt="Ben&amp;Bat" class="logo-primary" width="1800" height="600"><img src="logos-png/wordmark-noir-transparent.png" alt="Ben&amp;Bat" class="logo-scrolled" width="1800" height="600"></a>
       <nav aria-label="Navigation principale">
         <ul class="nav-links">
-          <li><a href="index.html">Accueil</a></li>
+          <li><a href="/">Accueil</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="realisations.html" class="active">Réalisations</a></li>
           <li><a href="a-propos.html">À propos</a></li>
@@ -272,7 +275,7 @@
   <!-- ══════════ MENU MOBILE ══════════ -->
   <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
     <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
-    <a href="index.html">Accueil</a>
+    <a href="/">Accueil</a>
     <a href="services.html">Services</a>
     <a href="realisations.html">Réalisations</a>
     <a href="a-propos.html">À propos</a>
@@ -290,7 +293,7 @@
     <div class="container">
       <div class="page-hero-inner">
         <div class="breadcrumb">
-          <a href="index.html">Accueil</a><span class="sep">/</span><span class="cur">Réalisations</span>
+          <a href="/">Accueil</a><span class="sep">/</span><span class="cur">Réalisations</span>
         </div>
         <h1>Nos réalisations</h1>
         <p>Chaque chantier est une signature. Béton ciré, rénovation intérieure, aménagement : des projets uniques en France et en Belgique.</p>
@@ -397,7 +400,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.png" alt="Ben&amp;Bat" width="1800" height="600"></a>
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.png" alt="Ben&amp;Bat" width="1800" height="600"></a>
           <p>25 ans d'expertise BTP : béton ciré premium, mobilier sur mesure et tous corps de métier. France &amp; Belgique.</p>
           <div class="footer-socials">
             <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -408,7 +411,7 @@
         <div class="footer-col">
           <h5>Navigation</h5>
           <ul class="footer-links">
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="/">Accueil</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="realisations.html">Réalisations</a></li>
             <li><a href="a-propos.html">À propos</a></li>

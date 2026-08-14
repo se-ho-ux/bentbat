@@ -2,4 +2,10 @@ User-agent: *
 Allow: /
 Disallow: /404.html
 
+# Documents internes et sources non destinés à l'indexation
+Disallow: /Brief-BenBat-v2.docx
+Disallow: /Brief-BenBat-v2.pdf
+Disallow: /BenBat-Plaquette-2026.pdf
+Disallow: /Ben-Bat%20-%20Plaquette%20commerciale_.pdf
+
 Sitemap: https://benbat.fr/sitemap.xml
