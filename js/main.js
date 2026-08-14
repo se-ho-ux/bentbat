@@ -38,11 +38,18 @@
 
   if (mobileMenu) mobileMenu.setAttribute('aria-hidden', 'true');
 
-  // Mark active page link
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  // Mark active page link.
+  // Les liens vers l'accueil s'écrivent "/" (URL canonique), mais le fichier
+  // servi reste index.html : on ramène les deux formes à une même clé.
+  const pageKey = path => {
+    const file = path.split('/').pop().split('#')[0].split('?')[0];
+    return (file === '' || file === 'index.html') ? '/' : file;
+  };
+  const currentPage = pageKey(window.location.pathname);
   mobileMenu?.querySelectorAll('a[href]').forEach(a => {
-    const href = a.getAttribute('href').split('#')[0];
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    const href = a.getAttribute('href');
+    if (/^(tel:|mailto:|https?:)/.test(href)) return;
+    if (pageKey(href) === currentPage) {
       a.classList.add('active');
     }
   });

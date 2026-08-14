@@ -5,6 +5,15 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io; frame-src https://maps.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // GitHub Pages sert /index.html et / comme la même page et ne permet aucune
+    // redirection serveur. On nettoie l'URL affichée sans recharger la page
+    // (favoris, anciens résultats Google, liens partagés).
+    if (location.pathname.endsWith('/index.html')) {
+      history.replaceState(null, '',
+        location.pathname.slice(0, -'index.html'.length) + location.search + location.hash);
+    }
+  </script>
   <link rel="canonical" href="https://benbat.fr/">
   <title>Béton Ciré &amp; Rénovation Intérieure Paris &amp; Belgique | Ben&amp;Bat</title>
   <meta name="description" content="Ben&amp;Bat, artisans BTP à Paris, Île-de-France et en Belgique. Béton ciré premium, rénovation intérieure tous corps de métier, mobilier sur mesure. Devis gratuit sous 24h.">
@@ -897,7 +906,7 @@
     <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat"><i class="fas fa-phone"></i></a>
   </div>
 
-  <script src="js/main.js?v=2"></script>
+  <script src="js/main.js?v=3"></script>
   <script src="js/reviews.js" defer></script>
   <div class="grain-overlay" aria-hidden="true"></div>
 </body>
