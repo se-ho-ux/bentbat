@@ -34,7 +34,14 @@
    RESET & BASE
 ───────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+/* scroll-padding-top : le header est fixe, sans ce décalage toute cible d'ancre
+   se retrouve masquée dessous, au clic comme à l'ouverture d'un lien #section. */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+  font-size: 16px;
+  overflow-x: hidden;
+}
 body {
   font-family: var(--font);
   background: var(--bg);

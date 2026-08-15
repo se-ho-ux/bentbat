@@ -137,6 +137,30 @@
     });
   });
 
+  // ── Ancre présente à l'ouverture de la page ────────────────────────────────
+  // « html { scroll-behavior: smooth } » empêche le saut natif vers l'ancre au
+  // chargement : le navigateur lance un défilement animé qui est annulé pendant
+  // la mise en page, et la page reste en haut. On refait donc le saut nous-mêmes,
+  // sans animation, une fois le DOM prêt puis après les polices et les images.
+  if (location.hash) {
+    let userScrolled = false;
+    const markScrolled = () => { userScrolled = true; };
+    ['wheel', 'touchstart', 'keydown'].forEach(evt =>
+      window.addEventListener(evt, markScrolled, { passive: true, once: true }));
+
+    const jumpToHash = () => {
+      if (userScrolled) return;              // ne pas contrarier l'utilisateur
+      let target = null;
+      try { target = document.querySelector(location.hash); } catch (e) { return; }
+      // 'instant' et non 'auto' : 'auto' signifie « suivre le CSS », donc smooth,
+      // et le défilement animé serait annulé comme le saut natif.
+      if (target) target.scrollIntoView({ behavior: 'instant', block: 'start' });
+    };
+
+    jumpToHash();
+    window.addEventListener('load', jumpToHash);
+  }
+
 
   // ── Sticky mobile CTA — appears when hero CTA button leaves viewport ─────
   const heroDevis = document.getElementById('heroDevis');
