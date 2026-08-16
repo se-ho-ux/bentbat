@@ -25,18 +25,38 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- ── Google Analytics 4 ─────────────────────────────────────────────── -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT"></script>
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RRTBMGWZJT');
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    // Le script Google n'est injecté qu'ici : tant que le visiteur n'a pas
+    // accepté, aucune requête ne part vers Google et aucun cookie n'est déposé.
+    window.benbatLoadGA = function () {
+      if (window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      if (localStorage.getItem('benbat-consent') === 'granted') window.benbatLoadGA();
+    } catch (e) {}
   </script>
   <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=5">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -304,8 +324,17 @@
           <li>Réclamation : CNIL (France) : <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">www.cnil.fr</a> / APD (Belgique) : <a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener noreferrer">www.autoriteprotectiondonnees.be</a></li>
         </ul>
 
-        <h3>Article 5 : Cookies</h3>
-        <p>Ce site utilise des cookies analytiques (Google Analytics) et des cookies de mesure d'audience (Meta Pixel) dans le but d'améliorer l'expérience utilisateur. En naviguant sur ce site, vous consentez à leur utilisation. Vous pouvez désactiver les cookies à tout moment dans les paramètres de votre navigateur.</p>
+        <h3 id="cookies">Article 5 : Cookies et mesure d'audience</h3>
+        <p>Ce site n'utilise aucun cookie publicitaire et ne pratique aucun profilage. Seule la mesure d'audience est concernée, via <strong>Google Analytics 4</strong> (Google Ireland Limited), afin de connaître la fréquentation des pages et d'améliorer le site.</p>
+        <p><strong>Aucun cookie de mesure d'audience n'est déposé sans votre consentement préalable.</strong> Le script Google n'est chargé qu'après votre acceptation : tant que vous n'avez pas choisi, ou si vous refusez, aucune donnée n'est transmise à Google. Le refus est aussi simple que l'acceptation et n'a aucune conséquence sur votre navigation.</p>
+        <ul>
+          <li>Finalité : mesure d'audience et statistiques de fréquentation</li>
+          <li>Base légale : votre consentement (article 82 de la loi Informatique et Libertés)</li>
+          <li>Cookies concernés : <code>_ga</code>, <code>_ga_*</code> déposés par Google Analytics</li>
+          <li>Durée de conservation des cookies : 13 mois maximum</li>
+          <li>Retrait du consentement : à tout moment via le lien <a href="#cookies" data-cookie-settings>Gérer les cookies</a>, également disponible en bas de chaque page. Les cookies déjà déposés sont alors supprimés.</li>
+        </ul>
+        <p>Les cookies strictement nécessaires au fonctionnement du site ne requièrent pas de consentement et ne servent à aucun suivi.</p>
 
         <h3>Article 6 : Responsabilité</h3>
         <p>Ben&amp;Bat s'efforce de maintenir les informations à jour mais ne peut garantir l'exactitude exhaustive du contenu. Les liens vers des sites tiers n'engagent pas la responsabilité de Ben&amp;Bat.</p>
@@ -372,6 +401,7 @@
             <a href="mentions-legales">Mentions légales</a>
             <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
             <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales#cookies" data-cookie-settings>Gérer les cookies</a>
           </div>
         </div>
       </div>
@@ -383,5 +413,6 @@
   </div>
 
   <script src="js/main.js?v=6"></script>
+  <script src="js/consent.js?v=2"></script>
 </body>
 </html>

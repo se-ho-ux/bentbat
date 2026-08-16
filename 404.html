@@ -8,18 +8,38 @@
   <title>Page introuvable | Ben&amp;Bat</title>
   <meta name="description" content="La page que vous cherchez n'existe pas ou a été déplacée.">
   <meta name="robots" content="noindex, nofollow">
-  <!-- ── Google Analytics 4 ─────────────────────────────────────────────── -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT"></script>
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-RRTBMGWZJT');
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    // Le script Google n'est injecté qu'ici : tant que le visiteur n'a pas
+    // accepté, aucune requête ne part vers Google et aucun cookie n'est déposé.
+    window.benbatLoadGA = function () {
+      if (window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      if (localStorage.getItem('benbat-consent') === 'granted') window.benbatLoadGA();
+    } catch (e) {}
   </script>
   <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=5">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous">
   <link rel="icon" type="image/png" sizes="512x512" href="logos-png/favicon-512.png">
   <script type="application/ld+json">
@@ -91,5 +111,6 @@
       </div>
     </div>
   </div>
+  <script src="js/consent.js?v=2"></script>
 </body>
 </html>
