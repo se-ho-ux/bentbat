@@ -56,8 +56,15 @@
   <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=5">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous">
+  <link rel="preload" as="image" href="images/image3.webp"
+        imagesrcset="images/image3-480.webp 480w, images/image3-640.webp 640w, images/image3-900.webp 900w, images/image3.webp 903w"
+        imagesizes="(max-width: 1024px) 100vw, 52vw" fetchpriority="high">
+  <link rel="stylesheet" href="css/style.css?v=6">
+  <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+       ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+       accompagnent toujours un libellé texte. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -299,7 +306,7 @@
   <!-- ══════════ HEADER ══════════ -->
   <header id="header">
     <div class="nav-wrap">
-      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.png" alt="Ben&amp;Bat" class="logo-primary" width="1800" height="600"><img src="logos-png/wordmark-noir-transparent.png" alt="Ben&amp;Bat" class="logo-scrolled" width="1800" height="600"></a>
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
       <nav aria-label="Navigation principale">
         <ul class="nav-links">
           <li><a href="/" class="active">Accueil</a></li>
@@ -355,7 +362,7 @@
       </div>
     </div>
     <div class="hero-right">
-      <img src="images/image3.webp" alt="Réalisation Ben&amp;Bat, béton ciré premium" loading="eager" width="903" height="1600">
+      <img src="images/image3.webp" srcset="images/image3-480.webp 480w, images/image3-640.webp 640w, images/image3-900.webp 900w, images/image3.webp 903w" sizes="(max-width: 1024px) 100vw, 52vw" alt="Réalisation Ben&amp;Bat, béton ciré premium" loading="eager" fetchpriority="high" width="903" height="1600">
       <div class="hero-right-overlay"></div>
     </div>
   </section>
@@ -526,55 +533,55 @@
         <div class="hp-carousel">
           <div class="hp-track" id="hpTrack">
             <div class="hp-slide">
-              <img src="images/image0.webp" alt="Rénovation cuisine moderne, Ben&amp;Bat" loading="lazy" width="1183" height="780">
+              <img src="images/image0.webp" srcset="images/image0-480.webp 480w, images/image0-640.webp 640w, images/image0-900.webp 900w, images/image0.webp 1183w" sizes="(max-width: 600px) 82vw, (max-width: 900px) 47vw, 34vw" alt="Rénovation cuisine moderne, Ben&amp;Bat" loading="lazy" width="1183" height="780">
               <div class="gallery-overlay"><span class="gallery-label">Cuisine moderne, Paris</span></div>
             </div>
             <div class="hp-slide">
-              <img src="images/image3.webp" alt="Béton ciré salle de bains, Ben&amp;Bat" loading="lazy" width="903" height="1600">
+              <img src="images/image3.webp" srcset="images/image3-480.webp 480w, images/image3-640.webp 640w, images/image3-900.webp 900w, images/image3.webp 903w" sizes="(max-width: 600px) 82vw, (max-width: 900px) 47vw, 34vw" alt="Béton ciré salle de bains, Ben&amp;Bat" loading="lazy" width="903" height="1600">
               <div class="gallery-overlay"><span class="gallery-label">Béton ciré, Salle de bains</span></div>
             </div>
             <div class="hp-slide">
-              <img src="images/image7.webp" alt="Cuisine avec îlot, Neuilly, Ben&amp;Bat" loading="lazy" width="1200" height="1600">
+              <img src="images/image7.webp" srcset="images/image7-480.webp 480w, images/image7-640.webp 640w, images/image7-900.webp 900w, images/image7.webp 1200w" sizes="(max-width: 600px) 82vw, (max-width: 900px) 47vw, 34vw" alt="Cuisine avec îlot, Neuilly, Ben&amp;Bat" loading="lazy" width="1200" height="1600">
               <div class="gallery-overlay"><span class="gallery-label">Cuisine avec îlot, Neuilly</span></div>
             </div>
             <div class="hp-slide">
-              <img src="images/image2.webp" alt="Parquet point de Hongrie, Versailles, Ben&amp;Bat" loading="lazy" width="911" height="1089">
+              <img src="images/image2.webp" srcset="images/image2-480.webp 480w, images/image2-640.webp 640w, images/image2-900.webp 900w, images/image2.webp 911w" sizes="(max-width: 600px) 82vw, (max-width: 900px) 47vw, 34vw" alt="Parquet point de Hongrie, Versailles, Ben&amp;Bat" loading="lazy" width="911" height="1089">
               <div class="gallery-overlay"><span class="gallery-label">Parquet point de Hongrie, Versailles</span></div>
             </div>
             <div class="hp-slide">
-              <img src="images/image9.webp" alt="Salle de bains, Lyon, Ben&amp;Bat" loading="lazy" width="960" height="1280">
+              <img src="images/image9.webp" srcset="images/image9-480.webp 480w, images/image9-640.webp 640w, images/image9-900.webp 900w, images/image9.webp 960w" sizes="(max-width: 600px) 82vw, (max-width: 900px) 47vw, 34vw" alt="Salle de bains, Lyon, Ben&amp;Bat" loading="lazy" width="960" height="1280">
               <div class="gallery-overlay"><span class="gallery-label">Salle de bains, Lyon</span></div>
             </div>
             <div class="hp-slide">
-              <img src="images/image8.webp" alt="Faïence marbre, Boulogne, Ben&amp;Bat" loading="lazy" width="1200" height="1600">
+              <img src="images/image8.webp" srcset="images/image8-480.webp 480w, images/image8-640.webp 640w, images/image8-900.webp 900w, images/image8.webp 1200w" sizes="(max-width: 600px) 82vw, (max-width: 900px) 47vw, 34vw" alt="Faïence marbre, Boulogne, Ben&amp;Bat" loading="lazy" width="1200" height="1600">
               <div class="gallery-overlay"><span class="gallery-label">Faïence marbre, Boulogne</span></div>
             </div>
             <div class="hp-slide">
-              <img src="images/image1.webp" alt="Terrazzo sur mesure, Paris, Ben&amp;Bat" loading="lazy" width="1183" height="777">
+              <img src="images/image1.webp" srcset="images/image1-480.webp 480w, images/image1-640.webp 640w, images/image1-900.webp 900w, images/image1.webp 1183w" sizes="(max-width: 600px) 82vw, (max-width: 900px) 47vw, 34vw" alt="Terrazzo sur mesure, Paris, Ben&amp;Bat" loading="lazy" width="1183" height="777">
               <div class="gallery-overlay"><span class="gallery-label">Terrazzo sur mesure, Paris</span></div>
             </div>
             <div class="hp-slide">
-              <img src="images/image5.webp" alt="Réalisation intérieure, Ben&amp;Bat" loading="lazy" width="1200" height="941">
+              <img src="images/image5.webp" srcset="images/image5-480.webp 480w, images/image5-640.webp 640w, images/image5-900.webp 900w, images/image5.webp 1200w" sizes="(max-width: 600px) 82vw, (max-width: 900px) 47vw, 34vw" alt="Réalisation intérieure, Ben&amp;Bat" loading="lazy" width="1200" height="941">
               <div class="gallery-overlay"><span class="gallery-label">Aménagement intérieur</span></div>
             </div>
             <div class="hp-slide">
-              <img src="images/image10.webp" alt="Salon bibliothèque, parquet point de Hongrie, Ben&amp;Bat" loading="lazy" width="1200" height="896">
+              <img src="images/image10.webp" srcset="images/image10-480.webp 480w, images/image10-640.webp 640w, images/image10-900.webp 900w, images/image10.webp 1200w" sizes="(max-width: 600px) 82vw, (max-width: 900px) 47vw, 34vw" alt="Salon bibliothèque, parquet point de Hongrie, Ben&amp;Bat" loading="lazy" width="1200" height="896">
               <div class="gallery-overlay"><span class="gallery-label">Salon bibliothèque, Paris</span></div>
             </div>
             <div class="hp-slide">
-              <img src="images/image12.webp" alt="Salle de bains pierre naturelle, baignoire îlot, Ben&amp;Bat" loading="lazy" width="1024" height="1024">
+              <img src="images/image12.webp" srcset="images/image12-480.webp 480w, images/image12-640.webp 640w, images/image12-900.webp 900w, images/image12.webp 1024w" sizes="(max-width: 600px) 82vw, (max-width: 900px) 47vw, 34vw" alt="Salle de bains pierre naturelle, baignoire îlot, Ben&amp;Bat" loading="lazy" width="1024" height="1024">
               <div class="gallery-overlay"><span class="gallery-label">Salle de bains pierre, baignoire îlot</span></div>
             </div>
             <div class="hp-slide">
-              <img src="images/image13.webp" alt="Appartement haussmannien, parquet &amp; îlot marbre, Ben&amp;Bat" loading="lazy" width="1200" height="896">
+              <img src="images/image13.webp" srcset="images/image13-480.webp 480w, images/image13-640.webp 640w, images/image13-900.webp 900w, images/image13.webp 1200w" sizes="(max-width: 600px) 82vw, (max-width: 900px) 47vw, 34vw" alt="Appartement haussmannien, parquet &amp; îlot marbre, Ben&amp;Bat" loading="lazy" width="1200" height="896">
               <div class="gallery-overlay"><span class="gallery-label">Appartement haussmannien, Paris</span></div>
             </div>
             <div class="hp-slide">
-              <img src="images/image14.webp" alt="Salle de bains béton ciré foncé, robinetterie laiton, Ben&amp;Bat" loading="lazy" width="1200" height="896">
+              <img src="images/image14.webp" srcset="images/image14-480.webp 480w, images/image14-640.webp 640w, images/image14-900.webp 900w, images/image14.webp 1200w" sizes="(max-width: 600px) 82vw, (max-width: 900px) 47vw, 34vw" alt="Salle de bains béton ciré foncé, robinetterie laiton, Ben&amp;Bat" loading="lazy" width="1200" height="896">
               <div class="gallery-overlay"><span class="gallery-label">Salle de bains béton ciré foncé</span></div>
             </div>
             <div class="hp-slide">
-              <img src="images/image15.webp" alt="Cuisine béton ciré, îlot minimaliste, Bruxelles, Ben&amp;Bat" loading="lazy" width="1408" height="768">
+              <img src="images/image15.webp" srcset="images/image15-480.webp 480w, images/image15-640.webp 640w, images/image15-900.webp 900w, images/image15.webp 1408w" sizes="(max-width: 600px) 82vw, (max-width: 900px) 47vw, 34vw" alt="Cuisine béton ciré, îlot minimaliste, Bruxelles, Ben&amp;Bat" loading="lazy" width="1408" height="768">
               <div class="gallery-overlay"><span class="gallery-label">Cuisine béton ciré, Bruxelles</span></div>
             </div>
           </div>
@@ -598,7 +605,7 @@
     <div class="container">
       <div class="why-grid">
         <div class="why-image">
-          <img src="images/image16.webp" alt="Artisan Ben&amp;Bat au travail" loading="lazy" width="1024" height="1024">
+          <img src="images/image16.webp" srcset="images/image16-480.webp 480w, images/image16-640.webp 640w, images/image16-900.webp 900w, images/image16.webp 1024w" sizes="(max-width: 1100px) 93vw, 43vw" alt="Artisan Ben&amp;Bat au travail" loading="lazy" width="1024" height="1024">
           <div class="why-badge">
             <strong>25+</strong>
             <span>ans d'expertise</span>
@@ -798,7 +805,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.png" alt="Ben&amp;Bat" width="1800" height="600"></a>
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.webp" alt="Ben&amp;Bat" width="360" height="120"></a>
           <p>25 ans d'expertise BTP : béton ciré premium, mobilier sur mesure et tous corps de métier. France &amp; Belgique.</p>
           <div class="footer-socials">
             <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -862,8 +869,8 @@
     <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat"><i class="fas fa-phone"></i></a>
   </div>
 
-  <script src="js/main.js?v=6"></script>
-  <script src="js/consent.js?v=2"></script>
+  <script src="js/main.js?v=6" defer></script>
+  <script src="js/consent.js?v=2" defer></script>
   <script src="js/reviews.js" defer></script>
   <div class="grain-overlay" aria-hidden="true"></div>
 </body>
