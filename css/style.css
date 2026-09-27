@@ -2352,6 +2352,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 @media (hover: hover) and (pointer: fine) {
   .sticky-phone:hover { background: var(--text) !important; }
 }
+.sticky-whatsapp { background: #25d366 !important; font-size: 1.15rem !important; }
 
 /* Trust bar */
 .trust-bar {
