@@ -3017,6 +3017,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   gap: 14px;
   justify-items: start;
 }
+.cookie-prefs[hidden] { display: none; }
 .cookie-pref {
   display: flex;
   gap: 12px;
