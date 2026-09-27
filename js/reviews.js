@@ -37,7 +37,7 @@
         <div class="t-stars">${stars}</div>
         <p class="t-text">« ${rev.text} »</p>
         <div class="t-author">
-          <div class="t-avatar">${initials}</div>
+          <div class="t-avatar">${esc(initials)}</div>
           <div>
             <div class="t-name">${rev.author}</div>
             <div class="t-location">${rev.time}</div>
