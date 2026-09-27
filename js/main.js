@@ -642,3 +642,35 @@ document.addEventListener('click', e => {
 document.querySelectorAll('.js-year').forEach(el => {
   el.textContent = new Date().getFullYear();
 });
+
+// ── Source du lead (première page vue dans la session) ──────────────────────
+// Mémorisée en sessionStorage (effacée à la fermeture de l'onglet, jamais
+// transmise à un tiers) puis recopiée dans les champs cachés du formulaire,
+// pour savoir quel canal produit quel devis.
+(() => {
+  const KEY = 'benbat-source';
+  let src = null;
+  try { src = JSON.parse(sessionStorage.getItem(KEY)); } catch (e) {}
+  if (!src) {
+    const p = new URLSearchParams(location.search);
+    let ref = '';
+    try {
+      if (document.referrer && new URL(document.referrer).hostname !== location.hostname) {
+        ref = new URL(document.referrer).hostname;
+      }
+    } catch (e) {}
+    src = {
+      landing: location.pathname,
+      referrer: ref || '(direct)',
+      utm_source: p.get('utm_source') || '',
+      utm_medium: p.get('utm_medium') || '',
+      utm_campaign: p.get('utm_campaign') || '',
+      utm_term: p.get('utm_term') || '',
+      gclid: p.get('gclid') || ''
+    };
+    try { sessionStorage.setItem(KEY, JSON.stringify(src)); } catch (e) {}
+  }
+  document.querySelectorAll('input[data-attr]').forEach(input => {
+    input.value = src[input.dataset.attr] || '';
+  });
+})();

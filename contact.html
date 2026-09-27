@@ -447,6 +447,14 @@
               <label for="message">Description du projet <span class="req">*</span></label>
               <textarea id="message" name="message" placeholder="Décrivez votre projet : type de travaux, surface, délais souhaités, contraintes…" required></textarea>
             </div>
+            <!-- Source du lead, remplie par js/main.js (attribution interne, jamais envoyée à Google) -->
+            <input type="hidden" name="source_page_entree" data-attr="landing">
+            <input type="hidden" name="source_referent" data-attr="referrer">
+            <input type="hidden" name="source_utm_source" data-attr="utm_source">
+            <input type="hidden" name="source_utm_medium" data-attr="utm_medium">
+            <input type="hidden" name="source_campagne" data-attr="utm_campaign">
+            <input type="hidden" name="source_mot_cle" data-attr="utm_term">
+            <input type="hidden" name="source_gclid" data-attr="gclid">
             <button type="submit" class="btn btn-dark form-submit">
               Envoyer ma demande &nbsp;<i class="fas fa-paper-plane"></i>
             </button>
@@ -527,7 +535,7 @@
       </div>
     </div>
   </footer>
-  <script src="js/main.js?v=8" defer></script>
+  <script src="js/main.js?v=9" defer></script>
   <script src="js/consent.js?v=2" defer></script>
 </body>
 </html>
