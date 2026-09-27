@@ -637,3 +637,8 @@ document.addEventListener('click', e => {
     page_path: location.pathname
   });
 });
+
+// ── Année du copyright à jour sans intervention (repli : valeur en dur) ────
+document.querySelectorAll('.js-year').forEach(el => {
+  el.textContent = new Date().getFullYear();
+});
