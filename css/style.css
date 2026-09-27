@@ -2988,6 +2988,37 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   min-width: 132px;
   justify-content: center;
 }
+.cookie-prefs {
+  max-width: var(--container);
+  margin: 18px auto 0;
+  padding-top: 18px;
+  border-top: 1px solid var(--border-inv);
+  display: grid;
+  gap: 14px;
+  justify-items: start;
+}
+.cookie-pref {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--text-inv-muted);
+}
+.cookie-pref input {
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+}
+.cookie-pref strong {
+  display: block;
+  font-weight: 700;
+  color: var(--text-inv);
+}
 
 @media (max-width: 760px) {
   .cookie-banner {
@@ -2998,7 +3029,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   }
   .cookie-banner-inner { gap: 18px; }
   .cookie-banner-actions { width: 100%; }
-  .cookie-banner-actions .btn { flex: 1; min-width: 0; }
+  .cookie-banner-actions .btn { flex: 1; min-width: 0; padding-inline: 8px; font-size: 0.8125rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

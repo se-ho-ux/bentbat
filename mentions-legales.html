@@ -36,10 +36,18 @@
       ad_personalization: 'denied',
       analytics_storage: 'denied'
     });
-    // Le script Google n'est injecté qu'ici : tant que le visiteur n'a pas
-    // accepté, aucune requête ne part vers Google et aucun cookie n'est déposé.
-    window.benbatLoadGA = function () {
-      if (window.benbatGaLoaded) return;
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
       window.benbatGaLoaded = true;
       gtag('consent', 'update', { analytics_storage: 'granted' });
       var s = document.createElement('script');
@@ -50,13 +58,18 @@
       gtag('config', 'G-RRTBMGWZJT');
     };
     try {
-      if (localStorage.getItem('benbat-consent') === 'granted') window.benbatLoadGA();
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
     } catch (e) {}
   </script>
   <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
   <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
        ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
        accompagnent toujours un libellé texte. -->
@@ -321,6 +334,7 @@
         <ul>
           <li>Responsable de traitement : Ben&amp;Bat</li>
           <li>Finalité : traitement des demandes de devis et de contact</li>
+          <li>Origine de la demande : le formulaire de devis transmet aussi la première page consultée sur le site, le site de provenance et, le cas échéant, les paramètres de la campagne publicitaire. Ces informations servent uniquement à savoir quel canal nous a fait connaître ; elles ne sont pas transmises à des tiers.</li>
           <li>Base légale : intérêt légitime / consentement</li>
           <li>Durée de conservation : 3 ans à compter du dernier contact</li>
           <li>Destinataires : équipes internes Ben&amp;Bat uniquement, aucune cession à des tiers</li>
@@ -328,15 +342,17 @@
           <li>Réclamation : CNIL (France) : <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer">www.cnil.fr</a> / APD (Belgique) : <a href="https://www.autoriteprotectiondonnees.be" target="_blank" rel="noopener noreferrer">www.autoriteprotectiondonnees.be</a></li>
         </ul>
 
-        <h3 id="cookies">Article 5 : Cookies et mesure d'audience</h3>
-        <p>Ce site n'utilise aucun cookie publicitaire et ne pratique aucun profilage. Seule la mesure d'audience est concernée, via <strong>Google Analytics 4</strong> (Google Ireland Limited), afin de connaître la fréquentation des pages et d'améliorer le site.</p>
-        <p><strong>Aucun cookie de mesure d'audience n'est déposé sans votre consentement préalable.</strong> Le script Google n'est chargé qu'après votre acceptation : tant que vous n'avez pas choisi, ou si vous refusez, aucune donnée n'est transmise à Google. Le refus est aussi simple que l'acceptation et n'a aucune conséquence sur votre navigation.</p>
+        <h3 id="cookies">Article 5 : Cookies, mesure d'audience et publicité</h3>
+        <p>Avec votre accord, ce site utilise deux services de Google Ireland Limited, chacun soumis à un choix distinct dans le bandeau de consentement :</p>
         <ul>
-          <li>Finalité : mesure d'audience et statistiques de fréquentation</li>
+          <li><strong>Mesure d'audience</strong> (Google Analytics 4) : connaître la fréquentation des pages afin d'améliorer le site. Cookies <code>_ga</code> et <code>_ga_*</code>.</li>
+          <li><strong>Publicité</strong> (Google Ads) : savoir si une demande de devis ou un contact fait suite à un clic sur l'une de nos annonces Google, afin d'évaluer leur efficacité. Cookies <code>_gcl_*</code>. Google peut également utiliser ces données dans le cadre de ses services publicitaires, conformément à ses propres règles de confidentialité. Cette finalité nécessite l'acceptation de la mesure d'audience.</li>
+        </ul>
+        <p><strong>Aucun cookie n'est déposé sans votre consentement préalable.</strong> Le script Google n'est chargé qu'après acceptation de la mesure d'audience : tant que vous n'avez pas choisi, ou si vous refusez, aucune donnée n'est transmise à Google. « Tout refuser » est aussi simple que « Tout accepter », et le bouton « Personnaliser » permet de choisir finalité par finalité. Le refus n'a aucune conséquence sur votre navigation.</p>
+        <ul>
           <li>Base légale : votre consentement (article 82 de la loi Informatique et Libertés)</li>
-          <li>Cookies concernés : <code>_ga</code>, <code>_ga_*</code> déposés par Google Analytics</li>
-          <li>Durée de conservation des cookies : 13 mois maximum</li>
-          <li>Retrait du consentement : à tout moment via le lien <a href="#cookies" data-cookie-settings>Gérer les cookies</a>, également disponible en bas de chaque page. Les cookies déjà déposés sont alors supprimés.</li>
+          <li>Durée de conservation des cookies : 13 mois maximum ; votre choix est redemandé au plus tard après ce délai</li>
+          <li>Retrait du consentement : à tout moment via le lien <a href="#cookies" data-cookie-settings>Gérer les cookies</a>, également disponible en bas de chaque page. Les cookies correspondants sont alors supprimés.</li>
         </ul>
         <p>Les cookies strictement nécessaires au fonctionnement du site ne requièrent pas de consentement et ne servent à aucun suivi.</p>
 
@@ -346,7 +362,7 @@
         <h3>Article 7 : Droit applicable</h3>
         <p>Les présentes mentions légales sont soumises au droit français. Tout litige relève de la compétence des juridictions françaises compétentes.</p>
 
-        <p><strong>Dernière mise à jour</strong> : Mai 2026</p>
+        <p><strong>Dernière mise à jour</strong> : Septembre 2026</p>
 
       </div>
     </div>
@@ -419,6 +435,6 @@
   </div>
 
   <script src="js/main.js?v=9" defer></script>
-  <script src="js/consent.js?v=2" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
 </body>
 </html>

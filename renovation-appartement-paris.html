@@ -36,10 +36,18 @@
       ad_personalization: 'denied',
       analytics_storage: 'denied'
     });
-    // Le script Google n'est injecté qu'ici : tant que le visiteur n'a pas
-    // accepté, aucune requête ne part vers Google et aucun cookie n'est déposé.
-    window.benbatLoadGA = function () {
-      if (window.benbatGaLoaded) return;
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
       window.benbatGaLoaded = true;
       gtag('consent', 'update', { analytics_storage: 'granted' });
       var s = document.createElement('script');
@@ -50,13 +58,18 @@
       gtag('config', 'G-RRTBMGWZJT');
     };
     try {
-      if (localStorage.getItem('benbat-consent') === 'granted') window.benbatLoadGA();
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
     } catch (e) {}
   </script>
   <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
   <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
        ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
        accompagnent toujours un libellé texte. -->
@@ -530,6 +543,6 @@
   </div>
 
   <script src="js/main.js?v=9" defer></script>
-  <script src="js/consent.js?v=2" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
 </body>
 </html>
