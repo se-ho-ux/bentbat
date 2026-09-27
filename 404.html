@@ -51,14 +51,14 @@
   </script>
   <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
-  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=8">
+  <link rel="preload" href="/fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css?v=9">
   <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
        ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
        accompagnent toujours un libellé texte. -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
-  <link rel="icon" type="image/png" sizes="512x512" href="logos-png/favicon-512.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/logos-png/favicon-512.png">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -259,17 +259,28 @@
 <body>
 
   <a href="#main-content" class="skip-link">Passer au contenu principal</a>
-  <div class="not-found">
+  <main id="main-content" class="not-found">
     <div class="not-found-inner">
       <h1>404</h1>
       <h2>Page introuvable</h2>
       <p>La page que vous cherchez n'existe pas ou a été déplacée.</p>
       <div class="not-found-actions">
         <a href="/" class="btn btn-primary"><i class="fas fa-home"></i> Retour à l'accueil</a>
-        <a href="contact" class="btn btn-ghost">Nous contacter <i class="fas fa-arrow-right"></i></a>
+        <a href="/contact" class="btn btn-ghost">Demander un devis <i class="fas fa-arrow-right"></i></a>
       </div>
+      <nav class="not-found-links" aria-label="Pages utiles">
+        <p>Vous cherchiez peut-être :</p>
+        <ul>
+          <li><a href="/beton-cire-paris">Béton ciré à Paris</a></li>
+          <li><a href="/beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+          <li><a href="/renovation-appartement-paris">Rénovation d'appartement à Paris</a></li>
+          <li><a href="/services">Tous nos services</a></li>
+          <li><a href="/realisations">Nos réalisations</a></li>
+        </ul>
+        <p class="not-found-phone">Ou appelez-nous : <a href="tel:+33658594147">+33 6 58 59 41 47</a> (France) · <a href="tel:+32465866372">+32 465 86 63 72</a> (Belgique)</p>
+      </nav>
     </div>
-  </div>
-  <script src="js/consent.js?v=3" defer></script>
+  </main>
+  <script src="/js/consent.js?v=3" defer></script>
 </body>
 </html>

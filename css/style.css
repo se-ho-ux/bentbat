@@ -2816,6 +2816,24 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 .not-found h2 { color: #fff; margin-bottom: 16px; font-size: 1.75rem; }
 .not-found p { color: var(--text-inv-muted); margin-bottom: 40px; }
 .not-found-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.not-found-links {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-inv);
+}
+.not-found-links p { margin-bottom: 16px; font-size: 0.9375rem; }
+.not-found-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+}
+.not-found-links a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.not-found-links a:hover { color: var(--accent); }
+.not-found-phone { font-size: 0.875rem; }
 
 /* ── TRÈS PETIT MOBILE (max-width: 375px) ───────────────────── */
 @media (max-width: 375px) {
