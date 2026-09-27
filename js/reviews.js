@@ -18,8 +18,14 @@
     el.textContent = `${data.total} avis Google · Travaux généraux Paris`;
   });
 
-  function buildCard(rev) {
-    const initials = rev.author
+  // Texte des avis écrit par des tiers : on l'échappe avant insertion HTML
+  const esc = s => String(s).replace(/[&<>"']/g, c => (
+    { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+  ));
+
+  function buildCard(raw) {
+    const rev = { ...raw, author: esc(raw.author), text: esc(raw.text), time: esc(raw.time) };
+    const initials = raw.author
       .split(' ')
       .map(w => w[0])
       .slice(0, 2)
