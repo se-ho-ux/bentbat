@@ -291,6 +291,16 @@
       })
       .then(res => {
         if (res.ok) {
+          // Conversion GA4 : seulement les listes déroulantes, jamais les
+          // coordonnées saisies (pas de données personnelles envoyées à Google).
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'generate_lead', {
+              form_id: 'contactForm',
+              project_type: form.type.value,
+              service: form.service.value,
+              country: form.pays.value
+            });
+          }
           form.style.display = 'none';
           success.style.display = 'block';
           success.setAttribute('tabindex', '-1');
@@ -596,3 +606,34 @@
         if (Math.abs(dx) > 48) { if (dx < 0) lbNext(); else lbPrev(); }
       }, { passive: true });
     })();
+
+// ── Conversions GA4 : clics téléphone, WhatsApp, e-mail ─────────────────────
+// Un seul écouteur délégué couvre tous les liens, y compris ceux du header,
+// du pied de page et du bouton flottant. Tant que le visiteur n'a pas accepté
+// les cookies, gtag ne fait qu'empiler dans dataLayer : rien ne part.
+document.addEventListener('click', e => {
+  const link = e.target.closest('a[href]');
+  if (!link || typeof window.gtag !== 'function') return;
+  const href = link.getAttribute('href');
+  const placement = link.closest('header') ? 'header'
+    : link.closest('footer') ? 'footer' : 'page';
+
+  let name = null;
+  let target = '';
+  if (/^tel:/i.test(href)) {
+    name = 'click_tel';
+    target = href.startsWith('tel:+32') ? 'BE' : 'FR';
+  } else if (/^https?:\/\/(wa\.me|api\.whatsapp\.com|(www\.)?whatsapp\.com)\//i.test(href)) {
+    name = 'click_whatsapp';
+    target = /wa\.me\/32|phone=32/.test(href) ? 'BE' : 'FR';
+  } else if (/^mailto:/i.test(href)) {
+    name = 'click_email';
+  }
+  if (!name) return;
+
+  window.gtag('event', name, {
+    link_placement: placement,
+    contact_line: target || undefined,
+    page_path: location.pathname
+  });
+});
