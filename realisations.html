@@ -69,7 +69,7 @@
   <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=10">
   <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
        ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
        accompagnent toujours un libellé texte. -->
@@ -367,7 +367,7 @@
         <div class="hp-carousel">
           <div class="hp-track" id="rlTrack">
             <div class="gallery-item" data-category="beton-cire">
-              <img src="images/image3.webp" srcset="images/image3-480.webp 480w, images/image3-640.webp 640w, images/image3-900.webp 900w, images/image3.webp 903w" sizes="(max-width: 600px) 82vw, (max-width: 900px) 47vw, 34vw" alt="Salle de bains béton ciré, Paris, Ben&amp;Bat" loading="lazy" width="903" height="1600">
+              <img src="images/image3.webp" srcset="images/image3-480.webp 480w, images/image3-640.webp 640w, images/image3-900.webp 900w, images/image3.webp 903w" sizes="(max-width: 600px) 82vw, (max-width: 900px) 47vw, 34vw" alt="Salle de bains béton ciré, Paris, Ben&amp;Bat" loading="eager" fetchpriority="high" width="903" height="1600">
               <div class="gallery-overlay"><span class="gallery-label">Salle de bains béton ciré, Paris</span></div>
             </div>
             <div class="gallery-item" data-category="cuisine">
