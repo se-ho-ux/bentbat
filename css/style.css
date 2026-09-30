@@ -1824,6 +1824,93 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 .signature-card p { color: var(--text); font-weight: 300; font-size: 1rem; line-height: 1.3125; }
 
 /* ─────────────────────────────────────────────────────────────
+   TARIFS — grille de catégories + tableaux de prix
+───────────────────────────────────────────────────────────── */
+.price-cats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--r-md);
+  overflow: hidden;
+  margin-top: 64px;
+}
+.price-cat { background: var(--bg); padding: 40px 40px 8px; }
+.price-cat-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+.price-cat-head h3 { margin: 0; }
+.price-table { width: 100%; border-collapse: collapse; }
+.price-table th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.price-table th:last-child, .price-table td:last-child { text-align: right; }
+.price-table td {
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9375rem;
+  vertical-align: baseline;
+}
+.price-table tr:last-child td { border-bottom: none; }
+.price-table td:first-child { font-weight: 500; padding-right: 12px; }
+.price-unit {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  margin-top: 2px;
+}
+.price-range {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  color: var(--accent-h);
+}
+.price-coefs {
+  margin-top: 64px;
+  background: var(--accent-light);
+  border-radius: var(--r-md);
+  padding: 40px 40px 32px;
+}
+.price-coefs .price-cat-head { margin-bottom: 20px; }
+.price-coefs .price-table th,
+.price-coefs .price-table td { border-bottom-color: rgba(184,92,56,0.18); }
+.price-coefs .price-range { color: var(--accent-h); }
+.price-coefs-note {
+  margin-top: 20px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  max-width: 60ch;
+}
+.price-note {
+  margin-top: 24px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: var(--text-muted);
+}
+.price-updated {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 12px;
+}
+
+/* ─────────────────────────────────────────────────────────────
    RESPONSIVE
 ───────────────────────────────────────────────────────────── */
 
@@ -1861,6 +1948,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .specialty-image { width: 100%; }
   .specialties-header { flex-direction: column; align-items: flex-start; gap: 20px; }
   .services-page-grid { grid-template-columns: 1fr; }
+  .price-cats { grid-template-columns: 1fr; }
   .signature-showcase { grid-template-columns: 1fr; }
   .process-grid { grid-template-columns: repeat(2, 1fr); }
   .zone-inner { grid-template-columns: 1fr; gap: 40px; }
@@ -2150,6 +2238,10 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 
   /* Service page cards */
   .service-page-card { padding: 24px 18px; }
+  .price-cat { padding: 28px 20px 4px; }
+  .price-coefs { padding: 28px 20px 24px; }
+  .price-table th, .price-table td { font-size: 0.8125rem; }
+  .price-table th:first-child, .price-table td:first-child { padding-right: 8px; }
   .services-page-grid { margin-top: 32px; }
   .service-page-card h3 { font-size: 1rem; margin: 14px 0 8px; }
 
