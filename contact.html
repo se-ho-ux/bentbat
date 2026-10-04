@@ -69,7 +69,7 @@
   <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=14">
+  <link rel="stylesheet" href="css/style.css?v=15">
   <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
        ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
        accompagnent toujours un libellé texte. -->
@@ -462,7 +462,7 @@
                 </select>
               </div>
             </div>
-            <div class="form-group">
+            <div class="form-group" id="serviceGroup">
               <label for="service">Service concerné</label>
               <select id="service" name="service">
                 <option value="">Optionnel</option>
@@ -480,9 +480,22 @@
                 <option value="multi">Plusieurs corps de métier</option>
               </select>
             </div>
+            <!-- Estimateur : construit par js/devis.js, visible si « Demande de devis » -->
+            <fieldset class="estimator" id="devisEstimator" hidden>
+              <legend>Estimez votre budget</legend>
+              <p class="est-intro">Choisissez les prestations qui vous intéressent : une fourchette de prix s’affiche, et elle nous est transmise avec votre demande.</p>
+              <div class="est-list" data-devis-list></div>
+              <p class="est-sub">Votre chantier présente-t-il l’une de ces situations ?</p>
+              <div class="est-coefs" data-devis-coefs></div>
+              <div class="est-result" data-devis-result role="status" aria-live="polite"></div>
+              <input type="hidden" name="estimation_fourchette_ht">
+              <input type="hidden" name="estimation_detail">
+              <input type="hidden" name="estimation_coefficients">
+              <input type="hidden" name="service_principal">
+            </fieldset>
             <div class="form-group">
               <label for="message">Description du projet <span class="req">*</span></label>
-              <textarea id="message" name="message" placeholder="Décrivez votre projet : type de travaux, surface, délais souhaités, contraintes…" required></textarea>
+              <textarea id="message" name="message" placeholder="Décrivez votre projet : adresse ou ville, état du logement, délais souhaités, contraintes…" required></textarea>
             </div>
             <!-- Source du lead, remplie par js/main.js (attribution interne, jamais envoyée à Google) -->
             <input type="hidden" name="source_page_entree" data-attr="landing">
@@ -573,7 +586,8 @@
       </div>
     </div>
   </footer>
-  <script src="js/main.js?v=9" defer></script>
+  <script src="js/main.js?v=10" defer></script>
+  <script src="js/devis.js?v=1" defer></script>
   <script src="js/consent.js?v=3" defer></script>
 </body>
 </html>

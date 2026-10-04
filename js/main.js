@@ -297,7 +297,7 @@
             window.gtag('event', 'generate_lead', {
               form_id: 'contactForm',
               project_type: form.type.value,
-              service: form.service.value,
+              service: form.service.value || (form.elements.service_principal ? form.elements.service_principal.value : ''),
               country: form.pays.value
             });
           }
@@ -319,7 +319,7 @@
           errEl.setAttribute('role', 'alert');
           errEl.setAttribute('aria-live', 'assertive');
           errEl.style.cssText = 'color:#dc2626;margin-top:12px;font-size:.9rem;text-align:center;font-weight:600;';
-          form.querySelector('.form-note').before(errEl);
+          form.querySelector('.form-reassurance').before(errEl);
         }
         errEl.textContent = "Une erreur s'est produite. Veuillez réessayer ou nous appeler directement.";
       });
