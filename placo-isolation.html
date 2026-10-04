@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- @shared:head-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
+    }
+  </script>
+  <!-- @end:head-meta -->
+  <link rel="canonical" href="https://benbat.fr/placo-isolation">
+  <title>Cloisons Placo, Doublage et Faux Plafond | Ben&amp;Bat</title>
+  <meta name="description" content="Cloisons Placo, doublage isolant thermique et phonique, faux plafond : pose soignée, prix indicatifs au m² et devis gratuit sous 24h.">
+  <meta property="og:title" content="Cloisons Placo, Doublage et Faux Plafond | Ben&amp;Bat">
+  <meta property="og:description" content="Cloisons Placo, doublage isolant thermique et phonique, faux plafond : pose soignée, prix indicatifs au m² et devis gratuit sous 24h.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benbat.fr/placo-isolation">
+  <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- @shared:head-assets -->
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
+    } catch (e) {}
+  </script>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=18">
+  <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+       ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+       accompagnent toujours un libellé texte. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- @end:head-assets -->
+  <!-- @shared:schema-business -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://benbat.fr/#entreprise",
+  "name": "Ben&Bat",
+  "description": "Spécialistes du béton ciré premium et de la rénovation intérieure tous corps de métier depuis 25 ans. Paris, Île-de-France et toute la Belgique.",
+  "url": "https://benbat.fr/",
+  "telephone": "+33658594147",
+  "email": "contact@ben-bat.com",
+  "image": "https://benbat.fr/images/image15.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Rue François 1er",
+    "addressLocality": "Paris",
+    "postalCode": "75008",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8698258,
+    "longitude": 2.3020488
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Paris"
+    },
+    {
+      "@type": "City",
+      "name": "Lyon"
+    },
+    {
+      "@type": "City",
+      "name": "Marseille"
+    },
+    {
+      "@type": "City",
+      "name": "Bordeaux"
+    },
+    {
+      "@type": "City",
+      "name": "Lille"
+    },
+    {
+      "@type": "City",
+      "name": "Neuilly-sur-Seine"
+    },
+    {
+      "@type": "City",
+      "name": "Versailles"
+    },
+    {
+      "@type": "City",
+      "name": "Boulogne-Billancourt"
+    },
+    {
+      "@type": "City",
+      "name": "Bruxelles"
+    },
+    {
+      "@type": "City",
+      "name": "Liège"
+    },
+    {
+      "@type": "City",
+      "name": "Anvers"
+    },
+    {
+      "@type": "City",
+      "name": "Gand"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    },
+    {
+      "@type": "Country",
+      "name": "Belgique"
+    }
+  ],
+  "knowsAbout": [
+    "béton ciré",
+    "rénovation intérieure",
+    "maçonnerie",
+    "plomberie",
+    "électricité",
+    "carrelage",
+    "mobilier sur mesure",
+    "vasques sur mesure",
+    "parquet",
+    "nettoyage de chantier"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "11",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services BTP",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Béton ciré décoratif",
+          "description": "Application de béton ciré premium sur sols, murs et plans de travail. Paris, Île-de-France et Belgique."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation intérieure tous corps de métier",
+          "description": "Coordination et réalisation de chantiers de rénovation complète : maçonnerie, électricité, plomberie, finitions."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobilier sur mesure",
+          "description": "Conception et fabrication de mobilier sur mesure pour particuliers et professionnels."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vasques sur mesure",
+          "description": "Création de vasques en béton ciré et matériaux naturels, design exclusif."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pose de parquet et carrelage",
+          "description": "Pose de parquet point de Hongrie, carrelage, faïence et revêtements de sol premium."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Nettoyage fin de chantier",
+          "description": "Nettoyage professionnel de bâtiments et fins de chantier en France et Belgique."
+        }
+      }
+    ]
+  },
+  "priceRange": "€€",
+  "logo": "https://benbat.fr/logos-png/wordmark-noir-transparent.webp",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+33658594147",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": [
+        "fr"
+      ]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+32465866372",
+      "contactType": "customer service",
+      "areaServed": "BE",
+      "availableLanguage": [
+        "fr"
+      ]
+    }
+  ]
+  }
+  </script>
+  <!-- @end:schema-business -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://benbat.fr/placo-isolation#service",
+      "name": "Cloisons Placo, doublage et faux plafond",
+      "serviceType": "Cloisons, doublages isolants et faux plafonds",
+      "description": "Cloisons en plaques de plâtre, doublages isolants thermiques et phoniques, faux plafonds et finitions, en France et en Belgique.",
+      "url": "https://benbat.fr/placo-isolation",
+      "provider": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Belgique"
+        }
+      ],
+      "image": [
+        "https://benbat.fr/images/image3.webp",
+        "https://benbat.fr/images/image15.webp"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://benbat.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://benbat.fr/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Placo et isolation",
+          "item": "https://benbat.fr/placo-isolation"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quelle est la différence entre une cloison et un doublage ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Une cloison sépare deux pièces, avec un parement de chaque côté d'une ossature. Un doublage se pose contre un mur existant, souvent un mur extérieur, pour l'isoler et le rendre plan. Les deux utilisent des plaques de plâtre, mais leur rôle est différent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Une cloison en Placo est-elle bien isolante phoniquement ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Elle l'est si l'on remplit l'ossature d'un isolant, comme de la laine minérale, et si l'on double les plaques. Une cloison simple sans isolant transmet beaucoup de bruit. Nous adaptons la composition à l'usage de la pièce."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on poser un faux plafond avec des spots ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, c'est l'un de ses usages les plus courants. Il faut prévoir l'emplacement des spots, la hauteur du vide nécessaire et le passage des câbles dès la pose de l'ossature. Les spots LED, peu épais, limitent la perte de hauteur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps faut-il attendre avant de peindre ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les enduits doivent être secs et poncés, ce qui prend en général un à deux jours selon l'épaisseur et la ventilation. La peinture s'applique ensuite, avec une sous-couche. Nous coordonnons la peinture à la suite de la pose."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Doublage isolant : quelles aides ou quel taux de TVA ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'isolation des parois peut bénéficier d'un taux de TVA réduit en France et d'aides pour les travaux d'amélioration énergétique, sous conditions de logement et de matériaux. Ces conditions varient : elles sont à vérifier avec votre devis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment estimer mon budget ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mesurez la surface concernée, puis utilisez l'estimateur de budget ou la grille tarifaire. Vous obtenez une fourchette hors taxes, que la visite permet de resserrer."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image3.webp",
+      "url": "https://benbat.fr/images/image3.webp",
+      "caption": "Salle de bains avec plafond courbe rétroéclairé et douche à l'italienne à Paris",
+      "name": "Salle de bains à Paris : plafond courbe rétroéclairé et douche à l'italienne.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image15.webp",
+      "url": "https://benbat.fr/images/image15.webp",
+      "caption": "Cuisine avec îlot et plafond à poutres apparentes à Bruxelles",
+      "name": "Cuisine à Bruxelles : îlot minimaliste sous un plafond à poutres apparentes.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- @shared:header active=services -->
+  <header id="header">
+    <div class="nav-wrap">
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="services" class="active">Services</a></li>
+          <li><a href="tarifs">Tarifs</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <a href="/">Accueil</a>
+    <a href="services">Services</a>
+    <a href="tarifs">Tarifs</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
+  </div>
+  <!-- @end:header -->
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">
+          <a href="/">Accueil</a><span class="sep">/</span><a href="services">Services</a><span class="sep">/</span><span class="cur">Placo et isolation</span>
+        </div>
+        <h1>Cloisons Placo, doublage<br>et faux plafond</h1>
+        <p>Cloisons, doublages isolants et faux plafonds : redistribuer une pièce, gagner en confort thermique et phonique, intégrer de l'éclairage, sur des supports prêts à peindre.</p>
+        <div class="svc-hero-cta">
+          <a href="contact?devis=placo#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="contact" class="btn btn-ghost-dark">Devis gratuit</a>
+        </div>
+        <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EN BREF ══════════ -->
+  <section class="section-sm svc-facts-band">
+    <div class="container">
+      <dl class="svc-facts">
+          <div><dt>Durée indicative</dt><dd>2 à 5 jours pour une cloison ou un plafond, selon la surface</dd></div>
+          <div><dt>Budget indicatif</dt><dd>Cloisons : 45 € – 80 € / m² HT</dd></div>
+          <div><dt>Interlocuteur</dt><dd>Un plaquiste dédié, coordonné avec les autres métiers</dd></div>
+          <div><dt>Garanties</dt><dd>Décennale, RC Pro, bilan à 30 jours</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══════════ INTRO ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
+        <div>
+          <span class="eyebrow">Placo et isolation</span>
+          <h2>Redessiner un volume,<br>améliorer son confort</h2>
+        </div>
+        <div class="svc-prose">
+          <p>Une cloison en plaques de plâtre est la façon la plus rapide de redistribuer un logement : créer une chambre, fermer une cuisine, ouvrir un séjour. Posée sur une ossature métallique, elle peut aussi embarquer de l'isolation et passer des gaines électriques. Sa qualité se juge à la planéité, aux jonctions et à ce qu'elle rend, une fois les bandes enduites, sur le chantier de peinture.</p>
+          <p>Nous réalisons des cloisons, des doublages isolants contre les murs extérieurs, des faux plafonds avec éclairage encastré, ainsi que les enduits et ragréages qui préparent les supports. Le choix des plaques et de l'isolant est adapté à la pièce : plaques hydrofuges en pièces humides, laine minérale pour l'acoustique.</p>
+          <p>Les cloisons précèdent la <a href="peinture">peinture</a> et suivent l'<a href="electricite">électricité</a> et la <a href="plomberie">plomberie</a>. Dans un <a href="renovation-complete">chantier complet</a>, elles sont planifiées en conséquence.</p>
+        </div>
+      </div>
+      <div class="services-page-grid">
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-border-all"></i></div>
+          <h3>Cloisons et distribution</h3>
+          <p>Cloisons sur ossature métallique avec isolant intégré. Elles redessinent le logement sans charge supplémentaire sur les planchers.</p>
+          <ul class="service-list">
+            <li>Cloisons sur ossature</li>
+            <li>Isolation phonique intégrée</li>
+            <li>Passage des gaines</li>
+            <li>Portes et trémies</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-temperature-low"></i></div>
+          <h3>Doublage thermique</h3>
+          <p>Un doublage isolant contre un mur extérieur améliore le confort et réduit les parois froides. Il se pose sur ossature ou collé, selon le support.</p>
+          <ul class="service-list">
+            <li>Doublage isolé</li>
+            <li>Laine minérale ou isolant rigide</li>
+            <li>Traitement des ponts thermiques</li>
+            <li>Pare-vapeur si nécessaire</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3>Faux plafonds</h3>
+          <p>Un faux plafond cache des réseaux, améliore l'acoustique et accueille des spots ou des rubans lumineux. Il se pense avec l'éclairage dès le départ.</p>
+          <ul class="service-list">
+            <li>Faux plafond sur ossature</li>
+            <li>Spots et rubans LED encastrés</li>
+            <li>Trappes de visite</li>
+            <li>Retombées et décaissés</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>Enduits et ragréages</h3>
+          <p>Bandes, enduits et ponçage donnent aux plaques leur surface lisse. Les ragréages mettent les sols de niveau avant la pose des revêtements.</p>
+          <ul class="service-list">
+            <li>Bandes et enduits</li>
+            <li>Ponçage soigné</li>
+            <li>Ragréage de sol</li>
+            <li>Préparation à la peinture</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ DÉROULÉ ══════════ -->
+  <section class="section section-dark" id="deroule">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Déroulé d'intervention</span>
+          <h2>Du tracé<br>à la surface prête à peindre</h2>
+        </div>
+        <p>Chaque ouvrage en plaques passe par les mêmes phases : ossature, isolant, parement, bandes, enduit. La qualité finale se joue dans les jonctions.</p>
+      </div>
+      <div class="services-list">
+        <div class="list-row">
+          <span class="sr-num">01</span>
+          <span class="sr-icon"><i class="fas fa-route"></i></span>
+          <div class="sr-body">
+            <h3>Visite et implantation</h3>
+            <p>Nous relevons les cotes, traçons les cloisons au sol et vérifions la hauteur sous plafond, les gaines et les réseaux existants avant de fixer l'implantation.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">02</span>
+          <span class="sr-icon"><i class="fas fa-file-invoice"></i></span>
+          <div class="sr-body">
+            <h3>Devis et choix des matériaux</h3>
+            <p>Plaques standard, hydrofuges ou acoustiques, isolant, finitions : le devis précise ce qui est posé dans chaque pièce, selon l'usage.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">03</span>
+          <span class="sr-icon"><i class="fas fa-hard-hat"></i></span>
+          <div class="sr-body">
+            <h3>Ossature et passage des réseaux</h3>
+            <p>Pose de l'ossature métallique, passage des gaines électriques et des réseaux avant fermeture, coordonnés avec les autres métiers.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">04</span>
+          <span class="sr-icon"><i class="fas fa-border-all"></i></span>
+          <div class="sr-body">
+            <h3>Isolation et pose des plaques</h3>
+            <p>Pose de l'isolant, vissage des plaques en quinconce, traitement des angles et des ouvertures.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">05</span>
+          <span class="sr-icon"><i class="fas fa-key"></i></span>
+          <div class="sr-body">
+            <h3>Bandes, enduits et réception</h3>
+            <p>Bandes sur les joints, enduits, ponçage et dépoussiérage. Le support est livré prêt à peindre, et nous contrôlons les surfaces en lumière rasante.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PRIX ══════════ -->
+  <section class="section" id="prix">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Prix indicatifs</span>
+          <h2>Combien coûtent<br>cloisons et doublages ?</h2>
+        </div>
+        <p>Les fourchettes se chiffrent au mètre carré posé. Elles varient selon l'épaisseur, le type d'isolant et la complexité du tracé.</p>
+      </div>
+      <div class="svc-price-layout">
+        <div class="svc-price-tables">
+        <div class="price-cat svc-price-cat">
+          <div class="price-cat-head"><h3>Placo &amp; isolation</h3></div>
+          <table class="price-table">
+            <thead><tr><th>Prestation</th><th>Fourchette HT</th></tr></thead>
+            <tbody>
+<tr><td>Cloisons<span class="price-unit">/ m²</span></td><td class="price-range">45 € – 80 €</td></tr>
+<tr><td>Doublage isolé<span class="price-unit">/ m²</span></td><td class="price-range">55 € – 120 €</td></tr>
+<tr><td>Faux plafond<span class="price-unit">/ m²</span></td><td class="price-range">45 € – 95 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+        <aside class="svc-price-side">
+          <h3>Ce qui fait varier le prix</h3>
+          <ul class="svc-factors"><li><strong>Dépose de l'existant + 15 %</strong> Ancienne cloison, doublage ou faux plafond à démolir et à évacuer.</li><li><strong>Accès difficile + 10 %</strong> Étage sans ascenseur, portage de plaques volumineuses.</li><li><strong>Support dégradé + 20 %</strong> Murs irréguliers ou humides à reprendre avant le doublage.</li><li><strong>Finition premium + 30 %</strong> Plafonds courbes, décaissés complexes, éclairage intégré.</li></ul>
+          <p class="svc-price-note">Fourchettes hors taxes, issues de notre <a href="tarifs">grille tarifaire</a>. Le prix définitif est arrêté après une visite technique.</p>
+          <a href="contact?devis=placo#devisEstimator" class="btn btn-primary">Estimer mon projet <i class="fas fa-arrow-right"></i></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONSEILS ══════════ -->
+  <section class="section" id="conseils">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Avant de cloisonner</span>
+          <h2>Quatre vérifications<br>avant de poser</h2>
+        </div>
+        <p>Ces points se règlent sur plan et sur place, avant de commander les plaques. Ils conditionnent la durée de vie et le confort de l'ouvrage.</p>
+      </div>
+      <div class="svc-tips">
+        <div class="svc-tip">
+          <h3>Vérifier la hauteur sous plafond</h3>
+          <p>Un faux plafond fait perdre de la hauteur. La réglementation fixe une hauteur minimale pour les pièces d'habitation : il faut donc vérifier ce qui reste une fois le plafond posé, et ajuster le projet si nécessaire.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Choisir les plaques selon la pièce</h3>
+          <p>En salle de bain, en cuisine ou en buanderie, des plaques hydrofuges résistent mieux à l'humidité. Pour des cloisons de chambre, des plaques acoustiques et une laine minérale améliorent nettement l'isolement phonique.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Penser aux fixations futures</h3>
+          <p>Un meuble suspendu, un écran ou un radiateur demandent des renforts dans la cloison. Les poser pendant le chantier évite de percer à l'aveugle plus tard.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Traiter l'humidité avant d'isoler</h3>
+          <p>Un doublage isolant posé contre un mur humide l'enferme et favorise les moisissures. La cause doit être identifiée et traitée avant la pose. Ce point est vérifié à la visite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ RÉALISATIONS ══════════ -->
+  <section class="section" id="realisations-liees" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Sur nos chantiers</span>
+          <h2>Des plafonds et des volumes<br>travaillés</h2>
+        </div>
+        <p>Deux ouvrages de plafond. Retrouvez toutes nos <a href="realisations">réalisations</a>.</p>
+      </div>
+      <div class="svc-photos">
+        <figure class="svc-photo">
+          <a href="realisations#rl-beton-cire"><img src="images/image3-640.webp" srcset="images/image3-480.webp 480w, images/image3-640.webp 640w, images/image3-900.webp 900w, images/image3.webp 903w" sizes="(max-width: 700px) 92vw, 46vw" alt="Salle de bains avec plafond courbe rétroéclairé et douche à l&#x27;italienne à Paris" loading="lazy" decoding="async"></a>
+          <figcaption>Salle de bains à Paris : plafond courbe rétroéclairé et douche à l'italienne. <a href="realisations#rl-beton-cire">Voir la réalisation</a></figcaption>
+        </figure>
+        <figure class="svc-photo">
+          <a href="realisations#rl-cuisines"><img src="images/image15-640.webp" srcset="images/image15-480.webp 480w, images/image15-640.webp 640w, images/image15-900.webp 900w, images/image15.webp 1408w" sizes="(max-width: 700px) 92vw, 46vw" alt="Cuisine avec îlot et plafond à poutres apparentes à Bruxelles" loading="lazy" decoding="async"></a>
+          <figcaption>Cuisine à Bruxelles : îlot minimaliste sous un plafond à poutres apparentes. <a href="realisations#rl-cuisines">Voir la réalisation</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Les questions<br>qu'on nous pose</h2>
+        </div>
+        <p>Épaisseur, isolation, faux plafond, délais : ce qu'il faut savoir avant de poser des plaques de plâtre.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Quelle est la différence entre une cloison et un doublage ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Une cloison sépare deux pièces, avec un parement de chaque côté d'une ossature. Un doublage se pose contre un mur existant, souvent un mur extérieur, pour l'isoler et le rendre plan. Les deux utilisent des plaques de plâtre, mais leur rôle est différent.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Une cloison en Placo est-elle bien isolante phoniquement ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Elle l'est si l'on remplit l'ossature d'un isolant, comme de la laine minérale, et si l'on double les plaques. Une cloison simple sans isolant transmet beaucoup de bruit. Nous adaptons la composition à l'usage de la pièce.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Peut-on poser un faux plafond avec des spots ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Oui, c'est l'un de ses usages les plus courants. Il faut prévoir l'emplacement des spots, la hauteur du vide nécessaire et le passage des câbles dès la pose de l'ossature. Les spots LED, peu épais, limitent la perte de hauteur.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Combien de temps faut-il attendre avant de peindre ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Les enduits doivent être secs et poncés, ce qui prend en général un à deux jours selon l'épaisseur et la ventilation. La peinture s'applique ensuite, avec une sous-couche. Nous coordonnons la <a href="peinture">peinture</a> à la suite de la pose.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Doublage isolant : quelles aides ou quel taux de TVA ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">L'isolation des parois peut bénéficier d'un taux de TVA réduit en France et d'aides pour les travaux d'amélioration énergétique, sous conditions de logement et de matériaux. Ces conditions varient : elles sont à vérifier avec votre devis.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Comment estimer mon budget ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Mesurez la surface concernée, puis utilisez l'<a href="contact?devis=placo#devisEstimator">estimateur de budget</a> ou la <a href="tarifs">grille tarifaire</a>. Vous obtenez une fourchette hors taxes, que la visite permet de resserrer.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ À VOIR AUSSI ══════════ -->
+  <section class="section-sm" id="voir-aussi">
+    <div class="container">
+      <h2 class="svc-related-title">À voir aussi</h2>
+      <div class="related-grid">
+        <a href="peinture" class="related-card">
+          <h3>Peinture</h3>
+          <p>Préparation, peinture et enduits décoratifs.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="electricite" class="related-card">
+          <h3>Électricité</h3>
+          <p>Gaines, éclairage encastré et tableau.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="renovation-complete" class="related-card">
+          <h3>Rénovation complète</h3>
+          <p>Les cloisons intégrées à un chantier coordonné.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="tarifs" class="related-card">
+          <h3>Grille tarifaire complète</h3>
+          <p>Toutes nos prestations, avec fourchettes de prix et majorations.</p>
+          <span>Voir les tarifs <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="garanties" class="related-card">
+          <h3>Garanties et assurances</h3>
+          <p>Décennale, responsabilité civile professionnelle, bilan à 30 jours.</p>
+          <span>Voir les garanties <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="section cta-section" id="ctaSection">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Un espace<br>à redessiner ?</h2>
+          <p>Visite sur site et devis détaillé gratuits. Réponse sous 24h.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact?devis=placo#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- @shared:footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.webp" alt="Ben&amp;Bat" width="360" height="120"></a>
+          <p>25 ans d'expertise BTP : béton ciré premium, mobilier sur mesure et tous corps de métier. France &amp; Belgique.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="tarifs">Tarifs</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Témoignages</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+    <h5>Services</h5>
+    <ul class="footer-links">
+      <li><a href="renovation-complete">Rénovation complète</a></li>
+      <li><a href="salle-de-bain">Salle de bain</a></li>
+      <li><a href="cuisine">Cuisine</a></li>
+      <li><a href="peinture">Peinture</a></li>
+      <li><a href="plomberie">Plomberie</a></li>
+      <li><a href="electricite">Électricité</a></li>
+      <li><a href="carrelage">Carrelage &amp; faïence</a></li>
+      <li><a href="placo-isolation">Placo &amp; isolation</a></li>
+      <li><a href="maconnerie">Maçonnerie</a></li>
+      <li><a href="revetements-de-sol">Revêtements de sol</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Spécialités</h5>
+    <ul class="footer-links">
+      <li><a href="beton-cire">Béton ciré premium</a></li>
+      <li><a href="mobilier-sur-mesure">Mobilier sur mesure</a></li>
+      <li><a href="vasques-sur-mesure">Vasques sur mesure</a></li>
+      <li><a href="nettoyage-fin-de-chantier">Nettoyage fin de chantier</a></li>
+      <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+      <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+      <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
+    </ul>
+  </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">WhatsApp (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@ben-bat.com">contact@ben-bat.com</a></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>60 Rue François 1er, 75008 Paris</span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Sam : 8h–20h</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; <span class="js-year">2026</span> Ben&amp;Bat. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales#cookies" data-cookie-settings>Gérer les cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- @end:footer -->
+  <!-- @shared:sticky -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+    <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." class="btn sticky-phone sticky-whatsapp" target="_blank" rel="noopener" aria-label="Écrire à Ben&amp;Bat sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <!-- @end:sticky -->
+
+  <!-- @shared:scripts -->
+  <script src="js/main.js?v=10" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
+  <!-- @end:scripts -->
+</body>
+</html>

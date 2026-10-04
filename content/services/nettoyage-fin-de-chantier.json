@@ -1,0 +1,81 @@
+{
+  "slug": "nettoyage-fin-de-chantier",
+  "nom": "Nettoyage de fin de chantier",
+  "nom_schema": "Nettoyage de fin de chantier",
+  "service_type": "Nettoyage de fin de chantier, remise en état et nettoyage de façades",
+  "kind": "pilier",
+  "estimateur": "nettoyage",
+  "title": "Nettoyage de Fin de Chantier, France et Belgique | Ben&Bat",
+  "description_meta": "Nettoyage de fin de chantier et de façades en France et en Belgique : dépoussiérage, vitres, sols. Prix indicatifs au m² et devis gratuit sous 24h.",
+  "description": "Nettoyage de fin de chantier et de bâtiments : dépoussiérage, protection des surfaces, vitres, sols et façades, en France et en Belgique.",
+  "kicker": "Notre spécialité signature",
+  "h1": "Nettoyage de fin de chantier|et remise en état",
+  "lede": "Dépoussiérage, nettoyage des vitres et des sols, protection des surfaces et traitement des façades : votre bien est livré propre et prêt à habiter, en France et en Belgique.",
+  "bref": [
+    ["Durée indicative", "Une journée pour un logement, plus pour un bâtiment"],
+    ["Budget indicatif", "Nettoyage de fin de chantier : {prix:nettoyage:0} HT"],
+    ["Interlocuteur", "Une équipe dédiée, coordonnée avec le chantier"],
+    ["Zones", "France et Belgique"]
+  ],
+  "intro": {
+    "h2": "Un chantier fini,|un logement vraiment habitable",
+    "p": [
+      "Après des travaux, la poussière est partout : sur les sols, dans les huisseries, derrière les radiateurs, dans les gaines. Un simple passage de balai ne suffit pas, et un mauvais produit peut abîmer un parquet, un béton ciré ou un joint. Le nettoyage de fin de chantier est un métier à part entière, avec ses produits, ses méthodes et son ordre d'intervention.",
+      "Nous réalisons le nettoyage de livraison de nos propres chantiers de rénovation, mais aussi de chantiers extérieurs : dépoussiérage complet, protection des surfaces, nettoyage des vitres, des sols et des sanitaires, évacuation des déchets. Nous traitons aussi les façades, avec nettoyage haute pression, démoussage et traitement.",
+      "Sur un [chantier de rénovation complète](renovation-complete), le nettoyage fait partie de la prestation. Il peut aussi être commandé seul, après travaux réalisés par une autre entreprise."
+    ]
+  },
+  "cartes": [
+    {"icon": "broom", "titre": "Remise en état après travaux", "texte": "Dépoussiérage des surfaces, des huisseries et des plinthes, nettoyage des sols adapté à leur nature, remise en état des sanitaires.", "liste": ["Dépoussiérage complet", "Nettoyage des sols selon leur nature", "Sanitaires et robinetterie", "Évacuation des déchets"]},
+    {"icon": "window-maximize", "titre": "Vitres et menuiseries", "texte": "Nettoyage des vitres, enlèvement des traces de peinture, de joint et de colle sur les menuiseries, sans rayer les surfaces.", "liste": ["Vitres intérieures et extérieures", "Traces de peinture et de joint", "Huisseries et volets", "Surfaces vitrées en hauteur"]},
+    {"icon": "shield-alt", "titre": "Protection des surfaces", "texte": "Les sols et les surfaces fragiles sont protégés pendant les travaux, puis nettoyés avec des produits adaptés au matériau.", "liste": ["Protection des sols", "Produits adaptés à chaque matériau", "Béton ciré, parquet, pierre", "Inox et surfaces sensibles"]},
+    {"icon": "building", "titre": "Nettoyage de bâtiments et de façades", "texte": "Nettoyage haute pression, démoussage, traitement des façades, vitrerie : des interventions pour tous types de bâtiments, en France et en Belgique.", "liste": ["Haute pression", "Démoussage", "Traitement de façades", "Vitrerie"]}
+  ],
+  "deroule_h2": "De l'évacuation|à la remise des clés",
+  "deroule_intro": "Le nettoyage suit un ordre précis, du haut vers le bas et du plus sale au plus propre, pour ne pas salir ce qui vient d'être nettoyé.",
+  "etapes": [
+    {"icon": "route", "titre": "Visite et repérage", "texte": "Nous repérons la nature des sols, des surfaces et des salissures : poussière de plâtre, voile de ciment, résidus de colle ou de peinture. Cela détermine les produits et les méthodes."},
+    {"icon": "file-invoice", "titre": "Devis au mètre carré", "texte": "Un devis gratuit et sans engagement, au mètre carré de surface à traiter, avec le niveau de nettoyage convenu."},
+    {"icon": "trash", "titre": "Évacuation et dépoussiérage", "texte": "Évacuation des déchets et des protections, puis dépoussiérage des surfaces hautes, des huisseries et des plinthes, avant les sols."},
+    {"icon": "broom", "titre": "Nettoyage des sols, vitres et sanitaires", "texte": "Nettoyage des sols selon leur nature, des vitres, des sanitaires et de la robinetterie, avec des produits adaptés."},
+    {"icon": "key", "titre": "Contrôle et remise des clés", "texte": "Nous contrôlons chaque pièce avec vous à la lumière du jour, reprenons ce qui doit l'être, et vous remettons un logement prêt à habiter."}
+  ],
+  "tarifs": {
+    "cats": ["nettoyage"],
+    "h2": "Combien coûte|un nettoyage de chantier ?",
+    "intro": "Le nettoyage se chiffre au mètre carré. Le prix dépend de la surface, du degré de salissure et de la nature des surfaces à traiter.",
+    "facteurs": [
+      {"titre": "Dépose de l'existant {coef:depose}", "texte": "Évacuation de protections ou de déchets volumineux avant nettoyage."},
+      {"titre": "Accès difficile {coef:acces}", "texte": "Étage sans ascenseur, façade en hauteur, accès restreint."},
+      {"titre": "Support dégradé {coef:support}", "texte": "Salissures incrustées, résidus de ciment ou de colle à traiter."},
+      {"titre": "Finition premium {coef:premium}", "texte": "Surfaces sensibles à protéger : béton ciré, pierre, parquet précieux."}
+    ]
+  },
+  "conseils": {
+    "eyebrow": "Bon à savoir",
+    "h2": "Quatre pièges|à éviter",
+    "intro": "Un mauvais nettoyage de fin de chantier abîme parfois plus qu'il ne nettoie. Voici ce que nous évitons systématiquement.",
+    "items": [
+      {"titre": "Ne pas utiliser le même produit partout", "texte": "Un produit acide qui enlève un voile de ciment sur du carrelage peut attaquer un joint, un béton ciré ou une pierre naturelle. Chaque surface demande son produit, et son dosage."},
+      {"titre": "Nettoyer dans le bon ordre", "texte": "On commence par le haut : plafonds, murs, huisseries, puis les sols. Inverser l'ordre oblige à tout recommencer, car la poussière retombe sur les surfaces déjà propres."},
+      {"titre": "Attendre le séchage complet avant de nettoyer", "texte": "Une peinture, un enduit ou un béton ciré encore frais ne supportent pas l'eau ni le frottement. Le nettoyage se fait une fois les surfaces durcies, selon les délais du fabricant."},
+      {"titre": "Prévoir le nettoyage au planning", "texte": "Le nettoyage se glisse entre la fin des travaux et l'emménagement. Le prévoir dès le planning évite de le sacrifier quand le chantier a pris du retard."}
+    ]
+  },
+  "faq_h2": "Les questions|qu'on nous pose",
+  "faq_intro": "Contenu de la prestation, durée, façades, zone d'intervention : ce qu'il faut savoir avant de commander un nettoyage de chantier.",
+  "faq": [
+    {"q": "Que comprend un nettoyage de fin de chantier ?", "r": "Un dépoussiérage complet des surfaces, des huisseries et des plinthes, le nettoyage des sols selon leur nature, des vitres et des sanitaires, et l'évacuation des déchets. Le périmètre exact est précisé dans le devis, selon l'état du chantier."},
+    {"q": "Quelle différence avec un ménage classique ?", "r": "Un chantier laisse des salissures spécifiques : poussière de plâtre très fine, voile de ciment, traces de peinture, de colle ou de joint. Elles demandent des produits et des méthodes particuliers, et un ordre d'intervention précis. Un ménage classique n'y suffit pas."},
+    {"q": "Combien de temps dure le nettoyage ?", "r": "Une journée en général pour un logement, davantage pour un grand bâtiment ou un chantier très poussiéreux. Nous précisons la durée dans le devis, après repérage."},
+    {"q": "Nettoyez-vous aussi les façades ?", "r": "Oui : nettoyage haute pression, démoussage et traitement de façades, ainsi que vitrerie, pour tous types de bâtiments. Les interventions en hauteur sont précisées dans le devis."},
+    {"q": "Intervenez-vous en Belgique ?", "r": "Oui, nous intervenons en France et en Belgique. Précisez votre adresse dans le [formulaire de devis](contact) pour que nous organisions le déplacement."},
+    {"q": "Peut-on commander un nettoyage sans rénovation avec vous ?", "r": "Oui. Le nettoyage de fin de chantier peut être commandé seul, après des travaux réalisés par une autre entreprise. Utilisez l'[estimateur de budget](contact?devis=nettoyage#devisEstimator) ou consultez la [grille tarifaire](tarifs) pour un ordre de grandeur."}
+  ],
+  "voir_aussi": [
+    {"slug": "renovation-complete", "label": "Rénovation complète", "texte": "Le nettoyage intégré à un chantier tous corps de métier."},
+    {"slug": "realisations", "label": "Nos réalisations", "texte": "Des chantiers livrés à Paris, Lyon, Neuilly et Bruxelles."},
+    {"slug": "peinture", "label": "Peinture", "texte": "Préparation, peinture et enduits décoratifs."}
+  ],
+  "cta": {"h2": "Un chantier|à remettre en état ?", "p": "Visite sur site et devis détaillé gratuits. Réponse sous 24h."}
+}

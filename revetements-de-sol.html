@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- @shared:head-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
+    }
+  </script>
+  <!-- @end:head-meta -->
+  <link rel="canonical" href="https://benbat.fr/revetements-de-sol">
+  <title>Pose de Parquet, Stratifié et Résine | Ben&amp;Bat</title>
+  <meta name="description" content="Pose de parquet massif ou contrecollé, stratifié, résine et sols souples sur tous supports. Prix indicatifs au m² et devis gratuit sous 24h.">
+  <meta property="og:title" content="Pose de Parquet, Stratifié et Résine | Ben&amp;Bat">
+  <meta property="og:description" content="Pose de parquet massif ou contrecollé, stratifié, résine et sols souples sur tous supports. Prix indicatifs au m² et devis gratuit sous 24h.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benbat.fr/revetements-de-sol">
+  <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- @shared:head-assets -->
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
+    } catch (e) {}
+  </script>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=18">
+  <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+       ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+       accompagnent toujours un libellé texte. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- @end:head-assets -->
+  <!-- @shared:schema-business -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://benbat.fr/#entreprise",
+  "name": "Ben&Bat",
+  "description": "Spécialistes du béton ciré premium et de la rénovation intérieure tous corps de métier depuis 25 ans. Paris, Île-de-France et toute la Belgique.",
+  "url": "https://benbat.fr/",
+  "telephone": "+33658594147",
+  "email": "contact@ben-bat.com",
+  "image": "https://benbat.fr/images/image15.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Rue François 1er",
+    "addressLocality": "Paris",
+    "postalCode": "75008",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8698258,
+    "longitude": 2.3020488
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Paris"
+    },
+    {
+      "@type": "City",
+      "name": "Lyon"
+    },
+    {
+      "@type": "City",
+      "name": "Marseille"
+    },
+    {
+      "@type": "City",
+      "name": "Bordeaux"
+    },
+    {
+      "@type": "City",
+      "name": "Lille"
+    },
+    {
+      "@type": "City",
+      "name": "Neuilly-sur-Seine"
+    },
+    {
+      "@type": "City",
+      "name": "Versailles"
+    },
+    {
+      "@type": "City",
+      "name": "Boulogne-Billancourt"
+    },
+    {
+      "@type": "City",
+      "name": "Bruxelles"
+    },
+    {
+      "@type": "City",
+      "name": "Liège"
+    },
+    {
+      "@type": "City",
+      "name": "Anvers"
+    },
+    {
+      "@type": "City",
+      "name": "Gand"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    },
+    {
+      "@type": "Country",
+      "name": "Belgique"
+    }
+  ],
+  "knowsAbout": [
+    "béton ciré",
+    "rénovation intérieure",
+    "maçonnerie",
+    "plomberie",
+    "électricité",
+    "carrelage",
+    "mobilier sur mesure",
+    "vasques sur mesure",
+    "parquet",
+    "nettoyage de chantier"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "11",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services BTP",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Béton ciré décoratif",
+          "description": "Application de béton ciré premium sur sols, murs et plans de travail. Paris, Île-de-France et Belgique."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation intérieure tous corps de métier",
+          "description": "Coordination et réalisation de chantiers de rénovation complète : maçonnerie, électricité, plomberie, finitions."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobilier sur mesure",
+          "description": "Conception et fabrication de mobilier sur mesure pour particuliers et professionnels."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vasques sur mesure",
+          "description": "Création de vasques en béton ciré et matériaux naturels, design exclusif."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pose de parquet et carrelage",
+          "description": "Pose de parquet point de Hongrie, carrelage, faïence et revêtements de sol premium."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Nettoyage fin de chantier",
+          "description": "Nettoyage professionnel de bâtiments et fins de chantier en France et Belgique."
+        }
+      }
+    ]
+  },
+  "priceRange": "€€",
+  "logo": "https://benbat.fr/logos-png/wordmark-noir-transparent.webp",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+33658594147",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": [
+        "fr"
+      ]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+32465866372",
+      "contactType": "customer service",
+      "areaServed": "BE",
+      "availableLanguage": [
+        "fr"
+      ]
+    }
+  ]
+  }
+  </script>
+  <!-- @end:schema-business -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://benbat.fr/revetements-de-sol#service",
+      "name": "Pose de parquet, stratifié, résine et sols souples",
+      "serviceType": "Pose de revêtements de sol : parquet, stratifié, résine, béton ciré, sols souples",
+      "description": "Pose de parquet massif et contrecollé, stratifié, résine, béton ciré et sols souples, avec préparation du support, en France et en Belgique.",
+      "url": "https://benbat.fr/revetements-de-sol",
+      "provider": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Belgique"
+        }
+      ],
+      "image": [
+        "https://benbat.fr/images/image2.webp",
+        "https://benbat.fr/images/image13.webp"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://benbat.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://benbat.fr/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Revêtements de sol",
+          "item": "https://benbat.fr/revetements-de-sol"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quelle différence entre parquet massif et contrecollé ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le parquet massif est taillé dans une seule pièce de bois, et peut être poncé plusieurs fois. Le contrecollé associe une couche de bois noble sur un support stable : il est moins sensible aux variations d'humidité et convient mieux aux sols chauffants, mais se rénove moins de fois."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on poser un parquet sur un sol chauffant ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, avec un parquet adapté, généralement contrecollé et de faible épaisseur, collé sur le support. La montée en température du sol doit être progressive avant et après la pose. Nous nous alignons sur les préconisations du fabricant et de l'installateur du chauffage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce qu'un parquet point de Hongrie ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est un parquet dont les lames, coupées en biseau, forment un motif en zigzag. Il est plus complexe à poser qu'un parquet droit, car chaque lame doit être ajustée avec précision. C'est un motif classique des appartements anciens parisiens."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps avant de pouvoir remettre les meubles ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un parquet collé demande en général un à trois jours avant le passage, et davantage avant de replacer des meubles lourds. Un stratifié flottant est utilisable immédiatement. Une résine ou un béton ciré demande plusieurs jours de séchage. Nous précisons le délai pour chaque revêtement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on poser un nouveau sol sans retirer l'ancien ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Parfois : un stratifié flottant peut se poser sur un ancien sol plan et sain, et le béton ciré sur un carrelage adhérent. La hauteur supplémentaire doit rester compatible avec les portes. Nous vérifions à la visite."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment estimer mon budget ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mesurez la surface, puis utilisez l'estimateur de budget ou consultez la grille tarifaire. Ces fourchettes concernent la pose, hors fourniture du revêtement."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image2.webp",
+      "url": "https://benbat.fr/images/image2.webp",
+      "caption": "Chambre avec parquet point de Hongrie et murs à moulures à Versailles",
+      "name": "Chambre à Versailles : parquet point de Hongrie et murs à moulures.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image13.webp",
+      "url": "https://benbat.fr/images/image13.webp",
+      "caption": "Appartement haussmannien avec parquet, îlot en marbre et bibliothèque en bois",
+      "name": "Appartement haussmannien : parquet, îlot en marbre et bibliothèque en bois.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- @shared:header active=services -->
+  <header id="header">
+    <div class="nav-wrap">
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="services" class="active">Services</a></li>
+          <li><a href="tarifs">Tarifs</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <a href="/">Accueil</a>
+    <a href="services">Services</a>
+    <a href="tarifs">Tarifs</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
+  </div>
+  <!-- @end:header -->
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">
+          <a href="/">Accueil</a><span class="sep">/</span><a href="services">Services</a><span class="sep">/</span><span class="cur">Revêtements de sol</span>
+        </div>
+        <h1>Pose de parquet, stratifié<br>résine et sols souples</h1>
+        <p>Parquet massif ou contrecollé, point de Hongrie, stratifié, résine, sol souple : le revêtement se choisit selon l'usage de la pièce, et se pose sur un support que nous préparons.</p>
+        <div class="svc-hero-cta">
+          <a href="contact?devis=revetements#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="contact" class="btn btn-ghost-dark">Devis gratuit</a>
+        </div>
+        <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EN BREF ══════════ -->
+  <section class="section-sm svc-facts-band">
+    <div class="container">
+      <dl class="svc-facts">
+          <div><dt>Durée indicative</dt><dd>2 à 6 jours selon la surface et le type de revêtement</dd></div>
+          <div><dt>Budget indicatif</dt><dd>Parquet : 60 € – 220 € / m² HT</dd></div>
+          <div><dt>Interlocuteur</dt><dd>Un poseur dédié, coordonné avec les autres métiers</dd></div>
+          <div><dt>Garanties</dt><dd>Décennale, RC Pro, bilan à 30 jours</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══════════ INTRO ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
+        <div>
+          <span class="eyebrow">Revêtements de sol</span>
+          <h2>Un sol se choisit<br>pour vivre dessus</h2>
+        </div>
+        <div class="svc-prose">
+          <p>Le sol est l'élément d'une pièce qui subit le plus : passages, meubles, humidité, variations de température. Le revêtement idéal n'existe pas dans l'absolu, il dépend de la pièce. Un parquet massif réchauffe un séjour mais supporte mal une cuisine très humide. Un sol souple convient à une pièce d'eau. Une résine crée une surface continue durable.</p>
+          <p>Nous posons le parquet massif et contrecollé, y compris en motifs comme le point de Hongrie ou le chevron, le stratifié, la résine, le béton ciré et les sols souples. Dans chaque cas, la préparation du support, plan, sec et propre, est la condition d'une pose durable.</p>
+          <p>Pour les pièces d'eau, le <a href="carrelage">carrelage</a> reste la solution de référence. Pour une surface continue sans joint, voyez le <a href="beton-cire">béton ciré</a>, que nous fabriquons dans notre atelier.</p>
+        </div>
+      </div>
+      <div class="services-page-grid">
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-tree"></i></div>
+          <h3>Parquet massif et contrecollé</h3>
+          <p>Le parquet apporte chaleur et caractère. Massif, il se rénove plusieurs fois. Contrecollé, il est plus stable et se pose sur sol chauffant.</p>
+          <ul class="service-list">
+            <li>Parquet massif</li>
+            <li>Parquet contrecollé</li>
+            <li>Point de Hongrie et chevron</li>
+            <li>Pose collée, clouée ou flottante</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>Stratifié et vinyle</h3>
+          <p>Stratifié et sols vinyles imitation bois offrent un bon rapport qualité-prix. La pose flottante sur sous-couche est rapide et réversible.</p>
+          <ul class="service-list">
+            <li>Stratifié</li>
+            <li>Sols vinyles</li>
+            <li>Sous-couche acoustique</li>
+            <li>Plinthes assorties</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-droplet"></i></div>
+          <h3>Résine et béton ciré</h3>
+          <p>Surfaces continues, sans joint, pour sols de pièces à vivre, de cuisines ou de salles de bains. Elles se coulent sur un support préparé.</p>
+          <ul class="service-list">
+            <li>Résine époxy et polyuréthane</li>
+            <li><a href="beton-cire">Béton ciré</a> pour sols</li>
+            <li>Continuité murs et sols</li>
+            <li>Protection adaptée à l'usage</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-shoe-prints"></i></div>
+          <h3>Sols souples et moquette</h3>
+          <p>Sols souples, moquette et liège apportent confort acoustique et chaleur. Ils conviennent aux chambres, aux bureaux et aux pièces de passage.</p>
+          <ul class="service-list">
+            <li>Sols souples</li>
+            <li>Moquette</li>
+            <li>Liège</li>
+            <li>Seuils et barres de finition</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ DÉROULÉ ══════════ -->
+  <section class="section section-dark" id="deroule">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Déroulé d'intervention</span>
+          <h2>De la préparation<br>au dernier seuil</h2>
+        </div>
+        <p>Un revêtement de sol se pose en fin de chantier, sur un support contrôlé. Une pose précipitée sur un support humide ou irrégulier se voit dans les mois qui suivent.</p>
+      </div>
+      <div class="services-list">
+        <div class="list-row">
+          <span class="sr-num">01</span>
+          <span class="sr-icon"><i class="fas fa-route"></i></span>
+          <div class="sr-body">
+            <h3>Visite et contrôle du support</h3>
+            <p>Nous vérifions la planéité, l'humidité et la solidité du support, la présence d'un sol chauffant et la hauteur disponible sous les portes. Ces points décident du revêtement possible.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">02</span>
+          <span class="sr-icon"><i class="fas fa-file-invoice"></i></span>
+          <div class="sr-body">
+            <h3>Devis et choix du revêtement</h3>
+            <p>Le devis précise le revêtement, le mode de pose, la sous-couche et les finitions. Le matériau est livré et stocké dans la pièce quelques jours avant la pose, pour s'acclimater.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">03</span>
+          <span class="sr-icon"><i class="fas fa-tools"></i></span>
+          <div class="sr-body">
+            <h3>Préparation du support</h3>
+            <p>Ragréage si nécessaire, primaire, sous-couche. Le support est plan, sec et propre avant la pose.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">04</span>
+          <span class="sr-icon"><i class="fas fa-tree"></i></span>
+          <div class="sr-body">
+            <h3>Pose du revêtement</h3>
+            <p>Pose selon le mode choisi, avec jeu de dilatation en périphérie pour le bois et le stratifié, calepinage des lames et alignement dans le sens de la lumière.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">05</span>
+          <span class="sr-icon"><i class="fas fa-key"></i></span>
+          <div class="sr-body">
+            <h3>Plinthes, seuils et réception</h3>
+            <p>Pose des plinthes et des barres de seuil, nettoyage, contrôle des raccords avec les portes et les autres revêtements.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PRIX ══════════ -->
+  <section class="section" id="prix">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Prix indicatifs</span>
+          <h2>Combien coûte<br>la pose d'un sol ?</h2>
+        </div>
+        <p>La pose se chiffre au mètre carré. Le prix du revêtement lui-même s'ajoute selon le modèle : un parquet massif de qualité peut représenter un budget supérieur à celui de la pose.</p>
+      </div>
+      <div class="svc-price-layout">
+        <div class="svc-price-tables">
+        <div class="price-cat svc-price-cat">
+          <div class="price-cat-head"><h3>Revêtements de sol &amp; mur</h3></div>
+          <table class="price-table">
+            <thead><tr><th>Prestation</th><th>Fourchette HT</th></tr></thead>
+            <tbody>
+<tr><td>Stratifié<span class="price-unit">/ m²</span></td><td class="price-range">35 € – 70 €</td></tr>
+<tr><td>Parquet<span class="price-unit">/ m²</span></td><td class="price-range">60 € – 220 €</td></tr>
+<tr><td>Résine / béton ciré<span class="price-unit">/ m²</span></td><td class="price-range">90 € – 250 €</td></tr>
+<tr><td>Sol souple<span class="price-unit">/ m²</span></td><td class="price-range">30 € – 120 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+        <aside class="svc-price-side">
+          <h3>Ce qui fait varier le prix</h3>
+          <ul class="svc-factors"><li><strong>Dépose de l'existant + 15 %</strong> Ancien parquet, moquette ou carrelage à retirer et à évacuer.</li><li><strong>Accès difficile + 10 %</strong> Étage sans ascenseur, portage de lames ou de rouleaux volumineux.</li><li><strong>Support dégradé + 20 %</strong> Plancher non plan, chape fissurée ou humide à reprendre.</li><li><strong>Finition premium + 30 %</strong> Point de Hongrie, chevrons, essences nobles, motifs complexes.</li></ul>
+          <p class="svc-price-note">Fourchettes hors taxes, issues de notre <a href="tarifs">grille tarifaire</a>. Le prix définitif est arrêté après une visite technique.</p>
+          <a href="contact?devis=revetements#devisEstimator" class="btn btn-primary">Estimer mon projet <i class="fas fa-arrow-right"></i></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONSEILS ══════════ -->
+  <section class="section" id="conseils">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Avant de choisir</span>
+          <h2>Quatre critères<br>pour bien choisir</h2>
+        </div>
+        <p>Ces questions orientent le choix entre bois, stratifié, résine ou sol souple. Nous les posons toujours avant de proposer un revêtement.</p>
+      </div>
+      <div class="svc-tips">
+        <div class="svc-tip">
+          <h3>Contrôler l'humidité du support</h3>
+          <p>Un parquet posé sur un support trop humide gonfle, se déforme et finit par se décoller. L'humidité de la chape se contrôle avant la pose, et la pose est repoussée si elle est trop élevée.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Anticiper le sol chauffant</h3>
+          <p>Tous les revêtements ne conviennent pas à un sol chauffant : le parquet contrecollé, le carrelage, la résine et certains stratifiés s'y prêtent, le parquet massif épais beaucoup moins. Le fabricant précise les conditions.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Laisser le matériau s'acclimater</h3>
+          <p>Le bois travaille avec l'humidité et la température. Le stocker quelques jours dans la pièce avant la pose limite les écarts de dimension après installation.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Choisir selon la pièce, pas seulement selon l'esthétique</h3>
+          <p>Cuisine, entrée, chambre d'enfant, bureau : l'usage dicte la résistance nécessaire. Nous vous conseillons sur échantillons, avec les contraintes d'entretien de chaque matériau.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ RÉALISATIONS ══════════ -->
+  <section class="section" id="realisations-liees" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Sur nos chantiers</span>
+          <h2>Des parquets posés<br>à Versailles et à Paris</h2>
+        </div>
+        <p>Deux intérieurs avec parquet. Retrouvez toutes nos <a href="realisations">réalisations</a>.</p>
+      </div>
+      <div class="svc-photos">
+        <figure class="svc-photo">
+          <a href="realisations#rl-amenagement"><img src="images/image2-640.webp" srcset="images/image2-480.webp 480w, images/image2-640.webp 640w, images/image2-900.webp 900w, images/image2.webp 911w" sizes="(max-width: 700px) 92vw, 46vw" alt="Chambre avec parquet point de Hongrie et murs à moulures à Versailles" loading="lazy" decoding="async"></a>
+          <figcaption>Chambre à Versailles : parquet point de Hongrie et murs à moulures. <a href="realisations#rl-amenagement">Voir la réalisation</a></figcaption>
+        </figure>
+        <figure class="svc-photo">
+          <a href="realisations#rl-amenagement"><img src="images/image13-640.webp" srcset="images/image13-480.webp 480w, images/image13-640.webp 640w, images/image13-900.webp 900w, images/image13.webp 1200w" sizes="(max-width: 700px) 92vw, 46vw" alt="Appartement haussmannien avec parquet, îlot en marbre et bibliothèque en bois" loading="lazy" decoding="async"></a>
+          <figcaption>Appartement haussmannien : parquet, îlot en marbre et bibliothèque en bois. <a href="realisations#rl-amenagement">Voir la réalisation</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Les questions<br>qu'on nous pose</h2>
+        </div>
+        <p>Support, sol chauffant, durée, entretien : les réponses aux questions de revêtements de sol les plus fréquentes.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Quelle différence entre parquet massif et contrecollé ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Le parquet massif est taillé dans une seule pièce de bois, et peut être poncé plusieurs fois. Le contrecollé associe une couche de bois noble sur un support stable : il est moins sensible aux variations d'humidité et convient mieux aux sols chauffants, mais se rénove moins de fois.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Peut-on poser un parquet sur un sol chauffant ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Oui, avec un parquet adapté, généralement contrecollé et de faible épaisseur, collé sur le support. La montée en température du sol doit être progressive avant et après la pose. Nous nous alignons sur les préconisations du fabricant et de l'installateur du chauffage.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Qu'est-ce qu'un parquet point de Hongrie ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">C'est un parquet dont les lames, coupées en biseau, forment un motif en zigzag. Il est plus complexe à poser qu'un parquet droit, car chaque lame doit être ajustée avec précision. C'est un motif classique des appartements anciens parisiens.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Combien de temps avant de pouvoir remettre les meubles ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Un parquet collé demande en général un à trois jours avant le passage, et davantage avant de replacer des meubles lourds. Un stratifié flottant est utilisable immédiatement. Une résine ou un béton ciré demande plusieurs jours de séchage. Nous précisons le délai pour chaque revêtement.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Peut-on poser un nouveau sol sans retirer l'ancien ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Parfois : un stratifié flottant peut se poser sur un ancien sol plan et sain, et le <a href="beton-cire">béton ciré</a> sur un carrelage adhérent. La hauteur supplémentaire doit rester compatible avec les portes. Nous vérifions à la visite.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Comment estimer mon budget ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Mesurez la surface, puis utilisez l'<a href="contact?devis=revetements#devisEstimator">estimateur de budget</a> ou consultez la <a href="tarifs">grille tarifaire</a>. Ces fourchettes concernent la pose, hors fourniture du revêtement.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ À VOIR AUSSI ══════════ -->
+  <section class="section-sm" id="voir-aussi">
+    <div class="container">
+      <h2 class="svc-related-title">À voir aussi</h2>
+      <div class="related-grid">
+        <a href="carrelage" class="related-card">
+          <h3>Carrelage et faïence</h3>
+          <p>Sols et murs, pièces d'eau, grands formats.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="beton-cire" class="related-card">
+          <h3>Béton ciré premium</h3>
+          <p>Un sol continu, sans joint, fabriqué en atelier.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="renovation-complete" class="related-card">
+          <h3>Rénovation complète</h3>
+          <p>Le sol intégré à un chantier tous corps de métier.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="tarifs" class="related-card">
+          <h3>Grille tarifaire complète</h3>
+          <p>Toutes nos prestations, avec fourchettes de prix et majorations.</p>
+          <span>Voir les tarifs <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="garanties" class="related-card">
+          <h3>Garanties et assurances</h3>
+          <p>Décennale, responsabilité civile professionnelle, bilan à 30 jours.</p>
+          <span>Voir les garanties <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="section cta-section" id="ctaSection">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Un sol<br>à renouveler ?</h2>
+          <p>Visite sur site et devis détaillé gratuits. Réponse sous 24h.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact?devis=revetements#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- @shared:footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.webp" alt="Ben&amp;Bat" width="360" height="120"></a>
+          <p>25 ans d'expertise BTP : béton ciré premium, mobilier sur mesure et tous corps de métier. France &amp; Belgique.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="tarifs">Tarifs</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Témoignages</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+    <h5>Services</h5>
+    <ul class="footer-links">
+      <li><a href="renovation-complete">Rénovation complète</a></li>
+      <li><a href="salle-de-bain">Salle de bain</a></li>
+      <li><a href="cuisine">Cuisine</a></li>
+      <li><a href="peinture">Peinture</a></li>
+      <li><a href="plomberie">Plomberie</a></li>
+      <li><a href="electricite">Électricité</a></li>
+      <li><a href="carrelage">Carrelage &amp; faïence</a></li>
+      <li><a href="placo-isolation">Placo &amp; isolation</a></li>
+      <li><a href="maconnerie">Maçonnerie</a></li>
+      <li><a href="revetements-de-sol">Revêtements de sol</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Spécialités</h5>
+    <ul class="footer-links">
+      <li><a href="beton-cire">Béton ciré premium</a></li>
+      <li><a href="mobilier-sur-mesure">Mobilier sur mesure</a></li>
+      <li><a href="vasques-sur-mesure">Vasques sur mesure</a></li>
+      <li><a href="nettoyage-fin-de-chantier">Nettoyage fin de chantier</a></li>
+      <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+      <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+      <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
+    </ul>
+  </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">WhatsApp (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@ben-bat.com">contact@ben-bat.com</a></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>60 Rue François 1er, 75008 Paris</span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Sam : 8h–20h</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; <span class="js-year">2026</span> Ben&amp;Bat. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales#cookies" data-cookie-settings>Gérer les cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- @end:footer -->
+  <!-- @shared:sticky -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+    <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." class="btn sticky-phone sticky-whatsapp" target="_blank" rel="noopener" aria-label="Écrire à Ben&amp;Bat sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <!-- @end:sticky -->
+
+  <!-- @shared:scripts -->
+  <script src="js/main.js?v=10" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
+  <!-- @end:scripts -->
+</body>
+</html>

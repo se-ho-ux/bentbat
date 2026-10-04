@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- @shared:head-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
+    }
+  </script>
+  <!-- @end:head-meta -->
+  <link rel="canonical" href="https://benbat.fr/renovation-complete">
+  <title>Rénovation Complète Tous Corps de Métier | Ben&amp;Bat</title>
+  <meta name="description" content="Rénovation complète clé en main en France et en Belgique : un interlocuteur unique, tous les corps de métier, devis détaillé gratuit sous 24h.">
+  <meta property="og:title" content="Rénovation Complète Tous Corps de Métier | Ben&amp;Bat">
+  <meta property="og:description" content="Rénovation complète clé en main en France et en Belgique : un interlocuteur unique, tous les corps de métier, devis détaillé gratuit sous 24h.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benbat.fr/renovation-complete">
+  <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- @shared:head-assets -->
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
+    } catch (e) {}
+  </script>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=18">
+  <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+       ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+       accompagnent toujours un libellé texte. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- @end:head-assets -->
+  <!-- @shared:schema-business -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://benbat.fr/#entreprise",
+  "name": "Ben&Bat",
+  "description": "Spécialistes du béton ciré premium et de la rénovation intérieure tous corps de métier depuis 25 ans. Paris, Île-de-France et toute la Belgique.",
+  "url": "https://benbat.fr/",
+  "telephone": "+33658594147",
+  "email": "contact@ben-bat.com",
+  "image": "https://benbat.fr/images/image15.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Rue François 1er",
+    "addressLocality": "Paris",
+    "postalCode": "75008",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8698258,
+    "longitude": 2.3020488
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Paris"
+    },
+    {
+      "@type": "City",
+      "name": "Lyon"
+    },
+    {
+      "@type": "City",
+      "name": "Marseille"
+    },
+    {
+      "@type": "City",
+      "name": "Bordeaux"
+    },
+    {
+      "@type": "City",
+      "name": "Lille"
+    },
+    {
+      "@type": "City",
+      "name": "Neuilly-sur-Seine"
+    },
+    {
+      "@type": "City",
+      "name": "Versailles"
+    },
+    {
+      "@type": "City",
+      "name": "Boulogne-Billancourt"
+    },
+    {
+      "@type": "City",
+      "name": "Bruxelles"
+    },
+    {
+      "@type": "City",
+      "name": "Liège"
+    },
+    {
+      "@type": "City",
+      "name": "Anvers"
+    },
+    {
+      "@type": "City",
+      "name": "Gand"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    },
+    {
+      "@type": "Country",
+      "name": "Belgique"
+    }
+  ],
+  "knowsAbout": [
+    "béton ciré",
+    "rénovation intérieure",
+    "maçonnerie",
+    "plomberie",
+    "électricité",
+    "carrelage",
+    "mobilier sur mesure",
+    "vasques sur mesure",
+    "parquet",
+    "nettoyage de chantier"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "11",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services BTP",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Béton ciré décoratif",
+          "description": "Application de béton ciré premium sur sols, murs et plans de travail. Paris, Île-de-France et Belgique."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation intérieure tous corps de métier",
+          "description": "Coordination et réalisation de chantiers de rénovation complète : maçonnerie, électricité, plomberie, finitions."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobilier sur mesure",
+          "description": "Conception et fabrication de mobilier sur mesure pour particuliers et professionnels."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vasques sur mesure",
+          "description": "Création de vasques en béton ciré et matériaux naturels, design exclusif."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pose de parquet et carrelage",
+          "description": "Pose de parquet point de Hongrie, carrelage, faïence et revêtements de sol premium."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Nettoyage fin de chantier",
+          "description": "Nettoyage professionnel de bâtiments et fins de chantier en France et Belgique."
+        }
+      }
+    ]
+  },
+  "priceRange": "€€",
+  "logo": "https://benbat.fr/logos-png/wordmark-noir-transparent.webp",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+33658594147",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": [
+        "fr"
+      ]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+32465866372",
+      "contactType": "customer service",
+      "areaServed": "BE",
+      "availableLanguage": [
+        "fr"
+      ]
+    }
+  ]
+  }
+  </script>
+  <!-- @end:schema-business -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://benbat.fr/renovation-complete#service",
+      "name": "Rénovation complète tous corps de métier",
+      "serviceType": "Rénovation intérieure complète",
+      "description": "Rénovation complète de logement clé en main : audit, devis détaillé, coordination de tous les corps de métier, finitions et réception, en France et en Belgique.",
+      "url": "https://benbat.fr/renovation-complete",
+      "provider": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Belgique"
+        }
+      ],
+      "image": [
+        "https://benbat.fr/images/image13.webp",
+        "https://benbat.fr/images/image10.webp"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://benbat.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://benbat.fr/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Rénovation complète",
+          "item": "https://benbat.fr/renovation-complete"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien de temps dure une rénovation complète ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cela dépend de la surface et de l'état de départ : de six semaines pour un petit logement à plusieurs mois pour une rénovation lourde avec reprise des réseaux et des planchers. Le planning détaillé figure dans le devis, avec les étapes qui conditionnent la suite, comme les temps de séchage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on rester dans le logement pendant les travaux ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sur une rénovation partielle, par exemple une seule pièce d'eau, c'est possible. Sur une rénovation complète avec reprise des réseaux, c'est déconseillé : l'eau et l'électricité sont coupées par intermittence, la poussière est omniprésente et les cloisons sont ouvertes. Nous vous aidons à phaser le chantier si un départ est impossible."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel taux de TVA s'applique à des travaux de rénovation ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En France, un taux réduit de 10 % s'applique en général aux travaux d'amélioration dans un logement achevé depuis plus de deux ans, et de 5,5 % pour certains travaux d'amélioration énergétique. En Belgique, un taux de 6 % existe pour la rénovation de logements de plus de dix ans. Ces taux dépendent de votre situation : ils sont précisés et confirmés sur le devis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment établir son budget avant de contacter un professionnel ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Partez de la grille tarifaire pour situer chaque poste, puis utilisez l'estimateur de budget en cochant les prestations qui vous concernent. Vous obtenez une fourchette hors taxes, qu'une visite sur place permet ensuite de resserrer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Puis-je ne lancer qu'une partie du chantier ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Le devis étant détaillé poste par poste, vous pouvez lancer les travaux prioritaires et reporter le reste. Nous vous conseillons seulement de traiter ensemble les réseaux et les sols d'une même zone, pour ne pas rouvrir ce qui vient d'être refermé."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qui coordonne les artisans ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un interlocuteur unique de notre équipe tient le planning, les commandes et les livraisons. Chaque métier est confié à un spécialiste de sa discipline. Vous n'avez pas à vous assurer que le plombier a fini avant le carreleur : c'est notre travail."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image13.webp",
+      "url": "https://benbat.fr/images/image13.webp",
+      "caption": "Appartement haussmannien rénové avec parquet, îlot en marbre et bibliothèque en bois",
+      "name": "Appartement haussmannien : parquet, îlot en marbre et bibliothèque en bois.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image10.webp",
+      "url": "https://benbat.fr/images/image10.webp",
+      "caption": "Salon avec bibliothèque, poutres apparentes et parquet point de Hongrie",
+      "name": "Salon avec bibliothèque, poutres apparentes et parquet point de Hongrie.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- @shared:header active=services -->
+  <header id="header">
+    <div class="nav-wrap">
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="services" class="active">Services</a></li>
+          <li><a href="tarifs">Tarifs</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <a href="/">Accueil</a>
+    <a href="services">Services</a>
+    <a href="tarifs">Tarifs</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
+  </div>
+  <!-- @end:header -->
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">
+          <a href="/">Accueil</a><span class="sep">/</span><a href="services">Services</a><span class="sep">/</span><span class="cur">Rénovation complète</span>
+        </div>
+        <h1>Rénovation complète<br>tous corps de métier</h1>
+        <p>Maçonnerie, plomberie, électricité, sols, peinture, cuisine et salle de bain : un seul interlocuteur pilote l'ensemble du chantier, du premier relevé à la remise des clés, en France et en Belgique.</p>
+        <div class="svc-hero-cta">
+          <a href="contact?devis=renovation#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="contact" class="btn btn-ghost-dark">Devis gratuit</a>
+        </div>
+        <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EN BREF ══════════ -->
+  <section class="section-sm svc-facts-band">
+    <div class="container">
+      <dl class="svc-facts">
+          <div><dt>Durée indicative</dt><dd>De 6 semaines pour un petit logement à plusieurs mois pour une rénovation lourde</dd></div>
+          <div><dt>Budget indicatif</dt><dd>Rénovation complète : 700 € – 1 800 € / m² HT</dd></div>
+          <div><dt>Interlocuteur</dt><dd>Un pilote unique pour tous les corps de métier</dd></div>
+          <div><dt>Garanties</dt><dd>Décennale, RC Pro, bilan à 30 jours</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══════════ INTRO ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
+        <div>
+          <span class="eyebrow">Rénovation clé en main</span>
+          <h2>Un chantier,<br>un seul responsable</h2>
+        </div>
+        <div class="svc-prose">
+          <p>Rénover un logement en entier revient à faire intervenir cinq à dix métiers dans le bon ordre. Les difficultés ne sont presque jamais techniques : elles viennent des délais qui se chevauchent, des commandes qui arrivent trop tard et des artisans qui s'attendent les uns les autres. Avec un interlocuteur unique, c'est notre rôle de les arbitrer, pas le vôtre.</p>
+          <p>Nous intervenons sur des rénovations complètes d'appartements et de maisons, mais aussi sur des rénovations partielles : un étage, une aile, deux pièces d'eau. Le devis est établi poste par poste, ce qui vous permet de phaser le projet dans le temps ou de retirer une ligne sans repartir de zéro.</p>
+          <p>À Paris, nous détaillons les contraintes propres aux immeubles de la capitale sur la page <a href="renovation-appartement-paris">rénovation d'appartement à Paris</a>.</p>
+        </div>
+      </div>
+      <div class="services-page-grid">
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+          <h3>Pilotage de chantier</h3>
+          <p>Un responsable unique tient le planning, les commandes et les livraisons. Vous savez à tout moment où en est le chantier et ce qui est attendu de vous.</p>
+          <ul class="service-list">
+            <li>Planning coordonné entre les métiers</li>
+            <li>Commandes et livraisons suivies</li>
+            <li>Point d'avancement régulier</li>
+            <li>Réception accompagnée</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
+          <h3>Gros œuvre et réseaux</h3>
+          <p>Démolition, ouvertures, cloisons, reprise de l'eau, de l'électricité et de la ventilation. Tout ce qui est invisible est traité avant les finitions.</p>
+          <ul class="service-list">
+            <li><a href="maconnerie">Maçonnerie</a> et cloisons</li>
+            <li><a href="plomberie">Plomberie</a> et évacuations</li>
+            <li><a href="electricite">Électricité</a> aux normes</li>
+            <li><a href="placo-isolation">Placo et isolation</a></li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
+          <h3>Second œuvre et finitions</h3>
+          <p>Sols, murs, plafonds, menuiseries : les finitions donnent son caractère au logement. Elles sont réalisées par des artisans spécialistes, jamais par des généralistes.</p>
+          <ul class="service-list">
+            <li><a href="peinture">Peinture</a> et enduits décoratifs</li>
+            <li><a href="carrelage">Carrelage</a> et faïence</li>
+            <li><a href="revetements-de-sol">Parquet et revêtements de sol</a></li>
+            <li><a href="beton-cire">Béton ciré</a></li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-couch"></i></div>
+          <h3>Pièces à vivre</h3>
+          <p>Cuisine, salle de bain et mobilier sur mesure sont traités dans le même chantier, avec les mêmes interlocuteurs et sans rupture de planning.</p>
+          <ul class="service-list">
+            <li><a href="cuisine">Cuisine</a> équipée ou sur mesure</li>
+            <li><a href="salle-de-bain">Salle de bain</a> complète</li>
+            <li><a href="mobilier-sur-mesure">Mobilier sur mesure</a></li>
+            <li>Nettoyage de fin de chantier</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ DÉROULÉ ══════════ -->
+  <section class="section section-dark" id="deroule">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Déroulé d'intervention</span>
+          <h2>Du relevé<br>à la remise des clés</h2>
+        </div>
+        <p>Le même déroulé sur tous nos chantiers, d'un studio à une maison entière. Ce qui varie, c'est la durée de chaque étape.</p>
+      </div>
+      <div class="services-list">
+        <div class="list-row">
+          <span class="sr-num">01</span>
+          <span class="sr-icon"><i class="fas fa-route"></i></span>
+          <div class="sr-body">
+            <h3>Visite, relevé et cahier des charges</h3>
+            <p>Nous venons sur place, gratuitement, pour relever les dimensions, l'état des réseaux et la nature des supports. Nous vous aidons à fixer le périmètre : ce qui est refait, ce qui est conservé, ce qui peut attendre.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">02</span>
+          <span class="sr-icon"><i class="fas fa-file-invoice"></i></span>
+          <div class="sr-body">
+            <h3>Devis détaillé sous 24h</h3>
+            <p>Un devis poste par poste, gratuit et sans engagement. Chaque corps de métier est chiffré séparément, ce qui vous permet d'arbitrer ligne à ligne avant de lancer quoi que ce soit.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">03</span>
+          <span class="sr-icon"><i class="fas fa-hard-hat"></i></span>
+          <div class="sr-body">
+            <h3>Dépose, gros œuvre et réseaux</h3>
+            <p>Protection des parties communes, dépose, maçonnerie, reprise des réseaux. Les murs sont fermés une fois les réseaux contrôlés, jamais avant.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">04</span>
+          <span class="sr-icon"><i class="fas fa-paint-roller"></i></span>
+          <div class="sr-body">
+            <h3>Second œuvre et finitions</h3>
+            <p>Cloisons, enduits, sols, faïence, peinture, menuiseries, mobilier. Les métiers s'enchaînent dans l'ordre imposé par les temps de séchage, sans temps mort entre deux intervenants.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">05</span>
+          <span class="sr-icon"><i class="fas fa-key"></i></span>
+          <div class="sr-body">
+            <h3>Nettoyage, réception et bilan</h3>
+            <p>Remise en état complète, visite du logement avec vous et levée des réserves. Un bilan est réalisé 30 jours après la livraison.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PRIX ══════════ -->
+  <section class="section" id="prix">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Prix indicatifs</span>
+          <h2>Combien coûte<br>une rénovation complète ?</h2>
+        </div>
+        <p>Le prix d'une rénovation complète se calcule au mètre carré, avec une fourchette large parce que l'état de départ et le niveau de finition changent tout. Seule une visite permet de resserrer l'estimation.</p>
+      </div>
+      <div class="svc-price-layout">
+        <div class="svc-price-tables">
+        <div class="price-cat svc-price-cat">
+          <div class="price-cat-head"><h3>Rénovation</h3></div>
+          <table class="price-table">
+            <thead><tr><th>Prestation</th><th>Fourchette HT</th></tr></thead>
+            <tbody>
+<tr><td>Rénovation complète<span class="price-unit">/ m²</span></td><td class="price-range">700 € – 1 800 €</td></tr>
+<tr><td>Coordination de chantier<span class="price-unit">forfait</span></td><td class="price-range">800 € – 6 000 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+        <aside class="svc-price-side">
+          <h3>Ce qui fait varier le prix</h3>
+          <ul class="svc-factors"><li><strong>Dépose de l'existant + 15 %</strong> Cloisons, sols, cuisine et sanitaires à démolir et à évacuer.</li><li><strong>Accès difficile + 10 %</strong> Étage élevé sans ascenseur, cour étroite, stationnement impossible.</li><li><strong>Support dégradé + 20 %</strong> Murs humides, planchers à reprendre, réseaux vétustes.</li><li><strong>Finition premium + 30 %</strong> Matériaux nobles, béton ciré, mobilier sur mesure, pierre naturelle.</li></ul>
+          <p class="svc-price-note">Fourchettes hors taxes, issues de notre <a href="tarifs">grille tarifaire</a>. Le prix définitif est arrêté après une visite technique.</p>
+          <a href="contact?devis=renovation#devisEstimator" class="btn btn-primary">Estimer mon projet <i class="fas fa-arrow-right"></i></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONSEILS ══════════ -->
+  <section class="section" id="conseils">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Avant de lancer le projet</span>
+          <h2>Quatre réflexes<br>qui sécurisent un chantier</h2>
+        </div>
+        <p>Ces points se règlent mieux avant le premier coup de masse qu'en cours de chantier. Nous les abordons lors de la visite.</p>
+      </div>
+      <div class="svc-tips">
+        <div class="svc-tip">
+          <h3>Garder une marge pour l'imprévu</h3>
+          <p>Un mur qui dévoile une canalisation vétuste ou un plancher à reprendre n'apparaissent qu'à la dépose. Prévoir une réserve de dix à quinze pour cent du budget évite de devoir arbitrer dans l'urgence.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Vérifier les autorisations avant de démolir</h3>
+          <p>En copropriété, toute intervention touchant aux parties communes, aux murs porteurs ou à la façade demande l'accord du syndic ou de l'assemblée générale. Nous vous indiquons ces points dès la visite.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Faire contrôler les diagnostics dans l'ancien</h3>
+          <p>Dans un logement ancien, un repérage amiante peut être exigé avant travaux, et un repérage plomb est vivement conseillé avant 1949. Ils protègent les occupants et les artisans, et se commandent avant le démarrage.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Choisir les matériaux avant la signature</h3>
+          <p>Carrelage, sanitaires, cuisine et parquet se commandent plusieurs semaines à l'avance. Un choix tardif retarde le chantier tout entier, alors qu'un choix précoce permet de planifier chaque métier au plus juste.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ RÉALISATIONS ══════════ -->
+  <section class="section" id="realisations-liees" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Sur nos chantiers</span>
+          <h2>Des logements rénovés<br>de la dépose aux finitions</h2>
+        </div>
+        <p>Deux chantiers d'appartements anciens. Retrouvez toutes nos <a href="realisations">réalisations</a>.</p>
+      </div>
+      <div class="svc-photos">
+        <figure class="svc-photo">
+          <a href="realisations#rl-amenagement"><img src="images/image13-640.webp" srcset="images/image13-480.webp 480w, images/image13-640.webp 640w, images/image13-900.webp 900w, images/image13.webp 1200w" sizes="(max-width: 700px) 92vw, 46vw" alt="Appartement haussmannien rénové avec parquet, îlot en marbre et bibliothèque en bois" loading="lazy" decoding="async"></a>
+          <figcaption>Appartement haussmannien : parquet, îlot en marbre et bibliothèque en bois. <a href="realisations#rl-amenagement">Voir la réalisation</a></figcaption>
+        </figure>
+        <figure class="svc-photo">
+          <a href="realisations#rl-amenagement"><img src="images/image10-640.webp" srcset="images/image10-480.webp 480w, images/image10-640.webp 640w, images/image10-900.webp 900w, images/image10.webp 1200w" sizes="(max-width: 700px) 92vw, 46vw" alt="Salon avec bibliothèque, poutres apparentes et parquet point de Hongrie" loading="lazy" decoding="async"></a>
+          <figcaption>Salon avec bibliothèque, poutres apparentes et parquet point de Hongrie. <a href="realisations#rl-amenagement">Voir la réalisation</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Les questions<br>qu'on nous pose</h2>
+        </div>
+        <p>Durée, habitation pendant les travaux, TVA, budget : les points à connaître avant de rénover entièrement un logement.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Combien de temps dure une rénovation complète ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Cela dépend de la surface et de l'état de départ : de six semaines pour un petit logement à plusieurs mois pour une rénovation lourde avec reprise des réseaux et des planchers. Le planning détaillé figure dans le devis, avec les étapes qui conditionnent la suite, comme les temps de séchage.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Peut-on rester dans le logement pendant les travaux ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Sur une rénovation partielle, par exemple une seule pièce d'eau, c'est possible. Sur une rénovation complète avec reprise des réseaux, c'est déconseillé : l'eau et l'électricité sont coupées par intermittence, la poussière est omniprésente et les cloisons sont ouvertes. Nous vous aidons à phaser le chantier si un départ est impossible.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Quel taux de TVA s'applique à des travaux de rénovation ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">En France, un taux réduit de 10 % s'applique en général aux travaux d'amélioration dans un logement achevé depuis plus de deux ans, et de 5,5 % pour certains travaux d'amélioration énergétique. En Belgique, un taux de 6 % existe pour la rénovation de logements de plus de dix ans. Ces taux dépendent de votre situation : ils sont précisés et confirmés sur le devis.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Comment établir son budget avant de contacter un professionnel ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Partez de la <a href="tarifs">grille tarifaire</a> pour situer chaque poste, puis utilisez l'<a href="contact?devis=renovation#devisEstimator">estimateur de budget</a> en cochant les prestations qui vous concernent. Vous obtenez une fourchette hors taxes, qu'une visite sur place permet ensuite de resserrer.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Puis-je ne lancer qu'une partie du chantier ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Oui. Le devis étant détaillé poste par poste, vous pouvez lancer les travaux prioritaires et reporter le reste. Nous vous conseillons seulement de traiter ensemble les réseaux et les sols d'une même zone, pour ne pas rouvrir ce qui vient d'être refermé.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Qui coordonne les artisans ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Un interlocuteur unique de notre équipe tient le planning, les commandes et les livraisons. Chaque métier est confié à un spécialiste de sa discipline. Vous n'avez pas à vous assurer que le plombier a fini avant le carreleur : c'est notre travail.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ À VOIR AUSSI ══════════ -->
+  <section class="section-sm" id="voir-aussi">
+    <div class="container">
+      <h2 class="svc-related-title">À voir aussi</h2>
+      <div class="related-grid">
+        <a href="renovation-appartement-paris" class="related-card">
+          <h3>Rénovation d'appartement à Paris</h3>
+          <p>Les contraintes des immeubles parisiens : copropriété, horaires, typologies.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="salle-de-bain" class="related-card">
+          <h3>Salle de bain</h3>
+          <p>Plomberie, étanchéité, carrelage ou béton ciré.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="cuisine" class="related-card">
+          <h3>Cuisine</h3>
+          <p>Pose de cuisine, plan de travail, îlot, réseaux intégrés.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="tarifs" class="related-card">
+          <h3>Grille tarifaire complète</h3>
+          <p>Toutes nos prestations, avec fourchettes de prix et majorations.</p>
+          <span>Voir les tarifs <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="garanties" class="related-card">
+          <h3>Garanties et assurances</h3>
+          <p>Décennale, responsabilité civile professionnelle, bilan à 30 jours.</p>
+          <span>Voir les garanties <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="section cta-section" id="ctaSection">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Un logement<br>à rénover ?</h2>
+          <p>Visite sur site et devis détaillé gratuits. Réponse sous 24h.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact?devis=renovation#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- @shared:footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.webp" alt="Ben&amp;Bat" width="360" height="120"></a>
+          <p>25 ans d'expertise BTP : béton ciré premium, mobilier sur mesure et tous corps de métier. France &amp; Belgique.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="tarifs">Tarifs</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Témoignages</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+    <h5>Services</h5>
+    <ul class="footer-links">
+      <li><a href="renovation-complete">Rénovation complète</a></li>
+      <li><a href="salle-de-bain">Salle de bain</a></li>
+      <li><a href="cuisine">Cuisine</a></li>
+      <li><a href="peinture">Peinture</a></li>
+      <li><a href="plomberie">Plomberie</a></li>
+      <li><a href="electricite">Électricité</a></li>
+      <li><a href="carrelage">Carrelage &amp; faïence</a></li>
+      <li><a href="placo-isolation">Placo &amp; isolation</a></li>
+      <li><a href="maconnerie">Maçonnerie</a></li>
+      <li><a href="revetements-de-sol">Revêtements de sol</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Spécialités</h5>
+    <ul class="footer-links">
+      <li><a href="beton-cire">Béton ciré premium</a></li>
+      <li><a href="mobilier-sur-mesure">Mobilier sur mesure</a></li>
+      <li><a href="vasques-sur-mesure">Vasques sur mesure</a></li>
+      <li><a href="nettoyage-fin-de-chantier">Nettoyage fin de chantier</a></li>
+      <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+      <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+      <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
+    </ul>
+  </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">WhatsApp (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@ben-bat.com">contact@ben-bat.com</a></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>60 Rue François 1er, 75008 Paris</span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Sam : 8h–20h</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; <span class="js-year">2026</span> Ben&amp;Bat. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales#cookies" data-cookie-settings>Gérer les cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- @end:footer -->
+  <!-- @shared:sticky -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+    <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." class="btn sticky-phone sticky-whatsapp" target="_blank" rel="noopener" aria-label="Écrire à Ben&amp;Bat sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <!-- @end:sticky -->
+
+  <!-- @shared:scripts -->
+  <script src="js/main.js?v=10" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
+  <!-- @end:scripts -->
+</body>
+</html>

@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- @shared:head-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
+    }
+  </script>
+  <!-- @end:head-meta -->
+  <link rel="canonical" href="https://benbat.fr/maconnerie">
+  <title>Maçonnerie d'Intérieur et Mur Porteur | Ben&amp;Bat</title>
+  <meta name="description" content="Maçonnerie d&#x27;intérieur : ouverture de mur porteur, dalle béton, reprise de structure et petite maçonnerie. Prix indicatifs, devis gratuit sous 24h.">
+  <meta property="og:title" content="Maçonnerie d&#x27;Intérieur et Mur Porteur | Ben&amp;Bat">
+  <meta property="og:description" content="Maçonnerie d&#x27;intérieur : ouverture de mur porteur, dalle béton, reprise de structure et petite maçonnerie. Prix indicatifs, devis gratuit sous 24h.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benbat.fr/maconnerie">
+  <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- @shared:head-assets -->
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
+    } catch (e) {}
+  </script>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=18">
+  <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+       ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+       accompagnent toujours un libellé texte. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- @end:head-assets -->
+  <!-- @shared:schema-business -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://benbat.fr/#entreprise",
+  "name": "Ben&Bat",
+  "description": "Spécialistes du béton ciré premium et de la rénovation intérieure tous corps de métier depuis 25 ans. Paris, Île-de-France et toute la Belgique.",
+  "url": "https://benbat.fr/",
+  "telephone": "+33658594147",
+  "email": "contact@ben-bat.com",
+  "image": "https://benbat.fr/images/image15.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Rue François 1er",
+    "addressLocality": "Paris",
+    "postalCode": "75008",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8698258,
+    "longitude": 2.3020488
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Paris"
+    },
+    {
+      "@type": "City",
+      "name": "Lyon"
+    },
+    {
+      "@type": "City",
+      "name": "Marseille"
+    },
+    {
+      "@type": "City",
+      "name": "Bordeaux"
+    },
+    {
+      "@type": "City",
+      "name": "Lille"
+    },
+    {
+      "@type": "City",
+      "name": "Neuilly-sur-Seine"
+    },
+    {
+      "@type": "City",
+      "name": "Versailles"
+    },
+    {
+      "@type": "City",
+      "name": "Boulogne-Billancourt"
+    },
+    {
+      "@type": "City",
+      "name": "Bruxelles"
+    },
+    {
+      "@type": "City",
+      "name": "Liège"
+    },
+    {
+      "@type": "City",
+      "name": "Anvers"
+    },
+    {
+      "@type": "City",
+      "name": "Gand"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    },
+    {
+      "@type": "Country",
+      "name": "Belgique"
+    }
+  ],
+  "knowsAbout": [
+    "béton ciré",
+    "rénovation intérieure",
+    "maçonnerie",
+    "plomberie",
+    "électricité",
+    "carrelage",
+    "mobilier sur mesure",
+    "vasques sur mesure",
+    "parquet",
+    "nettoyage de chantier"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "11",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services BTP",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Béton ciré décoratif",
+          "description": "Application de béton ciré premium sur sols, murs et plans de travail. Paris, Île-de-France et Belgique."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation intérieure tous corps de métier",
+          "description": "Coordination et réalisation de chantiers de rénovation complète : maçonnerie, électricité, plomberie, finitions."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobilier sur mesure",
+          "description": "Conception et fabrication de mobilier sur mesure pour particuliers et professionnels."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vasques sur mesure",
+          "description": "Création de vasques en béton ciré et matériaux naturels, design exclusif."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pose de parquet et carrelage",
+          "description": "Pose de parquet point de Hongrie, carrelage, faïence et revêtements de sol premium."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Nettoyage fin de chantier",
+          "description": "Nettoyage professionnel de bâtiments et fins de chantier en France et Belgique."
+        }
+      }
+    ]
+  },
+  "priceRange": "€€",
+  "logo": "https://benbat.fr/logos-png/wordmark-noir-transparent.webp",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+33658594147",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": [
+        "fr"
+      ]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+32465866372",
+      "contactType": "customer service",
+      "areaServed": "BE",
+      "availableLanguage": [
+        "fr"
+      ]
+    }
+  ]
+  }
+  </script>
+  <!-- @end:schema-business -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://benbat.fr/maconnerie#service",
+      "name": "Maçonnerie d'intérieur et ouverture de mur porteur",
+      "serviceType": "Maçonnerie d'intérieur, dalles, ouvertures et reprises de structure",
+      "description": "Maçonnerie d'intérieur : ouverture de murs porteurs, dalles béton, reprises de structure, cloisons et petite maçonnerie, en France et en Belgique.",
+      "url": "https://benbat.fr/maconnerie",
+      "provider": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Belgique"
+        }
+      ],
+      "image": [
+        "https://benbat.fr/images/image13.webp",
+        "https://benbat.fr/images/image10.webp"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://benbat.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://benbat.fr/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Maçonnerie",
+          "item": "https://benbat.fr/maconnerie"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment savoir si un mur est porteur ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "On ne peut pas le deviner de façon sûre : l'épaisseur, la position et la nature des matériaux donnent des indices, mais seule une étude le confirme. Les plans de l'immeuble et un diagnostic sur place sont nécessaires. Nous vous aidons à le déterminer lors de la visite."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on ouvrir un mur porteur dans un appartement ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, sous conditions : une étude de structure, l'accord de la copropriété en assemblée générale, et l'exécution par un professionnel assuré. Tous les murs ne s'y prêtent pas, mais beaucoup d'ouvertures sont possibles avec une poutre adaptée."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps dure une ouverture dans un mur porteur ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Une à trois semaines en général, étude préalable non comprise. Le chantier lui-même est rapide, mais il demande des temps de prise et de séchage avant de pouvoir reprendre les finitions. Le planning exact figure dans le devis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle différence entre une chape et une dalle ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Une dalle est un élément structurel en béton armé, qui reprend les charges. Une chape est une couche de mise à niveau, posée sur la dalle ou un isolant, qui reçoit le revêtement de sol. Nous réalisons les deux."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Intervenez-vous seulement en rénovation complète ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Nous réalisons aussi des interventions isolées : une ouverture, une reprise de fissure, une dalle ou un seuil. Pour un ordre de grandeur, consultez la grille tarifaire ou l'estimateur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qui s'occupe des finitions après la maçonnerie ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nous coordonnons les métiers suivants : cloisons et enduits, peinture, revêtements de sol. Vous gardez un seul interlocuteur du premier coup de masse à la livraison."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image13.webp",
+      "url": "https://benbat.fr/images/image13.webp",
+      "caption": "Appartement ancien avec pierre apparente, poutre en bois, parquet et bibliothèque",
+      "name": "Appartement ancien : pierre apparente, poutre en bois et parquet.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image10.webp",
+      "url": "https://benbat.fr/images/image10.webp",
+      "caption": "Salon avec poutres apparentes au plafond et bibliothèque en bois",
+      "name": "Salon avec poutres apparentes au plafond et bibliothèque en bois.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- @shared:header active=services -->
+  <header id="header">
+    <div class="nav-wrap">
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="services" class="active">Services</a></li>
+          <li><a href="tarifs">Tarifs</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <a href="/">Accueil</a>
+    <a href="services">Services</a>
+    <a href="tarifs">Tarifs</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
+  </div>
+  <!-- @end:header -->
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">
+          <a href="/">Accueil</a><span class="sep">/</span><a href="services">Services</a><span class="sep">/</span><span class="cur">Maçonnerie</span>
+        </div>
+        <h1>Maçonnerie d'intérieur<br>et ouverture de mur porteur</h1>
+        <p>Ouvertures, dalles, reprises de structure et petite maçonnerie : la partie solide de la rénovation, qui conditionne tout le reste et se prépare avec sérieux.</p>
+        <div class="svc-hero-cta">
+          <a href="contact?devis=maconnerie#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="contact" class="btn btn-ghost-dark">Devis gratuit</a>
+        </div>
+        <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EN BREF ══════════ -->
+  <section class="section-sm svc-facts-band">
+    <div class="container">
+      <dl class="svc-facts">
+          <div><dt>Durée indicative</dt><dd>Quelques jours pour une petite maçonnerie, 1 à 3 semaines pour une ouverture porteuse</dd></div>
+          <div><dt>Budget indicatif</dt><dd>Ouverture de mur porteur : 2 000 € – 8 000 € / unité HT</dd></div>
+          <div><dt>Interlocuteur</dt><dd>Un maçon dédié, coordonné avec les autres métiers</dd></div>
+          <div><dt>Garanties</dt><dd>Décennale, RC Pro, bilan à 30 jours</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══════════ INTRO ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
+        <div>
+          <span class="eyebrow">Maçonnerie</span>
+          <h2>La structure d'abord,<br>les finitions ensuite</h2>
+        </div>
+        <div class="svc-prose">
+          <p>La maçonnerie est le premier métier d'un chantier de rénovation et le seul dont les erreurs ne se rattrapent pas avec de la peinture. Ouvrir un mur porteur, couler une dalle ou reprendre une structure ancienne demande de comprendre comment le bâtiment fonctionne, pas seulement de savoir démolir.</p>
+          <p>Nous réalisons des ouvertures dans les murs, des reprises de structure, des dalles béton, des cloisons maçonnées et de la petite maçonnerie : rebouchages, seuils, niches, réservations. Nous travaillons en lien avec le bureau d'études ou l'ingénieur de structure quand l'ouvrage touche à la stabilité.</p>
+          <p>La maçonnerie ouvre généralement un <a href="renovation-complete">chantier de rénovation complète</a>. Elle est suivie par la <a href="plomberie">plomberie</a>, l'<a href="electricite">électricité</a> et les <a href="placo-isolation">cloisons</a>.</p>
+        </div>
+      </div>
+      <div class="services-page-grid">
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-dungeon"></i></div>
+          <h3>Ouvertures et murs porteurs</h3>
+          <p>Ouvrir un mur porteur impose une étude de structure, un étaiement et la pose d'une poutre dimensionnée. L'ouvrage est contrôlé à chaque étape.</p>
+          <ul class="service-list">
+            <li>Étude de structure</li>
+            <li>Étaiement provisoire</li>
+            <li>Poutre et linteau dimensionnés</li>
+            <li>Reprise des charges</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>Dalles et chapes</h3>
+          <p>Dalle béton, chape de ragréage, mise à niveau : le sol est préparé avec la pente et l'épaisseur nécessaires avant la pose des revêtements.</p>
+          <ul class="service-list">
+            <li>Dalle béton</li>
+            <li>Chape et ragréage</li>
+            <li>Mise à niveau des sols</li>
+            <li>Séchage contrôlé</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-tools"></i></div>
+          <h3>Reprises de structure</h3>
+          <p>Fissures, planchers affaissés, murs dégradés : nous diagnostiquons, étayons et reprenons les éléments porteurs avant de refermer.</p>
+          <ul class="service-list">
+            <li>Reprise en sous-œuvre</li>
+            <li>Renforcement de plancher</li>
+            <li>Traitement des fissures</li>
+            <li>Murs et voiles béton</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-border-all"></i></div>
+          <h3>Cloisons et petite maçonnerie</h3>
+          <p>Cloisons maçonnées, seuils, niches, réservations pour les réseaux : les ouvrages courants qui préparent le second œuvre.</p>
+          <ul class="service-list">
+            <li>Cloisons maçonnées</li>
+            <li>Seuils et appuis</li>
+            <li>Niches et réservations</li>
+            <li>Rebouchages</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ DÉROULÉ ══════════ -->
+  <section class="section section-dark" id="deroule">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Déroulé d'intervention</span>
+          <h2>De l'étude<br>au rebouchage final</h2>
+        </div>
+        <p>Sur un ouvrage porteur, aucune étape ne se saute : l'étude précède l'étaiement, qui précède la démolition.</p>
+      </div>
+      <div class="services-list">
+        <div class="list-row">
+          <span class="sr-num">01</span>
+          <span class="sr-icon"><i class="fas fa-route"></i></span>
+          <div class="sr-body">
+            <h3>Visite et diagnostic</h3>
+            <p>Nous examinons la nature du mur, du plancher et de la structure, les fissures éventuelles et les réseaux encastrés. C'est ce diagnostic qui décide de la méthode.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">02</span>
+          <span class="sr-icon"><i class="fas fa-file-invoice"></i></span>
+          <div class="sr-body">
+            <h3>Étude de structure et devis</h3>
+            <p>Pour un ouvrage porteur, une étude de structure dimensionne la poutre et les appuis. Le devis détaille la démolition, l'étaiement, la reprise et les finitions.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">03</span>
+          <span class="sr-icon"><i class="fas fa-hard-hat"></i></span>
+          <div class="sr-body">
+            <h3>Étaiement et démolition</h3>
+            <p>Protection des parties communes, étaiement, démolition contrôlée. Les gravats sont évacués au fur et à mesure.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">04</span>
+          <span class="sr-icon"><i class="fas fa-tools"></i></span>
+          <div class="sr-body">
+            <h3>Reprise de structure</h3>
+            <p>Pose de la poutre ou du linteau, calage, reprise des appuis, et coulage de la dalle ou de la chape quand elle est prévue.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">05</span>
+          <span class="sr-icon"><i class="fas fa-key"></i></span>
+          <div class="sr-body">
+            <h3>Rebouchages et réception</h3>
+            <p>Rebouchage et mise en forme des tableaux d'ouverture, nettoyage, évacuation. Le chantier est remis aux autres métiers prêt à être cloisonné ou enduit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PRIX ══════════ -->
+  <section class="section" id="prix">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Prix indicatifs</span>
+          <h2>Combien coûte<br>la maçonnerie ?</h2>
+        </div>
+        <p>Les fourchettes sont larges parce qu'une ouverture dans un mur porteur varie fortement selon la largeur, l'épaisseur du mur et la poutre nécessaire. Seule une visite permet de les resserrer.</p>
+      </div>
+      <div class="svc-price-layout">
+        <div class="svc-price-tables">
+        <div class="price-cat svc-price-cat">
+          <div class="price-cat-head"><h3>Maçonnerie</h3></div>
+          <table class="price-table">
+            <thead><tr><th>Prestation</th><th>Fourchette HT</th></tr></thead>
+            <tbody>
+<tr><td>Petite maçonnerie<span class="price-unit">/ m²</span></td><td class="price-range">80 € – 180 €</td></tr>
+<tr><td>Dalle béton<span class="price-unit">/ m²</span></td><td class="price-range">80 € – 180 €</td></tr>
+<tr><td>Ouverture de mur porteur<span class="price-unit">/ unité</span></td><td class="price-range">2 000 € – 8 000 €</td></tr>
+<tr><td>Reprise de structure<span class="price-unit">forfait</span></td><td class="price-range">600 € – 5 000 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+        <aside class="svc-price-side">
+          <h3>Ce qui fait varier le prix</h3>
+          <ul class="svc-factors"><li><strong>Dépose de l'existant + 15 %</strong> Cloisons, enduits ou sols à démolir et à évacuer.</li><li><strong>Accès difficile + 10 %</strong> Étage sans ascenseur, cour étroite, évacuation des gravats complexe.</li><li><strong>Support dégradé + 20 %</strong> Murs fissurés, planchers affaissés, maçonnerie ancienne à consolider.</li><li><strong>Finition premium + 30 %</strong> Tableaux soignés, enduits à la chaux, éléments de pierre apparente.</li></ul>
+          <p class="svc-price-note">Fourchettes hors taxes, issues de notre <a href="tarifs">grille tarifaire</a>. Le prix définitif est arrêté après une visite technique.</p>
+          <a href="contact?devis=maconnerie#devisEstimator" class="btn btn-primary">Estimer mon projet <i class="fas fa-arrow-right"></i></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONSEILS ══════════ -->
+  <section class="section" id="conseils">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Avant d'ouvrir un mur</span>
+          <h2>Quatre étapes<br>que rien ne remplace</h2>
+        </div>
+        <p>Une ouverture dans un mur porteur est un ouvrage réglementé, qui engage la sécurité de l'immeuble. Voici ce qu'il faut faire avant la première démolition.</p>
+      </div>
+      <div class="svc-tips">
+        <div class="svc-tip">
+          <h3>Faire réaliser une étude de structure</h3>
+          <p>Une étude établie par un bureau d'études ou un ingénieur dimensionne la poutre et ses appuis. Elle protège les occupants, et elle est souvent demandée par le syndic ou l'assureur.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Obtenir l'accord de la copropriété</h3>
+          <p>En copropriété, toucher à un mur porteur nécessite l'accord de l'assemblée générale, car il fait partie de la structure de l'immeuble. Le lancer sans accord expose à des mises en demeure et à des travaux de remise en état.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Prévenir son assurance</h3>
+          <p>Informer son assureur avant des travaux touchant à la structure évite les mauvaises surprises en cas de sinistre. Nos chantiers sont couverts par notre assurance décennale et notre responsabilité civile professionnelle.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Anticiper les réseaux dans le mur</h3>
+          <p>Un mur peut cacher des gaines électriques, des conduites d'eau ou de gaz. Nous les repérons avant de démolir et les déplaçons avec les corps de métier concernés.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ RÉALISATIONS ══════════ -->
+  <section class="section" id="realisations-liees" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Sur nos chantiers</span>
+          <h2>Des volumes ouverts<br>et des structures apparentes</h2>
+        </div>
+        <p>Deux intérieurs avec poutres et pierre apparentes. Retrouvez toutes nos <a href="realisations">réalisations</a>.</p>
+      </div>
+      <div class="svc-photos">
+        <figure class="svc-photo">
+          <a href="realisations#rl-amenagement"><img src="images/image13-640.webp" srcset="images/image13-480.webp 480w, images/image13-640.webp 640w, images/image13-900.webp 900w, images/image13.webp 1200w" sizes="(max-width: 700px) 92vw, 46vw" alt="Appartement ancien avec pierre apparente, poutre en bois, parquet et bibliothèque" loading="lazy" decoding="async"></a>
+          <figcaption>Appartement ancien : pierre apparente, poutre en bois et parquet. <a href="realisations#rl-amenagement">Voir la réalisation</a></figcaption>
+        </figure>
+        <figure class="svc-photo">
+          <a href="realisations#rl-amenagement"><img src="images/image10-640.webp" srcset="images/image10-480.webp 480w, images/image10-640.webp 640w, images/image10-900.webp 900w, images/image10.webp 1200w" sizes="(max-width: 700px) 92vw, 46vw" alt="Salon avec poutres apparentes au plafond et bibliothèque en bois" loading="lazy" decoding="async"></a>
+          <figcaption>Salon avec poutres apparentes au plafond et bibliothèque en bois. <a href="realisations#rl-amenagement">Voir la réalisation</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Les questions<br>qu'on nous pose</h2>
+        </div>
+        <p>Mur porteur, copropriété, étude de structure, durée : les réponses aux questions de maçonnerie les plus fréquentes.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Comment savoir si un mur est porteur ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">On ne peut pas le deviner de façon sûre : l'épaisseur, la position et la nature des matériaux donnent des indices, mais seule une étude le confirme. Les plans de l'immeuble et un diagnostic sur place sont nécessaires. Nous vous aidons à le déterminer lors de la visite.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Peut-on ouvrir un mur porteur dans un appartement ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Oui, sous conditions : une étude de structure, l'accord de la copropriété en assemblée générale, et l'exécution par un professionnel assuré. Tous les murs ne s'y prêtent pas, mais beaucoup d'ouvertures sont possibles avec une poutre adaptée.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Combien de temps dure une ouverture dans un mur porteur ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Une à trois semaines en général, étude préalable non comprise. Le chantier lui-même est rapide, mais il demande des temps de prise et de séchage avant de pouvoir reprendre les finitions. Le planning exact figure dans le devis.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Quelle différence entre une chape et une dalle ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Une dalle est un élément structurel en béton armé, qui reprend les charges. Une chape est une couche de mise à niveau, posée sur la dalle ou un isolant, qui reçoit le revêtement de sol. Nous réalisons les deux.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Intervenez-vous seulement en rénovation complète ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Non. Nous réalisons aussi des interventions isolées : une ouverture, une reprise de fissure, une dalle ou un seuil. Pour un ordre de grandeur, consultez la <a href="tarifs">grille tarifaire</a> ou l'<a href="contact?devis=maconnerie#devisEstimator">estimateur</a>.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Qui s'occupe des finitions après la maçonnerie ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Nous coordonnons les métiers suivants : <a href="placo-isolation">cloisons et enduits</a>, <a href="peinture">peinture</a>, <a href="revetements-de-sol">revêtements de sol</a>. Vous gardez un seul interlocuteur du premier coup de masse à la livraison.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ À VOIR AUSSI ══════════ -->
+  <section class="section-sm" id="voir-aussi">
+    <div class="container">
+      <h2 class="svc-related-title">À voir aussi</h2>
+      <div class="related-grid">
+        <a href="renovation-complete" class="related-card">
+          <h3>Rénovation complète</h3>
+          <p>La maçonnerie intégrée à un chantier tous corps de métier.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="placo-isolation" class="related-card">
+          <h3>Placo et isolation</h3>
+          <p>Cloisons, doublages et faux plafonds.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="revetements-de-sol" class="related-card">
+          <h3>Revêtements de sol</h3>
+          <p>Parquet, stratifié, résine et sols souples.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="tarifs" class="related-card">
+          <h3>Grille tarifaire complète</h3>
+          <p>Toutes nos prestations, avec fourchettes de prix et majorations.</p>
+          <span>Voir les tarifs <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="garanties" class="related-card">
+          <h3>Garanties et assurances</h3>
+          <p>Décennale, responsabilité civile professionnelle, bilan à 30 jours.</p>
+          <span>Voir les garanties <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="section cta-section" id="ctaSection">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Un mur<br>à ouvrir ?</h2>
+          <p>Visite sur site et devis détaillé gratuits. Réponse sous 24h.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact?devis=maconnerie#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- @shared:footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.webp" alt="Ben&amp;Bat" width="360" height="120"></a>
+          <p>25 ans d'expertise BTP : béton ciré premium, mobilier sur mesure et tous corps de métier. France &amp; Belgique.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="tarifs">Tarifs</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Témoignages</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+    <h5>Services</h5>
+    <ul class="footer-links">
+      <li><a href="renovation-complete">Rénovation complète</a></li>
+      <li><a href="salle-de-bain">Salle de bain</a></li>
+      <li><a href="cuisine">Cuisine</a></li>
+      <li><a href="peinture">Peinture</a></li>
+      <li><a href="plomberie">Plomberie</a></li>
+      <li><a href="electricite">Électricité</a></li>
+      <li><a href="carrelage">Carrelage &amp; faïence</a></li>
+      <li><a href="placo-isolation">Placo &amp; isolation</a></li>
+      <li><a href="maconnerie">Maçonnerie</a></li>
+      <li><a href="revetements-de-sol">Revêtements de sol</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Spécialités</h5>
+    <ul class="footer-links">
+      <li><a href="beton-cire">Béton ciré premium</a></li>
+      <li><a href="mobilier-sur-mesure">Mobilier sur mesure</a></li>
+      <li><a href="vasques-sur-mesure">Vasques sur mesure</a></li>
+      <li><a href="nettoyage-fin-de-chantier">Nettoyage fin de chantier</a></li>
+      <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+      <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+      <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
+    </ul>
+  </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">WhatsApp (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@ben-bat.com">contact@ben-bat.com</a></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>60 Rue François 1er, 75008 Paris</span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Sam : 8h–20h</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; <span class="js-year">2026</span> Ben&amp;Bat. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales#cookies" data-cookie-settings>Gérer les cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- @end:footer -->
+  <!-- @shared:sticky -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+    <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." class="btn sticky-phone sticky-whatsapp" target="_blank" rel="noopener" aria-label="Écrire à Ben&amp;Bat sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <!-- @end:sticky -->
+
+  <!-- @shared:scripts -->
+  <script src="js/main.js?v=10" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
+  <!-- @end:scripts -->
+</body>
+</html>

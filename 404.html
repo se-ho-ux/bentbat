@@ -8,6 +8,7 @@
   <title>Page introuvable | Ben&amp;Bat</title>
   <meta name="description" content="La page que vous cherchez n'existe pas ou a été déplacée.">
   <meta name="robots" content="noindex, nofollow">
+  <!-- @shared:head-assets abs -->
   <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -52,13 +53,16 @@
   <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="/fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/css/style.css?v=17">
+  <link rel="stylesheet" href="/css/style.css?v=18">
   <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
        ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
        accompagnent toujours un libellé texte. -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
-  <link rel="icon" type="image/png" sizes="512x512" href="/logos-png/favicon-512.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <!-- @end:head-assets -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -271,10 +275,12 @@
       <nav class="not-found-links" aria-label="Pages utiles">
         <p>Vous cherchiez peut-être :</p>
         <ul>
-          <li><a href="/beton-cire-paris">Béton ciré à Paris</a></li>
-          <li><a href="/beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
-          <li><a href="/renovation-appartement-paris">Rénovation d'appartement à Paris</a></li>
           <li><a href="/services">Tous nos services</a></li>
+          <li><a href="/tarifs">Nos tarifs indicatifs</a></li>
+          <li><a href="/renovation-complete">Rénovation complète</a></li>
+          <li><a href="/salle-de-bain">Salle de bain</a></li>
+          <li><a href="/cuisine">Cuisine</a></li>
+          <li><a href="/beton-cire">Béton ciré premium</a></li>
           <li><a href="/realisations">Nos réalisations</a></li>
         </ul>
         <p class="not-found-phone">Ou appelez-nous : <a href="tel:+33658594147">+33 6 58 59 41 47</a> (France) · <a href="tel:+32465866372">+32 465 86 63 72</a> (Belgique)</p>

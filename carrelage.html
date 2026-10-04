@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- @shared:head-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
+    }
+  </script>
+  <!-- @end:head-meta -->
+  <link rel="canonical" href="https://benbat.fr/carrelage">
+  <title>Pose de Carrelage et Faïence | Ben&amp;Bat</title>
+  <meta name="description" content="Pose de carrelage, faïence et mosaïque, y compris grands formats : préparation du support, joints soignés, prix indicatifs et devis gratuit sous 24h.">
+  <meta property="og:title" content="Pose de Carrelage et Faïence | Ben&amp;Bat">
+  <meta property="og:description" content="Pose de carrelage, faïence et mosaïque, y compris grands formats : préparation du support, joints soignés, prix indicatifs et devis gratuit sous 24h.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benbat.fr/carrelage">
+  <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- @shared:head-assets -->
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
+    } catch (e) {}
+  </script>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=18">
+  <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+       ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+       accompagnent toujours un libellé texte. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- @end:head-assets -->
+  <!-- @shared:schema-business -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://benbat.fr/#entreprise",
+  "name": "Ben&Bat",
+  "description": "Spécialistes du béton ciré premium et de la rénovation intérieure tous corps de métier depuis 25 ans. Paris, Île-de-France et toute la Belgique.",
+  "url": "https://benbat.fr/",
+  "telephone": "+33658594147",
+  "email": "contact@ben-bat.com",
+  "image": "https://benbat.fr/images/image15.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Rue François 1er",
+    "addressLocality": "Paris",
+    "postalCode": "75008",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8698258,
+    "longitude": 2.3020488
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Paris"
+    },
+    {
+      "@type": "City",
+      "name": "Lyon"
+    },
+    {
+      "@type": "City",
+      "name": "Marseille"
+    },
+    {
+      "@type": "City",
+      "name": "Bordeaux"
+    },
+    {
+      "@type": "City",
+      "name": "Lille"
+    },
+    {
+      "@type": "City",
+      "name": "Neuilly-sur-Seine"
+    },
+    {
+      "@type": "City",
+      "name": "Versailles"
+    },
+    {
+      "@type": "City",
+      "name": "Boulogne-Billancourt"
+    },
+    {
+      "@type": "City",
+      "name": "Bruxelles"
+    },
+    {
+      "@type": "City",
+      "name": "Liège"
+    },
+    {
+      "@type": "City",
+      "name": "Anvers"
+    },
+    {
+      "@type": "City",
+      "name": "Gand"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    },
+    {
+      "@type": "Country",
+      "name": "Belgique"
+    }
+  ],
+  "knowsAbout": [
+    "béton ciré",
+    "rénovation intérieure",
+    "maçonnerie",
+    "plomberie",
+    "électricité",
+    "carrelage",
+    "mobilier sur mesure",
+    "vasques sur mesure",
+    "parquet",
+    "nettoyage de chantier"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "11",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services BTP",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Béton ciré décoratif",
+          "description": "Application de béton ciré premium sur sols, murs et plans de travail. Paris, Île-de-France et Belgique."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation intérieure tous corps de métier",
+          "description": "Coordination et réalisation de chantiers de rénovation complète : maçonnerie, électricité, plomberie, finitions."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobilier sur mesure",
+          "description": "Conception et fabrication de mobilier sur mesure pour particuliers et professionnels."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vasques sur mesure",
+          "description": "Création de vasques en béton ciré et matériaux naturels, design exclusif."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pose de parquet et carrelage",
+          "description": "Pose de parquet point de Hongrie, carrelage, faïence et revêtements de sol premium."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Nettoyage fin de chantier",
+          "description": "Nettoyage professionnel de bâtiments et fins de chantier en France et Belgique."
+        }
+      }
+    ]
+  },
+  "priceRange": "€€",
+  "logo": "https://benbat.fr/logos-png/wordmark-noir-transparent.webp",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+33658594147",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": [
+        "fr"
+      ]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+32465866372",
+      "contactType": "customer service",
+      "areaServed": "BE",
+      "availableLanguage": [
+        "fr"
+      ]
+    }
+  ]
+  }
+  </script>
+  <!-- @end:schema-business -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://benbat.fr/carrelage#service",
+      "name": "Pose de carrelage et de faïence",
+      "serviceType": "Pose de carrelage, faïence et mosaïque",
+      "description": "Pose de carrelage, faïence, mosaïque et grands formats sur sols et murs, avec préparation des supports et joints soignés, en France et en Belgique.",
+      "url": "https://benbat.fr/carrelage",
+      "provider": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Belgique"
+        }
+      ],
+      "image": [
+        "https://benbat.fr/images/image8.webp",
+        "https://benbat.fr/images/image1.webp"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://benbat.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://benbat.fr/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Carrelage et faïence",
+          "item": "https://benbat.fr/carrelage"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Peut-on poser du carrelage sur un ancien carrelage ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est parfois possible, si l'ancien carrelage est sain, bien adhérent et plan, et que la hauteur supplémentaire ne pose pas de problème aux portes et aux seuils. Nous vérifions l'adhérence et la planéité à la visite. En cas de doute, la dépose reste la solution la plus sûre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps avant de marcher sur un carrelage neuf ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En général, 24 à 48 heures après la pose, selon la colle utilisée et les conditions de la pièce. Les joints se réalisent après le temps de prise de la colle, et le sol se met en service complètement quelques jours plus tard. Nous précisons les délais sur le chantier."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Les grands formats sont-ils plus difficiles à poser ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui : ils demandent un support très plan, un encollage adapté et une manutention soignée. Mal posés, ils sonnent creux ou se fissurent. Bien posés, ils réduisent les joints et rendent la pièce plus lumineuse et plus simple à entretenir."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on carreler un sol chauffant ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, avec une colle et un joint déformables adaptés, et en respectant la montée en température progressive prévue par le fabricant avant la pose. Nous vérifions ces points avec l'installateur du chauffage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle différence entre carrelage et faïence ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le carrelage est conçu pour le sol et supporte le passage. La faïence est destinée aux murs, elle est plus fine et plus fragile. Certains carreaux, comme les grès cérames, s'utilisent indifféremment au sol et au mur."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment estimer mon budget ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mesurez la surface à carreler, puis utilisez l'estimateur de budget ou consultez la grille tarifaire. Ces fourchettes concernent la pose, hors fourniture des carreaux."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image8.webp",
+      "url": "https://benbat.fr/images/image8.webp",
+      "caption": "WC suspendu avec faïence effet marbre à Boulogne-Billancourt",
+      "name": "WC à Boulogne-Billancourt : faïence effet marbre jusqu'au plafond.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image1.webp",
+      "url": "https://benbat.fr/images/image1.webp",
+      "caption": "Crédence en terrazzo et évier de cuisine à Paris",
+      "name": "Cuisine à Paris : crédence en terrazzo et évier encastré.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- @shared:header active=services -->
+  <header id="header">
+    <div class="nav-wrap">
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="services" class="active">Services</a></li>
+          <li><a href="tarifs">Tarifs</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <a href="/">Accueil</a>
+    <a href="services">Services</a>
+    <a href="tarifs">Tarifs</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
+  </div>
+  <!-- @end:header -->
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">
+          <a href="/">Accueil</a><span class="sep">/</span><a href="services">Services</a><span class="sep">/</span><span class="cur">Carrelage et faïence</span>
+        </div>
+        <h1>Pose de carrelage<br>et de faïence</h1>
+        <p>Carrelage de sol, faïence murale, mosaïque et grands formats : un alignement précis et des joints soignés, sur un support préparé pour durer.</p>
+        <div class="svc-hero-cta">
+          <a href="contact?devis=revetements#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="contact" class="btn btn-ghost-dark">Devis gratuit</a>
+        </div>
+        <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EN BREF ══════════ -->
+  <section class="section-sm svc-facts-band">
+    <div class="container">
+      <dl class="svc-facts">
+          <div><dt>Durée indicative</dt><dd>2 à 4 jours pour une salle de bain, 4 à 8 jours pour un séjour</dd></div>
+          <div><dt>Budget indicatif</dt><dd>Carrelage : 45 € – 95 € / m² HT</dd></div>
+          <div><dt>Interlocuteur</dt><dd>Un carreleur dédié, coordonné avec les autres métiers</dd></div>
+          <div><dt>Garanties</dt><dd>Décennale, RC Pro, bilan à 30 jours</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══════════ INTRO ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
+        <div>
+          <span class="eyebrow">Carrelage et faïence</span>
+          <h2>Un beau carrelage<br>commence sous le carrelage</h2>
+        </div>
+        <div class="svc-prose">
+          <p>Un carrelage se juge d'abord à ses alignements et à ses joints, mais sa tenue dans le temps dépend du support. Un sol qui n'est pas plan, une chape trop humide ou une colle mal adaptée entraînent des carreaux creux, des fissures et des joints qui se détachent. C'est pourquoi nous contrôlons la planéité et la nature du support avant d'ouvrir le premier carton.</p>
+          <p>Nous posons du carrelage de sol et mural, de la faïence, de la mosaïque et des grands formats, en intérieur comme en extérieur couvert. Nous soignons les coupes, les angles et les raccords avec les plinthes et les menuiseries, ce qui fait souvent la différence entre une pose correcte et une pose irréprochable.</p>
+          <p>Le carrelage est le plus souvent posé dans le cadre d'une <a href="salle-de-bain">salle de bain</a> ou d'une <a href="cuisine">cuisine</a>. Pour une surface continue sans joint, le <a href="beton-cire">béton ciré</a> peut le remplacer sur les murs comme au sol.</p>
+        </div>
+      </div>
+      <div class="services-page-grid">
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-th-large"></i></div>
+          <h3>Carrelage de sol et mural</h3>
+          <p>Pose collée sur support préparé, avec le calepinage défini avant le début pour éviter les coupes disgracieuses en bord de pièce.</p>
+          <ul class="service-list">
+            <li>Carrelage de sol</li>
+            <li>Carrelage mural</li>
+            <li>Calepinage et alignements</li>
+            <li>Coupes soignées</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-droplet"></i></div>
+          <h3>Faïence et pièces d'eau</h3>
+          <p>Dans les zones humides, l'étanchéité sous le revêtement est aussi importante que la faïence elle-même. Elle est posée avant le carrelage.</p>
+          <ul class="service-list">
+            <li>Faïence de salle de bain et de cuisine</li>
+            <li>Étanchéité sous carrelage</li>
+            <li>Douche à l'italienne</li>
+            <li>Crédence de cuisine</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-expand"></i></div>
+          <h3>Grands formats</h3>
+          <p>Les grands carreaux et les dalles minces demandent un support très plan et un encollage adapté. Ils réduisent le nombre de joints et simplifient l'entretien.</p>
+          <ul class="service-list">
+            <li>Grands formats et dalles</li>
+            <li>Double encollage</li>
+            <li>Support très plan</li>
+            <li>Joints fins</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-gem"></i></div>
+          <h3>Mosaïque et finitions</h3>
+          <p>Mosaïque, frises et motifs décoratifs apportent du caractère. Les joints et les profilés de finition sont choisis pour s'accorder au revêtement.</p>
+          <ul class="service-list">
+            <li>Mosaïque et frises</li>
+            <li>Joints colorés ou époxy</li>
+            <li>Profilés de finition</li>
+            <li>Raccords avec plinthes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ DÉROULÉ ══════════ -->
+  <section class="section section-dark" id="deroule">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Déroulé d'intervention</span>
+          <h2>Du support<br>au dernier joint</h2>
+        </div>
+        <p>Le carrelage est posé en dernier sur un support préparé : chaque couche attend le séchage de la précédente.</p>
+      </div>
+      <div class="services-list">
+        <div class="list-row">
+          <span class="sr-num">01</span>
+          <span class="sr-icon"><i class="fas fa-route"></i></span>
+          <div class="sr-body">
+            <h3>Visite et contrôle du support</h3>
+            <p>Nous vérifions la planéité du sol, la solidité de la chape, l'humidité et l'état des murs. Ce contrôle décide si un ragréage ou un primaire est nécessaire.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">02</span>
+          <span class="sr-icon"><i class="fas fa-file-invoice"></i></span>
+          <div class="sr-body">
+            <h3>Devis et choix des carreaux</h3>
+            <p>Le devis précise le format, la quantité et les finitions. Les carreaux se commandent avec une marge pour les coupes, et sont livrés avant le démarrage.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">03</span>
+          <span class="sr-icon"><i class="fas fa-tools"></i></span>
+          <div class="sr-body">
+            <h3>Préparation et étanchéité</h3>
+            <p>Ragréage si nécessaire, primaire, étanchéité des zones humides. Nous laissons sécher chaque couche selon les préconisations du fabricant.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">04</span>
+          <span class="sr-icon"><i class="fas fa-th-large"></i></span>
+          <div class="sr-body">
+            <h3>Pose et calepinage</h3>
+            <p>Traçage du calepinage, pose à la colle adaptée au format et au support, vérification des niveaux au fur et à mesure.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">05</span>
+          <span class="sr-icon"><i class="fas fa-key"></i></span>
+          <div class="sr-body">
+            <h3>Joints, finitions et réception</h3>
+            <p>Joints après le temps de prise de la colle, nettoyage du voile de ciment, pose des profilés et plinthes. Nous contrôlons le résultat avec vous à la lumière rasante.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PRIX ══════════ -->
+  <section class="section" id="prix">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Prix indicatifs</span>
+          <h2>Combien coûte<br>la pose de carrelage ?</h2>
+        </div>
+        <p>La pose se chiffre au mètre carré. Le prix du carrelage lui-même s'ajoute selon le modèle choisi : de quelques dizaines à plusieurs centaines d'euros le mètre carré.</p>
+      </div>
+      <div class="svc-price-layout">
+        <div class="svc-price-tables">
+        <div class="price-cat svc-price-cat">
+          <div class="price-cat-head"><h3>Revêtements de sol &amp; mur</h3></div>
+          <table class="price-table">
+            <thead><tr><th>Prestation</th><th>Fourchette HT</th></tr></thead>
+            <tbody>
+<tr><td>Carrelage<span class="price-unit">/ m²</span></td><td class="price-range">45 € – 95 €</td></tr>
+<tr><td>Faïence<span class="price-unit">/ m²</span></td><td class="price-range">45 € – 110 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+        <aside class="svc-price-side">
+          <h3>Ce qui fait varier le prix</h3>
+          <ul class="svc-factors"><li><strong>Dépose de l'existant + 15 %</strong> Ancien carrelage, faïence ou revêtement à démonter et à évacuer.</li><li><strong>Accès difficile + 10 %</strong> Étage sans ascenseur, portage de grands formats lourds.</li><li><strong>Support dégradé + 20 %</strong> Sol non plan à ragréer, chape à reprendre, mur à enduire.</li><li><strong>Finition premium + 30 %</strong> Pierre naturelle, grands formats, mosaïque, motifs complexes.</li></ul>
+          <p class="svc-price-note">Fourchettes hors taxes, issues de notre <a href="tarifs">grille tarifaire</a>. Le prix définitif est arrêté après une visite technique.</p>
+          <a href="contact?devis=revetements#devisEstimator" class="btn btn-primary">Estimer mon projet <i class="fas fa-arrow-right"></i></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONSEILS ══════════ -->
+  <section class="section" id="conseils">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Avant de choisir</span>
+          <h2>Quatre choix<br>qui font la différence</h2>
+        </div>
+        <p>Ce sont les questions que nous posons systématiquement avant de commander les carreaux : elles se règlent sur échantillon, pas sur catalogue.</p>
+      </div>
+      <div class="svc-tips">
+        <div class="svc-tip">
+          <h3>Commander une marge de carreaux</h3>
+          <p>Prévoyez environ dix pour cent de carreaux supplémentaires pour les coupes et la casse. Un carreau manquant plusieurs mois plus tard peut ne plus être disponible dans le même lot de teinte.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Choisir le joint selon l'usage</h3>
+          <p>Un joint ciment est économique mais poreux. Un joint époxy est plus résistant aux taches et à l'humidité, ce qui convient aux douches et aux plans de travail. Nous vous montrons les deux sur échantillon.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Penser à l'antidérapant dans les zones humides</h3>
+          <p>Un carrelage de douche ou de sol de salle de bain doit offrir une bonne adhérence mouillée. La classe d'antidérapance figure sur la fiche technique du carreau : nous la vérifions avec vous.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Prévoir les joints de fractionnement</h3>
+          <p>Sur les grandes surfaces, des joints de dilatation absorbent les mouvements du support. Les ignorer provoque des fissures. Nous les positionnons de façon discrète, au niveau des seuils ou des changements de direction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ RÉALISATIONS ══════════ -->
+  <section class="section" id="realisations-liees" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Sur nos chantiers</span>
+          <h2>Des carrelages et des faïences<br>livrés à Boulogne et à Paris</h2>
+        </div>
+        <p>Deux détails de chantiers. Retrouvez toutes nos <a href="realisations">réalisations</a>.</p>
+      </div>
+      <div class="svc-photos">
+        <figure class="svc-photo">
+          <a href="realisations#rl-salles-de-bains"><img src="images/image8-640.webp" srcset="images/image8-480.webp 480w, images/image8-640.webp 640w, images/image8-900.webp 900w, images/image8.webp 1200w" sizes="(max-width: 700px) 92vw, 46vw" alt="WC suspendu avec faïence effet marbre à Boulogne-Billancourt" loading="lazy" decoding="async"></a>
+          <figcaption>WC à Boulogne-Billancourt : faïence effet marbre jusqu'au plafond. <a href="realisations#rl-salles-de-bains">Voir la réalisation</a></figcaption>
+        </figure>
+        <figure class="svc-photo">
+          <a href="realisations#rl-amenagement"><img src="images/image1-640.webp" srcset="images/image1-480.webp 480w, images/image1-640.webp 640w, images/image1-900.webp 900w, images/image1.webp 1183w" sizes="(max-width: 700px) 92vw, 46vw" alt="Crédence en terrazzo et évier de cuisine à Paris" loading="lazy" decoding="async"></a>
+          <figcaption>Cuisine à Paris : crédence en terrazzo et évier encastré. <a href="realisations#rl-amenagement">Voir la réalisation</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Les questions<br>qu'on nous pose</h2>
+        </div>
+        <p>Support, séchage, grands formats, joints : ce qu'il faut savoir avant de faire poser du carrelage.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Peut-on poser du carrelage sur un ancien carrelage ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">C'est parfois possible, si l'ancien carrelage est sain, bien adhérent et plan, et que la hauteur supplémentaire ne pose pas de problème aux portes et aux seuils. Nous vérifions l'adhérence et la planéité à la visite. En cas de doute, la dépose reste la solution la plus sûre.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Combien de temps avant de marcher sur un carrelage neuf ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">En général, 24 à 48 heures après la pose, selon la colle utilisée et les conditions de la pièce. Les joints se réalisent après le temps de prise de la colle, et le sol se met en service complètement quelques jours plus tard. Nous précisons les délais sur le chantier.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Les grands formats sont-ils plus difficiles à poser ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Oui : ils demandent un support très plan, un encollage adapté et une manutention soignée. Mal posés, ils sonnent creux ou se fissurent. Bien posés, ils réduisent les joints et rendent la pièce plus lumineuse et plus simple à entretenir.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Peut-on carreler un sol chauffant ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Oui, avec une colle et un joint déformables adaptés, et en respectant la montée en température progressive prévue par le fabricant avant la pose. Nous vérifions ces points avec l'installateur du chauffage.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Quelle différence entre carrelage et faïence ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Le carrelage est conçu pour le sol et supporte le passage. La faïence est destinée aux murs, elle est plus fine et plus fragile. Certains carreaux, comme les grès cérames, s'utilisent indifféremment au sol et au mur.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Comment estimer mon budget ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Mesurez la surface à carreler, puis utilisez l'<a href="contact?devis=revetements#devisEstimator">estimateur de budget</a> ou consultez la <a href="tarifs">grille tarifaire</a>. Ces fourchettes concernent la pose, hors fourniture des carreaux.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ À VOIR AUSSI ══════════ -->
+  <section class="section-sm" id="voir-aussi">
+    <div class="container">
+      <h2 class="svc-related-title">À voir aussi</h2>
+      <div class="related-grid">
+        <a href="salle-de-bain" class="related-card">
+          <h3>Salle de bain</h3>
+          <p>Étanchéité, carrelage, douche à l'italienne.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="revetements-de-sol" class="related-card">
+          <h3>Revêtements de sol</h3>
+          <p>Parquet, stratifié, résine et sols souples.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="beton-cire" class="related-card">
+          <h3>Béton ciré premium</h3>
+          <p>Une surface continue, sans joint, pour sols et murs.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="tarifs" class="related-card">
+          <h3>Grille tarifaire complète</h3>
+          <p>Toutes nos prestations, avec fourchettes de prix et majorations.</p>
+          <span>Voir les tarifs <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="garanties" class="related-card">
+          <h3>Garanties et assurances</h3>
+          <p>Décennale, responsabilité civile professionnelle, bilan à 30 jours.</p>
+          <span>Voir les garanties <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="section cta-section" id="ctaSection">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Un sol ou des murs<br>à carreler ?</h2>
+          <p>Visite sur site et devis détaillé gratuits. Réponse sous 24h.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact?devis=revetements#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- @shared:footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.webp" alt="Ben&amp;Bat" width="360" height="120"></a>
+          <p>25 ans d'expertise BTP : béton ciré premium, mobilier sur mesure et tous corps de métier. France &amp; Belgique.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="tarifs">Tarifs</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Témoignages</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+    <h5>Services</h5>
+    <ul class="footer-links">
+      <li><a href="renovation-complete">Rénovation complète</a></li>
+      <li><a href="salle-de-bain">Salle de bain</a></li>
+      <li><a href="cuisine">Cuisine</a></li>
+      <li><a href="peinture">Peinture</a></li>
+      <li><a href="plomberie">Plomberie</a></li>
+      <li><a href="electricite">Électricité</a></li>
+      <li><a href="carrelage">Carrelage &amp; faïence</a></li>
+      <li><a href="placo-isolation">Placo &amp; isolation</a></li>
+      <li><a href="maconnerie">Maçonnerie</a></li>
+      <li><a href="revetements-de-sol">Revêtements de sol</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Spécialités</h5>
+    <ul class="footer-links">
+      <li><a href="beton-cire">Béton ciré premium</a></li>
+      <li><a href="mobilier-sur-mesure">Mobilier sur mesure</a></li>
+      <li><a href="vasques-sur-mesure">Vasques sur mesure</a></li>
+      <li><a href="nettoyage-fin-de-chantier">Nettoyage fin de chantier</a></li>
+      <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+      <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+      <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
+    </ul>
+  </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">WhatsApp (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@ben-bat.com">contact@ben-bat.com</a></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>60 Rue François 1er, 75008 Paris</span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Sam : 8h–20h</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; <span class="js-year">2026</span> Ben&amp;Bat. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales#cookies" data-cookie-settings>Gérer les cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- @end:footer -->
+  <!-- @shared:sticky -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+    <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." class="btn sticky-phone sticky-whatsapp" target="_blank" rel="noopener" aria-label="Écrire à Ben&amp;Bat sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <!-- @end:sticky -->
+
+  <!-- @shared:scripts -->
+  <script src="js/main.js?v=10" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
+  <!-- @end:scripts -->
+</body>
+</html>

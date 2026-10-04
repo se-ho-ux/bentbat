@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- @shared:head-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
+    }
+  </script>
+  <!-- @end:head-meta -->
+  <link rel="canonical" href="https://benbat.fr/peinture">
+  <title>Peinture et Enduits Décoratifs, Intérieur | Ben&amp;Bat</title>
+  <meta name="description" content="Peinture intérieure, préparation des supports et enduits décoratifs : finitions soignées, prix indicatifs au m² et devis gratuit sous 24h.">
+  <meta property="og:title" content="Peinture et Enduits Décoratifs, Intérieur | Ben&amp;Bat">
+  <meta property="og:description" content="Peinture intérieure, préparation des supports et enduits décoratifs : finitions soignées, prix indicatifs au m² et devis gratuit sous 24h.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benbat.fr/peinture">
+  <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- @shared:head-assets -->
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
+    } catch (e) {}
+  </script>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=18">
+  <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+       ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+       accompagnent toujours un libellé texte. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- @end:head-assets -->
+  <!-- @shared:schema-business -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://benbat.fr/#entreprise",
+  "name": "Ben&Bat",
+  "description": "Spécialistes du béton ciré premium et de la rénovation intérieure tous corps de métier depuis 25 ans. Paris, Île-de-France et toute la Belgique.",
+  "url": "https://benbat.fr/",
+  "telephone": "+33658594147",
+  "email": "contact@ben-bat.com",
+  "image": "https://benbat.fr/images/image15.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Rue François 1er",
+    "addressLocality": "Paris",
+    "postalCode": "75008",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8698258,
+    "longitude": 2.3020488
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Paris"
+    },
+    {
+      "@type": "City",
+      "name": "Lyon"
+    },
+    {
+      "@type": "City",
+      "name": "Marseille"
+    },
+    {
+      "@type": "City",
+      "name": "Bordeaux"
+    },
+    {
+      "@type": "City",
+      "name": "Lille"
+    },
+    {
+      "@type": "City",
+      "name": "Neuilly-sur-Seine"
+    },
+    {
+      "@type": "City",
+      "name": "Versailles"
+    },
+    {
+      "@type": "City",
+      "name": "Boulogne-Billancourt"
+    },
+    {
+      "@type": "City",
+      "name": "Bruxelles"
+    },
+    {
+      "@type": "City",
+      "name": "Liège"
+    },
+    {
+      "@type": "City",
+      "name": "Anvers"
+    },
+    {
+      "@type": "City",
+      "name": "Gand"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    },
+    {
+      "@type": "Country",
+      "name": "Belgique"
+    }
+  ],
+  "knowsAbout": [
+    "béton ciré",
+    "rénovation intérieure",
+    "maçonnerie",
+    "plomberie",
+    "électricité",
+    "carrelage",
+    "mobilier sur mesure",
+    "vasques sur mesure",
+    "parquet",
+    "nettoyage de chantier"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "11",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services BTP",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Béton ciré décoratif",
+          "description": "Application de béton ciré premium sur sols, murs et plans de travail. Paris, Île-de-France et Belgique."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation intérieure tous corps de métier",
+          "description": "Coordination et réalisation de chantiers de rénovation complète : maçonnerie, électricité, plomberie, finitions."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobilier sur mesure",
+          "description": "Conception et fabrication de mobilier sur mesure pour particuliers et professionnels."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vasques sur mesure",
+          "description": "Création de vasques en béton ciré et matériaux naturels, design exclusif."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pose de parquet et carrelage",
+          "description": "Pose de parquet point de Hongrie, carrelage, faïence et revêtements de sol premium."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Nettoyage fin de chantier",
+          "description": "Nettoyage professionnel de bâtiments et fins de chantier en France et Belgique."
+        }
+      }
+    ]
+  },
+  "priceRange": "€€",
+  "logo": "https://benbat.fr/logos-png/wordmark-noir-transparent.webp",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+33658594147",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": [
+        "fr"
+      ]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+32465866372",
+      "contactType": "customer service",
+      "areaServed": "BE",
+      "availableLanguage": [
+        "fr"
+      ]
+    }
+  ]
+  }
+  </script>
+  <!-- @end:schema-business -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://benbat.fr/peinture#service",
+      "name": "Peinture et enduits décoratifs",
+      "serviceType": "Peinture intérieure, préparation de supports et enduits décoratifs",
+      "description": "Peinture intérieure et extérieure, préparation de supports, enduits décoratifs et finitions premium, en France et en Belgique, par des artisans spécialisés.",
+      "url": "https://benbat.fr/peinture",
+      "provider": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Belgique"
+        }
+      ],
+      "image": [
+        "https://benbat.fr/images/image2.webp",
+        "https://benbat.fr/images/image13.webp"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://benbat.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://benbat.fr/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Peinture",
+          "item": "https://benbat.fr/peinture"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien de couches de peinture faut-il ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Deux couches de finition sont la norme, précédées d'une sous-couche sur un support neuf, très poreux ou très foncé. Une seule couche donne rarement un rendu uniforme, surtout au rouleau sur grande surface. Nous précisons le nombre de couches dans le devis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on peindre par-dessus du papier peint ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est déconseillé : le papier peint peut se décoller sous l'humidité de la peinture et laisser des bulles ou des raccords visibles. Nous le décollons, nous traitons le mur, puis nous préparons le support avant de peindre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps faut-il attendre avant de remettre les meubles ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La peinture est sèche au toucher en quelques heures, mais son durcissement complet prend plusieurs jours. Nous conseillons d'attendre 24 à 48 heures avant de replacer les meubles contre les murs, et davantage avant de nettoyer les surfaces."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce qu'un enduit décoratif ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est un revêtement mural en pâte appliqué à la spatule, qui donne un aspect lissé, nuancé ou texturé. Il remplace la peinture là où l'on souhaite de la profondeur ou un rendu unique. Nous réalisons aussi du béton ciré mural pour les pièces humides."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Fournissez-vous la peinture ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, nous fournissons les produits, choisis selon le support et l'usage de la pièce. Vous gardez le choix des teintes, et nous vous conseillons sur la gamme et le niveau de brillance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment estimer mon budget peinture ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mesurez la surface des murs et des plafonds, puis utilisez l'estimateur de budget ou consultez la grille tarifaire. La fourchette obtenue est hors taxes, et la visite permet de la préciser."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image2.webp",
+      "url": "https://benbat.fr/images/image2.webp",
+      "caption": "Chambre avec murs à moulures et parquet point de Hongrie à Versailles",
+      "name": "Chambre à Versailles : murs à moulures et parquet point de Hongrie.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image13.webp",
+      "url": "https://benbat.fr/images/image13.webp",
+      "caption": "Appartement haussmannien avec murs enduits, parquet et îlot en marbre",
+      "name": "Appartement haussmannien : murs enduits, parquet et îlot en marbre.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- @shared:header active=services -->
+  <header id="header">
+    <div class="nav-wrap">
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="services" class="active">Services</a></li>
+          <li><a href="tarifs">Tarifs</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <a href="/">Accueil</a>
+    <a href="services">Services</a>
+    <a href="tarifs">Tarifs</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
+  </div>
+  <!-- @end:header -->
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">
+          <a href="/">Accueil</a><span class="sep">/</span><a href="services">Services</a><span class="sep">/</span><span class="cur">Peinture</span>
+        </div>
+        <h1>Peinture, enduits<br>et finitions</h1>
+        <p>Préparation des supports, peinture murs et plafonds, enduits décoratifs et finitions : une peinture réussie se joue d'abord sur la préparation, c'est là que nous passons le plus de temps.</p>
+        <div class="svc-hero-cta">
+          <a href="contact?devis=peinture#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="contact" class="btn btn-ghost-dark">Devis gratuit</a>
+        </div>
+        <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EN BREF ══════════ -->
+  <section class="section-sm svc-facts-band">
+    <div class="container">
+      <dl class="svc-facts">
+          <div><dt>Durée indicative</dt><dd>1 à 2 jours par pièce, 4 à 8 jours pour un appartement de trois pièces</dd></div>
+          <div><dt>Budget indicatif</dt><dd>Peinture murs et plafonds : 22 € – 55 € / m² HT</dd></div>
+          <div><dt>Interlocuteur</dt><dd>Un artisan peintre dédié sur le chantier</dd></div>
+          <div><dt>Garanties</dt><dd>Décennale, RC Pro, bilan à 30 jours</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══════════ INTRO ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
+        <div>
+          <span class="eyebrow">Peinture et enduits</span>
+          <h2>Le résultat se voit,<br>le travail se fait avant</h2>
+        </div>
+        <div class="svc-prose">
+          <p>Une peinture dure tant que son support est sain. Un mur mal rebouché, un fond farineux non traité ou un traitement d'humidité oublié se rappellent à vous quelques mois plus tard, par des cloques, des fissures ou des traces. C'est pourquoi la préparation représente souvent la moitié du temps passé sur un chantier de peinture.</p>
+          <p>Nous intervenons en peinture intérieure et extérieure, sur murs, plafonds, boiseries et métal, ainsi qu'en enduits décoratifs : enduits lissés, effets de matière, stucco, béton ciré mural. Nous protégeons les sols et le mobilier, et nous rendons un chantier propre.</p>
+          <p>Pour une surface continue et durable dans les pièces d'eau, le <a href="beton-cire">béton ciré mural</a> est une alternative à la peinture et à la faïence.</p>
+        </div>
+      </div>
+      <div class="services-page-grid">
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-tools"></i></div>
+          <h3>Préparation des supports</h3>
+          <p>Rebouchage, ponçage, ratissage, traitement des fissures et des fonds fragiles : la surface est mise à niveau avant la première couche.</p>
+          <ul class="service-list">
+            <li>Rebouchage et ratissage</li>
+            <li>Ponçage et dépoussiérage</li>
+            <li>Traitement des fissures</li>
+            <li>Sous-couche adaptée au support</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
+          <h3>Peinture murs et plafonds</h3>
+          <p>Application en deux couches de finition, avec la sous-couche nécessaire. Teintes, niveaux de brillance et produits sont choisis selon l'usage de chaque pièce.</p>
+          <ul class="service-list">
+            <li>Murs et plafonds</li>
+            <li>Mat, velours ou satiné selon la pièce</li>
+            <li>Boiseries et portes</li>
+            <li>Peinture extérieure</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>Enduits décoratifs</h3>
+          <p>Enduits lissés, effets de matière, stucco ou béton ciré mural : des finitions qui remplacent la peinture là où l'on veut du relief ou de la profondeur.</p>
+          <ul class="service-list">
+            <li>Enduits décoratifs et lisses</li>
+            <li>Stucco</li>
+            <li>Béton ciré mural</li>
+            <li>Effets de matière sur mesure</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-gem"></i></div>
+          <h3>Finitions soignées</h3>
+          <p>Plinthes, baguettes d'angle, raccords et retouches : le détail qui fait la différence entre une peinture correcte et une peinture irréprochable.</p>
+          <ul class="service-list">
+            <li>Plinthes et baguettes</li>
+            <li>Raccords et rebouchages invisibles</li>
+            <li>Peintures de finition haute qualité</li>
+            <li>Remise en état et nettoyage</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ DÉROULÉ ══════════ -->
+  <section class="section section-dark" id="deroule">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Déroulé d'intervention</span>
+          <h2>De la protection<br>à la dernière retouche</h2>
+        </div>
+        <p>Chaque étape attend que la précédente soit sèche. C'est la durée de séchage, plus que le geste du peintre, qui rythme le chantier.</p>
+      </div>
+      <div class="services-list">
+        <div class="list-row">
+          <span class="sr-num">01</span>
+          <span class="sr-icon"><i class="fas fa-route"></i></span>
+          <div class="sr-body">
+            <h3>Visite et diagnostic des supports</h3>
+            <p>Nous observons l'état des murs, repérons les traces d'humidité, les fissures et les anciennes peintures à décaper. Le devis précise la préparation nécessaire pièce par pièce.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">02</span>
+          <span class="sr-icon"><i class="fas fa-shield-alt"></i></span>
+          <div class="sr-body">
+            <h3>Protection du chantier</h3>
+            <p>Sols, menuiseries, prises et mobilier sont protégés. Le mobilier est déplacé et regroupé sous bâche si nécessaire.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">03</span>
+          <span class="sr-icon"><i class="fas fa-tools"></i></span>
+          <div class="sr-body">
+            <h3>Préparation des supports</h3>
+            <p>Rebouchage, ponçage, ratissage, application de la sous-couche. C'est l'étape la plus longue, et celle qui conditionne la durée de la peinture.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">04</span>
+          <span class="sr-icon"><i class="fas fa-paint-roller"></i></span>
+          <div class="sr-body">
+            <h3>Mise en peinture ou enduit décoratif</h3>
+            <p>Application en couches croisées avec le temps de séchage recommandé entre chaque passe. Les plafonds sont faits avant les murs, les boiseries à la fin.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">05</span>
+          <span class="sr-icon"><i class="fas fa-key"></i></span>
+          <div class="sr-body">
+            <h3>Retouches, nettoyage et réception</h3>
+            <p>Retouches à la lumière du jour, retrait des protections, nettoyage complet. Nous parcourons les pièces avec vous avant de clore le chantier.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PRIX ══════════ -->
+  <section class="section" id="prix">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Prix indicatifs</span>
+          <h2>Combien coûte<br>une peinture ?</h2>
+        </div>
+        <p>Le prix varie surtout avec l'état du support et le niveau de finition. Un mur sain se peint vite, un mur dégradé demande plus de préparation que de peinture.</p>
+      </div>
+      <div class="svc-price-layout">
+        <div class="svc-price-tables">
+        <div class="price-cat svc-price-cat">
+          <div class="price-cat-head"><h3>Peinture</h3></div>
+          <table class="price-table">
+            <thead><tr><th>Prestation</th><th>Fourchette HT</th></tr></thead>
+            <tbody>
+<tr><td>Peinture murs / plafonds<span class="price-unit">/ m²</span></td><td class="price-range">22 € – 55 €</td></tr>
+<tr><td>Préparation des supports<span class="price-unit">/ m²</span></td><td class="price-range">15 € – 40 €</td></tr>
+<tr><td>Enduits décoratifs<span class="price-unit">/ m²</span></td><td class="price-range">70 € – 180 €</td></tr>
+<tr><td>Finitions<span class="price-unit">/ ml</span></td><td class="price-range">12 € – 60 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+        <aside class="svc-price-side">
+          <h3>Ce qui fait varier le prix</h3>
+          <ul class="svc-factors"><li><strong>Dépose de l'existant + 15 %</strong> Papier peint, revêtement ou ancienne peinture à décaper.</li><li><strong>Accès difficile + 10 %</strong> Grande hauteur sous plafond, échafaudage nécessaire, étage sans ascenseur.</li><li><strong>Support dégradé + 20 %</strong> Fissures, fonds farineux, humidité, enduit à reprendre.</li><li><strong>Finition premium + 30 %</strong> Enduits décoratifs, stucco, béton ciré mural, teintes sur mesure.</li></ul>
+          <p class="svc-price-note">Fourchettes hors taxes, issues de notre <a href="tarifs">grille tarifaire</a>. Le prix définitif est arrêté après une visite technique.</p>
+          <a href="contact?devis=peinture#devisEstimator" class="btn btn-primary">Estimer mon projet <i class="fas fa-arrow-right"></i></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONSEILS ══════════ -->
+  <section class="section" id="conseils">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Avant de choisir une teinte</span>
+          <h2>Quatre points<br>souvent négligés</h2>
+        </div>
+        <p>Ces détails se voient une fois le chantier terminé, quand il est trop tard pour les modifier. Nous les évoquons systématiquement avant de commencer.</p>
+      </div>
+      <div class="svc-tips">
+        <div class="svc-tip">
+          <h3>Tester la couleur à la lumière du logement</h3>
+          <p>Une teinte change selon l'orientation, l'éclairage et les matériaux voisins. Un échantillon peint sur un grand format, observé le matin et le soir, évite les mauvaises surprises.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Adapter la brillance à la pièce</h3>
+          <p>Le mat atténue les défauts mais se nettoie moins bien. Le velours ou le satiné conviennent aux cuisines, aux couloirs et aux salles de bain. Nous choisissons le produit selon l'usage, pas seulement selon la teinte.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Traiter l'humidité avant de peindre</h3>
+          <p>Peindre sur un mur humide ne la fait pas disparaître : la peinture cloque. La source doit être identifiée et traitée, puis le mur doit sécher complètement. Ce point est contrôlé lors de la visite.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Faire peindre après les autres corps de métier</h3>
+          <p>La peinture s'applique après la plomberie, l'électricité et les cloisons. La planifier trop tôt oblige à retoucher, et trop tard retarde la livraison. Dans un <a href="renovation-complete">chantier complet</a>, nous l'intégrons au planning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ RÉALISATIONS ══════════ -->
+  <section class="section" id="realisations-liees" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Sur nos chantiers</span>
+          <h2>Des intérieurs peints<br>et des murs travaillés</h2>
+        </div>
+        <p>Deux chantiers d'appartements. Retrouvez toutes nos <a href="realisations">réalisations</a>.</p>
+      </div>
+      <div class="svc-photos">
+        <figure class="svc-photo">
+          <a href="realisations#rl-amenagement"><img src="images/image2-640.webp" srcset="images/image2-480.webp 480w, images/image2-640.webp 640w, images/image2-900.webp 900w, images/image2.webp 911w" sizes="(max-width: 700px) 92vw, 46vw" alt="Chambre avec murs à moulures et parquet point de Hongrie à Versailles" loading="lazy" decoding="async"></a>
+          <figcaption>Chambre à Versailles : murs à moulures et parquet point de Hongrie. <a href="realisations#rl-amenagement">Voir la réalisation</a></figcaption>
+        </figure>
+        <figure class="svc-photo">
+          <a href="realisations#rl-amenagement"><img src="images/image13-640.webp" srcset="images/image13-480.webp 480w, images/image13-640.webp 640w, images/image13-900.webp 900w, images/image13.webp 1200w" sizes="(max-width: 700px) 92vw, 46vw" alt="Appartement haussmannien avec murs enduits, parquet et îlot en marbre" loading="lazy" decoding="async"></a>
+          <figcaption>Appartement haussmannien : murs enduits, parquet et îlot en marbre. <a href="realisations#rl-amenagement">Voir la réalisation</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Les questions<br>qu'on nous pose</h2>
+        </div>
+        <p>Nombre de couches, séchage, humidité, enduits décoratifs : ce qu'il faut savoir avant de repeindre.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Combien de couches de peinture faut-il ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Deux couches de finition sont la norme, précédées d'une sous-couche sur un support neuf, très poreux ou très foncé. Une seule couche donne rarement un rendu uniforme, surtout au rouleau sur grande surface. Nous précisons le nombre de couches dans le devis.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Peut-on peindre par-dessus du papier peint ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">C'est déconseillé : le papier peint peut se décoller sous l'humidité de la peinture et laisser des bulles ou des raccords visibles. Nous le décollons, nous traitons le mur, puis nous préparons le support avant de peindre.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Combien de temps faut-il attendre avant de remettre les meubles ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">La peinture est sèche au toucher en quelques heures, mais son durcissement complet prend plusieurs jours. Nous conseillons d'attendre 24 à 48 heures avant de replacer les meubles contre les murs, et davantage avant de nettoyer les surfaces.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Qu'est-ce qu'un enduit décoratif ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">C'est un revêtement mural en pâte appliqué à la spatule, qui donne un aspect lissé, nuancé ou texturé. Il remplace la peinture là où l'on souhaite de la profondeur ou un rendu unique. Nous réalisons aussi du <a href="beton-cire">béton ciré mural</a> pour les pièces humides.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Fournissez-vous la peinture ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Oui, nous fournissons les produits, choisis selon le support et l'usage de la pièce. Vous gardez le choix des teintes, et nous vous conseillons sur la gamme et le niveau de brillance.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Comment estimer mon budget peinture ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Mesurez la surface des murs et des plafonds, puis utilisez l'<a href="contact?devis=peinture#devisEstimator">estimateur de budget</a> ou consultez la <a href="tarifs">grille tarifaire</a>. La fourchette obtenue est hors taxes, et la visite permet de la préciser.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ À VOIR AUSSI ══════════ -->
+  <section class="section-sm" id="voir-aussi">
+    <div class="container">
+      <h2 class="svc-related-title">À voir aussi</h2>
+      <div class="related-grid">
+        <a href="placo-isolation" class="related-card">
+          <h3>Placo et isolation</h3>
+          <p>Cloisons, doublages et faux plafonds, prêts à peindre.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="renovation-complete" class="related-card">
+          <h3>Rénovation complète</h3>
+          <p>La peinture intégrée à un chantier tous corps de métier.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="beton-cire" class="related-card">
+          <h3>Béton ciré premium</h3>
+          <p>Une alternative continue à la peinture et à la faïence.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="tarifs" class="related-card">
+          <h3>Grille tarifaire complète</h3>
+          <p>Toutes nos prestations, avec fourchettes de prix et majorations.</p>
+          <span>Voir les tarifs <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="garanties" class="related-card">
+          <h3>Garanties et assurances</h3>
+          <p>Décennale, responsabilité civile professionnelle, bilan à 30 jours.</p>
+          <span>Voir les garanties <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="section cta-section" id="ctaSection">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Des murs<br>à repenser ?</h2>
+          <p>Visite sur site et devis détaillé gratuits. Réponse sous 24h.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact?devis=peinture#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- @shared:footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.webp" alt="Ben&amp;Bat" width="360" height="120"></a>
+          <p>25 ans d'expertise BTP : béton ciré premium, mobilier sur mesure et tous corps de métier. France &amp; Belgique.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="tarifs">Tarifs</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Témoignages</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+    <h5>Services</h5>
+    <ul class="footer-links">
+      <li><a href="renovation-complete">Rénovation complète</a></li>
+      <li><a href="salle-de-bain">Salle de bain</a></li>
+      <li><a href="cuisine">Cuisine</a></li>
+      <li><a href="peinture">Peinture</a></li>
+      <li><a href="plomberie">Plomberie</a></li>
+      <li><a href="electricite">Électricité</a></li>
+      <li><a href="carrelage">Carrelage &amp; faïence</a></li>
+      <li><a href="placo-isolation">Placo &amp; isolation</a></li>
+      <li><a href="maconnerie">Maçonnerie</a></li>
+      <li><a href="revetements-de-sol">Revêtements de sol</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Spécialités</h5>
+    <ul class="footer-links">
+      <li><a href="beton-cire">Béton ciré premium</a></li>
+      <li><a href="mobilier-sur-mesure">Mobilier sur mesure</a></li>
+      <li><a href="vasques-sur-mesure">Vasques sur mesure</a></li>
+      <li><a href="nettoyage-fin-de-chantier">Nettoyage fin de chantier</a></li>
+      <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+      <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+      <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
+    </ul>
+  </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">WhatsApp (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@ben-bat.com">contact@ben-bat.com</a></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>60 Rue François 1er, 75008 Paris</span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Sam : 8h–20h</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; <span class="js-year">2026</span> Ben&amp;Bat. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales#cookies" data-cookie-settings>Gérer les cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- @end:footer -->
+  <!-- @shared:sticky -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+    <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." class="btn sticky-phone sticky-whatsapp" target="_blank" rel="noopener" aria-label="Écrire à Ben&amp;Bat sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <!-- @end:sticky -->
+
+  <!-- @shared:scripts -->
+  <script src="js/main.js?v=10" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
+  <!-- @end:scripts -->
+</body>
+</html>

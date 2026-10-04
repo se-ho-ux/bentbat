@@ -1,0 +1,106 @@
+{
+  "slug": "salle-de-bain",
+  "nom": "Salle de bain",
+  "nom_schema": "Rénovation de salle de bain",
+  "service_type": "Rénovation de salle de bain clé en main",
+  "estimateur": "salle-de-bain",
+  "title": "Rénovation de Salle de Bain Clé en Main | Ben&Bat",
+  "description_meta": "Rénovation de salle de bain clé en main : plomberie, douche à l'italienne, carrelage ou béton ciré. Prix indicatifs et devis gratuit sous 24h.",
+  "description": "Rénovation de salle de bain clé en main : dépose, plomberie, étanchéité, carrelage ou béton ciré, électricité et finitions, coordonnés par un interlocuteur unique en France et en Belgique.",
+  "kicker": "Salle de bain",
+  "h1": "Rénovation de salle de bain|clé en main",
+  "lede": "Plomberie, étanchéité, carrelage ou béton ciré, électricité, meuble et finitions : tous les métiers de la salle de bain coordonnés par un seul interlocuteur, de la dépose à la première douche.",
+  "bref": [
+    ["Durée indicative", "2 à 5 semaines selon l'ampleur, hors délais de livraison des équipements"],
+    ["Budget indicatif", "Salle de bain complète : {prix:salle-de-bain:3} HT"],
+    ["Interlocuteur", "Un seul, du relevé à la réception"],
+    ["Garanties", "Décennale, RC Pro, bilan à 30 jours"]
+  ],
+  "intro": {
+    "h2": "Une petite pièce,|presque tous les métiers",
+    "p": [
+      "Une salle de bain concentre en quelques mètres carrés la démolition, la plomberie, l'électricité, l'étanchéité, le carrelage, la menuiserie et la peinture. C'est la pièce où une erreur d'ordre coûte le plus cher : tout ce qui se cache derrière un mur doit être juste avant que les finitions ne le recouvrent.",
+      "Nous rénovons des salles de bain complètes, de la dépose à la mise en service, mais aussi des interventions ciblées : remplacer une baignoire par une douche à l'italienne, reprendre une étanchéité défaillante, installer un nouveau meuble vasque. Le devis est détaillé poste par poste, vous gardez la main sur le périmètre.",
+      "Pour les murs et les sols, le [béton ciré](beton-cire) fabriqué dans notre atelier est une alternative au carrelage : une surface continue, sans joint, qui s'adapte aux angles et aux formes de la pièce."
+    ]
+  },
+  "cartes": [
+    {
+      "icon": "faucet",
+      "titre": "Plomberie et sanitaires",
+      "texte": "Alimentations, évacuations et appareils sont repris ou créés selon votre plan. C'est le moment de déplacer un point d'eau ou de remplacer des canalisations vieillissantes.",
+      "liste": ["Alimentations et évacuations", "WC suspendu et bâti-support", "Robinetterie et colonne de douche", "Chauffe-eau ou sèche-serviettes"]
+    },
+    {
+      "icon": "shower",
+      "titre": "Douche et étanchéité",
+      "texte": "Une douche à l'italienne se joue sous le revêtement : pente régulière, siphon adapté et étanchéité sous carrelage conditionnent la tenue dans le temps.",
+      "liste": ["Douche à l'italienne ou receveur extra-plat", "Siphon de sol et pente d'évacuation", "Étanchéité sous revêtement", "Parois de douche"]
+    },
+    {
+      "icon": "th-large",
+      "titre": "Murs et sols",
+      "texte": "Carrelage grand format, faïence, mosaïque ou béton ciré : le revêtement se choisit selon l'usage, l'entretien souhaité et le nombre de joints que vous acceptez de voir.",
+      "liste": ["Carrelage et faïence", "Mosaïque et frises", "Béton ciré mural et sol", "Joints et finitions soignées"]
+    },
+    {
+      "icon": "lightbulb",
+      "titre": "Électricité et ventilation",
+      "texte": "L'électricité d'une salle de bain suit des règles strictes de volumes de sécurité. La ventilation, souvent oubliée, évite l'humidité persistante et les moisissures.",
+      "liste": ["Respect des volumes de sécurité NF C 15-100", "Prises, éclairage et miroir lumineux", "Ventilation mécanique", "Sèche-serviettes électrique"]
+    }
+  ],
+  "deroule_h2": "De la dépose|à la première douche",
+  "deroule_intro": "L'ordre des interventions est dicté par la matière : ce qui est caché est traité d'abord, ce qui se voit est posé en dernier. Sauter une étape se paie en reprises.",
+  "etapes": [
+    {"icon": "route", "titre": "Visite et relevé", "texte": "Nous venons sur place, gratuitement. Nous mesurons la pièce, observons l'état des supports, l'emplacement des évacuations et la ventilation existante. C'est ce relevé qui rend le devis fiable."},
+    {"icon": "file-invoice", "titre": "Devis détaillé et choix des équipements", "texte": "Vous recevez un devis poste par poste sous 24h ouvrées. Les sanitaires, le meuble et les revêtements se choisissent maintenant : leur délai de livraison conditionne la date de démarrage."},
+    {"icon": "hard-hat", "titre": "Dépose et reprise des réseaux", "texte": "Dépose de l'existant, reprise des alimentations et des évacuations, passage des gaines électriques et de ventilation. Les murs sont ensuite remis à niveau."},
+    {"icon": "droplet", "titre": "Étanchéité, pose et finitions", "texte": "Étanchéité de la zone de douche, puis pose du carrelage ou application du béton ciré, joints, peinture. Chaque couche respecte son temps de séchage avant la suivante."},
+    {"icon": "key", "titre": "Pose des équipements et réception", "texte": "Installation des sanitaires, de la robinetterie et du mobilier, essais d'eau et d'électricité, nettoyage complet. Nous parcourons la pièce avec vous et levons les réserves, puis un bilan est fait 30 jours après la livraison."}
+  ],
+  "tarifs": {
+    "cats": ["salle-de-bain"],
+    "h2": "Combien coûte|une salle de bain ?",
+    "intro": "Une salle de bain complète se chiffre au mètre carré de pièce. Les postes détaillés conviennent aux projets partiels : une douche, une baignoire ou un meuble vasque seuls.",
+    "facteurs": [
+      {"titre": "Dépose de l'existant {coef:depose}", "texte": "Ancienne baignoire, faïence ou receveur à démolir et à évacuer."},
+      {"titre": "Accès difficile {coef:acces}", "texte": "Étage élevé sans ascenseur, escalier étroit, portage des matériaux."},
+      {"titre": "Support dégradé {coef:support}", "texte": "Cloisons ou sols à reprendre avant de poser quoi que ce soit."},
+      {"titre": "Finition premium {coef:premium}", "texte": "Pierre naturelle, grand format, béton ciré, robinetterie haut de gamme."}
+    ]
+  },
+  "conseils": {
+    "eyebrow": "Avant de commencer",
+    "h2": "Quatre points|qui évitent les regrets",
+    "intro": "Ce sont les questions que nous posons systématiquement lors de la visite, parce qu'elles se règlent mieux avant le chantier qu'après.",
+    "items": [
+      {"titre": "Ne pas négliger la ventilation", "texte": "Une salle de bain rénovée sans ventilation efficace garde son humidité et finit par moisir, quelle que soit la qualité du revêtement. Nous vérifions systématiquement l'extraction existante et la remplaçons si elle est sous-dimensionnée ou inactive."},
+      {"titre": "Choisir le revêtement selon l'entretien souhaité", "texte": "Le grand format réduit le nombre de joints, donc l'entretien. Le [béton ciré](beton-cire) supprime les joints mais demande un produit de protection adapté aux pièces d'eau et un entretien avec des produits non agressifs. Nous vous expliquons les deux options sur échantillon."},
+      {"titre": "Commander tôt les équipements", "texte": "Les sanitaires, les meubles sur mesure et certains carrelages se commandent plusieurs semaines à l'avance. Les choisir avant le démarrage évite un chantier à l'arrêt, avec une pièce inutilisable pendant des jours."},
+      {"titre": "Penser à l'usage dans dix ans", "texte": "Une douche de plain-pied, un receveur extra-plat ou des renforts dans les cloisons pour de futures barres d'appui ne coûtent presque rien à prévoir pendant les travaux, et beaucoup à ajouter après."}
+    ]
+  },
+  "photos_h2": "Des salles de bain|livrées à Paris et Lyon",
+  "photos_texte": "Deux chantiers récents. Les photos sont celles de nos chantiers : retrouvez toutes nos [réalisations](realisations).",
+  "photos": [
+    {"img": "image9", "alt": "Salle de bains rénovée à Lyon avec douche à colonne noire, miroir rétroéclairé et meuble vasque", "legende": "Salle de bains à Lyon : douche à colonne noire, miroir rétroéclairé et meuble vasque suspendu.", "lien": "realisations#rl-salles-de-bains"},
+    {"img": "image3", "alt": "Salle de bains en béton ciré à Paris avec douche à l'italienne et plafond rétroéclairé", "legende": "Salle de bains en béton ciré à Paris : douche à l'italienne sans joint et plafond rétroéclairé.", "lien": "realisations#rl-beton-cire"}
+  ],
+  "faq_h2": "Les questions|qu'on nous pose",
+  "faq_intro": "Durée, douche à l'italienne, béton ciré, copropriété : les points à connaître avant de lancer une rénovation de salle de bain.",
+  "faq": [
+    {"q": "Combien de temps reste-t-on sans salle de bain ?", "r": "Comptez en général deux à cinq semaines selon l'ampleur : une rénovation complète avec reprise des réseaux et étanchéité est plus longue qu'un remplacement de baignoire par une douche. Cette durée dépend aussi du temps de séchage des supports. Nous vous donnons un planning précis dans le devis, et nous vous conseillons d'organiser une solution de repli (douche chez un proche, salle d'eau annexe) pour la période la plus lourde."},
+    {"q": "La douche à l'italienne est-elle possible chez moi ?", "r": "Souvent oui, mais elle demande une pente vers le siphon et donc un peu de hauteur sous le sol fini. Dans un immeuble ancien à plancher bois ou avec une évacuation peu profonde, nous vérifions la faisabilité lors de la visite. Si la hauteur manque, un receveur extra-plat reste une bonne solution."},
+    {"q": "Peut-on faire une salle de bain en béton ciré ?", "r": "Oui, à condition d'utiliser un système conçu pour les pièces d'eau : préparation du support, couches de finition et protection hydrofuge. C'est une spécialité que nous maîtrisons, avec un béton ciré fabriqué dans notre atelier. Voir notre page [béton ciré](beton-cire)."},
+    {"q": "Faut-il prévenir la copropriété ?", "r": "Pour un simple remplacement d'appareils, rarement. En revanche, tout déplacement d'une évacuation, toute intervention sur une colonne commune ou un percement de mur porteur nécessite d'informer le syndic, voire de demander une autorisation en assemblée générale. Nous vous indiquons ces points dès la visite."},
+    {"q": "Que comprend le devis ?", "r": "Un devis détaillé poste par poste : dépose, plomberie, étanchéité, revêtements, électricité, équipements et nettoyage. Il est gratuit, sans engagement, et vous pouvez en retirer ou en reporter des lignes. Pour un premier ordre de grandeur, utilisez l'[estimateur de budget](contact?devis=salle-de-bain#devisEstimator) ou consultez la [grille tarifaire](tarifs)."},
+    {"q": "Quelles garanties après les travaux ?", "r": "Tous nos chantiers sont couverts par notre assurance décennale et notre responsabilité civile professionnelle. Nous réalisons en plus un bilan 30 jours après la livraison. Le détail est sur la page [garanties](garanties)."}
+  ],
+  "voir_aussi": [
+    {"slug": "carrelage", "label": "Carrelage et faïence", "texte": "Pose de carrelage grand format, faïence et mosaïque pour murs et sols."},
+    {"slug": "plomberie", "label": "Plomberie", "texte": "Réseaux d'eau, sanitaires, chauffe-eau et dépannage."},
+    {"slug": "beton-cire", "label": "Béton ciré premium", "texte": "Murs, sols et plans de travail sans joint, fabriqués dans notre atelier."}
+  ],
+  "cta": {"h2": "Une salle de bain|à rénover ?", "p": "Visite sur site et devis détaillé gratuits. Réponse sous 24h."}
+}

@@ -1,0 +1,86 @@
+{
+  "slug": "maconnerie",
+  "nom": "Maçonnerie",
+  "nom_schema": "Maçonnerie d'intérieur et ouverture de mur porteur",
+  "service_type": "Maçonnerie d'intérieur, dalles, ouvertures et reprises de structure",
+  "estimateur": "maconnerie",
+  "title": "Maçonnerie d'Intérieur et Mur Porteur | Ben&Bat",
+  "description_meta": "Maçonnerie d'intérieur : ouverture de mur porteur, dalle béton, reprise de structure et petite maçonnerie. Prix indicatifs, devis gratuit sous 24h.",
+  "description": "Maçonnerie d'intérieur : ouverture de murs porteurs, dalles béton, reprises de structure, cloisons et petite maçonnerie, en France et en Belgique.",
+  "kicker": "Maçonnerie",
+  "h1": "Maçonnerie d'intérieur|et ouverture de mur porteur",
+  "lede": "Ouvertures, dalles, reprises de structure et petite maçonnerie : la partie solide de la rénovation, qui conditionne tout le reste et se prépare avec sérieux.",
+  "bref": [
+    ["Durée indicative", "Quelques jours pour une petite maçonnerie, 1 à 3 semaines pour une ouverture porteuse"],
+    ["Budget indicatif", "Ouverture de mur porteur : {prix:maconnerie:2} HT"],
+    ["Interlocuteur", "Un maçon dédié, coordonné avec les autres métiers"],
+    ["Garanties", "Décennale, RC Pro, bilan à 30 jours"]
+  ],
+  "intro": {
+    "h2": "La structure d'abord,|les finitions ensuite",
+    "p": [
+      "La maçonnerie est le premier métier d'un chantier de rénovation et le seul dont les erreurs ne se rattrapent pas avec de la peinture. Ouvrir un mur porteur, couler une dalle ou reprendre une structure ancienne demande de comprendre comment le bâtiment fonctionne, pas seulement de savoir démolir.",
+      "Nous réalisons des ouvertures dans les murs, des reprises de structure, des dalles béton, des cloisons maçonnées et de la petite maçonnerie : rebouchages, seuils, niches, réservations. Nous travaillons en lien avec le bureau d'études ou l'ingénieur de structure quand l'ouvrage touche à la stabilité.",
+      "La maçonnerie ouvre généralement un [chantier de rénovation complète](renovation-complete). Elle est suivie par la [plomberie](plomberie), l'[électricité](electricite) et les [cloisons](placo-isolation)."
+    ]
+  },
+  "cartes": [
+    {"icon": "dungeon", "titre": "Ouvertures et murs porteurs", "texte": "Ouvrir un mur porteur impose une étude de structure, un étaiement et la pose d'une poutre dimensionnée. L'ouvrage est contrôlé à chaque étape.", "liste": ["Étude de structure", "Étaiement provisoire", "Poutre et linteau dimensionnés", "Reprise des charges"]},
+    {"icon": "layer-group", "titre": "Dalles et chapes", "texte": "Dalle béton, chape de ragréage, mise à niveau : le sol est préparé avec la pente et l'épaisseur nécessaires avant la pose des revêtements.", "liste": ["Dalle béton", "Chape et ragréage", "Mise à niveau des sols", "Séchage contrôlé"]},
+    {"icon": "tools", "titre": "Reprises de structure", "texte": "Fissures, planchers affaissés, murs dégradés : nous diagnostiquons, étayons et reprenons les éléments porteurs avant de refermer.", "liste": ["Reprise en sous-œuvre", "Renforcement de plancher", "Traitement des fissures", "Murs et voiles béton"]},
+    {"icon": "border-all", "titre": "Cloisons et petite maçonnerie", "texte": "Cloisons maçonnées, seuils, niches, réservations pour les réseaux : les ouvrages courants qui préparent le second œuvre.", "liste": ["Cloisons maçonnées", "Seuils et appuis", "Niches et réservations", "Rebouchages"]}
+  ],
+  "deroule_h2": "De l'étude|au rebouchage final",
+  "deroule_intro": "Sur un ouvrage porteur, aucune étape ne se saute : l'étude précède l'étaiement, qui précède la démolition.",
+  "etapes": [
+    {"icon": "route", "titre": "Visite et diagnostic", "texte": "Nous examinons la nature du mur, du plancher et de la structure, les fissures éventuelles et les réseaux encastrés. C'est ce diagnostic qui décide de la méthode."},
+    {"icon": "file-invoice", "titre": "Étude de structure et devis", "texte": "Pour un ouvrage porteur, une étude de structure dimensionne la poutre et les appuis. Le devis détaille la démolition, l'étaiement, la reprise et les finitions."},
+    {"icon": "hard-hat", "titre": "Étaiement et démolition", "texte": "Protection des parties communes, étaiement, démolition contrôlée. Les gravats sont évacués au fur et à mesure."},
+    {"icon": "tools", "titre": "Reprise de structure", "texte": "Pose de la poutre ou du linteau, calage, reprise des appuis, et coulage de la dalle ou de la chape quand elle est prévue."},
+    {"icon": "key", "titre": "Rebouchages et réception", "texte": "Rebouchage et mise en forme des tableaux d'ouverture, nettoyage, évacuation. Le chantier est remis aux autres métiers prêt à être cloisonné ou enduit."}
+  ],
+  "tarifs": {
+    "cats": ["maconnerie"],
+    "h2": "Combien coûte|la maçonnerie ?",
+    "intro": "Les fourchettes sont larges parce qu'une ouverture dans un mur porteur varie fortement selon la largeur, l'épaisseur du mur et la poutre nécessaire. Seule une visite permet de les resserrer.",
+    "facteurs": [
+      {"titre": "Dépose de l'existant {coef:depose}", "texte": "Cloisons, enduits ou sols à démolir et à évacuer."},
+      {"titre": "Accès difficile {coef:acces}", "texte": "Étage sans ascenseur, cour étroite, évacuation des gravats complexe."},
+      {"titre": "Support dégradé {coef:support}", "texte": "Murs fissurés, planchers affaissés, maçonnerie ancienne à consolider."},
+      {"titre": "Finition premium {coef:premium}", "texte": "Tableaux soignés, enduits à la chaux, éléments de pierre apparente."}
+    ]
+  },
+  "conseils": {
+    "eyebrow": "Avant d'ouvrir un mur",
+    "h2": "Quatre étapes|que rien ne remplace",
+    "intro": "Une ouverture dans un mur porteur est un ouvrage réglementé, qui engage la sécurité de l'immeuble. Voici ce qu'il faut faire avant la première démolition.",
+    "items": [
+      {"titre": "Faire réaliser une étude de structure", "texte": "Une étude établie par un bureau d'études ou un ingénieur dimensionne la poutre et ses appuis. Elle protège les occupants, et elle est souvent demandée par le syndic ou l'assureur."},
+      {"titre": "Obtenir l'accord de la copropriété", "texte": "En copropriété, toucher à un mur porteur nécessite l'accord de l'assemblée générale, car il fait partie de la structure de l'immeuble. Le lancer sans accord expose à des mises en demeure et à des travaux de remise en état."},
+      {"titre": "Prévenir son assurance", "texte": "Informer son assureur avant des travaux touchant à la structure évite les mauvaises surprises en cas de sinistre. Nos chantiers sont couverts par notre assurance décennale et notre responsabilité civile professionnelle."},
+      {"titre": "Anticiper les réseaux dans le mur", "texte": "Un mur peut cacher des gaines électriques, des conduites d'eau ou de gaz. Nous les repérons avant de démolir et les déplaçons avec les corps de métier concernés."}
+    ]
+  },
+  "photos_h2": "Des volumes ouverts|et des structures apparentes",
+  "photos_texte": "Deux intérieurs avec poutres et pierre apparentes. Retrouvez toutes nos [réalisations](realisations).",
+  "photos": [
+    {"img": "image13", "alt": "Appartement ancien avec pierre apparente, poutre en bois, parquet et bibliothèque", "legende": "Appartement ancien : pierre apparente, poutre en bois et parquet.", "lien": "realisations#rl-amenagement"},
+    {"img": "image10", "alt": "Salon avec poutres apparentes au plafond et bibliothèque en bois", "legende": "Salon avec poutres apparentes au plafond et bibliothèque en bois.", "lien": "realisations#rl-amenagement"}
+  ],
+  "faq_h2": "Les questions|qu'on nous pose",
+  "faq_intro": "Mur porteur, copropriété, étude de structure, durée : les réponses aux questions de maçonnerie les plus fréquentes.",
+  "faq": [
+    {"q": "Comment savoir si un mur est porteur ?", "r": "On ne peut pas le deviner de façon sûre : l'épaisseur, la position et la nature des matériaux donnent des indices, mais seule une étude le confirme. Les plans de l'immeuble et un diagnostic sur place sont nécessaires. Nous vous aidons à le déterminer lors de la visite."},
+    {"q": "Peut-on ouvrir un mur porteur dans un appartement ?", "r": "Oui, sous conditions : une étude de structure, l'accord de la copropriété en assemblée générale, et l'exécution par un professionnel assuré. Tous les murs ne s'y prêtent pas, mais beaucoup d'ouvertures sont possibles avec une poutre adaptée."},
+    {"q": "Combien de temps dure une ouverture dans un mur porteur ?", "r": "Une à trois semaines en général, étude préalable non comprise. Le chantier lui-même est rapide, mais il demande des temps de prise et de séchage avant de pouvoir reprendre les finitions. Le planning exact figure dans le devis."},
+    {"q": "Quelle différence entre une chape et une dalle ?", "r": "Une dalle est un élément structurel en béton armé, qui reprend les charges. Une chape est une couche de mise à niveau, posée sur la dalle ou un isolant, qui reçoit le revêtement de sol. Nous réalisons les deux."},
+    {"q": "Intervenez-vous seulement en rénovation complète ?", "r": "Non. Nous réalisons aussi des interventions isolées : une ouverture, une reprise de fissure, une dalle ou un seuil. Pour un ordre de grandeur, consultez la [grille tarifaire](tarifs) ou l'[estimateur](contact?devis=maconnerie#devisEstimator)."},
+    {"q": "Qui s'occupe des finitions après la maçonnerie ?", "r": "Nous coordonnons les métiers suivants : [cloisons et enduits](placo-isolation), [peinture](peinture), [revêtements de sol](revetements-de-sol). Vous gardez un seul interlocuteur du premier coup de masse à la livraison."}
+  ],
+  "voir_aussi": [
+    {"slug": "renovation-complete", "label": "Rénovation complète", "texte": "La maçonnerie intégrée à un chantier tous corps de métier."},
+    {"slug": "placo-isolation", "label": "Placo et isolation", "texte": "Cloisons, doublages et faux plafonds."},
+    {"slug": "revetements-de-sol", "label": "Revêtements de sol", "texte": "Parquet, stratifié, résine et sols souples."}
+  ],
+  "cta": {"h2": "Un mur|à ouvrir ?", "p": "Visite sur site et devis détaillé gratuits. Réponse sous 24h."}
+}

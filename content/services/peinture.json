@@ -1,0 +1,86 @@
+{
+  "slug": "peinture",
+  "nom": "Peinture",
+  "nom_schema": "Peinture et enduits décoratifs",
+  "service_type": "Peinture intérieure, préparation de supports et enduits décoratifs",
+  "estimateur": "peinture",
+  "title": "Peinture et Enduits Décoratifs, Intérieur | Ben&Bat",
+  "description_meta": "Peinture intérieure, préparation des supports et enduits décoratifs : finitions soignées, prix indicatifs au m² et devis gratuit sous 24h.",
+  "description": "Peinture intérieure et extérieure, préparation de supports, enduits décoratifs et finitions premium, en France et en Belgique, par des artisans spécialisés.",
+  "kicker": "Peinture et enduits",
+  "h1": "Peinture, enduits|et finitions",
+  "lede": "Préparation des supports, peinture murs et plafonds, enduits décoratifs et finitions : une peinture réussie se joue d'abord sur la préparation, c'est là que nous passons le plus de temps.",
+  "bref": [
+    ["Durée indicative", "1 à 2 jours par pièce, 4 à 8 jours pour un appartement de trois pièces"],
+    ["Budget indicatif", "Peinture murs et plafonds : {prix:peinture:0} HT"],
+    ["Interlocuteur", "Un artisan peintre dédié sur le chantier"],
+    ["Garanties", "Décennale, RC Pro, bilan à 30 jours"]
+  ],
+  "intro": {
+    "h2": "Le résultat se voit,|le travail se fait avant",
+    "p": [
+      "Une peinture dure tant que son support est sain. Un mur mal rebouché, un fond farineux non traité ou un traitement d'humidité oublié se rappellent à vous quelques mois plus tard, par des cloques, des fissures ou des traces. C'est pourquoi la préparation représente souvent la moitié du temps passé sur un chantier de peinture.",
+      "Nous intervenons en peinture intérieure et extérieure, sur murs, plafonds, boiseries et métal, ainsi qu'en enduits décoratifs : enduits lissés, effets de matière, stucco, béton ciré mural. Nous protégeons les sols et le mobilier, et nous rendons un chantier propre.",
+      "Pour une surface continue et durable dans les pièces d'eau, le [béton ciré mural](beton-cire) est une alternative à la peinture et à la faïence."
+    ]
+  },
+  "cartes": [
+    {"icon": "tools", "titre": "Préparation des supports", "texte": "Rebouchage, ponçage, ratissage, traitement des fissures et des fonds fragiles : la surface est mise à niveau avant la première couche.", "liste": ["Rebouchage et ratissage", "Ponçage et dépoussiérage", "Traitement des fissures", "Sous-couche adaptée au support"]},
+    {"icon": "paint-roller", "titre": "Peinture murs et plafonds", "texte": "Application en deux couches de finition, avec la sous-couche nécessaire. Teintes, niveaux de brillance et produits sont choisis selon l'usage de chaque pièce.", "liste": ["Murs et plafonds", "Mat, velours ou satiné selon la pièce", "Boiseries et portes", "Peinture extérieure"]},
+    {"icon": "layer-group", "titre": "Enduits décoratifs", "texte": "Enduits lissés, effets de matière, stucco ou béton ciré mural : des finitions qui remplacent la peinture là où l'on veut du relief ou de la profondeur.", "liste": ["Enduits décoratifs et lisses", "Stucco", "Béton ciré mural", "Effets de matière sur mesure"]},
+    {"icon": "gem", "titre": "Finitions soignées", "texte": "Plinthes, baguettes d'angle, raccords et retouches : le détail qui fait la différence entre une peinture correcte et une peinture irréprochable.", "liste": ["Plinthes et baguettes", "Raccords et rebouchages invisibles", "Peintures de finition haute qualité", "Remise en état et nettoyage"]}
+  ],
+  "deroule_h2": "De la protection|à la dernière retouche",
+  "deroule_intro": "Chaque étape attend que la précédente soit sèche. C'est la durée de séchage, plus que le geste du peintre, qui rythme le chantier.",
+  "etapes": [
+    {"icon": "route", "titre": "Visite et diagnostic des supports", "texte": "Nous observons l'état des murs, repérons les traces d'humidité, les fissures et les anciennes peintures à décaper. Le devis précise la préparation nécessaire pièce par pièce."},
+    {"icon": "shield-alt", "titre": "Protection du chantier", "texte": "Sols, menuiseries, prises et mobilier sont protégés. Le mobilier est déplacé et regroupé sous bâche si nécessaire."},
+    {"icon": "tools", "titre": "Préparation des supports", "texte": "Rebouchage, ponçage, ratissage, application de la sous-couche. C'est l'étape la plus longue, et celle qui conditionne la durée de la peinture."},
+    {"icon": "paint-roller", "titre": "Mise en peinture ou enduit décoratif", "texte": "Application en couches croisées avec le temps de séchage recommandé entre chaque passe. Les plafonds sont faits avant les murs, les boiseries à la fin."},
+    {"icon": "key", "titre": "Retouches, nettoyage et réception", "texte": "Retouches à la lumière du jour, retrait des protections, nettoyage complet. Nous parcourons les pièces avec vous avant de clore le chantier."}
+  ],
+  "tarifs": {
+    "cats": ["peinture"],
+    "h2": "Combien coûte|une peinture ?",
+    "intro": "Le prix varie surtout avec l'état du support et le niveau de finition. Un mur sain se peint vite, un mur dégradé demande plus de préparation que de peinture.",
+    "facteurs": [
+      {"titre": "Dépose de l'existant {coef:depose}", "texte": "Papier peint, revêtement ou ancienne peinture à décaper."},
+      {"titre": "Accès difficile {coef:acces}", "texte": "Grande hauteur sous plafond, échafaudage nécessaire, étage sans ascenseur."},
+      {"titre": "Support dégradé {coef:support}", "texte": "Fissures, fonds farineux, humidité, enduit à reprendre."},
+      {"titre": "Finition premium {coef:premium}", "texte": "Enduits décoratifs, stucco, béton ciré mural, teintes sur mesure."}
+    ]
+  },
+  "conseils": {
+    "eyebrow": "Avant de choisir une teinte",
+    "h2": "Quatre points|souvent négligés",
+    "intro": "Ces détails se voient une fois le chantier terminé, quand il est trop tard pour les modifier. Nous les évoquons systématiquement avant de commencer.",
+    "items": [
+      {"titre": "Tester la couleur à la lumière du logement", "texte": "Une teinte change selon l'orientation, l'éclairage et les matériaux voisins. Un échantillon peint sur un grand format, observé le matin et le soir, évite les mauvaises surprises."},
+      {"titre": "Adapter la brillance à la pièce", "texte": "Le mat atténue les défauts mais se nettoie moins bien. Le velours ou le satiné conviennent aux cuisines, aux couloirs et aux salles de bain. Nous choisissons le produit selon l'usage, pas seulement selon la teinte."},
+      {"titre": "Traiter l'humidité avant de peindre", "texte": "Peindre sur un mur humide ne la fait pas disparaître : la peinture cloque. La source doit être identifiée et traitée, puis le mur doit sécher complètement. Ce point est contrôlé lors de la visite."},
+      {"titre": "Faire peindre après les autres corps de métier", "texte": "La peinture s'applique après la plomberie, l'électricité et les cloisons. La planifier trop tôt oblige à retoucher, et trop tard retarde la livraison. Dans un [chantier complet](renovation-complete), nous l'intégrons au planning."}
+    ]
+  },
+  "photos_h2": "Des intérieurs peints|et des murs travaillés",
+  "photos_texte": "Deux chantiers d'appartements. Retrouvez toutes nos [réalisations](realisations).",
+  "photos": [
+    {"img": "image2", "alt": "Chambre avec murs à moulures et parquet point de Hongrie à Versailles", "legende": "Chambre à Versailles : murs à moulures et parquet point de Hongrie.", "lien": "realisations#rl-amenagement"},
+    {"img": "image13", "alt": "Appartement haussmannien avec murs enduits, parquet et îlot en marbre", "legende": "Appartement haussmannien : murs enduits, parquet et îlot en marbre.", "lien": "realisations#rl-amenagement"}
+  ],
+  "faq_h2": "Les questions|qu'on nous pose",
+  "faq_intro": "Nombre de couches, séchage, humidité, enduits décoratifs : ce qu'il faut savoir avant de repeindre.",
+  "faq": [
+    {"q": "Combien de couches de peinture faut-il ?", "r": "Deux couches de finition sont la norme, précédées d'une sous-couche sur un support neuf, très poreux ou très foncé. Une seule couche donne rarement un rendu uniforme, surtout au rouleau sur grande surface. Nous précisons le nombre de couches dans le devis."},
+    {"q": "Peut-on peindre par-dessus du papier peint ?", "r": "C'est déconseillé : le papier peint peut se décoller sous l'humidité de la peinture et laisser des bulles ou des raccords visibles. Nous le décollons, nous traitons le mur, puis nous préparons le support avant de peindre."},
+    {"q": "Combien de temps faut-il attendre avant de remettre les meubles ?", "r": "La peinture est sèche au toucher en quelques heures, mais son durcissement complet prend plusieurs jours. Nous conseillons d'attendre 24 à 48 heures avant de replacer les meubles contre les murs, et davantage avant de nettoyer les surfaces."},
+    {"q": "Qu'est-ce qu'un enduit décoratif ?", "r": "C'est un revêtement mural en pâte appliqué à la spatule, qui donne un aspect lissé, nuancé ou texturé. Il remplace la peinture là où l'on souhaite de la profondeur ou un rendu unique. Nous réalisons aussi du [béton ciré mural](beton-cire) pour les pièces humides."},
+    {"q": "Fournissez-vous la peinture ?", "r": "Oui, nous fournissons les produits, choisis selon le support et l'usage de la pièce. Vous gardez le choix des teintes, et nous vous conseillons sur la gamme et le niveau de brillance."},
+    {"q": "Comment estimer mon budget peinture ?", "r": "Mesurez la surface des murs et des plafonds, puis utilisez l'[estimateur de budget](contact?devis=peinture#devisEstimator) ou consultez la [grille tarifaire](tarifs). La fourchette obtenue est hors taxes, et la visite permet de la préciser."}
+  ],
+  "voir_aussi": [
+    {"slug": "placo-isolation", "label": "Placo et isolation", "texte": "Cloisons, doublages et faux plafonds, prêts à peindre."},
+    {"slug": "renovation-complete", "label": "Rénovation complète", "texte": "La peinture intégrée à un chantier tous corps de métier."},
+    {"slug": "beton-cire", "label": "Béton ciré premium", "texte": "Une alternative continue à la peinture et à la faïence."}
+  ],
+  "cta": {"h2": "Des murs|à repenser ?", "p": "Visite sur site et devis détaillé gratuits. Réponse sous 24h."}
+}

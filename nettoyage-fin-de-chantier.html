@@ -16,13 +16,13 @@
     }
   </script>
   <!-- @end:head-meta -->
-  <link rel="canonical" href="https://benbat.fr/services">
-  <title>Services BTP — Rénovation, Plomberie, Électricité | Ben&amp;Bat</title>
-  <meta name="description" content="Béton ciré, rénovation complète, maçonnerie, plomberie, électricité, cuisine et salle de bains à Paris, en Île-de-France et en Belgique. Devis gratuit.">
-  <meta property="og:title" content="Béton ciré &amp; rénovation intérieure | Ben&amp;Bat">
-  <meta property="og:description" content="Béton ciré premium, rénovation complète, maçonnerie, plomberie, électricité, cuisine, salle de bains. Un seul interlocuteur pour tous les corps de métier, à Paris et en Belgique.">
+  <link rel="canonical" href="https://benbat.fr/nettoyage-fin-de-chantier">
+  <title>Nettoyage de Fin de Chantier, France et Belgique | Ben&amp;Bat</title>
+  <meta name="description" content="Nettoyage de fin de chantier et de façades en France et en Belgique : dépoussiérage, vitres, sols. Prix indicatifs au m² et devis gratuit sous 24h.">
+  <meta property="og:title" content="Nettoyage de Fin de Chantier, France et Belgique | Ben&amp;Bat">
+  <meta property="og:description" content="Nettoyage de fin de chantier et de façades en France et en Belgique : dépoussiérage, vitres, sols. Prix indicatifs au m² et devis gratuit sous 24h.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://benbat.fr/services">
+  <meta property="og:url" content="https://benbat.fr/nettoyage-fin-de-chantier">
   <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -82,8 +82,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- @end:head-assets -->
+  <!-- @shared:schema-business -->
   <script type="application/ld+json">
-{
+  {
   "@context": "https://schema.org",
   "@type": [
     "HomeAndConstructionBusiness",
@@ -276,75 +277,110 @@
       ]
     }
   ]
-}
+  }
   </script>
   <!-- @end:schema-business -->
-
   <script type="application/ld+json">
-  {
+{
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Accueil",
-      "item": "https://benbat.fr/"
+      "@type": "Service",
+      "@id": "https://benbat.fr/nettoyage-fin-de-chantier#service",
+      "name": "Nettoyage de fin de chantier",
+      "serviceType": "Nettoyage de fin de chantier, remise en état et nettoyage de façades",
+      "description": "Nettoyage de fin de chantier et de bâtiments : dépoussiérage, protection des surfaces, vitres, sols et façades, en France et en Belgique.",
+      "url": "https://benbat.fr/nettoyage-fin-de-chantier",
+      "provider": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Belgique"
+        }
+      ],
+      "image": []
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Services",
-      "item": "https://benbat.fr/services"
-    }
-  ]
-}
-  </script>
-
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Ben&Bat intervient-il partout en France ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Oui, Ben&Bat intervient sur l'ensemble du territoire français : Paris, Île-de-France, Lyon, Marseille, Bordeaux, Lille et toutes autres régions."
-      }
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://benbat.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://benbat.fr/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Nettoyage de fin de chantier",
+          "item": "https://benbat.fr/nettoyage-fin-de-chantier"
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "Ben&Bat travaille-t-il en Belgique ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Oui, nos équipes interviennent en Belgique : Bruxelles, Liège, Anvers, Gand et toute la Belgique francophone et flamande."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Qu'est-ce que le béton ciré ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Le béton ciré est un revêtement décoratif appliqué sur sols, murs et plans de travail. Il est apprécié pour son aspect lisse, moderne et sa durabilité. Ben&Bat est spécialiste du béton ciré premium depuis 25 ans."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Ben&Bat propose-t-il des devis gratuits ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Oui, Ben&Bat propose des devis gratuits et sans engagement. Réponse sous 24h. Déplacement sur site en France et en Belgique pour évaluer votre projet."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Quelles garanties Ben&Bat offre-t-il ?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Tous les chantiers Ben&Bat sont couverts par une assurance décennale, une RC Professionnelle et une garantie post-chantier de 30 jours. Attestation d'assurance fournie sur demande."
-      }
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Que comprend un nettoyage de fin de chantier ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un dépoussiérage complet des surfaces, des huisseries et des plinthes, le nettoyage des sols selon leur nature, des vitres et des sanitaires, et l'évacuation des déchets. Le périmètre exact est précisé dans le devis, selon l'état du chantier."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelle différence avec un ménage classique ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un chantier laisse des salissures spécifiques : poussière de plâtre très fine, voile de ciment, traces de peinture, de colle ou de joint. Elles demandent des produits et des méthodes particuliers, et un ordre d'intervention précis. Un ménage classique n'y suffit pas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps dure le nettoyage ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Une journée en général pour un logement, davantage pour un grand bâtiment ou un chantier très poussiéreux. Nous précisons la durée dans le devis, après repérage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Nettoyez-vous aussi les façades ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui : nettoyage haute pression, démoussage et traitement de façades, ainsi que vitrerie, pour tous types de bâtiments. Les interventions en hauteur sont précisées dans le devis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Intervenez-vous en Belgique ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, nous intervenons en France et en Belgique. Précisez votre adresse dans le formulaire de devis pour que nous organisions le déplacement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on commander un nettoyage sans rénovation avec vous ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Le nettoyage de fin de chantier peut être commandé seul, après des travaux réalisés par une autre entreprise. Utilisez l'estimateur de budget ou consultez la grille tarifaire pour un ordre de grandeur."
+          }
+        }
+      ]
     }
   ]
 }
@@ -396,228 +432,213 @@
   </div>
   <!-- @end:header -->
 
-  <!-- PAGE HERO -->
+  <!-- ══════════ HERO ══════════ -->
   <section class="page-hero" id="main-content">
     <div class="container">
       <div class="page-hero-inner">
         <div class="breadcrumb">
-          <a href="/">Accueil</a><span class="sep">/</span><span class="cur">Services</span>
+          <a href="/">Accueil</a><span class="sep">/</span><a href="services">Services</a><span class="sep">/</span><span class="cur">Nettoyage de fin de chantier</span>
         </div>
-        <h1>Nos services BTP,<br>tous corps de métier</h1>
-        <p>Tous corps de métier sous un même toit. Des experts dédiés à chaque discipline, de la conception à la livraison clé en main, accessible à tous profils de clients. Consultez notre <a href="tarifs">grille tarifaire indicative</a>.</p>
+        <h1>Nettoyage de fin de chantier<br>et remise en état</h1>
+        <p>Dépoussiérage, nettoyage des vitres et des sols, protection des surfaces et traitement des façades : votre bien est livré propre et prêt à habiter, en France et en Belgique.</p>
+        <div class="svc-hero-cta">
+          <a href="contact?devis=nettoyage#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="contact" class="btn btn-ghost-dark">Devis gratuit</a>
+        </div>
         <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
       </div>
     </div>
   </section>
 
-  <!-- BTP TOUS CORPS DE MÉTIER -->
-  <section class="section" id="renovation">
+  <!-- ══════════ EN BREF ══════════ -->
+  <section class="section-sm svc-facts-band">
     <div class="container">
-      <div class="section-head">
+      <dl class="svc-facts">
+          <div><dt>Durée indicative</dt><dd>Une journée pour un logement, plus pour un bâtiment</dd></div>
+          <div><dt>Budget indicatif</dt><dd>Nettoyage de fin de chantier : 5 € – 15 € / m² HT</dd></div>
+          <div><dt>Interlocuteur</dt><dd>Une équipe dédiée, coordonnée avec le chantier</dd></div>
+          <div><dt>Zones</dt><dd>France et Belgique</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══════════ INTRO ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
         <div>
-          <span class="eyebrow">BTP · Tous corps de métier</span>
-          <h2>Chaque chantier<br>piloté de A à Z</h2>
+          <span class="eyebrow">Notre spécialité signature</span>
+          <h2>Un chantier fini,<br>un logement vraiment habitable</h2>
         </div>
-        <p>Un interlocuteur unique coordonne l'ensemble des intervenants. Chaque artisan est spécialiste de sa discipline, jamais de généraliste sur vos chantiers.</p>
+        <div class="svc-prose">
+          <p>Après des travaux, la poussière est partout : sur les sols, dans les huisseries, derrière les radiateurs, dans les gaines. Un simple passage de balai ne suffit pas, et un mauvais produit peut abîmer un parquet, un béton ciré ou un joint. Le nettoyage de fin de chantier est un métier à part entière, avec ses produits, ses méthodes et son ordre d'intervention.</p>
+          <p>Nous réalisons le nettoyage de livraison de nos propres chantiers de rénovation, mais aussi de chantiers extérieurs : dépoussiérage complet, protection des surfaces, nettoyage des vitres, des sols et des sanitaires, évacuation des déchets. Nous traitons aussi les façades, avec nettoyage haute pression, démoussage et traitement.</p>
+          <p>Sur un <a href="renovation-complete">chantier de rénovation complète</a>, le nettoyage fait partie de la prestation. Il peut aussi être commandé seul, après travaux réalisés par une autre entreprise.</p>
+        </div>
       </div>
       <div class="services-page-grid">
         <div class="service-page-card">
-          <div class="service-icon"><i class="fas fa-home"></i></div>
-          <h3>Rénovation intérieure complète</h3>
-          <p>Coordination de tous les corps de métier pour une rénovation clé en main. Un seul interlocuteur du début à la fin. À Paris, voir notre page dédiée <a href="renovation-appartement-paris">rénovation d'appartement</a>.</p>
+          <div class="service-icon"><i class="fas fa-broom"></i></div>
+          <h3>Remise en état après travaux</h3>
+          <p>Dépoussiérage des surfaces, des huisseries et des plinthes, nettoyage des sols adapté à leur nature, remise en état des sanitaires.</p>
           <ul class="service-list">
-            <li>Pilotage de chantier</li>
-            <li>Coordination des intervenants</li>
-            <li>Suivi planning et délais</li>
-            <li>Livraison clé en main</li>
+            <li>Dépoussiérage complet</li>
+            <li>Nettoyage des sols selon leur nature</li>
+            <li>Sanitaires et robinetterie</li>
+            <li>Évacuation des déchets</li>
           </ul>
-          <a class="card-more" href="renovation-complete">Détail, prix et déroulé <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="service-page-card">
-          <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
-          <h3>Peinture &amp; Enduits</h3>
-          <p>Enduits décoratifs, peintures de finition intérieure et extérieure. Finitions soignées, prix transparents.</p>
+          <div class="service-icon"><i class="fas fa-window-maximize"></i></div>
+          <h3>Vitres et menuiseries</h3>
+          <p>Nettoyage des vitres, enlèvement des traces de peinture, de joint et de colle sur les menuiseries, sans rayer les surfaces.</p>
           <ul class="service-list">
-            <li>Enduits décoratifs et lisses</li>
-            <li>Peinture intérieure et extérieure</li>
-            <li>Stucco et béton ciré mural</li>
-            <li>Finitions premium sur mesure</li>
+            <li>Vitres intérieures et extérieures</li>
+            <li>Traces de peinture et de joint</li>
+            <li>Huisseries et volets</li>
+            <li>Surfaces vitrées en hauteur</li>
           </ul>
-          <a class="card-more" href="peinture">Détail, prix et déroulé <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="service-page-card">
-          <div class="service-icon"><i class="fas fa-faucet"></i></div>
-          <h3>Plomberie</h3>
-          <p>Installation, rénovation et dépannage de réseaux d'eau, salles de bain et cuisines.</p>
+          <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Protection des surfaces</h3>
+          <p>Les sols et les surfaces fragiles sont protégés pendant les travaux, puis nettoyés avec des produits adaptés au matériau.</p>
           <ul class="service-list">
-            <li>Installation complète salle de bain</li>
-            <li>Cuisine : réseau eau &amp; gaz</li>
-            <li>Chauffe-eau et ballon thermodynamique</li>
-            <li>Dépannage et urgences</li>
+            <li>Protection des sols</li>
+            <li>Produits adaptés à chaque matériau</li>
+            <li>Béton ciré, parquet, pierre</li>
+            <li>Inox et surfaces sensibles</li>
           </ul>
-          <a class="card-more" href="plomberie">Détail, prix et déroulé <i class="fas fa-arrow-right"></i></a>
         </div>
         <div class="service-page-card">
-          <div class="service-icon"><i class="fas fa-bolt"></i></div>
-          <h3>Électricité</h3>
-          <p>Mise aux normes NF C 15-100, tableaux électriques, domotique et éclairage LED.</p>
+          <div class="service-icon"><i class="fas fa-building"></i></div>
+          <h3>Nettoyage de bâtiments et de façades</h3>
+          <p>Nettoyage haute pression, démoussage, traitement des façades, vitrerie : des interventions pour tous types de bâtiments, en France et en Belgique.</p>
           <ul class="service-list">
-            <li>Tableau électrique &amp; mise aux normes</li>
-            <li>Domotique et home automation</li>
-            <li>Éclairage intérieur &amp; extérieur</li>
-            <li>Interphones et vidéophonie</li>
+            <li>Haute pression</li>
+            <li>Démoussage</li>
+            <li>Traitement de façades</li>
+            <li>Vitrerie</li>
           </ul>
-          <a class="card-more" href="electricite">Détail, prix et déroulé <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-page-card">
-          <div class="service-icon"><i class="fas fa-border-all"></i></div>
-          <h3>Carrelage &amp; Faïence</h3>
-          <p>Pose de carrelage, faïence et mosaïque. Joints parfaits, alignement millimétrique.</p>
-          <ul class="service-list">
-            <li>Carrelage sol et mural</li>
-            <li>Faïence salle de bain et cuisine</li>
-            <li>Joints et décoration</li>
-            <li>Mosaïque et format XXL</li>
-          </ul>
-          <a class="card-more" href="carrelage">Détail, prix et déroulé <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-page-card">
-          <div class="service-icon"><i class="fas fa-layer-group"></i></div>
-          <h3>Maçonnerie</h3>
-          <p>Cloisons, ouvertures, reprises en sous-œuvre. Structure solide, matériaux adaptés à chaque projet.</p>
-          <ul class="service-list">
-            <li>Cloisons et ouvertures</li>
-            <li>Fondations et dalles</li>
-            <li>Reprises en sous-œuvre</li>
-            <li>Murs porteurs et voiles béton</li>
-          </ul>
-          <a class="card-more" href="maconnerie">Détail, prix et déroulé <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-page-card">
-          <div class="service-icon"><i class="fas fa-th-large"></i></div>
-          <h3>Placo / Plâtrerie</h3>
-          <p>Cloisons Placo, doublages et faux-plafonds. Isolation thermique et phonique intégrée.</p>
-          <ul class="service-list">
-            <li>Cloisons et doublages Placo</li>
-            <li>Faux-plafonds</li>
-            <li>Isolation thermique et phonique</li>
-            <li>Enduits et ragréages</li>
-          </ul>
-          <a class="card-more" href="placo-isolation">Détail, prix et déroulé <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-page-card">
-          <div class="service-icon"><i class="fas fa-grip-horizontal"></i></div>
-          <h3>Revêtements de sols</h3>
-          <p>Parquet, stratifié, résine, moquette : pose et finitions soignées sur tous types de supports.</p>
-          <ul class="service-list">
-            <li>Parquet massif et contrecollé</li>
-            <li>Stratifié et vinyle</li>
-            <li>Résine époxy et polyuréthane</li>
-            <li>Moquette et liège</li>
-          </ul>
-          <a class="card-more" href="revetements-de-sol">Détail, prix et déroulé <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-page-card">
-          <div class="service-icon"><i class="fas fa-utensils"></i></div>
-          <h3>Cuisine</h3>
-          <p>Pose de cuisines équipées et sur mesure. Plomberie et électricité intégrées, finitions parfaites.</p>
-          <ul class="service-list">
-            <li>Cuisines équipées et semi-équipées</li>
-            <li>Îlots et plans de travail sur mesure</li>
-            <li>Plomberie et électricité intégrées</li>
-            <li>Carrelage et revêtements assortis</li>
-          </ul>
-          <a class="card-more" href="cuisine">Détail, prix et déroulé <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-page-card">
-          <div class="service-icon"><i class="fas fa-bath"></i></div>
-          <h3>Salle de bain</h3>
-          <p>Conception complète de salle de bain avec plomberie intégrée. Du plan au résultat final.</p>
-          <ul class="service-list">
-            <li>Conception et plan 3D</li>
-            <li>Plomberie et sanitaires</li>
-            <li>Carrelage et faïence</li>
-            <li>Béton ciré et mobilier sur mesure</li>
-          </ul>
-          <a class="card-more" href="salle-de-bain">Détail, prix et déroulé <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="service-page-card">
-          <div class="service-icon"><i class="fas fa-gem"></i></div>
-          <h3>Finitions Premium</h3>
-          <p>Plinthes, baguettes, raccords et peintures de finition. Le détail qui fait toute la différence.</p>
-          <ul class="service-list">
-            <li>Plinthes et baguettes d'angle</li>
-            <li>Raccords et rebouchages invisibles</li>
-            <li>Peintures de finition haute qualité</li>
-            <li>Nettoyage et remise en état final</li>
-          </ul>
-          <a class="card-more" href="peinture">Détail, prix et déroulé <i class="fas fa-arrow-right"></i></a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SPÉCIALITÉS SIGNATURE -->
-  <section class="section section-dark" id="beton-cire">
+  <!-- ══════════ DÉROULÉ ══════════ -->
+  <section class="section section-dark" id="deroule">
     <div class="container">
       <div class="section-head">
         <div>
-          <span class="eyebrow">Spécialités Signature</span>
-          <h2>Nos savoir-faire<br>exclusifs</h2>
+          <span class="eyebrow">Déroulé d'intervention</span>
+          <h2>De l'évacuation<br>à la remise des clés</h2>
         </div>
-        <p>Maîtrisés en interne depuis 25 ans. Pas de sous-traitance : nos artisans réalisent chaque pièce de A à Z dans notre atelier.</p>
+        <p>Le nettoyage suit un ordre précis, du haut vers le bas et du plus sale au plus propre, pour ne pas salir ce qui vient d'être nettoyé.</p>
       </div>
       <div class="services-list">
         <div class="list-row">
           <span class="sr-num">01</span>
-          <span class="sr-icon"><i class="fas fa-layer-group"></i></span>
+          <span class="sr-icon"><i class="fas fa-route"></i></span>
           <div class="sr-body">
-            <h3>Béton Ciré Premium</h3>
-            <p>Fabriqué et posé en interne depuis 25 ans. Chaque teinte, chaque rendu est unique, conçu sur mesure. Applicable sur : sols, murs, plans de travail, vasques, mobilier, escaliers.</p>
-            <p>Selon votre zone, voir le détail de nos chantiers de <a href="beton-cire-paris">béton ciré à Paris et en Île-de-France</a> ou de <a href="beton-cire-bruxelles">béton ciré à Bruxelles et en Belgique</a>.</p>
-            <p><a class="card-more" href="beton-cire">Découvrir la spécialité <i class="fas fa-arrow-right"></i></a></p>
-            <div class="specialty-tag"><i class="fas fa-star"></i> Exclusif, fabriqué en atelier Ben&amp;Bat depuis 1999</div>
+            <h3>Visite et repérage</h3>
+            <p>Nous repérons la nature des sols, des surfaces et des salissures : poussière de plâtre, voile de ciment, résidus de colle ou de peinture. Cela détermine les produits et les méthodes.</p>
           </div>
         </div>
-        <div class="list-row" id="mobilier">
+        <div class="list-row">
           <span class="sr-num">02</span>
-          <span class="sr-icon"><i class="fas fa-couch"></i></span>
+          <span class="sr-icon"><i class="fas fa-file-invoice"></i></span>
           <div class="sr-body">
-            <h3>Mobilier Sur Mesure</h3>
-            <p>Dressings, bibliothèques, tables, bancs, conçus et fabriqués par nos artisans. Design exclusif, matériaux nobles, finitions irréprochables. Pas de sous-traitance.</p>
-            <p><a class="card-more" href="mobilier-sur-mesure">Découvrir la spécialité <i class="fas fa-arrow-right"></i></a></p>
-            <div class="specialty-tag"><i class="fas fa-tools"></i> 100% artisanal</div>
+            <h3>Devis au mètre carré</h3>
+            <p>Un devis gratuit et sans engagement, au mètre carré de surface à traiter, avec le niveau de nettoyage convenu.</p>
           </div>
         </div>
-        <div class="list-row" id="vasques">
+        <div class="list-row">
           <span class="sr-num">03</span>
-          <span class="sr-icon"><i class="fas fa-sink"></i></span>
+          <span class="sr-icon"><i class="fas fa-trash"></i></span>
           <div class="sr-body">
-            <h3>Vasques Sur Mesure</h3>
-            <p>Vasques en béton ciré, résine ou pierre de synthèse. Dessinées et réalisées par nos artisans. Chaque vasque est une pièce unique.</p>
-            <p><a class="card-more" href="vasques-sur-mesure">Découvrir la spécialité <i class="fas fa-arrow-right"></i></a></p>
-            <div class="specialty-tag"><i class="fas fa-drafting-compass"></i> Pièce unique</div>
+            <h3>Évacuation et dépoussiérage</h3>
+            <p>Évacuation des déchets et des protections, puis dépoussiérage des surfaces hautes, des huisseries et des plinthes, avant les sols.</p>
           </div>
         </div>
-        <div class="list-row" id="nettoyage">
+        <div class="list-row">
           <span class="sr-num">04</span>
           <span class="sr-icon"><i class="fas fa-broom"></i></span>
           <div class="sr-body">
-            <h3>Nettoyage Bâtiment</h3>
-            <p>Nettoyage haute pression, démoussage, traitement de façades et vitrerie. Résultats professionnels pour tous types de bâtiments en France &amp; Belgique.</p>
-            <p><a class="card-more" href="nettoyage-fin-de-chantier">Découvrir la spécialité <i class="fas fa-arrow-right"></i></a></p>
-            <div class="specialty-tag"><i class="fas fa-check-circle"></i> Haute pression &amp; traitement de façades</div>
+            <h3>Nettoyage des sols, vitres et sanitaires</h3>
+            <p>Nettoyage des sols selon leur nature, des vitres, des sanitaires et de la robinetterie, avec des produits adaptés.</p>
           </div>
         </div>
-        <div class="list-row" id="nettoyage-chantier">
+        <div class="list-row">
           <span class="sr-num">05</span>
-          <span class="sr-icon"><i class="fas fa-spray-can"></i></span>
+          <span class="sr-icon"><i class="fas fa-key"></i></span>
           <div class="sr-body">
-            <h3>Nettoyage Fin de Chantier</h3>
-            <p>Remise en état complète après travaux : dépoussiérage, protection de surfaces, nettoyage de vitres et sols. Votre bien livré propre et prêt à habiter.</p>
-            <p><a class="card-more" href="nettoyage-fin-de-chantier">Découvrir la spécialité <i class="fas fa-arrow-right"></i></a></p>
-            <div class="specialty-tag"><i class="fas fa-home"></i> Livraison clé en main</div>
+            <h3>Contrôle et remise des clés</h3>
+            <p>Nous contrôlons chaque pièce avec vous à la lumière du jour, reprenons ce qui doit l'être, et vous remettons un logement prêt à habiter.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PRIX ══════════ -->
+  <section class="section" id="prix">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Prix indicatifs</span>
+          <h2>Combien coûte<br>un nettoyage de chantier ?</h2>
+        </div>
+        <p>Le nettoyage se chiffre au mètre carré. Le prix dépend de la surface, du degré de salissure et de la nature des surfaces à traiter.</p>
+      </div>
+      <div class="svc-price-layout">
+        <div class="svc-price-tables">
+        <div class="price-cat svc-price-cat">
+          <div class="price-cat-head"><h3>Nettoyage</h3></div>
+          <table class="price-table">
+            <thead><tr><th>Prestation</th><th>Fourchette HT</th></tr></thead>
+            <tbody>
+<tr><td>Nettoyage de fin de chantier<span class="price-unit">/ m²</span></td><td class="price-range">5 € – 15 €</td></tr>
+<tr><td>Nettoyage de façade<span class="price-unit">/ m²</span></td><td class="price-range">8 € – 25 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+        <aside class="svc-price-side">
+          <h3>Ce qui fait varier le prix</h3>
+          <ul class="svc-factors"><li><strong>Dépose de l'existant + 15 %</strong> Évacuation de protections ou de déchets volumineux avant nettoyage.</li><li><strong>Accès difficile + 10 %</strong> Étage sans ascenseur, façade en hauteur, accès restreint.</li><li><strong>Support dégradé + 20 %</strong> Salissures incrustées, résidus de ciment ou de colle à traiter.</li><li><strong>Finition premium + 30 %</strong> Surfaces sensibles à protéger : béton ciré, pierre, parquet précieux.</li></ul>
+          <p class="svc-price-note">Fourchettes hors taxes, issues de notre <a href="tarifs">grille tarifaire</a>. Le prix définitif est arrêté après une visite technique.</p>
+          <a href="contact?devis=nettoyage#devisEstimator" class="btn btn-primary">Estimer mon projet <i class="fas fa-arrow-right"></i></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONSEILS ══════════ -->
+  <section class="section" id="conseils">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Bon à savoir</span>
+          <h2>Quatre pièges<br>à éviter</h2>
+        </div>
+        <p>Un mauvais nettoyage de fin de chantier abîme parfois plus qu'il ne nettoie. Voici ce que nous évitons systématiquement.</p>
+      </div>
+      <div class="svc-tips">
+        <div class="svc-tip">
+          <h3>Ne pas utiliser le même produit partout</h3>
+          <p>Un produit acide qui enlève un voile de ciment sur du carrelage peut attaquer un joint, un béton ciré ou une pierre naturelle. Chaque surface demande son produit, et son dosage.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Nettoyer dans le bon ordre</h3>
+          <p>On commence par le haut : plafonds, murs, huisseries, puis les sols. Inverser l'ordre oblige à tout recommencer, car la poussière retombe sur les surfaces déjà propres.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Attendre le séchage complet avant de nettoyer</h3>
+          <p>Une peinture, un enduit ou un béton ciré encore frais ne supportent pas l'eau ni le frottement. Le nettoyage se fait une fois les surfaces durcies, selon les délais du fabricant.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Prévoir le nettoyage au planning</h3>
+          <p>Le nettoyage se glisse entre la fin des travaux et l'emménagement. Le prévoir dès le planning évite de le sacrifier quand le chantier a pris du retard.</p>
         </div>
       </div>
     </div>
@@ -629,60 +650,101 @@
       <div class="section-head">
         <div>
           <span class="eyebrow">Questions fréquentes</span>
-          <h2>Ce qu'on nous<br>demande le plus</h2>
+          <h2>Les questions<br>qu'on nous pose</h2>
         </div>
-        <p>Zone d'intervention, béton ciré, devis, garanties : les réponses aux questions qui reviennent avant chaque chantier.</p>
+        <p>Contenu de la prestation, durée, façades, zone d'intervention : ce qu'il faut savoir avant de commander un nettoyage de chantier.</p>
       </div>
       <div class="faq-list">
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            Ben&amp;Bat intervient-il partout en France ?
+            Que comprend un nettoyage de fin de chantier ?
             <i class="fas fa-plus"></i>
           </button>
-          <div class="faq-a">Oui, Ben&amp;Bat intervient sur l'ensemble du territoire français : Paris, Île-de-France, Lyon, Marseille, Bordeaux, Lille et toutes autres régions.</div>
+          <div class="faq-a">Un dépoussiérage complet des surfaces, des huisseries et des plinthes, le nettoyage des sols selon leur nature, des vitres et des sanitaires, et l'évacuation des déchets. Le périmètre exact est précisé dans le devis, selon l'état du chantier.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            Ben&amp;Bat travaille-t-il en Belgique ?
+            Quelle différence avec un ménage classique ?
             <i class="fas fa-plus"></i>
           </button>
-          <div class="faq-a">Oui, nos équipes interviennent en Belgique : Bruxelles, Liège, Anvers, Gand et toute la Belgique francophone et flamande.</div>
+          <div class="faq-a">Un chantier laisse des salissures spécifiques : poussière de plâtre très fine, voile de ciment, traces de peinture, de colle ou de joint. Elles demandent des produits et des méthodes particuliers, et un ordre d'intervention précis. Un ménage classique n'y suffit pas.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            Qu'est-ce que le béton ciré ?
+            Combien de temps dure le nettoyage ?
             <i class="fas fa-plus"></i>
           </button>
-          <div class="faq-a">Le béton ciré est un revêtement décoratif appliqué sur sols, murs et plans de travail. Il est apprécié pour son aspect lisse, moderne et sa durabilité. Ben&amp;Bat est spécialiste du béton ciré premium depuis 25 ans.</div>
+          <div class="faq-a">Une journée en général pour un logement, davantage pour un grand bâtiment ou un chantier très poussiéreux. Nous précisons la durée dans le devis, après repérage.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            Ben&amp;Bat propose-t-il des devis gratuits ?
+            Nettoyez-vous aussi les façades ?
             <i class="fas fa-plus"></i>
           </button>
-          <div class="faq-a">Oui, Ben&amp;Bat propose des devis gratuits et sans engagement. Réponse sous 24h. Déplacement sur site en France et en Belgique pour évaluer votre projet.</div>
+          <div class="faq-a">Oui : nettoyage haute pression, démoussage et traitement de façades, ainsi que vitrerie, pour tous types de bâtiments. Les interventions en hauteur sont précisées dans le devis.</div>
         </div>
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">
-            Quelles garanties Ben&amp;Bat offre-t-il ?
+            Intervenez-vous en Belgique ?
             <i class="fas fa-plus"></i>
           </button>
-          <div class="faq-a">Tous les chantiers Ben&amp;Bat sont couverts par une assurance décennale, une RC Professionnelle et une garantie post-chantier de 30 jours. Attestation d'assurance fournie sur demande.</div>
+          <div class="faq-a">Oui, nous intervenons en France et en Belgique. Précisez votre adresse dans le <a href="contact">formulaire de devis</a> pour que nous organisions le déplacement.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Peut-on commander un nettoyage sans rénovation avec vous ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Oui. Le nettoyage de fin de chantier peut être commandé seul, après des travaux réalisés par une autre entreprise. Utilisez l'<a href="contact?devis=nettoyage#devisEstimator">estimateur de budget</a> ou consultez la <a href="tarifs">grille tarifaire</a> pour un ordre de grandeur.</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- ══════════ À VOIR AUSSI ══════════ -->
+  <section class="section-sm" id="voir-aussi">
+    <div class="container">
+      <h2 class="svc-related-title">À voir aussi</h2>
+      <div class="related-grid">
+        <a href="renovation-complete" class="related-card">
+          <h3>Rénovation complète</h3>
+          <p>Le nettoyage intégré à un chantier tous corps de métier.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="realisations" class="related-card">
+          <h3>Nos réalisations</h3>
+          <p>Des chantiers livrés à Paris, Lyon, Neuilly et Bruxelles.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="peinture" class="related-card">
+          <h3>Peinture</h3>
+          <p>Préparation, peinture et enduits décoratifs.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="tarifs" class="related-card">
+          <h3>Grille tarifaire complète</h3>
+          <p>Toutes nos prestations, avec fourchettes de prix et majorations.</p>
+          <span>Voir les tarifs <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="garanties" class="related-card">
+          <h3>Garanties et assurances</h3>
+          <p>Décennale, responsabilité civile professionnelle, bilan à 30 jours.</p>
+          <span>Voir les garanties <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
   <section class="section cta-section" id="ctaSection">
     <div class="container">
       <div class="cta-inner">
         <div>
-          <h2>Votre projet, de A à Z</h2>
-          <p>Devis gratuit sous 24h · France &amp; Belgique.</p>
+          <h2>Un chantier<br>à remettre en état ?</h2>
+          <p>Visite sur site et devis détaillé gratuits. Réponse sous 24h.</p>
         </div>
         <div class="cta-btns">
-          <a href="contact" class="btn btn-primary">Demander un devis <i class="fas fa-arrow-right"></i></a>
+          <a href="contact?devis=nettoyage#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
           <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
         </div>
       </div>

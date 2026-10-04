@@ -1,0 +1,86 @@
+{
+  "slug": "plomberie",
+  "nom": "Plomberie",
+  "nom_schema": "Plomberie : installation, rénovation et dépannage",
+  "service_type": "Plomberie, sanitaires, chauffe-eau et dépannage",
+  "estimateur": "plomberie",
+  "title": "Plomberie : Installation, Rénovation, Dépannage | Ben&Bat",
+  "description_meta": "Plomberie : réseaux d'eau, installation sanitaire, chauffe-eau et dépannage en France et en Belgique. Prix indicatifs et devis gratuit sous 24h.",
+  "description": "Plomberie d'installation, de rénovation et de dépannage : réseaux d'alimentation et d'évacuation, sanitaires, chauffe-eau, salle de bain et cuisine, en France et en Belgique.",
+  "kicker": "Plomberie",
+  "h1": "Plomberie : installation,|rénovation et dépannage",
+  "lede": "Réseaux d'alimentation et d'évacuation, sanitaires, chauffe-eau, salle de bain et cuisine : de la création d'un point d'eau à la reprise complète des canalisations d'un logement.",
+  "bref": [
+    ["Durée indicative", "Quelques heures pour un dépannage, 3 à 10 jours pour la plomberie d'un logement"],
+    ["Budget indicatif", "Installation sanitaire : {prix:plomberie:1} HT"],
+    ["Interlocuteur", "Un plombier dédié, coordonné avec les autres métiers"],
+    ["Garanties", "Décennale, RC Pro, bilan à 30 jours"]
+  ],
+  "intro": {
+    "h2": "De l'eau qui arrive,|de l'eau qui repart",
+    "p": [
+      "Une installation de plomberie se juge à ce qu'on ne voit pas : la qualité des canalisations, la pente des évacuations, la facilité d'accès aux vannes d'arrêt. Une pose soignée se remarque le jour où quelque chose doit être réparé, parce qu'on y accède sans casser un mur.",
+      "Nous intervenons en création et en rénovation de réseaux, en installation de salles de bain et de cuisines, en pose de chauffe-eau et en dépannage. En rénovation, la plomberie est coordonnée avec la maçonnerie, l'électricité et le carrelage, pour que les murs ne soient refermés qu'une fois les réseaux contrôlés.",
+      "La plomberie fait partie de nos chantiers de [salle de bain](salle-de-bain) et de [cuisine](cuisine), mais nous intervenons aussi seuls, sur une réparation ou un remplacement ciblé."
+    ]
+  },
+  "cartes": [
+    {"icon": "faucet", "titre": "Réseaux d'eau et évacuations", "texte": "Création ou reprise des alimentations et des évacuations, avec des matériaux adaptés : multicouche, cuivre, PVC. Les vannes d'arrêt restent accessibles.", "liste": ["Alimentations eau froide et chaude", "Évacuations et colonnes", "Remplacement de canalisations vétustes", "Vannes d'arrêt accessibles"]},
+    {"icon": "bath", "titre": "Installation sanitaire", "texte": "Lavabo, WC, douche, baignoire, robinetterie : les appareils sont posés, raccordés et testés. Le WC suspendu demande un bâti-support solide dans la cloison.", "liste": ["Lavabo, vasque et meuble", "WC et bâti-support", "Douche et baignoire", "Robinetterie"]},
+    {"icon": "fire", "titre": "Chauffe-eau", "texte": "Remplacement ou installation d'un chauffe-eau électrique ou thermodynamique, avec groupe de sécurité et évacuation conformes.", "liste": ["Chauffe-eau électrique", "Ballon thermodynamique", "Groupe de sécurité", "Mise en service"]},
+    {"icon": "tools", "titre": "Dépannage", "texte": "Fuite, évacuation bouchée, robinetterie défaillante : nous intervenons pour un dépannage, au tarif horaire de la grille, avec un compte rendu de l'intervention.", "liste": ["Recherche et réparation de fuite", "Débouchage", "Remplacement de robinetterie", "Remise en service"]}
+  ],
+  "deroule_h2": "De l'état des lieux|à l'essai en pression",
+  "deroule_intro": "En plomberie, rien n'est refermé avant d'avoir été éprouvé. Chaque réseau est testé en eau avant que les murs ne soient fermés.",
+  "etapes": [
+    {"icon": "route", "titre": "Visite et état des lieux", "texte": "Nous repérons les canalisations existantes, leur matériau et leur état, l'emplacement des colonnes et des vannes. Dans l'ancien, c'est souvent là que se trouvent les surprises."},
+    {"icon": "file-invoice", "titre": "Devis détaillé", "texte": "Un devis poste par poste, gratuit et sans engagement : réseaux, appareils, chauffe-eau, main-d'œuvre. Les équipements se choisissent avant le démarrage."},
+    {"icon": "hard-hat", "titre": "Dépose et passage des réseaux", "texte": "Dépose des anciennes canalisations, passage des nouvelles en gaines ou saignées, pose des évacuations avec la pente nécessaire."},
+    {"icon": "droplet", "titre": "Essais en pression", "texte": "Chaque réseau est mis en eau et contrôlé avant fermeture des cloisons. Une fuite se corrige en quelques minutes à ce stade, et en plusieurs jours si elle est découverte après le carrelage."},
+    {"icon": "key", "titre": "Pose des appareils et mise en service", "texte": "Raccordement des sanitaires, de la robinetterie et du chauffe-eau, réglages, essais finaux et remise en état des lieux."}
+  ],
+  "tarifs": {
+    "cats": ["plomberie"],
+    "h2": "Combien coûte|la plomberie ?",
+    "intro": "Les fourchettes varient selon le type d'intervention : un réseau neuf se chiffre au mètre linéaire, un appareil à l'unité, un dépannage à l'heure.",
+    "facteurs": [
+      {"titre": "Dépose de l'existant {coef:depose}", "texte": "Canalisations, appareils ou chauffe-eau à démonter et à évacuer."},
+      {"titre": "Accès difficile {coef:acces}", "texte": "Gaines étroites, passage sous plancher, étage sans ascenseur."},
+      {"titre": "Support dégradé {coef:support}", "texte": "Cloisons ou sols à reprendre pour passer les réseaux."},
+      {"titre": "Finition premium {coef:premium}", "texte": "Robinetterie encastrée, appareils haut de gamme, pose complexe."}
+    ]
+  },
+  "conseils": {
+    "eyebrow": "Bon à savoir",
+    "h2": "Quatre notions|qui évitent les dégâts",
+    "intro": "La plomberie est un domaine où l'anticipation coûte peu et où la négligence coûte cher. Voici ce que nous recommandons à chaque client.",
+    "items": [
+      {"titre": "Repérer sa vanne d'arrêt générale", "texte": "En cas de fuite, couper l'arrivée d'eau est le premier geste. Beaucoup de personnes ignorent où se trouve leur vanne d'arrêt : le moment d'apprendre à la manœuvrer est avant l'incident, pas pendant."},
+      {"titre": "Remplacer les canalisations en plomb", "texte": "Dans un logement ancien, des canalisations en plomb peuvent subsister. Elles sont à remplacer, car la réglementation sur la qualité de l'eau limite la teneur en plomb. Un état des lieux des réseaux est systématique à la visite."},
+      {"titre": "Choisir le chauffe-eau selon l'usage", "texte": "Un chauffe-eau thermodynamique consomme moins d'électricité qu'un modèle classique, mais il demande de la place et une pièce non chauffée à proximité. Nous vous conseillons selon la configuration du logement et le nombre d'occupants."},
+      {"titre": "Prévoir l'accès aux organes de coupure", "texte": "Les vannes et les siphons doivent rester accessibles après la rénovation, derrière une trappe ou un panneau démontable. Un réseau enterré sous du carrelage sans accès devient très cher à réparer."}
+    ]
+  },
+  "photos_h2": "Des pièces d'eau|livrées à Lyon et à Boulogne",
+  "photos_texte": "Deux pièces d'eau de nos chantiers. Retrouvez toutes nos [réalisations](realisations).",
+  "photos": [
+    {"img": "image9", "alt": "Salle de bains à Lyon avec douche à colonne noire, meuble vasque et miroir rétroéclairé", "legende": "Salle de bains à Lyon : colonne de douche noire, meuble vasque et robinetterie assortie.", "lien": "realisations#rl-salles-de-bains"},
+    {"img": "image8", "alt": "WC suspendu avec faïence effet marbre et lave-mains à Boulogne-Billancourt", "legende": "WC à Boulogne-Billancourt : cuvette suspendue, lave-mains et faïence effet marbre.", "lien": "realisations#rl-salles-de-bains"}
+  ],
+  "faq_h2": "Les questions|qu'on nous pose",
+  "faq_intro": "Fuite, chauffe-eau, canalisations anciennes, devis : les réponses aux questions de plomberie les plus fréquentes.",
+  "faq": [
+    {"q": "Que faire en cas de fuite d'eau ?", "r": "Coupez immédiatement l'arrivée d'eau à la vanne générale, puis coupez l'électricité dans la pièce concernée si l'eau s'approche des prises. Prenez des photos, puis déclarez le sinistre à votre assurance habitation dans les délais prévus par votre contrat. Pour une intervention rapide, contactez-nous : nous traitons les [demandes urgentes](contact)."},
+    {"q": "Peut-on déplacer un point d'eau ?", "r": "Souvent oui, à condition que l'évacuation garde une pente suffisante vers la colonne. Plus le point d'eau s'en éloigne, plus la pente est difficile à tenir. Nous vérifions la faisabilité lors de la visite."},
+    {"q": "Faut-il changer toutes les canalisations en rénovation ?", "r": "Pas toujours, mais c'est souvent prudent quand les murs sont ouverts et que les réseaux ont plus de quarante ans. Remplacer des canalisations quand le carrelage est déjà posé revient beaucoup plus cher. Nous vous indiquons dans le devis ce qui peut être conservé."},
+    {"q": "Quelle différence entre un chauffe-eau électrique et thermodynamique ?", "r": "Le chauffe-eau électrique chauffe l'eau par une résistance. Le thermodynamique récupère les calories de l'air ambiant et consomme nettement moins, mais coûte plus cher à l'achat et demande de la place. Nous le recommandons surtout aux foyers de plusieurs personnes."},
+    {"q": "Intervenez-vous seulement en rénovation complète ?", "r": "Non. Nous réalisons aussi des interventions isolées : remplacement d'un chauffe-eau, pose d'une robinetterie, reprise d'une évacuation. Pour un ordre de grandeur, consultez la [grille tarifaire](tarifs) ou l'[estimateur](contact?devis=plomberie#devisEstimator)."},
+    {"q": "Qui s'occupe du carrelage après la plomberie ?", "r": "Nous coordonnons les métiers. Une fois les réseaux testés en pression, le carreleur ferme les murs et pose les sols. Pour les [salles de bain](salle-de-bain) comme pour les [cuisines](cuisine), vous n'avez qu'un interlocuteur."}
+  ],
+  "voir_aussi": [
+    {"slug": "salle-de-bain", "label": "Salle de bain", "texte": "Plomberie, étanchéité, carrelage et équipements."},
+    {"slug": "cuisine", "label": "Cuisine", "texte": "Réseaux, plan de travail et pose."},
+    {"slug": "electricite", "label": "Électricité", "texte": "Mise aux normes, tableau, éclairage."}
+  ],
+  "cta": {"h2": "Un projet|ou une urgence ?", "p": "Visite sur site et devis détaillé gratuits. Réponse sous 24h."}
+}

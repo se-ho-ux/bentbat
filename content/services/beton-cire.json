@@ -1,0 +1,88 @@
+{
+  "slug": "beton-cire",
+  "nom": "Béton ciré premium",
+  "nom_schema": "Béton ciré premium sur mesure",
+  "service_type": "Fabrication et pose de béton ciré décoratif : sols, murs, plans de travail, salles de bains",
+  "kind": "pilier",
+  "estimateur": "premium",
+  "title": "Béton Ciré Premium, Fabriqué en Atelier | Ben&Bat",
+  "description_meta": "Béton ciré premium fabriqué en atelier depuis 1999 : sols, murs, salles de bains, plans de travail. France et Belgique. Devis gratuit sous 24h.",
+  "description": "Béton ciré premium fabriqué dans notre atelier depuis 1999 et posé par nos artisans : sols, murs, salles de bains, plans de travail, vasques et escaliers, en France et en Belgique.",
+  "kicker": "Notre spécialité signature",
+  "h1": "Béton ciré premium|fabriqué en atelier",
+  "lede": "Sols, murs, salles de bains, plans de travail et escaliers : un revêtement continu, sans joint, dont les teintes sont composées dans notre atelier depuis 1999 et posées par nos propres artisans.",
+  "bref": [
+    ["Épaisseur", "Quelques millimètres, posé sur l'existant dans la plupart des cas"],
+    ["Budget indicatif", "Béton ciré : {prix:premium:0} HT"],
+    ["Fabrication", "En atelier Ben&Bat, depuis 1999"],
+    ["Zones", "France et Belgique, avec pages dédiées Paris et Bruxelles"]
+  ],
+  "intro": {
+    "h2": "Un revêtement continu,|fait sur mesure",
+    "p": [
+      "Le béton ciré est un enduit décoratif minéral qui s'applique en couches fines sur un sol, un mur, un plan de travail ou un meuble. Une fois protégé, il forme une surface continue, sans joint, d'aspect mat, satiné ou cire, aux nuances propres à chaque chantier. C'est cette continuité qui lui donne son caractère, et c'est aussi ce qui exige du soin à la pose.",
+      "Nous ne revendons pas un produit du commerce : nos formulations sont composées dans notre atelier depuis 1999, validées sur échantillon avant tout chantier, et appliquées par les artisans qui les ont préparées. Les teintes sont donc entièrement sur mesure, et les raccords maîtrisés même sur de grandes surfaces.",
+      "Nous intervenons partout en France et en Belgique. Pour le détail de nos chantiers locaux, voir [béton ciré à Paris et en Île-de-France](beton-cire-paris) et [béton ciré à Bruxelles et en Belgique](beton-cire-bruxelles)."
+    ]
+  },
+  "cartes": [
+    {"icon": "layer-group", "titre": "Sols", "texte": "Séjour, couloir, chambre, cuisine ouverte : un sol coulé sans joint agrandit visuellement l'espace. Il se pose le plus souvent sur un carrelage sain, sans dépose.", "liste": ["Pose sur carrelage conservé", "Surface continue", "Compatible sol chauffant selon le support", "Pas de surépaisseur notable"]},
+    {"icon": "shower", "titre": "Salles de bains et douches", "texte": "Murs, sols, receveurs et niches en continuité. L'étanchéité est faite sous le revêtement, puis une protection adaptée aux pièces d'eau est appliquée.", "liste": ["Douches à l'italienne", "Murs et niches", "Étanchéité sous revêtement", "Protection hydrofuge"]},
+    {"icon": "utensils", "titre": "Cuisines : plans de travail et crédences", "texte": "Plan de travail, îlot et crédence dans la même teinte suppriment les joints, donc les zones qui noircissent. La protection est adaptée au contact alimentaire.", "liste": ["Plans de travail sur mesure", "Îlots", "Crédences sans joint", "Protection adaptée à la cuisine"]},
+    {"icon": "couch", "titre": "Mobilier, vasques et escaliers", "texte": "Nous coulons aussi des [vasques](vasques-sur-mesure), du [mobilier](mobilier-sur-mesure) et des escaliers, y compris sur un escalier bois existant.", "liste": ["Vasques et plans de toilette", "Mobilier sur mesure", "Marches et contremarches", "Pièces uniques"]}
+  ],
+  "deroule_h2": "Du support|à la protection finale",
+  "deroule_intro": "Chaque couche sèche avant la suivante. C'est ce temps de séchage, plus que le geste d'application, qui détermine la durée du chantier.",
+  "etapes": [
+    {"icon": "route", "titre": "Visite et validation du support", "texte": "Nous vérifions la solidité et la planéité du support, son adhérence, son humidité, et l'absence de fissures actives. Ce contrôle conditionne la tenue du revêtement."},
+    {"icon": "palette", "titre": "Échantillon et choix de la teinte", "texte": "La teinte est composée pour votre projet, puis validée sur échantillon avant tout chantier. Vous choisissez aussi la finition : mate, satinée ou cirée."},
+    {"icon": "tools", "titre": "Préparation et primaire", "texte": "Nettoyage, réparation des fissures, ragréage si nécessaire, application du primaire d'accroche. Dans les pièces d'eau, l'étanchéité est posée à ce stade."},
+    {"icon": "layer-group", "titre": "Application en couches", "texte": "Application de plusieurs couches fines, avec ponçage entre les passes, pour obtenir la profondeur et les nuances recherchées."},
+    {"icon": "shield-alt", "titre": "Protection, nettoyage et réception", "texte": "Application de la protection adaptée à l'usage de la surface, nettoyage complet, et remise d'un protocole d'entretien. Un bilan est fait 30 jours après la livraison."}
+  ],
+  "tarifs": {
+    "cats": ["premium"],
+    "only": ["Béton ciré"],
+    "h2": "Combien coûte|un béton ciré ?",
+    "intro": "Le prix varie surtout avec la surface, l'état du support, la complexité des formes et la teinte demandée. Il se chiffre au mètre carré, hors fourniture de travaux annexes.",
+    "facteurs": [
+      {"titre": "Dépose de l'existant {coef:depose}", "texte": "Revêtement à retirer quand il n'est pas assez sain pour être recouvert."},
+      {"titre": "Accès difficile {coef:acces}", "texte": "Étage sans ascenseur, accès restreint, livraison des matériaux complexe."},
+      {"titre": "Support dégradé {coef:support}", "texte": "Support fissuré, humide ou irrégulier à reprendre avant application."},
+      {"titre": "Finition premium {coef:premium}", "texte": "Teintes sur mesure, formes complexes, grandes surfaces sans reprise visible."}
+    ]
+  },
+  "conseils": {
+    "eyebrow": "Avant de choisir",
+    "h2": "Quatre choses|à savoir sur le béton ciré",
+    "intro": "Le béton ciré est un matériau séduisant mais exigeant. Voici ce que nous expliquons à chaque client avant de chiffrer.",
+    "items": [
+      {"titre": "Il a une personnalité, pas une uniformité", "texte": "Le béton ciré est appliqué à la main, couche après couche : il présente des nuances, des variations de matière et de teinte. C'est ce qui fait son charme. Si l'on cherche une uniformité parfaite, un autre revêtement est plus adapté."},
+      {"titre": "Le support décide de sa tenue", "texte": "Un support instable, humide ou fissurant se retrouve dans le revêtement. Dans les immeubles anciens à plancher bois, nous stabilisons et désolidarisons le support avant application. C'est le premier point que nous vérifions."},
+      {"titre": "La protection se renouvelle", "texte": "Une surface en béton ciré est protégée par une finition qui s'use avec le temps, plus vite dans les zones de passage ou les plans de travail. Elle se renouvelle simplement, sans refaire le revêtement. Nous vous remettons un protocole d'entretien."},
+      {"titre": "L'entretien est simple mais précis", "texte": "Un nettoyage à l'eau et au savon au pH neutre suffit. Il faut éviter les produits acides ou très agressifs et les outils abrasifs. Il n'y a pas de joints à récurer."}
+    ]
+  },
+  "photos_h2": "Du béton ciré|dans les pièces à vivre",
+  "photos_texte": "Deux chantiers en béton ciré. Retrouvez toutes nos [réalisations](realisations).",
+  "photos": [
+    {"img": "image14", "alt": "Salle de bains en béton ciré foncé avec baignoire îlot et robinetterie laiton", "legende": "Salle de bains en béton ciré foncé : baignoire îlot, plan vasque et robinetterie laiton.", "lien": "realisations#rl-beton-cire"},
+    {"img": "image15", "alt": "Cuisine en béton ciré avec îlot minimaliste à Bruxelles", "legende": "Cuisine à Bruxelles : îlot et meubles en béton ciré, poutres apparentes au plafond.", "lien": "realisations#rl-beton-cire"}
+  ],
+  "faq_h2": "Les questions|qu'on nous pose",
+  "faq_intro": "Supports, épaisseur, salle de bains, entretien, prix : ce qu'il faut savoir avant de choisir du béton ciré.",
+  "faq": [
+    {"q": "Qu'est-ce que le béton ciré ?", "r": "C'est un revêtement décoratif minéral appliqué en couches fines sur un sol, un mur ou un plan de travail, puis protégé par une finition. Il forme une surface continue sans joint, aux nuances propres à chaque chantier. Le nôtre est fabriqué dans notre atelier depuis 1999."},
+    {"q": "Sur quels supports peut-on appliquer du béton ciré ?", "r": "Sur du carrelage sain et adhérent, une chape, du béton, des enduits ou certains panneaux, après préparation. Il se pose en quelques millimètres, ce qui évite le plus souvent de déposer l'ancien revêtement. Nous vérifions le support lors de la visite."},
+    {"q": "Le béton ciré est-il adapté à une salle de bains ?", "r": "Oui, à condition d'une étanchéité faite sous le revêtement et d'une protection adaptée aux pièces d'eau. C'est l'un de nos usages les plus fréquents. Voir aussi notre page [salle de bain](salle-de-bain)."},
+    {"q": "Le béton ciré se raye-t-il ou se tache-t-il ?", "r": "Comme tout revêtement, il peut marquer sous des chocs ou des produits agressifs. La finition de protection limite les taches et peut être renouvelée. Un sol en béton ciré vieillit en prenant de la patine, ce que beaucoup de clients apprécient."},
+    {"q": "Combien de temps dure un chantier de béton ciré ?", "r": "Cela dépend de la surface et du nombre de couches, chaque couche devant sécher avant la suivante. Nous indiquons un planning précis sur le devis après le relevé, et nous précisons le délai avant la mise en service complète de la surface."},
+    {"q": "Comment estimer mon budget béton ciré ?", "r": "Mesurez la surface, puis utilisez l'[estimateur de budget](contact?devis=premium#devisEstimator) ou consultez la [grille tarifaire](tarifs). La fourchette est hors taxes ; un échantillon et une visite permettent de la préciser."}
+  ],
+  "voir_aussi": [
+    {"slug": "beton-cire-paris", "label": "Béton ciré à Paris", "texte": "Nos chantiers à Paris et en Île-de-France."},
+    {"slug": "beton-cire-bruxelles", "label": "Béton ciré à Bruxelles", "texte": "Nos chantiers à Bruxelles et en Belgique."},
+    {"slug": "vasques-sur-mesure", "label": "Vasques sur mesure", "texte": "Vasques et plans de toilette en béton ciré, pièces uniques."}
+  ],
+  "cta": {"h2": "Un projet|en béton ciré ?", "p": "Échantillon, visite sur site et devis détaillé gratuits. Réponse sous 24h."}
+}

@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- @shared:head-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
+    }
+  </script>
+  <!-- @end:head-meta -->
+  <link rel="canonical" href="https://benbat.fr/cuisine">
+  <title>Rénovation et Pose de Cuisine sur Mesure | Ben&amp;Bat</title>
+  <meta name="description" content="Rénovation et pose de cuisine équipée ou sur mesure : plomberie, électricité, plan de travail, îlot et crédence. Prix indicatifs, devis gratuit sous 24h.">
+  <meta property="og:title" content="Rénovation et Pose de Cuisine sur Mesure | Ben&amp;Bat">
+  <meta property="og:description" content="Rénovation et pose de cuisine équipée ou sur mesure : plomberie, électricité, plan de travail, îlot et crédence. Prix indicatifs, devis gratuit sous 24h.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benbat.fr/cuisine">
+  <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- @shared:head-assets -->
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
+    } catch (e) {}
+  </script>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=18">
+  <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+       ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+       accompagnent toujours un libellé texte. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- @end:head-assets -->
+  <!-- @shared:schema-business -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://benbat.fr/#entreprise",
+  "name": "Ben&Bat",
+  "description": "Spécialistes du béton ciré premium et de la rénovation intérieure tous corps de métier depuis 25 ans. Paris, Île-de-France et toute la Belgique.",
+  "url": "https://benbat.fr/",
+  "telephone": "+33658594147",
+  "email": "contact@ben-bat.com",
+  "image": "https://benbat.fr/images/image15.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Rue François 1er",
+    "addressLocality": "Paris",
+    "postalCode": "75008",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8698258,
+    "longitude": 2.3020488
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Paris"
+    },
+    {
+      "@type": "City",
+      "name": "Lyon"
+    },
+    {
+      "@type": "City",
+      "name": "Marseille"
+    },
+    {
+      "@type": "City",
+      "name": "Bordeaux"
+    },
+    {
+      "@type": "City",
+      "name": "Lille"
+    },
+    {
+      "@type": "City",
+      "name": "Neuilly-sur-Seine"
+    },
+    {
+      "@type": "City",
+      "name": "Versailles"
+    },
+    {
+      "@type": "City",
+      "name": "Boulogne-Billancourt"
+    },
+    {
+      "@type": "City",
+      "name": "Bruxelles"
+    },
+    {
+      "@type": "City",
+      "name": "Liège"
+    },
+    {
+      "@type": "City",
+      "name": "Anvers"
+    },
+    {
+      "@type": "City",
+      "name": "Gand"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    },
+    {
+      "@type": "Country",
+      "name": "Belgique"
+    }
+  ],
+  "knowsAbout": [
+    "béton ciré",
+    "rénovation intérieure",
+    "maçonnerie",
+    "plomberie",
+    "électricité",
+    "carrelage",
+    "mobilier sur mesure",
+    "vasques sur mesure",
+    "parquet",
+    "nettoyage de chantier"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "11",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services BTP",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Béton ciré décoratif",
+          "description": "Application de béton ciré premium sur sols, murs et plans de travail. Paris, Île-de-France et Belgique."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation intérieure tous corps de métier",
+          "description": "Coordination et réalisation de chantiers de rénovation complète : maçonnerie, électricité, plomberie, finitions."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobilier sur mesure",
+          "description": "Conception et fabrication de mobilier sur mesure pour particuliers et professionnels."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vasques sur mesure",
+          "description": "Création de vasques en béton ciré et matériaux naturels, design exclusif."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pose de parquet et carrelage",
+          "description": "Pose de parquet point de Hongrie, carrelage, faïence et revêtements de sol premium."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Nettoyage fin de chantier",
+          "description": "Nettoyage professionnel de bâtiments et fins de chantier en France et Belgique."
+        }
+      }
+    ]
+  },
+  "priceRange": "€€",
+  "logo": "https://benbat.fr/logos-png/wordmark-noir-transparent.webp",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+33658594147",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": [
+        "fr"
+      ]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+32465866372",
+      "contactType": "customer service",
+      "areaServed": "BE",
+      "availableLanguage": [
+        "fr"
+      ]
+    }
+  ]
+  }
+  </script>
+  <!-- @end:schema-business -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://benbat.fr/cuisine#service",
+      "name": "Rénovation et pose de cuisine",
+      "serviceType": "Pose de cuisine équipée ou sur mesure",
+      "description": "Rénovation de cuisine clé en main : dépose, reprise de l'eau et de l'électricité, pose des meubles, plan de travail, îlot, crédence et finitions, en France et en Belgique.",
+      "url": "https://benbat.fr/cuisine",
+      "provider": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Belgique"
+        }
+      ],
+      "image": [
+        "https://benbat.fr/images/image0.webp",
+        "https://benbat.fr/images/image7.webp"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://benbat.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://benbat.fr/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cuisine",
+          "item": "https://benbat.fr/cuisine"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien de temps reste-t-on sans cuisine ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La phase la plus pénalisante, entre la dépose et la remise en service de l'évier et de la plaque, dure en général de une à deux semaines. Le plan de travail sur mesure peut allonger ce délai s'il est découpé après la pose des meubles. Nous vous conseillons de prévoir un coin repas temporaire avec bouilloire et plaque d'appoint."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on changer l'emplacement de l'évier ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, à condition que l'évacuation garde une pente suffisante vers la colonne. Dans un immeuble ancien, c'est parfois limité par la structure du plancher. Nous vérifions la faisabilité lors de la visite, avant de dessiner le plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel plan de travail choisir ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le stratifié est économique et résistant. La pierre et le quartz sont robustes mais lourds et coûteux. Le béton ciré permet une surface sans joint, entièrement sur mesure, avec une protection adaptée aux usages alimentaires. Nous vous montrons des échantillons lors du rendez-vous."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il refaire l'électricité pour une nouvelle cuisine ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pas toujours, mais souvent en partie. Le four, la plaque, le lave-vaisselle et le réfrigérateur nécessitent des circuits dédiés. Nous contrôlons le tableau et les lignes existantes, et nous indiquons dans le devis ce qui doit être repris. Détails sur la page électricité."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posez-vous des cuisines achetées ailleurs ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, nous posons des cuisines équipées et semi-équipées de différentes provenances, à condition qu'elles soient livrées complètes et vérifiées avant le démarrage. Nous pouvons aussi réaliser un îlot ou un plan de travail sur mesure pour compléter."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment obtenir un ordre de grandeur de budget ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Consultez la grille tarifaire ou utilisez l'estimateur de budget. Vous obtenez une fourchette hors taxes pour la pose et les ouvrages associés. Le prix des meubles et de l'électroménager s'ajoute selon vos choix."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image0.webp",
+      "url": "https://benbat.fr/images/image0.webp",
+      "caption": "Cuisine moderne rénovée à Paris avec meubles bleu-gris et plan de travail clair",
+      "name": "Cuisine rénovée à Paris : meubles bleu-gris, plan de travail clair et crédence assortie.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image7.webp",
+      "url": "https://benbat.fr/images/image7.webp",
+      "caption": "Cuisine avec îlot et suspensions à Neuilly-sur-Seine",
+      "name": "Cuisine avec îlot à Neuilly-sur-Seine : meubles blancs, bois et suspensions.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- @shared:header active=services -->
+  <header id="header">
+    <div class="nav-wrap">
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="services" class="active">Services</a></li>
+          <li><a href="tarifs">Tarifs</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <a href="/">Accueil</a>
+    <a href="services">Services</a>
+    <a href="tarifs">Tarifs</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
+  </div>
+  <!-- @end:header -->
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">
+          <a href="/">Accueil</a><span class="sep">/</span><a href="services">Services</a><span class="sep">/</span><span class="cur">Cuisine</span>
+        </div>
+        <h1>Rénovation et pose<br>de cuisine</h1>
+        <p>Cuisine équipée ou sur mesure, avec plomberie, électricité, plan de travail et revêtements assortis : tous les métiers de la cuisine coordonnés par un seul interlocuteur.</p>
+        <div class="svc-hero-cta">
+          <a href="contact?devis=cuisine#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="contact" class="btn btn-ghost-dark">Devis gratuit</a>
+        </div>
+        <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EN BREF ══════════ -->
+  <section class="section-sm svc-facts-band">
+    <div class="container">
+      <dl class="svc-facts">
+          <div><dt>Durée indicative</dt><dd>1 à 4 semaines, hors délai de fabrication de la cuisine</dd></div>
+          <div><dt>Budget indicatif</dt><dd>Cuisine complète : 900 € – 2 500 € / m² HT</dd></div>
+          <div><dt>Interlocuteur</dt><dd>Un seul, de l'implantation à la mise en service</dd></div>
+          <div><dt>Garanties</dt><dd>Décennale, RC Pro, bilan à 30 jours</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══════════ INTRO ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
+        <div>
+          <span class="eyebrow">Cuisine</span>
+          <h2>Une cuisine réussie<br>se joue avant la pose</h2>
+        </div>
+        <div class="svc-prose">
+          <p>Dans une cuisine, les meubles ne sont que la partie visible. Ce qui fait qu'elle fonctionne bien, c'est l'emplacement des arrivées d'eau, la puissance électrique disponible, la place de la hotte et la circulation autour de l'évier, de la plaque et du réfrigérateur. Tout cela se décide sur plan, avant que le premier meuble ne soit commandé.</p>
+          <p>Nous posons des cuisines équipées et semi-équipées, et réalisons des îlots et des plans de travail sur mesure. Nous reprenons aussi les réseaux, le sol et la crédence pour que le résultat soit cohérent de bout en bout, sans avoir à coordonner vous-même un plombier, un électricien et un carreleur.</p>
+          <p>Pour un plan de travail ou un îlot sans joint, le <a href="beton-cire">béton ciré</a> fabriqué dans notre atelier est une option durable et entièrement sur mesure.</p>
+        </div>
+      </div>
+      <div class="services-page-grid">
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-ruler-combined"></i></div>
+          <h3>Implantation et pose</h3>
+          <p>Nous vérifions les cotes sur place, posons les meubles de niveau et ajustons les finitions : plinthes, joues, façades, poignées.</p>
+          <ul class="service-list">
+            <li>Cuisines équipées et semi-équipées</li>
+            <li>Pose de niveau et alignement des façades</li>
+            <li>Électroménager encastré</li>
+            <li>Ajustements et raccords</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-faucet"></i></div>
+          <h3>Plomberie intégrée</h3>
+          <p>Arrivée d'eau, évacuation de l'évier et du lave-vaisselle sont déplacées ou reprises selon le nouveau plan de la pièce.</p>
+          <ul class="service-list">
+            <li>Évier et robinetterie</li>
+            <li>Lave-vaisselle et lave-linge</li>
+            <li>Évacuations reprises</li>
+            <li>Mise en service et essais</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Électricité et éclairage</h3>
+          <p>Plaque, four, lave-vaisselle et réfrigérateur demandent des circuits dédiés. L'éclairage sous meuble et les prises de plan de travail se positionnent avant la pose.</p>
+          <ul class="service-list">
+            <li>Circuits spécialisés</li>
+            <li>Prises de plan de travail</li>
+            <li>Éclairage sous meubles</li>
+            <li>Raccordement de la hotte</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-th-large"></i></div>
+          <h3>Plan de travail, îlot et crédence</h3>
+          <p>Stratifié, pierre, quartz ou béton ciré : le plan de travail est découpé et posé aux cotes exactes, avec la crédence assortie.</p>
+          <ul class="service-list">
+            <li>Plans de travail sur mesure</li>
+            <li>Îlots et péninsules</li>
+            <li>Crédence carrelée ou en béton ciré</li>
+            <li>Sol assorti</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ DÉROULÉ ══════════ -->
+  <section class="section section-dark" id="deroule">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Déroulé d'intervention</span>
+          <h2>De l'implantation<br>à la première recette</h2>
+        </div>
+        <p>La pose proprement dite n'occupe que quelques jours. L'essentiel du chantier est ce qui la précède et ce qui la suit.</p>
+      </div>
+      <div class="services-list">
+        <div class="list-row">
+          <span class="sr-num">01</span>
+          <span class="sr-icon"><i class="fas fa-route"></i></span>
+          <div class="sr-body">
+            <h3>Visite et implantation</h3>
+            <p>Nous relevons la pièce, les arrivées d'eau, les évacuations, les circuits électriques et les contraintes de ventilation. Nous validons ensemble l'implantation avant toute commande.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">02</span>
+          <span class="sr-icon"><i class="fas fa-file-invoice"></i></span>
+          <div class="sr-body">
+            <h3>Devis et commande</h3>
+            <p>Devis détaillé sous 24h ouvrées. La cuisine, l'électroménager et le plan de travail se commandent à ce stade : leurs délais fixent la date de démarrage.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">03</span>
+          <span class="sr-icon"><i class="fas fa-hard-hat"></i></span>
+          <div class="sr-body">
+            <h3>Dépose et reprise des réseaux</h3>
+            <p>Dépose de l'ancienne cuisine, reprise de l'eau, des évacuations et de l'électricité, remise en état des murs et du sol avant la pose.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">04</span>
+          <span class="sr-icon"><i class="fas fa-ruler-combined"></i></span>
+          <div class="sr-body">
+            <h3>Pose des meubles et du plan de travail</h3>
+            <p>Les meubles sont posés et mis de niveau. Le plan de travail est mesuré une fois les meubles en place, puis découpé et posé, avec évier et plaque.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">05</span>
+          <span class="sr-icon"><i class="fas fa-key"></i></span>
+          <div class="sr-body">
+            <h3>Crédence, raccordements et réception</h3>
+            <p>Crédence, joints, raccordement de l'électroménager et de la hotte, essais, nettoyage. Nous vérifions chaque tiroir et chaque porte avec vous.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PRIX ══════════ -->
+  <section class="section" id="prix">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Prix indicatifs</span>
+          <h2>Combien coûte<br>une cuisine ?</h2>
+        </div>
+        <p>Ces fourchettes concernent la pose et les ouvrages associés. Le prix des meubles et de l'électroménager dépend de la gamme choisie et s'ajoute selon votre sélection.</p>
+      </div>
+      <div class="svc-price-layout">
+        <div class="svc-price-tables">
+        <div class="price-cat svc-price-cat">
+          <div class="price-cat-head"><h3>Cuisine</h3></div>
+          <table class="price-table">
+            <thead><tr><th>Prestation</th><th>Fourchette HT</th></tr></thead>
+            <tbody>
+<tr><td>Pose de cuisine<span class="price-unit">/ ml</span></td><td class="price-range">350 € – 900 €</td></tr>
+<tr><td>Plan de travail<span class="price-unit">/ ml</span></td><td class="price-range">120 € – 1 500 €</td></tr>
+<tr><td>Îlot<span class="price-unit">/ unité</span></td><td class="price-range">1 800 € – 7 000 €</td></tr>
+<tr><td>Cuisine complète<span class="price-unit">/ m²</span></td><td class="price-range">900 € – 2 500 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+        <aside class="svc-price-side">
+          <h3>Ce qui fait varier le prix</h3>
+          <ul class="svc-factors"><li><strong>Dépose de l'existant + 15 %</strong> Ancienne cuisine, carrelage ou faïence à démonter et à évacuer.</li><li><strong>Accès difficile + 10 %</strong> Étage sans ascenseur, escalier étroit, portage des plans de travail.</li><li><strong>Support dégradé + 20 %</strong> Murs à reprendre, sol à ragréer avant la pose.</li><li><strong>Finition premium + 30 %</strong> Plan de travail en pierre ou en béton ciré, meubles sur mesure.</li></ul>
+          <p class="svc-price-note">Fourchettes hors taxes, issues de notre <a href="tarifs">grille tarifaire</a>. Le prix définitif est arrêté après une visite technique.</p>
+          <a href="contact?devis=cuisine#devisEstimator" class="btn btn-primary">Estimer mon projet <i class="fas fa-arrow-right"></i></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONSEILS ══════════ -->
+  <section class="section" id="conseils">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Avant de commander</span>
+          <h2>Quatre choix<br>qui changent le quotidien</h2>
+        </div>
+        <p>Ce sont les décisions que nous regardons en premier lors de la visite, parce qu'elles sont presque impossibles à corriger une fois la cuisine posée.</p>
+      </div>
+      <div class="svc-tips">
+        <div class="svc-tip">
+          <h3>Penser la circulation avant l'esthétique</h3>
+          <p>Autour d'un îlot, comptez environ quatre-vingt-dix centimètres de passage pour circuler et ouvrir les portes sans se gêner. Si la pièce ne le permet pas, une péninsule ou une table adossée est souvent plus pertinente qu'un îlot isolé.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Choisir la hotte selon l'évacuation possible</h3>
+          <p>Une hotte à évacuation extérieure est plus efficace qu'une hotte à recyclage, mais elle exige un conduit. En immeuble, ce conduit est parfois impossible : mieux vaut le savoir avant de choisir la cuisine.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Prendre la mesure du plan de travail à la fin</h3>
+          <p>Le plan de travail se mesure une fois les meubles posés et de niveau, jamais sur plan. Un écart de quelques millimètres sur un mur non d'équerre se voit ensuite à chaque joint.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Prévoir la puissance électrique</h3>
+          <p>Four, plaque, lave-vaisselle et lave-linge demandent chacun un circuit dédié. Dans un logement ancien, le tableau électrique doit parfois être renforcé : c'est un poste à anticiper dans le budget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ RÉALISATIONS ══════════ -->
+  <section class="section" id="realisations-liees" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Sur nos chantiers</span>
+          <h2>Des cuisines livrées<br>à Paris et à Neuilly</h2>
+        </div>
+        <p>Deux cuisines de nos chantiers. Retrouvez toutes nos <a href="realisations">réalisations</a>.</p>
+      </div>
+      <div class="svc-photos">
+        <figure class="svc-photo">
+          <a href="realisations#rl-cuisines"><img src="images/image0-640.webp" srcset="images/image0-480.webp 480w, images/image0-640.webp 640w, images/image0-900.webp 900w, images/image0.webp 1183w" sizes="(max-width: 700px) 92vw, 46vw" alt="Cuisine moderne rénovée à Paris avec meubles bleu-gris et plan de travail clair" loading="lazy" decoding="async"></a>
+          <figcaption>Cuisine rénovée à Paris : meubles bleu-gris, plan de travail clair et crédence assortie. <a href="realisations#rl-cuisines">Voir la réalisation</a></figcaption>
+        </figure>
+        <figure class="svc-photo">
+          <a href="realisations#rl-cuisines"><img src="images/image7-640.webp" srcset="images/image7-480.webp 480w, images/image7-640.webp 640w, images/image7-900.webp 900w, images/image7.webp 960w" sizes="(max-width: 700px) 92vw, 46vw" alt="Cuisine avec îlot et suspensions à Neuilly-sur-Seine" loading="lazy" decoding="async"></a>
+          <figcaption>Cuisine avec îlot à Neuilly-sur-Seine : meubles blancs, bois et suspensions. <a href="realisations#rl-cuisines">Voir la réalisation</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Les questions<br>qu'on nous pose</h2>
+        </div>
+        <p>Délais, îlot, plan de travail, électricité : les points à connaître avant de rénover une cuisine.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Combien de temps reste-t-on sans cuisine ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">La phase la plus pénalisante, entre la dépose et la remise en service de l'évier et de la plaque, dure en général de une à deux semaines. Le plan de travail sur mesure peut allonger ce délai s'il est découpé après la pose des meubles. Nous vous conseillons de prévoir un coin repas temporaire avec bouilloire et plaque d'appoint.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Peut-on changer l'emplacement de l'évier ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Oui, à condition que l'évacuation garde une pente suffisante vers la colonne. Dans un immeuble ancien, c'est parfois limité par la structure du plancher. Nous vérifions la faisabilité lors de la visite, avant de dessiner le plan.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Quel plan de travail choisir ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Le stratifié est économique et résistant. La pierre et le quartz sont robustes mais lourds et coûteux. Le <a href="beton-cire">béton ciré</a> permet une surface sans joint, entièrement sur mesure, avec une protection adaptée aux usages alimentaires. Nous vous montrons des échantillons lors du rendez-vous.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Faut-il refaire l'électricité pour une nouvelle cuisine ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Pas toujours, mais souvent en partie. Le four, la plaque, le lave-vaisselle et le réfrigérateur nécessitent des circuits dédiés. Nous contrôlons le tableau et les lignes existantes, et nous indiquons dans le devis ce qui doit être repris. Détails sur la page <a href="electricite">électricité</a>.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Posez-vous des cuisines achetées ailleurs ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Oui, nous posons des cuisines équipées et semi-équipées de différentes provenances, à condition qu'elles soient livrées complètes et vérifiées avant le démarrage. Nous pouvons aussi réaliser un îlot ou un plan de travail sur mesure pour compléter.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Comment obtenir un ordre de grandeur de budget ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Consultez la <a href="tarifs">grille tarifaire</a> ou utilisez l'<a href="contact?devis=cuisine#devisEstimator">estimateur de budget</a>. Vous obtenez une fourchette hors taxes pour la pose et les ouvrages associés. Le prix des meubles et de l'électroménager s'ajoute selon vos choix.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ À VOIR AUSSI ══════════ -->
+  <section class="section-sm" id="voir-aussi">
+    <div class="container">
+      <h2 class="svc-related-title">À voir aussi</h2>
+      <div class="related-grid">
+        <a href="electricite" class="related-card">
+          <h3>Électricité</h3>
+          <p>Circuits dédiés, tableau, éclairage sous meuble.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="plomberie" class="related-card">
+          <h3>Plomberie</h3>
+          <p>Arrivées d'eau, évacuations et appareils.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="beton-cire" class="related-card">
+          <h3>Béton ciré premium</h3>
+          <p>Plan de travail et îlot sans joint, fabriqués dans notre atelier.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="tarifs" class="related-card">
+          <h3>Grille tarifaire complète</h3>
+          <p>Toutes nos prestations, avec fourchettes de prix et majorations.</p>
+          <span>Voir les tarifs <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="garanties" class="related-card">
+          <h3>Garanties et assurances</h3>
+          <p>Décennale, responsabilité civile professionnelle, bilan à 30 jours.</p>
+          <span>Voir les garanties <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="section cta-section" id="ctaSection">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Une cuisine<br>à rénover ?</h2>
+          <p>Visite sur site et devis détaillé gratuits. Réponse sous 24h.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact?devis=cuisine#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- @shared:footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.webp" alt="Ben&amp;Bat" width="360" height="120"></a>
+          <p>25 ans d'expertise BTP : béton ciré premium, mobilier sur mesure et tous corps de métier. France &amp; Belgique.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="tarifs">Tarifs</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Témoignages</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+    <h5>Services</h5>
+    <ul class="footer-links">
+      <li><a href="renovation-complete">Rénovation complète</a></li>
+      <li><a href="salle-de-bain">Salle de bain</a></li>
+      <li><a href="cuisine">Cuisine</a></li>
+      <li><a href="peinture">Peinture</a></li>
+      <li><a href="plomberie">Plomberie</a></li>
+      <li><a href="electricite">Électricité</a></li>
+      <li><a href="carrelage">Carrelage &amp; faïence</a></li>
+      <li><a href="placo-isolation">Placo &amp; isolation</a></li>
+      <li><a href="maconnerie">Maçonnerie</a></li>
+      <li><a href="revetements-de-sol">Revêtements de sol</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Spécialités</h5>
+    <ul class="footer-links">
+      <li><a href="beton-cire">Béton ciré premium</a></li>
+      <li><a href="mobilier-sur-mesure">Mobilier sur mesure</a></li>
+      <li><a href="vasques-sur-mesure">Vasques sur mesure</a></li>
+      <li><a href="nettoyage-fin-de-chantier">Nettoyage fin de chantier</a></li>
+      <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+      <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+      <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
+    </ul>
+  </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">WhatsApp (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@ben-bat.com">contact@ben-bat.com</a></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>60 Rue François 1er, 75008 Paris</span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Sam : 8h–20h</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; <span class="js-year">2026</span> Ben&amp;Bat. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales#cookies" data-cookie-settings>Gérer les cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- @end:footer -->
+  <!-- @shared:sticky -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+    <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." class="btn sticky-phone sticky-whatsapp" target="_blank" rel="noopener" aria-label="Écrire à Ben&amp;Bat sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <!-- @end:sticky -->
+
+  <!-- @shared:scripts -->
+  <script src="js/main.js?v=10" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
+  <!-- @end:scripts -->
+</body>
+</html>

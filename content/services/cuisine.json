@@ -1,0 +1,86 @@
+{
+  "slug": "cuisine",
+  "nom": "Cuisine",
+  "nom_schema": "Rénovation et pose de cuisine",
+  "service_type": "Pose de cuisine équipée ou sur mesure",
+  "estimateur": "cuisine",
+  "title": "Rénovation et Pose de Cuisine sur Mesure | Ben&Bat",
+  "description_meta": "Rénovation et pose de cuisine équipée ou sur mesure : plomberie, électricité, plan de travail, îlot et crédence. Prix indicatifs, devis gratuit sous 24h.",
+  "description": "Rénovation de cuisine clé en main : dépose, reprise de l'eau et de l'électricité, pose des meubles, plan de travail, îlot, crédence et finitions, en France et en Belgique.",
+  "kicker": "Cuisine",
+  "h1": "Rénovation et pose|de cuisine",
+  "lede": "Cuisine équipée ou sur mesure, avec plomberie, électricité, plan de travail et revêtements assortis : tous les métiers de la cuisine coordonnés par un seul interlocuteur.",
+  "bref": [
+    ["Durée indicative", "1 à 4 semaines, hors délai de fabrication de la cuisine"],
+    ["Budget indicatif", "Cuisine complète : {prix:cuisine:3} HT"],
+    ["Interlocuteur", "Un seul, de l'implantation à la mise en service"],
+    ["Garanties", "Décennale, RC Pro, bilan à 30 jours"]
+  ],
+  "intro": {
+    "h2": "Une cuisine réussie|se joue avant la pose",
+    "p": [
+      "Dans une cuisine, les meubles ne sont que la partie visible. Ce qui fait qu'elle fonctionne bien, c'est l'emplacement des arrivées d'eau, la puissance électrique disponible, la place de la hotte et la circulation autour de l'évier, de la plaque et du réfrigérateur. Tout cela se décide sur plan, avant que le premier meuble ne soit commandé.",
+      "Nous posons des cuisines équipées et semi-équipées, et réalisons des îlots et des plans de travail sur mesure. Nous reprenons aussi les réseaux, le sol et la crédence pour que le résultat soit cohérent de bout en bout, sans avoir à coordonner vous-même un plombier, un électricien et un carreleur.",
+      "Pour un plan de travail ou un îlot sans joint, le [béton ciré](beton-cire) fabriqué dans notre atelier est une option durable et entièrement sur mesure."
+    ]
+  },
+  "cartes": [
+    {"icon": "ruler-combined", "titre": "Implantation et pose", "texte": "Nous vérifions les cotes sur place, posons les meubles de niveau et ajustons les finitions : plinthes, joues, façades, poignées.", "liste": ["Cuisines équipées et semi-équipées", "Pose de niveau et alignement des façades", "Électroménager encastré", "Ajustements et raccords"]},
+    {"icon": "faucet", "titre": "Plomberie intégrée", "texte": "Arrivée d'eau, évacuation de l'évier et du lave-vaisselle sont déplacées ou reprises selon le nouveau plan de la pièce.", "liste": ["Évier et robinetterie", "Lave-vaisselle et lave-linge", "Évacuations reprises", "Mise en service et essais"]},
+    {"icon": "bolt", "titre": "Électricité et éclairage", "texte": "Plaque, four, lave-vaisselle et réfrigérateur demandent des circuits dédiés. L'éclairage sous meuble et les prises de plan de travail se positionnent avant la pose.", "liste": ["Circuits spécialisés", "Prises de plan de travail", "Éclairage sous meubles", "Raccordement de la hotte"]},
+    {"icon": "th-large", "titre": "Plan de travail, îlot et crédence", "texte": "Stratifié, pierre, quartz ou béton ciré : le plan de travail est découpé et posé aux cotes exactes, avec la crédence assortie.", "liste": ["Plans de travail sur mesure", "Îlots et péninsules", "Crédence carrelée ou en béton ciré", "Sol assorti"]}
+  ],
+  "deroule_h2": "De l'implantation|à la première recette",
+  "deroule_intro": "La pose proprement dite n'occupe que quelques jours. L'essentiel du chantier est ce qui la précède et ce qui la suit.",
+  "etapes": [
+    {"icon": "route", "titre": "Visite et implantation", "texte": "Nous relevons la pièce, les arrivées d'eau, les évacuations, les circuits électriques et les contraintes de ventilation. Nous validons ensemble l'implantation avant toute commande."},
+    {"icon": "file-invoice", "titre": "Devis et commande", "texte": "Devis détaillé sous 24h ouvrées. La cuisine, l'électroménager et le plan de travail se commandent à ce stade : leurs délais fixent la date de démarrage."},
+    {"icon": "hard-hat", "titre": "Dépose et reprise des réseaux", "texte": "Dépose de l'ancienne cuisine, reprise de l'eau, des évacuations et de l'électricité, remise en état des murs et du sol avant la pose."},
+    {"icon": "ruler-combined", "titre": "Pose des meubles et du plan de travail", "texte": "Les meubles sont posés et mis de niveau. Le plan de travail est mesuré une fois les meubles en place, puis découpé et posé, avec évier et plaque."},
+    {"icon": "key", "titre": "Crédence, raccordements et réception", "texte": "Crédence, joints, raccordement de l'électroménager et de la hotte, essais, nettoyage. Nous vérifions chaque tiroir et chaque porte avec vous."}
+  ],
+  "tarifs": {
+    "cats": ["cuisine"],
+    "h2": "Combien coûte|une cuisine ?",
+    "intro": "Ces fourchettes concernent la pose et les ouvrages associés. Le prix des meubles et de l'électroménager dépend de la gamme choisie et s'ajoute selon votre sélection.",
+    "facteurs": [
+      {"titre": "Dépose de l'existant {coef:depose}", "texte": "Ancienne cuisine, carrelage ou faïence à démonter et à évacuer."},
+      {"titre": "Accès difficile {coef:acces}", "texte": "Étage sans ascenseur, escalier étroit, portage des plans de travail."},
+      {"titre": "Support dégradé {coef:support}", "texte": "Murs à reprendre, sol à ragréer avant la pose."},
+      {"titre": "Finition premium {coef:premium}", "texte": "Plan de travail en pierre ou en béton ciré, meubles sur mesure."}
+    ]
+  },
+  "conseils": {
+    "eyebrow": "Avant de commander",
+    "h2": "Quatre choix|qui changent le quotidien",
+    "intro": "Ce sont les décisions que nous regardons en premier lors de la visite, parce qu'elles sont presque impossibles à corriger une fois la cuisine posée.",
+    "items": [
+      {"titre": "Penser la circulation avant l'esthétique", "texte": "Autour d'un îlot, comptez environ quatre-vingt-dix centimètres de passage pour circuler et ouvrir les portes sans se gêner. Si la pièce ne le permet pas, une péninsule ou une table adossée est souvent plus pertinente qu'un îlot isolé."},
+      {"titre": "Choisir la hotte selon l'évacuation possible", "texte": "Une hotte à évacuation extérieure est plus efficace qu'une hotte à recyclage, mais elle exige un conduit. En immeuble, ce conduit est parfois impossible : mieux vaut le savoir avant de choisir la cuisine."},
+      {"titre": "Prendre la mesure du plan de travail à la fin", "texte": "Le plan de travail se mesure une fois les meubles posés et de niveau, jamais sur plan. Un écart de quelques millimètres sur un mur non d'équerre se voit ensuite à chaque joint."},
+      {"titre": "Prévoir la puissance électrique", "texte": "Four, plaque, lave-vaisselle et lave-linge demandent chacun un circuit dédié. Dans un logement ancien, le tableau électrique doit parfois être renforcé : c'est un poste à anticiper dans le budget."}
+    ]
+  },
+  "photos_h2": "Des cuisines livrées|à Paris et à Neuilly",
+  "photos_texte": "Deux cuisines de nos chantiers. Retrouvez toutes nos [réalisations](realisations).",
+  "photos": [
+    {"img": "image0", "alt": "Cuisine moderne rénovée à Paris avec meubles bleu-gris et plan de travail clair", "legende": "Cuisine rénovée à Paris : meubles bleu-gris, plan de travail clair et crédence assortie.", "lien": "realisations#rl-cuisines"},
+    {"img": "image7", "alt": "Cuisine avec îlot et suspensions à Neuilly-sur-Seine", "legende": "Cuisine avec îlot à Neuilly-sur-Seine : meubles blancs, bois et suspensions.", "lien": "realisations#rl-cuisines"}
+  ],
+  "faq_h2": "Les questions|qu'on nous pose",
+  "faq_intro": "Délais, îlot, plan de travail, électricité : les points à connaître avant de rénover une cuisine.",
+  "faq": [
+    {"q": "Combien de temps reste-t-on sans cuisine ?", "r": "La phase la plus pénalisante, entre la dépose et la remise en service de l'évier et de la plaque, dure en général de une à deux semaines. Le plan de travail sur mesure peut allonger ce délai s'il est découpé après la pose des meubles. Nous vous conseillons de prévoir un coin repas temporaire avec bouilloire et plaque d'appoint."},
+    {"q": "Peut-on changer l'emplacement de l'évier ?", "r": "Oui, à condition que l'évacuation garde une pente suffisante vers la colonne. Dans un immeuble ancien, c'est parfois limité par la structure du plancher. Nous vérifions la faisabilité lors de la visite, avant de dessiner le plan."},
+    {"q": "Quel plan de travail choisir ?", "r": "Le stratifié est économique et résistant. La pierre et le quartz sont robustes mais lourds et coûteux. Le [béton ciré](beton-cire) permet une surface sans joint, entièrement sur mesure, avec une protection adaptée aux usages alimentaires. Nous vous montrons des échantillons lors du rendez-vous."},
+    {"q": "Faut-il refaire l'électricité pour une nouvelle cuisine ?", "r": "Pas toujours, mais souvent en partie. Le four, la plaque, le lave-vaisselle et le réfrigérateur nécessitent des circuits dédiés. Nous contrôlons le tableau et les lignes existantes, et nous indiquons dans le devis ce qui doit être repris. Détails sur la page [électricité](electricite)."},
+    {"q": "Posez-vous des cuisines achetées ailleurs ?", "r": "Oui, nous posons des cuisines équipées et semi-équipées de différentes provenances, à condition qu'elles soient livrées complètes et vérifiées avant le démarrage. Nous pouvons aussi réaliser un îlot ou un plan de travail sur mesure pour compléter."},
+    {"q": "Comment obtenir un ordre de grandeur de budget ?", "r": "Consultez la [grille tarifaire](tarifs) ou utilisez l'[estimateur de budget](contact?devis=cuisine#devisEstimator). Vous obtenez une fourchette hors taxes pour la pose et les ouvrages associés. Le prix des meubles et de l'électroménager s'ajoute selon vos choix."}
+  ],
+  "voir_aussi": [
+    {"slug": "electricite", "label": "Électricité", "texte": "Circuits dédiés, tableau, éclairage sous meuble."},
+    {"slug": "plomberie", "label": "Plomberie", "texte": "Arrivées d'eau, évacuations et appareils."},
+    {"slug": "beton-cire", "label": "Béton ciré premium", "texte": "Plan de travail et îlot sans joint, fabriqués dans notre atelier."}
+  ],
+  "cta": {"h2": "Une cuisine|à rénover ?", "p": "Visite sur site et devis détaillé gratuits. Réponse sous 24h."}
+}

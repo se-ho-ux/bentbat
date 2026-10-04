@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- @shared:head-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
+    }
+  </script>
+  <!-- @end:head-meta -->
+  <link rel="canonical" href="https://benbat.fr/salle-de-bain">
+  <title>Rénovation de Salle de Bain Clé en Main | Ben&amp;Bat</title>
+  <meta name="description" content="Rénovation de salle de bain clé en main : plomberie, douche à l&#x27;italienne, carrelage ou béton ciré. Prix indicatifs et devis gratuit sous 24h.">
+  <meta property="og:title" content="Rénovation de Salle de Bain Clé en Main | Ben&amp;Bat">
+  <meta property="og:description" content="Rénovation de salle de bain clé en main : plomberie, douche à l&#x27;italienne, carrelage ou béton ciré. Prix indicatifs et devis gratuit sous 24h.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benbat.fr/salle-de-bain">
+  <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- @shared:head-assets -->
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
+    } catch (e) {}
+  </script>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=18">
+  <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+       ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+       accompagnent toujours un libellé texte. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- @end:head-assets -->
+  <!-- @shared:schema-business -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://benbat.fr/#entreprise",
+  "name": "Ben&Bat",
+  "description": "Spécialistes du béton ciré premium et de la rénovation intérieure tous corps de métier depuis 25 ans. Paris, Île-de-France et toute la Belgique.",
+  "url": "https://benbat.fr/",
+  "telephone": "+33658594147",
+  "email": "contact@ben-bat.com",
+  "image": "https://benbat.fr/images/image15.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Rue François 1er",
+    "addressLocality": "Paris",
+    "postalCode": "75008",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8698258,
+    "longitude": 2.3020488
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Paris"
+    },
+    {
+      "@type": "City",
+      "name": "Lyon"
+    },
+    {
+      "@type": "City",
+      "name": "Marseille"
+    },
+    {
+      "@type": "City",
+      "name": "Bordeaux"
+    },
+    {
+      "@type": "City",
+      "name": "Lille"
+    },
+    {
+      "@type": "City",
+      "name": "Neuilly-sur-Seine"
+    },
+    {
+      "@type": "City",
+      "name": "Versailles"
+    },
+    {
+      "@type": "City",
+      "name": "Boulogne-Billancourt"
+    },
+    {
+      "@type": "City",
+      "name": "Bruxelles"
+    },
+    {
+      "@type": "City",
+      "name": "Liège"
+    },
+    {
+      "@type": "City",
+      "name": "Anvers"
+    },
+    {
+      "@type": "City",
+      "name": "Gand"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    },
+    {
+      "@type": "Country",
+      "name": "Belgique"
+    }
+  ],
+  "knowsAbout": [
+    "béton ciré",
+    "rénovation intérieure",
+    "maçonnerie",
+    "plomberie",
+    "électricité",
+    "carrelage",
+    "mobilier sur mesure",
+    "vasques sur mesure",
+    "parquet",
+    "nettoyage de chantier"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "11",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services BTP",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Béton ciré décoratif",
+          "description": "Application de béton ciré premium sur sols, murs et plans de travail. Paris, Île-de-France et Belgique."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation intérieure tous corps de métier",
+          "description": "Coordination et réalisation de chantiers de rénovation complète : maçonnerie, électricité, plomberie, finitions."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobilier sur mesure",
+          "description": "Conception et fabrication de mobilier sur mesure pour particuliers et professionnels."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vasques sur mesure",
+          "description": "Création de vasques en béton ciré et matériaux naturels, design exclusif."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pose de parquet et carrelage",
+          "description": "Pose de parquet point de Hongrie, carrelage, faïence et revêtements de sol premium."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Nettoyage fin de chantier",
+          "description": "Nettoyage professionnel de bâtiments et fins de chantier en France et Belgique."
+        }
+      }
+    ]
+  },
+  "priceRange": "€€",
+  "logo": "https://benbat.fr/logos-png/wordmark-noir-transparent.webp",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+33658594147",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": [
+        "fr"
+      ]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+32465866372",
+      "contactType": "customer service",
+      "areaServed": "BE",
+      "availableLanguage": [
+        "fr"
+      ]
+    }
+  ]
+  }
+  </script>
+  <!-- @end:schema-business -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://benbat.fr/salle-de-bain#service",
+      "name": "Rénovation de salle de bain",
+      "serviceType": "Rénovation de salle de bain clé en main",
+      "description": "Rénovation de salle de bain clé en main : dépose, plomberie, étanchéité, carrelage ou béton ciré, électricité et finitions, coordonnés par un interlocuteur unique en France et en Belgique.",
+      "url": "https://benbat.fr/salle-de-bain",
+      "provider": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Belgique"
+        }
+      ],
+      "image": [
+        "https://benbat.fr/images/image9.webp",
+        "https://benbat.fr/images/image3.webp"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://benbat.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://benbat.fr/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Salle de bain",
+          "item": "https://benbat.fr/salle-de-bain"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien de temps reste-t-on sans salle de bain ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Comptez en général deux à cinq semaines selon l'ampleur : une rénovation complète avec reprise des réseaux et étanchéité est plus longue qu'un remplacement de baignoire par une douche. Cette durée dépend aussi du temps de séchage des supports. Nous vous donnons un planning précis dans le devis, et nous vous conseillons d'organiser une solution de repli (douche chez un proche, salle d'eau annexe) pour la période la plus lourde."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "La douche à l'italienne est-elle possible chez moi ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Souvent oui, mais elle demande une pente vers le siphon et donc un peu de hauteur sous le sol fini. Dans un immeuble ancien à plancher bois ou avec une évacuation peu profonde, nous vérifions la faisabilité lors de la visite. Si la hauteur manque, un receveur extra-plat reste une bonne solution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on faire une salle de bain en béton ciré ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, à condition d'utiliser un système conçu pour les pièces d'eau : préparation du support, couches de finition et protection hydrofuge. C'est une spécialité que nous maîtrisons, avec un béton ciré fabriqué dans notre atelier. Voir notre page béton ciré."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il prévenir la copropriété ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pour un simple remplacement d'appareils, rarement. En revanche, tout déplacement d'une évacuation, toute intervention sur une colonne commune ou un percement de mur porteur nécessite d'informer le syndic, voire de demander une autorisation en assemblée générale. Nous vous indiquons ces points dès la visite."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Que comprend le devis ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un devis détaillé poste par poste : dépose, plomberie, étanchéité, revêtements, électricité, équipements et nettoyage. Il est gratuit, sans engagement, et vous pouvez en retirer ou en reporter des lignes. Pour un premier ordre de grandeur, utilisez l'estimateur de budget ou consultez la grille tarifaire."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelles garanties après les travaux ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tous nos chantiers sont couverts par notre assurance décennale et notre responsabilité civile professionnelle. Nous réalisons en plus un bilan 30 jours après la livraison. Le détail est sur la page garanties."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image9.webp",
+      "url": "https://benbat.fr/images/image9.webp",
+      "caption": "Salle de bains rénovée à Lyon avec douche à colonne noire, miroir rétroéclairé et meuble vasque",
+      "name": "Salle de bains à Lyon : douche à colonne noire, miroir rétroéclairé et meuble vasque suspendu.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image3.webp",
+      "url": "https://benbat.fr/images/image3.webp",
+      "caption": "Salle de bains en béton ciré à Paris avec douche à l'italienne et plafond rétroéclairé",
+      "name": "Salle de bains en béton ciré à Paris : douche à l'italienne sans joint et plafond rétroéclairé.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- @shared:header active=services -->
+  <header id="header">
+    <div class="nav-wrap">
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="services" class="active">Services</a></li>
+          <li><a href="tarifs">Tarifs</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <a href="/">Accueil</a>
+    <a href="services">Services</a>
+    <a href="tarifs">Tarifs</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
+  </div>
+  <!-- @end:header -->
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">
+          <a href="/">Accueil</a><span class="sep">/</span><a href="services">Services</a><span class="sep">/</span><span class="cur">Salle de bain</span>
+        </div>
+        <h1>Rénovation de salle de bain<br>clé en main</h1>
+        <p>Plomberie, étanchéité, carrelage ou béton ciré, électricité, meuble et finitions : tous les métiers de la salle de bain coordonnés par un seul interlocuteur, de la dépose à la première douche.</p>
+        <div class="svc-hero-cta">
+          <a href="contact?devis=salle-de-bain#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="contact" class="btn btn-ghost-dark">Devis gratuit</a>
+        </div>
+        <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EN BREF ══════════ -->
+  <section class="section-sm svc-facts-band">
+    <div class="container">
+      <dl class="svc-facts">
+          <div><dt>Durée indicative</dt><dd>2 à 5 semaines selon l'ampleur, hors délais de livraison des équipements</dd></div>
+          <div><dt>Budget indicatif</dt><dd>Salle de bain complète : 1 200 € – 3 500 € / m² HT</dd></div>
+          <div><dt>Interlocuteur</dt><dd>Un seul, du relevé à la réception</dd></div>
+          <div><dt>Garanties</dt><dd>Décennale, RC Pro, bilan à 30 jours</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══════════ INTRO ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
+        <div>
+          <span class="eyebrow">Salle de bain</span>
+          <h2>Une petite pièce,<br>presque tous les métiers</h2>
+        </div>
+        <div class="svc-prose">
+          <p>Une salle de bain concentre en quelques mètres carrés la démolition, la plomberie, l'électricité, l'étanchéité, le carrelage, la menuiserie et la peinture. C'est la pièce où une erreur d'ordre coûte le plus cher : tout ce qui se cache derrière un mur doit être juste avant que les finitions ne le recouvrent.</p>
+          <p>Nous rénovons des salles de bain complètes, de la dépose à la mise en service, mais aussi des interventions ciblées : remplacer une baignoire par une douche à l'italienne, reprendre une étanchéité défaillante, installer un nouveau meuble vasque. Le devis est détaillé poste par poste, vous gardez la main sur le périmètre.</p>
+          <p>Pour les murs et les sols, le <a href="beton-cire">béton ciré</a> fabriqué dans notre atelier est une alternative au carrelage : une surface continue, sans joint, qui s'adapte aux angles et aux formes de la pièce.</p>
+        </div>
+      </div>
+      <div class="services-page-grid">
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-faucet"></i></div>
+          <h3>Plomberie et sanitaires</h3>
+          <p>Alimentations, évacuations et appareils sont repris ou créés selon votre plan. C'est le moment de déplacer un point d'eau ou de remplacer des canalisations vieillissantes.</p>
+          <ul class="service-list">
+            <li>Alimentations et évacuations</li>
+            <li>WC suspendu et bâti-support</li>
+            <li>Robinetterie et colonne de douche</li>
+            <li>Chauffe-eau ou sèche-serviettes</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-shower"></i></div>
+          <h3>Douche et étanchéité</h3>
+          <p>Une douche à l'italienne se joue sous le revêtement : pente régulière, siphon adapté et étanchéité sous carrelage conditionnent la tenue dans le temps.</p>
+          <ul class="service-list">
+            <li>Douche à l'italienne ou receveur extra-plat</li>
+            <li>Siphon de sol et pente d'évacuation</li>
+            <li>Étanchéité sous revêtement</li>
+            <li>Parois de douche</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-th-large"></i></div>
+          <h3>Murs et sols</h3>
+          <p>Carrelage grand format, faïence, mosaïque ou béton ciré : le revêtement se choisit selon l'usage, l'entretien souhaité et le nombre de joints que vous acceptez de voir.</p>
+          <ul class="service-list">
+            <li>Carrelage et faïence</li>
+            <li>Mosaïque et frises</li>
+            <li>Béton ciré mural et sol</li>
+            <li>Joints et finitions soignées</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3>Électricité et ventilation</h3>
+          <p>L'électricité d'une salle de bain suit des règles strictes de volumes de sécurité. La ventilation, souvent oubliée, évite l'humidité persistante et les moisissures.</p>
+          <ul class="service-list">
+            <li>Respect des volumes de sécurité NF C 15-100</li>
+            <li>Prises, éclairage et miroir lumineux</li>
+            <li>Ventilation mécanique</li>
+            <li>Sèche-serviettes électrique</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ DÉROULÉ ══════════ -->
+  <section class="section section-dark" id="deroule">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Déroulé d'intervention</span>
+          <h2>De la dépose<br>à la première douche</h2>
+        </div>
+        <p>L'ordre des interventions est dicté par la matière : ce qui est caché est traité d'abord, ce qui se voit est posé en dernier. Sauter une étape se paie en reprises.</p>
+      </div>
+      <div class="services-list">
+        <div class="list-row">
+          <span class="sr-num">01</span>
+          <span class="sr-icon"><i class="fas fa-route"></i></span>
+          <div class="sr-body">
+            <h3>Visite et relevé</h3>
+            <p>Nous venons sur place, gratuitement. Nous mesurons la pièce, observons l'état des supports, l'emplacement des évacuations et la ventilation existante. C'est ce relevé qui rend le devis fiable.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">02</span>
+          <span class="sr-icon"><i class="fas fa-file-invoice"></i></span>
+          <div class="sr-body">
+            <h3>Devis détaillé et choix des équipements</h3>
+            <p>Vous recevez un devis poste par poste sous 24h ouvrées. Les sanitaires, le meuble et les revêtements se choisissent maintenant : leur délai de livraison conditionne la date de démarrage.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">03</span>
+          <span class="sr-icon"><i class="fas fa-hard-hat"></i></span>
+          <div class="sr-body">
+            <h3>Dépose et reprise des réseaux</h3>
+            <p>Dépose de l'existant, reprise des alimentations et des évacuations, passage des gaines électriques et de ventilation. Les murs sont ensuite remis à niveau.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">04</span>
+          <span class="sr-icon"><i class="fas fa-droplet"></i></span>
+          <div class="sr-body">
+            <h3>Étanchéité, pose et finitions</h3>
+            <p>Étanchéité de la zone de douche, puis pose du carrelage ou application du béton ciré, joints, peinture. Chaque couche respecte son temps de séchage avant la suivante.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">05</span>
+          <span class="sr-icon"><i class="fas fa-key"></i></span>
+          <div class="sr-body">
+            <h3>Pose des équipements et réception</h3>
+            <p>Installation des sanitaires, de la robinetterie et du mobilier, essais d'eau et d'électricité, nettoyage complet. Nous parcourons la pièce avec vous et levons les réserves, puis un bilan est fait 30 jours après la livraison.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PRIX ══════════ -->
+  <section class="section" id="prix">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Prix indicatifs</span>
+          <h2>Combien coûte<br>une salle de bain ?</h2>
+        </div>
+        <p>Une salle de bain complète se chiffre au mètre carré de pièce. Les postes détaillés conviennent aux projets partiels : une douche, une baignoire ou un meuble vasque seuls.</p>
+      </div>
+      <div class="svc-price-layout">
+        <div class="svc-price-tables">
+        <div class="price-cat svc-price-cat">
+          <div class="price-cat-head"><h3>Salle de bain</h3></div>
+          <table class="price-table">
+            <thead><tr><th>Prestation</th><th>Fourchette HT</th></tr></thead>
+            <tbody>
+<tr><td>Douche italienne<span class="price-unit">/ unité</span></td><td class="price-range">2 500 € – 6 500 €</td></tr>
+<tr><td>Baignoire<span class="price-unit">/ unité</span></td><td class="price-range">700 € – 2 000 €</td></tr>
+<tr><td>Meuble vasque<span class="price-unit">/ unité</span></td><td class="price-range">500 € – 2 500 €</td></tr>
+<tr><td>Salle de bain complète<span class="price-unit">/ m²</span></td><td class="price-range">1 200 € – 3 500 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+        <aside class="svc-price-side">
+          <h3>Ce qui fait varier le prix</h3>
+          <ul class="svc-factors"><li><strong>Dépose de l'existant + 15 %</strong> Ancienne baignoire, faïence ou receveur à démolir et à évacuer.</li><li><strong>Accès difficile + 10 %</strong> Étage élevé sans ascenseur, escalier étroit, portage des matériaux.</li><li><strong>Support dégradé + 20 %</strong> Cloisons ou sols à reprendre avant de poser quoi que ce soit.</li><li><strong>Finition premium + 30 %</strong> Pierre naturelle, grand format, béton ciré, robinetterie haut de gamme.</li></ul>
+          <p class="svc-price-note">Fourchettes hors taxes, issues de notre <a href="tarifs">grille tarifaire</a>. Le prix définitif est arrêté après une visite technique.</p>
+          <a href="contact?devis=salle-de-bain#devisEstimator" class="btn btn-primary">Estimer mon projet <i class="fas fa-arrow-right"></i></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONSEILS ══════════ -->
+  <section class="section" id="conseils">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Avant de commencer</span>
+          <h2>Quatre points<br>qui évitent les regrets</h2>
+        </div>
+        <p>Ce sont les questions que nous posons systématiquement lors de la visite, parce qu'elles se règlent mieux avant le chantier qu'après.</p>
+      </div>
+      <div class="svc-tips">
+        <div class="svc-tip">
+          <h3>Ne pas négliger la ventilation</h3>
+          <p>Une salle de bain rénovée sans ventilation efficace garde son humidité et finit par moisir, quelle que soit la qualité du revêtement. Nous vérifions systématiquement l'extraction existante et la remplaçons si elle est sous-dimensionnée ou inactive.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Choisir le revêtement selon l'entretien souhaité</h3>
+          <p>Le grand format réduit le nombre de joints, donc l'entretien. Le <a href="beton-cire">béton ciré</a> supprime les joints mais demande un produit de protection adapté aux pièces d'eau et un entretien avec des produits non agressifs. Nous vous expliquons les deux options sur échantillon.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Commander tôt les équipements</h3>
+          <p>Les sanitaires, les meubles sur mesure et certains carrelages se commandent plusieurs semaines à l'avance. Les choisir avant le démarrage évite un chantier à l'arrêt, avec une pièce inutilisable pendant des jours.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Penser à l'usage dans dix ans</h3>
+          <p>Une douche de plain-pied, un receveur extra-plat ou des renforts dans les cloisons pour de futures barres d'appui ne coûtent presque rien à prévoir pendant les travaux, et beaucoup à ajouter après.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ RÉALISATIONS ══════════ -->
+  <section class="section" id="realisations-liees" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Sur nos chantiers</span>
+          <h2>Des salles de bain<br>livrées à Paris et Lyon</h2>
+        </div>
+        <p>Deux chantiers récents. Les photos sont celles de nos chantiers : retrouvez toutes nos <a href="realisations">réalisations</a>.</p>
+      </div>
+      <div class="svc-photos">
+        <figure class="svc-photo">
+          <a href="realisations#rl-salles-de-bains"><img src="images/image9-640.webp" srcset="images/image9-480.webp 480w, images/image9-640.webp 640w, images/image9-900.webp 900w, images/image9.webp 960w" sizes="(max-width: 700px) 92vw, 46vw" alt="Salle de bains rénovée à Lyon avec douche à colonne noire, miroir rétroéclairé et meuble vasque" loading="lazy" decoding="async"></a>
+          <figcaption>Salle de bains à Lyon : douche à colonne noire, miroir rétroéclairé et meuble vasque suspendu. <a href="realisations#rl-salles-de-bains">Voir la réalisation</a></figcaption>
+        </figure>
+        <figure class="svc-photo">
+          <a href="realisations#rl-beton-cire"><img src="images/image3-640.webp" srcset="images/image3-480.webp 480w, images/image3-640.webp 640w, images/image3-900.webp 900w, images/image3.webp 903w" sizes="(max-width: 700px) 92vw, 46vw" alt="Salle de bains en béton ciré à Paris avec douche à l&#x27;italienne et plafond rétroéclairé" loading="lazy" decoding="async"></a>
+          <figcaption>Salle de bains en béton ciré à Paris : douche à l'italienne sans joint et plafond rétroéclairé. <a href="realisations#rl-beton-cire">Voir la réalisation</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Les questions<br>qu'on nous pose</h2>
+        </div>
+        <p>Durée, douche à l'italienne, béton ciré, copropriété : les points à connaître avant de lancer une rénovation de salle de bain.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Combien de temps reste-t-on sans salle de bain ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Comptez en général deux à cinq semaines selon l'ampleur : une rénovation complète avec reprise des réseaux et étanchéité est plus longue qu'un remplacement de baignoire par une douche. Cette durée dépend aussi du temps de séchage des supports. Nous vous donnons un planning précis dans le devis, et nous vous conseillons d'organiser une solution de repli (douche chez un proche, salle d'eau annexe) pour la période la plus lourde.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            La douche à l'italienne est-elle possible chez moi ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Souvent oui, mais elle demande une pente vers le siphon et donc un peu de hauteur sous le sol fini. Dans un immeuble ancien à plancher bois ou avec une évacuation peu profonde, nous vérifions la faisabilité lors de la visite. Si la hauteur manque, un receveur extra-plat reste une bonne solution.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Peut-on faire une salle de bain en béton ciré ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Oui, à condition d'utiliser un système conçu pour les pièces d'eau : préparation du support, couches de finition et protection hydrofuge. C'est une spécialité que nous maîtrisons, avec un béton ciré fabriqué dans notre atelier. Voir notre page <a href="beton-cire">béton ciré</a>.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Faut-il prévenir la copropriété ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Pour un simple remplacement d'appareils, rarement. En revanche, tout déplacement d'une évacuation, toute intervention sur une colonne commune ou un percement de mur porteur nécessite d'informer le syndic, voire de demander une autorisation en assemblée générale. Nous vous indiquons ces points dès la visite.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Que comprend le devis ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Un devis détaillé poste par poste : dépose, plomberie, étanchéité, revêtements, électricité, équipements et nettoyage. Il est gratuit, sans engagement, et vous pouvez en retirer ou en reporter des lignes. Pour un premier ordre de grandeur, utilisez l'<a href="contact?devis=salle-de-bain#devisEstimator">estimateur de budget</a> ou consultez la <a href="tarifs">grille tarifaire</a>.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Quelles garanties après les travaux ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Tous nos chantiers sont couverts par notre assurance décennale et notre responsabilité civile professionnelle. Nous réalisons en plus un bilan 30 jours après la livraison. Le détail est sur la page <a href="garanties">garanties</a>.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ À VOIR AUSSI ══════════ -->
+  <section class="section-sm" id="voir-aussi">
+    <div class="container">
+      <h2 class="svc-related-title">À voir aussi</h2>
+      <div class="related-grid">
+        <a href="carrelage" class="related-card">
+          <h3>Carrelage et faïence</h3>
+          <p>Pose de carrelage grand format, faïence et mosaïque pour murs et sols.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="plomberie" class="related-card">
+          <h3>Plomberie</h3>
+          <p>Réseaux d'eau, sanitaires, chauffe-eau et dépannage.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="beton-cire" class="related-card">
+          <h3>Béton ciré premium</h3>
+          <p>Murs, sols et plans de travail sans joint, fabriqués dans notre atelier.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="tarifs" class="related-card">
+          <h3>Grille tarifaire complète</h3>
+          <p>Toutes nos prestations, avec fourchettes de prix et majorations.</p>
+          <span>Voir les tarifs <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="garanties" class="related-card">
+          <h3>Garanties et assurances</h3>
+          <p>Décennale, responsabilité civile professionnelle, bilan à 30 jours.</p>
+          <span>Voir les garanties <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="section cta-section" id="ctaSection">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Une salle de bain<br>à rénover ?</h2>
+          <p>Visite sur site et devis détaillé gratuits. Réponse sous 24h.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact?devis=salle-de-bain#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- @shared:footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.webp" alt="Ben&amp;Bat" width="360" height="120"></a>
+          <p>25 ans d'expertise BTP : béton ciré premium, mobilier sur mesure et tous corps de métier. France &amp; Belgique.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="tarifs">Tarifs</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Témoignages</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+    <h5>Services</h5>
+    <ul class="footer-links">
+      <li><a href="renovation-complete">Rénovation complète</a></li>
+      <li><a href="salle-de-bain">Salle de bain</a></li>
+      <li><a href="cuisine">Cuisine</a></li>
+      <li><a href="peinture">Peinture</a></li>
+      <li><a href="plomberie">Plomberie</a></li>
+      <li><a href="electricite">Électricité</a></li>
+      <li><a href="carrelage">Carrelage &amp; faïence</a></li>
+      <li><a href="placo-isolation">Placo &amp; isolation</a></li>
+      <li><a href="maconnerie">Maçonnerie</a></li>
+      <li><a href="revetements-de-sol">Revêtements de sol</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Spécialités</h5>
+    <ul class="footer-links">
+      <li><a href="beton-cire">Béton ciré premium</a></li>
+      <li><a href="mobilier-sur-mesure">Mobilier sur mesure</a></li>
+      <li><a href="vasques-sur-mesure">Vasques sur mesure</a></li>
+      <li><a href="nettoyage-fin-de-chantier">Nettoyage fin de chantier</a></li>
+      <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+      <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+      <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
+    </ul>
+  </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">WhatsApp (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@ben-bat.com">contact@ben-bat.com</a></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>60 Rue François 1er, 75008 Paris</span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Sam : 8h–20h</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; <span class="js-year">2026</span> Ben&amp;Bat. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales#cookies" data-cookie-settings>Gérer les cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- @end:footer -->
+  <!-- @shared:sticky -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+    <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." class="btn sticky-phone sticky-whatsapp" target="_blank" rel="noopener" aria-label="Écrire à Ben&amp;Bat sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <!-- @end:sticky -->
+
+  <!-- @shared:scripts -->
+  <script src="js/main.js?v=10" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
+  <!-- @end:scripts -->
+</body>
+</html>

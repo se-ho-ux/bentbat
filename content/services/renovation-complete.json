@@ -1,0 +1,86 @@
+{
+  "slug": "renovation-complete",
+  "nom": "Rénovation complète",
+  "nom_schema": "Rénovation complète tous corps de métier",
+  "service_type": "Rénovation intérieure complète",
+  "estimateur": "renovation",
+  "title": "Rénovation Complète Tous Corps de Métier | Ben&Bat",
+  "description_meta": "Rénovation complète clé en main en France et en Belgique : un interlocuteur unique, tous les corps de métier, devis détaillé gratuit sous 24h.",
+  "description": "Rénovation complète de logement clé en main : audit, devis détaillé, coordination de tous les corps de métier, finitions et réception, en France et en Belgique.",
+  "kicker": "Rénovation clé en main",
+  "h1": "Rénovation complète|tous corps de métier",
+  "lede": "Maçonnerie, plomberie, électricité, sols, peinture, cuisine et salle de bain : un seul interlocuteur pilote l'ensemble du chantier, du premier relevé à la remise des clés, en France et en Belgique.",
+  "bref": [
+    ["Durée indicative", "De 6 semaines pour un petit logement à plusieurs mois pour une rénovation lourde"],
+    ["Budget indicatif", "Rénovation complète : {prix:renovation:0} HT"],
+    ["Interlocuteur", "Un pilote unique pour tous les corps de métier"],
+    ["Garanties", "Décennale, RC Pro, bilan à 30 jours"]
+  ],
+  "intro": {
+    "h2": "Un chantier,|un seul responsable",
+    "p": [
+      "Rénover un logement en entier revient à faire intervenir cinq à dix métiers dans le bon ordre. Les difficultés ne sont presque jamais techniques : elles viennent des délais qui se chevauchent, des commandes qui arrivent trop tard et des artisans qui s'attendent les uns les autres. Avec un interlocuteur unique, c'est notre rôle de les arbitrer, pas le vôtre.",
+      "Nous intervenons sur des rénovations complètes d'appartements et de maisons, mais aussi sur des rénovations partielles : un étage, une aile, deux pièces d'eau. Le devis est établi poste par poste, ce qui vous permet de phaser le projet dans le temps ou de retirer une ligne sans repartir de zéro.",
+      "À Paris, nous détaillons les contraintes propres aux immeubles de la capitale sur la page [rénovation d'appartement à Paris](renovation-appartement-paris)."
+    ]
+  },
+  "cartes": [
+    {"icon": "user-tie", "titre": "Pilotage de chantier", "texte": "Un responsable unique tient le planning, les commandes et les livraisons. Vous savez à tout moment où en est le chantier et ce qui est attendu de vous.", "liste": ["Planning coordonné entre les métiers", "Commandes et livraisons suivies", "Point d'avancement régulier", "Réception accompagnée"]},
+    {"icon": "hard-hat", "titre": "Gros œuvre et réseaux", "texte": "Démolition, ouvertures, cloisons, reprise de l'eau, de l'électricité et de la ventilation. Tout ce qui est invisible est traité avant les finitions.", "liste": ["[Maçonnerie](maconnerie) et cloisons", "[Plomberie](plomberie) et évacuations", "[Électricité](electricite) aux normes", "[Placo et isolation](placo-isolation)"]},
+    {"icon": "paint-roller", "titre": "Second œuvre et finitions", "texte": "Sols, murs, plafonds, menuiseries : les finitions donnent son caractère au logement. Elles sont réalisées par des artisans spécialistes, jamais par des généralistes.", "liste": ["[Peinture](peinture) et enduits décoratifs", "[Carrelage](carrelage) et faïence", "[Parquet et revêtements de sol](revetements-de-sol)", "[Béton ciré](beton-cire)"]},
+    {"icon": "couch", "titre": "Pièces à vivre", "texte": "Cuisine, salle de bain et mobilier sur mesure sont traités dans le même chantier, avec les mêmes interlocuteurs et sans rupture de planning.", "liste": ["[Cuisine](cuisine) équipée ou sur mesure", "[Salle de bain](salle-de-bain) complète", "[Mobilier sur mesure](mobilier-sur-mesure)", "Nettoyage de fin de chantier"]}
+  ],
+  "deroule_h2": "Du relevé|à la remise des clés",
+  "deroule_intro": "Le même déroulé sur tous nos chantiers, d'un studio à une maison entière. Ce qui varie, c'est la durée de chaque étape.",
+  "etapes": [
+    {"icon": "route", "titre": "Visite, relevé et cahier des charges", "texte": "Nous venons sur place, gratuitement, pour relever les dimensions, l'état des réseaux et la nature des supports. Nous vous aidons à fixer le périmètre : ce qui est refait, ce qui est conservé, ce qui peut attendre."},
+    {"icon": "file-invoice", "titre": "Devis détaillé sous 24h", "texte": "Un devis poste par poste, gratuit et sans engagement. Chaque corps de métier est chiffré séparément, ce qui vous permet d'arbitrer ligne à ligne avant de lancer quoi que ce soit."},
+    {"icon": "hard-hat", "titre": "Dépose, gros œuvre et réseaux", "texte": "Protection des parties communes, dépose, maçonnerie, reprise des réseaux. Les murs sont fermés une fois les réseaux contrôlés, jamais avant."},
+    {"icon": "paint-roller", "titre": "Second œuvre et finitions", "texte": "Cloisons, enduits, sols, faïence, peinture, menuiseries, mobilier. Les métiers s'enchaînent dans l'ordre imposé par les temps de séchage, sans temps mort entre deux intervenants."},
+    {"icon": "key", "titre": "Nettoyage, réception et bilan", "texte": "Remise en état complète, visite du logement avec vous et levée des réserves. Un bilan est réalisé 30 jours après la livraison."}
+  ],
+  "tarifs": {
+    "cats": ["renovation"],
+    "h2": "Combien coûte|une rénovation complète ?",
+    "intro": "Le prix d'une rénovation complète se calcule au mètre carré, avec une fourchette large parce que l'état de départ et le niveau de finition changent tout. Seule une visite permet de resserrer l'estimation.",
+    "facteurs": [
+      {"titre": "Dépose de l'existant {coef:depose}", "texte": "Cloisons, sols, cuisine et sanitaires à démolir et à évacuer."},
+      {"titre": "Accès difficile {coef:acces}", "texte": "Étage élevé sans ascenseur, cour étroite, stationnement impossible."},
+      {"titre": "Support dégradé {coef:support}", "texte": "Murs humides, planchers à reprendre, réseaux vétustes."},
+      {"titre": "Finition premium {coef:premium}", "texte": "Matériaux nobles, béton ciré, mobilier sur mesure, pierre naturelle."}
+    ]
+  },
+  "conseils": {
+    "eyebrow": "Avant de lancer le projet",
+    "h2": "Quatre réflexes|qui sécurisent un chantier",
+    "intro": "Ces points se règlent mieux avant le premier coup de masse qu'en cours de chantier. Nous les abordons lors de la visite.",
+    "items": [
+      {"titre": "Garder une marge pour l'imprévu", "texte": "Un mur qui dévoile une canalisation vétuste ou un plancher à reprendre n'apparaissent qu'à la dépose. Prévoir une réserve de dix à quinze pour cent du budget évite de devoir arbitrer dans l'urgence."},
+      {"titre": "Vérifier les autorisations avant de démolir", "texte": "En copropriété, toute intervention touchant aux parties communes, aux murs porteurs ou à la façade demande l'accord du syndic ou de l'assemblée générale. Nous vous indiquons ces points dès la visite."},
+      {"titre": "Faire contrôler les diagnostics dans l'ancien", "texte": "Dans un logement ancien, un repérage amiante peut être exigé avant travaux, et un repérage plomb est vivement conseillé avant 1949. Ils protègent les occupants et les artisans, et se commandent avant le démarrage."},
+      {"titre": "Choisir les matériaux avant la signature", "texte": "Carrelage, sanitaires, cuisine et parquet se commandent plusieurs semaines à l'avance. Un choix tardif retarde le chantier tout entier, alors qu'un choix précoce permet de planifier chaque métier au plus juste."}
+    ]
+  },
+  "photos_h2": "Des logements rénovés|de la dépose aux finitions",
+  "photos_texte": "Deux chantiers d'appartements anciens. Retrouvez toutes nos [réalisations](realisations).",
+  "photos": [
+    {"img": "image13", "alt": "Appartement haussmannien rénové avec parquet, îlot en marbre et bibliothèque en bois", "legende": "Appartement haussmannien : parquet, îlot en marbre et bibliothèque en bois.", "lien": "realisations#rl-amenagement"},
+    {"img": "image10", "alt": "Salon avec bibliothèque, poutres apparentes et parquet point de Hongrie", "legende": "Salon avec bibliothèque, poutres apparentes et parquet point de Hongrie.", "lien": "realisations#rl-amenagement"}
+  ],
+  "faq_h2": "Les questions|qu'on nous pose",
+  "faq_intro": "Durée, habitation pendant les travaux, TVA, budget : les points à connaître avant de rénover entièrement un logement.",
+  "faq": [
+    {"q": "Combien de temps dure une rénovation complète ?", "r": "Cela dépend de la surface et de l'état de départ : de six semaines pour un petit logement à plusieurs mois pour une rénovation lourde avec reprise des réseaux et des planchers. Le planning détaillé figure dans le devis, avec les étapes qui conditionnent la suite, comme les temps de séchage."},
+    {"q": "Peut-on rester dans le logement pendant les travaux ?", "r": "Sur une rénovation partielle, par exemple une seule pièce d'eau, c'est possible. Sur une rénovation complète avec reprise des réseaux, c'est déconseillé : l'eau et l'électricité sont coupées par intermittence, la poussière est omniprésente et les cloisons sont ouvertes. Nous vous aidons à phaser le chantier si un départ est impossible."},
+    {"q": "Quel taux de TVA s'applique à des travaux de rénovation ?", "r": "En France, un taux réduit de 10 % s'applique en général aux travaux d'amélioration dans un logement achevé depuis plus de deux ans, et de 5,5 % pour certains travaux d'amélioration énergétique. En Belgique, un taux de 6 % existe pour la rénovation de logements de plus de dix ans. Ces taux dépendent de votre situation : ils sont précisés et confirmés sur le devis."},
+    {"q": "Comment établir son budget avant de contacter un professionnel ?", "r": "Partez de la [grille tarifaire](tarifs) pour situer chaque poste, puis utilisez l'[estimateur de budget](contact?devis=renovation#devisEstimator) en cochant les prestations qui vous concernent. Vous obtenez une fourchette hors taxes, qu'une visite sur place permet ensuite de resserrer."},
+    {"q": "Puis-je ne lancer qu'une partie du chantier ?", "r": "Oui. Le devis étant détaillé poste par poste, vous pouvez lancer les travaux prioritaires et reporter le reste. Nous vous conseillons seulement de traiter ensemble les réseaux et les sols d'une même zone, pour ne pas rouvrir ce qui vient d'être refermé."},
+    {"q": "Qui coordonne les artisans ?", "r": "Un interlocuteur unique de notre équipe tient le planning, les commandes et les livraisons. Chaque métier est confié à un spécialiste de sa discipline. Vous n'avez pas à vous assurer que le plombier a fini avant le carreleur : c'est notre travail."}
+  ],
+  "voir_aussi": [
+    {"slug": "renovation-appartement-paris", "label": "Rénovation d'appartement à Paris", "texte": "Les contraintes des immeubles parisiens : copropriété, horaires, typologies."},
+    {"slug": "salle-de-bain", "label": "Salle de bain", "texte": "Plomberie, étanchéité, carrelage ou béton ciré."},
+    {"slug": "cuisine", "label": "Cuisine", "texte": "Pose de cuisine, plan de travail, îlot, réseaux intégrés."}
+  ],
+  "cta": {"h2": "Un logement|à rénover ?", "p": "Visite sur site et devis détaillé gratuits. Réponse sous 24h."}
+}

@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- @shared:head-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
+    }
+  </script>
+  <!-- @end:head-meta -->
+  <link rel="canonical" href="https://benbat.fr/beton-cire">
+  <title>Béton Ciré Premium, Fabriqué en Atelier | Ben&amp;Bat</title>
+  <meta name="description" content="Béton ciré premium fabriqué en atelier depuis 1999 : sols, murs, salles de bains, plans de travail. France et Belgique. Devis gratuit sous 24h.">
+  <meta property="og:title" content="Béton Ciré Premium, Fabriqué en Atelier | Ben&amp;Bat">
+  <meta property="og:description" content="Béton ciré premium fabriqué en atelier depuis 1999 : sols, murs, salles de bains, plans de travail. France et Belgique. Devis gratuit sous 24h.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benbat.fr/beton-cire">
+  <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- @shared:head-assets -->
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
+    } catch (e) {}
+  </script>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=18">
+  <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+       ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+       accompagnent toujours un libellé texte. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- @end:head-assets -->
+  <!-- @shared:schema-business -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://benbat.fr/#entreprise",
+  "name": "Ben&Bat",
+  "description": "Spécialistes du béton ciré premium et de la rénovation intérieure tous corps de métier depuis 25 ans. Paris, Île-de-France et toute la Belgique.",
+  "url": "https://benbat.fr/",
+  "telephone": "+33658594147",
+  "email": "contact@ben-bat.com",
+  "image": "https://benbat.fr/images/image15.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Rue François 1er",
+    "addressLocality": "Paris",
+    "postalCode": "75008",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8698258,
+    "longitude": 2.3020488
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Paris"
+    },
+    {
+      "@type": "City",
+      "name": "Lyon"
+    },
+    {
+      "@type": "City",
+      "name": "Marseille"
+    },
+    {
+      "@type": "City",
+      "name": "Bordeaux"
+    },
+    {
+      "@type": "City",
+      "name": "Lille"
+    },
+    {
+      "@type": "City",
+      "name": "Neuilly-sur-Seine"
+    },
+    {
+      "@type": "City",
+      "name": "Versailles"
+    },
+    {
+      "@type": "City",
+      "name": "Boulogne-Billancourt"
+    },
+    {
+      "@type": "City",
+      "name": "Bruxelles"
+    },
+    {
+      "@type": "City",
+      "name": "Liège"
+    },
+    {
+      "@type": "City",
+      "name": "Anvers"
+    },
+    {
+      "@type": "City",
+      "name": "Gand"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    },
+    {
+      "@type": "Country",
+      "name": "Belgique"
+    }
+  ],
+  "knowsAbout": [
+    "béton ciré",
+    "rénovation intérieure",
+    "maçonnerie",
+    "plomberie",
+    "électricité",
+    "carrelage",
+    "mobilier sur mesure",
+    "vasques sur mesure",
+    "parquet",
+    "nettoyage de chantier"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "11",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services BTP",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Béton ciré décoratif",
+          "description": "Application de béton ciré premium sur sols, murs et plans de travail. Paris, Île-de-France et Belgique."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation intérieure tous corps de métier",
+          "description": "Coordination et réalisation de chantiers de rénovation complète : maçonnerie, électricité, plomberie, finitions."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobilier sur mesure",
+          "description": "Conception et fabrication de mobilier sur mesure pour particuliers et professionnels."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vasques sur mesure",
+          "description": "Création de vasques en béton ciré et matériaux naturels, design exclusif."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pose de parquet et carrelage",
+          "description": "Pose de parquet point de Hongrie, carrelage, faïence et revêtements de sol premium."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Nettoyage fin de chantier",
+          "description": "Nettoyage professionnel de bâtiments et fins de chantier en France et Belgique."
+        }
+      }
+    ]
+  },
+  "priceRange": "€€",
+  "logo": "https://benbat.fr/logos-png/wordmark-noir-transparent.webp",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+33658594147",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": [
+        "fr"
+      ]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+32465866372",
+      "contactType": "customer service",
+      "areaServed": "BE",
+      "availableLanguage": [
+        "fr"
+      ]
+    }
+  ]
+  }
+  </script>
+  <!-- @end:schema-business -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": "https://benbat.fr/beton-cire#service",
+      "name": "Béton ciré premium sur mesure",
+      "serviceType": "Fabrication et pose de béton ciré décoratif : sols, murs, plans de travail, salles de bains",
+      "description": "Béton ciré premium fabriqué dans notre atelier depuis 1999 et posé par nos artisans : sols, murs, salles de bains, plans de travail, vasques et escaliers, en France et en Belgique.",
+      "url": "https://benbat.fr/beton-cire",
+      "provider": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "areaServed": [
+        {
+          "@type": "Country",
+          "name": "France"
+        },
+        {
+          "@type": "Country",
+          "name": "Belgique"
+        }
+      ],
+      "image": [
+        "https://benbat.fr/images/image14.webp",
+        "https://benbat.fr/images/image15.webp"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://benbat.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://benbat.fr/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Béton ciré premium",
+          "item": "https://benbat.fr/beton-cire"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que le béton ciré ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est un revêtement décoratif minéral appliqué en couches fines sur un sol, un mur ou un plan de travail, puis protégé par une finition. Il forme une surface continue sans joint, aux nuances propres à chaque chantier. Le nôtre est fabriqué dans notre atelier depuis 1999."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sur quels supports peut-on appliquer du béton ciré ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sur du carrelage sain et adhérent, une chape, du béton, des enduits ou certains panneaux, après préparation. Il se pose en quelques millimètres, ce qui évite le plus souvent de déposer l'ancien revêtement. Nous vérifions le support lors de la visite."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le béton ciré est-il adapté à une salle de bains ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, à condition d'une étanchéité faite sous le revêtement et d'une protection adaptée aux pièces d'eau. C'est l'un de nos usages les plus fréquents. Voir aussi notre page salle de bain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le béton ciré se raye-t-il ou se tache-t-il ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Comme tout revêtement, il peut marquer sous des chocs ou des produits agressifs. La finition de protection limite les taches et peut être renouvelée. Un sol en béton ciré vieillit en prenant de la patine, ce que beaucoup de clients apprécient."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps dure un chantier de béton ciré ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cela dépend de la surface et du nombre de couches, chaque couche devant sécher avant la suivante. Nous indiquons un planning précis sur le devis après le relevé, et nous précisons le délai avant la mise en service complète de la surface."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment estimer mon budget béton ciré ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mesurez la surface, puis utilisez l'estimateur de budget ou consultez la grille tarifaire. La fourchette est hors taxes ; un échantillon et une visite permettent de la préciser."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image14.webp",
+      "url": "https://benbat.fr/images/image14.webp",
+      "caption": "Salle de bains en béton ciré foncé avec baignoire îlot et robinetterie laiton",
+      "name": "Salle de bains en béton ciré foncé : baignoire îlot, plan vasque et robinetterie laiton.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "contentUrl": "https://benbat.fr/images/image15.webp",
+      "url": "https://benbat.fr/images/image15.webp",
+      "caption": "Cuisine en béton ciré avec îlot minimaliste à Bruxelles",
+      "name": "Cuisine à Bruxelles : îlot et meubles en béton ciré, poutres apparentes au plafond.",
+      "creator": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- @shared:header active=services -->
+  <header id="header">
+    <div class="nav-wrap">
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="services" class="active">Services</a></li>
+          <li><a href="tarifs">Tarifs</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <a href="/">Accueil</a>
+    <a href="services">Services</a>
+    <a href="tarifs">Tarifs</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
+  </div>
+  <!-- @end:header -->
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">
+          <a href="/">Accueil</a><span class="sep">/</span><a href="services">Services</a><span class="sep">/</span><span class="cur">Béton ciré premium</span>
+        </div>
+        <h1>Béton ciré premium<br>fabriqué en atelier</h1>
+        <p>Sols, murs, salles de bains, plans de travail et escaliers : un revêtement continu, sans joint, dont les teintes sont composées dans notre atelier depuis 1999 et posées par nos propres artisans.</p>
+        <div class="svc-hero-cta">
+          <a href="contact?devis=premium#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="contact" class="btn btn-ghost-dark">Devis gratuit</a>
+        </div>
+        <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EN BREF ══════════ -->
+  <section class="section-sm svc-facts-band">
+    <div class="container">
+      <dl class="svc-facts">
+          <div><dt>Épaisseur</dt><dd>Quelques millimètres, posé sur l'existant dans la plupart des cas</dd></div>
+          <div><dt>Budget indicatif</dt><dd>Béton ciré : 120 € – 250 € / m² HT</dd></div>
+          <div><dt>Fabrication</dt><dd>En atelier Ben&amp;Bat, depuis 1999</dd></div>
+          <div><dt>Zones</dt><dd>France et Belgique, avec pages dédiées Paris et Bruxelles</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══════════ INTRO ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
+        <div>
+          <span class="eyebrow">Notre spécialité signature</span>
+          <h2>Un revêtement continu,<br>fait sur mesure</h2>
+        </div>
+        <div class="svc-prose">
+          <p>Le béton ciré est un enduit décoratif minéral qui s'applique en couches fines sur un sol, un mur, un plan de travail ou un meuble. Une fois protégé, il forme une surface continue, sans joint, d'aspect mat, satiné ou cire, aux nuances propres à chaque chantier. C'est cette continuité qui lui donne son caractère, et c'est aussi ce qui exige du soin à la pose.</p>
+          <p>Nous ne revendons pas un produit du commerce : nos formulations sont composées dans notre atelier depuis 1999, validées sur échantillon avant tout chantier, et appliquées par les artisans qui les ont préparées. Les teintes sont donc entièrement sur mesure, et les raccords maîtrisés même sur de grandes surfaces.</p>
+          <p>Nous intervenons partout en France et en Belgique. Pour le détail de nos chantiers locaux, voir <a href="beton-cire-paris">béton ciré à Paris et en Île-de-France</a> et <a href="beton-cire-bruxelles">béton ciré à Bruxelles et en Belgique</a>.</p>
+        </div>
+      </div>
+      <div class="services-page-grid">
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>Sols</h3>
+          <p>Séjour, couloir, chambre, cuisine ouverte : un sol coulé sans joint agrandit visuellement l'espace. Il se pose le plus souvent sur un carrelage sain, sans dépose.</p>
+          <ul class="service-list">
+            <li>Pose sur carrelage conservé</li>
+            <li>Surface continue</li>
+            <li>Compatible sol chauffant selon le support</li>
+            <li>Pas de surépaisseur notable</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-shower"></i></div>
+          <h3>Salles de bains et douches</h3>
+          <p>Murs, sols, receveurs et niches en continuité. L'étanchéité est faite sous le revêtement, puis une protection adaptée aux pièces d'eau est appliquée.</p>
+          <ul class="service-list">
+            <li>Douches à l'italienne</li>
+            <li>Murs et niches</li>
+            <li>Étanchéité sous revêtement</li>
+            <li>Protection hydrofuge</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-utensils"></i></div>
+          <h3>Cuisines : plans de travail et crédences</h3>
+          <p>Plan de travail, îlot et crédence dans la même teinte suppriment les joints, donc les zones qui noircissent. La protection est adaptée au contact alimentaire.</p>
+          <ul class="service-list">
+            <li>Plans de travail sur mesure</li>
+            <li>Îlots</li>
+            <li>Crédences sans joint</li>
+            <li>Protection adaptée à la cuisine</li>
+          </ul>
+        </div>
+        <div class="service-page-card">
+          <div class="service-icon"><i class="fas fa-couch"></i></div>
+          <h3>Mobilier, vasques et escaliers</h3>
+          <p>Nous coulons aussi des <a href="vasques-sur-mesure">vasques</a>, du <a href="mobilier-sur-mesure">mobilier</a> et des escaliers, y compris sur un escalier bois existant.</p>
+          <ul class="service-list">
+            <li>Vasques et plans de toilette</li>
+            <li>Mobilier sur mesure</li>
+            <li>Marches et contremarches</li>
+            <li>Pièces uniques</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ DÉROULÉ ══════════ -->
+  <section class="section section-dark" id="deroule">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Déroulé d'intervention</span>
+          <h2>Du support<br>à la protection finale</h2>
+        </div>
+        <p>Chaque couche sèche avant la suivante. C'est ce temps de séchage, plus que le geste d'application, qui détermine la durée du chantier.</p>
+      </div>
+      <div class="services-list">
+        <div class="list-row">
+          <span class="sr-num">01</span>
+          <span class="sr-icon"><i class="fas fa-route"></i></span>
+          <div class="sr-body">
+            <h3>Visite et validation du support</h3>
+            <p>Nous vérifions la solidité et la planéité du support, son adhérence, son humidité, et l'absence de fissures actives. Ce contrôle conditionne la tenue du revêtement.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">02</span>
+          <span class="sr-icon"><i class="fas fa-palette"></i></span>
+          <div class="sr-body">
+            <h3>Échantillon et choix de la teinte</h3>
+            <p>La teinte est composée pour votre projet, puis validée sur échantillon avant tout chantier. Vous choisissez aussi la finition : mate, satinée ou cirée.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">03</span>
+          <span class="sr-icon"><i class="fas fa-tools"></i></span>
+          <div class="sr-body">
+            <h3>Préparation et primaire</h3>
+            <p>Nettoyage, réparation des fissures, ragréage si nécessaire, application du primaire d'accroche. Dans les pièces d'eau, l'étanchéité est posée à ce stade.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">04</span>
+          <span class="sr-icon"><i class="fas fa-layer-group"></i></span>
+          <div class="sr-body">
+            <h3>Application en couches</h3>
+            <p>Application de plusieurs couches fines, avec ponçage entre les passes, pour obtenir la profondeur et les nuances recherchées.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">05</span>
+          <span class="sr-icon"><i class="fas fa-shield-alt"></i></span>
+          <div class="sr-body">
+            <h3>Protection, nettoyage et réception</h3>
+            <p>Application de la protection adaptée à l'usage de la surface, nettoyage complet, et remise d'un protocole d'entretien. Un bilan est fait 30 jours après la livraison.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PRIX ══════════ -->
+  <section class="section" id="prix">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Prix indicatifs</span>
+          <h2>Combien coûte<br>un béton ciré ?</h2>
+        </div>
+        <p>Le prix varie surtout avec la surface, l'état du support, la complexité des formes et la teinte demandée. Il se chiffre au mètre carré, hors fourniture de travaux annexes.</p>
+      </div>
+      <div class="svc-price-layout">
+        <div class="svc-price-tables">
+        <div class="price-cat svc-price-cat">
+          <div class="price-cat-head"><h3>Prestations premium</h3></div>
+          <table class="price-table">
+            <thead><tr><th>Prestation</th><th>Fourchette HT</th></tr></thead>
+            <tbody>
+<tr><td>Béton ciré<span class="price-unit">/ m²</span></td><td class="price-range">120 € – 250 €</td></tr>
+            </tbody>
+          </table>
+        </div>
+        </div>
+        <aside class="svc-price-side">
+          <h3>Ce qui fait varier le prix</h3>
+          <ul class="svc-factors"><li><strong>Dépose de l'existant + 15 %</strong> Revêtement à retirer quand il n'est pas assez sain pour être recouvert.</li><li><strong>Accès difficile + 10 %</strong> Étage sans ascenseur, accès restreint, livraison des matériaux complexe.</li><li><strong>Support dégradé + 20 %</strong> Support fissuré, humide ou irrégulier à reprendre avant application.</li><li><strong>Finition premium + 30 %</strong> Teintes sur mesure, formes complexes, grandes surfaces sans reprise visible.</li></ul>
+          <p class="svc-price-note">Fourchettes hors taxes, issues de notre <a href="tarifs">grille tarifaire</a>. Le prix définitif est arrêté après une visite technique.</p>
+          <a href="contact?devis=premium#devisEstimator" class="btn btn-primary">Estimer mon projet <i class="fas fa-arrow-right"></i></a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONSEILS ══════════ -->
+  <section class="section" id="conseils">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Avant de choisir</span>
+          <h2>Quatre choses<br>à savoir sur le béton ciré</h2>
+        </div>
+        <p>Le béton ciré est un matériau séduisant mais exigeant. Voici ce que nous expliquons à chaque client avant de chiffrer.</p>
+      </div>
+      <div class="svc-tips">
+        <div class="svc-tip">
+          <h3>Il a une personnalité, pas une uniformité</h3>
+          <p>Le béton ciré est appliqué à la main, couche après couche : il présente des nuances, des variations de matière et de teinte. C'est ce qui fait son charme. Si l'on cherche une uniformité parfaite, un autre revêtement est plus adapté.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Le support décide de sa tenue</h3>
+          <p>Un support instable, humide ou fissurant se retrouve dans le revêtement. Dans les immeubles anciens à plancher bois, nous stabilisons et désolidarisons le support avant application. C'est le premier point que nous vérifions.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>La protection se renouvelle</h3>
+          <p>Une surface en béton ciré est protégée par une finition qui s'use avec le temps, plus vite dans les zones de passage ou les plans de travail. Elle se renouvelle simplement, sans refaire le revêtement. Nous vous remettons un protocole d'entretien.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>L'entretien est simple mais précis</h3>
+          <p>Un nettoyage à l'eau et au savon au pH neutre suffit. Il faut éviter les produits acides ou très agressifs et les outils abrasifs. Il n'y a pas de joints à récurer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ RÉALISATIONS ══════════ -->
+  <section class="section" id="realisations-liees" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Sur nos chantiers</span>
+          <h2>Du béton ciré<br>dans les pièces à vivre</h2>
+        </div>
+        <p>Deux chantiers en béton ciré. Retrouvez toutes nos <a href="realisations">réalisations</a>.</p>
+      </div>
+      <div class="svc-photos">
+        <figure class="svc-photo">
+          <a href="realisations#rl-beton-cire"><img src="images/image14-640.webp" srcset="images/image14-480.webp 480w, images/image14-640.webp 640w, images/image14-900.webp 900w, images/image14.webp 1200w" sizes="(max-width: 700px) 92vw, 46vw" alt="Salle de bains en béton ciré foncé avec baignoire îlot et robinetterie laiton" loading="lazy" decoding="async"></a>
+          <figcaption>Salle de bains en béton ciré foncé : baignoire îlot, plan vasque et robinetterie laiton. <a href="realisations#rl-beton-cire">Voir la réalisation</a></figcaption>
+        </figure>
+        <figure class="svc-photo">
+          <a href="realisations#rl-beton-cire"><img src="images/image15-640.webp" srcset="images/image15-480.webp 480w, images/image15-640.webp 640w, images/image15-900.webp 900w, images/image15.webp 1408w" sizes="(max-width: 700px) 92vw, 46vw" alt="Cuisine en béton ciré avec îlot minimaliste à Bruxelles" loading="lazy" decoding="async"></a>
+          <figcaption>Cuisine à Bruxelles : îlot et meubles en béton ciré, poutres apparentes au plafond. <a href="realisations#rl-beton-cire">Voir la réalisation</a></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Les questions<br>qu'on nous pose</h2>
+        </div>
+        <p>Supports, épaisseur, salle de bains, entretien, prix : ce qu'il faut savoir avant de choisir du béton ciré.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Qu'est-ce que le béton ciré ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">C'est un revêtement décoratif minéral appliqué en couches fines sur un sol, un mur ou un plan de travail, puis protégé par une finition. Il forme une surface continue sans joint, aux nuances propres à chaque chantier. Le nôtre est fabriqué dans notre atelier depuis 1999.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Sur quels supports peut-on appliquer du béton ciré ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Sur du carrelage sain et adhérent, une chape, du béton, des enduits ou certains panneaux, après préparation. Il se pose en quelques millimètres, ce qui évite le plus souvent de déposer l'ancien revêtement. Nous vérifions le support lors de la visite.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Le béton ciré est-il adapté à une salle de bains ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Oui, à condition d'une étanchéité faite sous le revêtement et d'une protection adaptée aux pièces d'eau. C'est l'un de nos usages les plus fréquents. Voir aussi notre page <a href="salle-de-bain">salle de bain</a>.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Le béton ciré se raye-t-il ou se tache-t-il ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Comme tout revêtement, il peut marquer sous des chocs ou des produits agressifs. La finition de protection limite les taches et peut être renouvelée. Un sol en béton ciré vieillit en prenant de la patine, ce que beaucoup de clients apprécient.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Combien de temps dure un chantier de béton ciré ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Cela dépend de la surface et du nombre de couches, chaque couche devant sécher avant la suivante. Nous indiquons un planning précis sur le devis après le relevé, et nous précisons le délai avant la mise en service complète de la surface.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Comment estimer mon budget béton ciré ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Mesurez la surface, puis utilisez l'<a href="contact?devis=premium#devisEstimator">estimateur de budget</a> ou consultez la <a href="tarifs">grille tarifaire</a>. La fourchette est hors taxes ; un échantillon et une visite permettent de la préciser.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ À VOIR AUSSI ══════════ -->
+  <section class="section-sm" id="voir-aussi">
+    <div class="container">
+      <h2 class="svc-related-title">À voir aussi</h2>
+      <div class="related-grid">
+        <a href="beton-cire-paris" class="related-card">
+          <h3>Béton ciré à Paris</h3>
+          <p>Nos chantiers à Paris et en Île-de-France.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="beton-cire-bruxelles" class="related-card">
+          <h3>Béton ciré à Bruxelles</h3>
+          <p>Nos chantiers à Bruxelles et en Belgique.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="vasques-sur-mesure" class="related-card">
+          <h3>Vasques sur mesure</h3>
+          <p>Vasques et plans de toilette en béton ciré, pièces uniques.</p>
+          <span>Voir la page <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="tarifs" class="related-card">
+          <h3>Grille tarifaire complète</h3>
+          <p>Toutes nos prestations, avec fourchettes de prix et majorations.</p>
+          <span>Voir les tarifs <i class="fas fa-arrow-right"></i></span>
+        </a>
+        <a href="garanties" class="related-card">
+          <h3>Garanties et assurances</h3>
+          <p>Décennale, responsabilité civile professionnelle, bilan à 30 jours.</p>
+          <span>Voir les garanties <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="section cta-section" id="ctaSection">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Un projet<br>en béton ciré ?</h2>
+          <p>Échantillon, visite sur site et devis détaillé gratuits. Réponse sous 24h.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact?devis=premium#devisEstimator" class="btn btn-primary">Estimer mon budget <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- @shared:footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.webp" alt="Ben&amp;Bat" width="360" height="120"></a>
+          <p>25 ans d'expertise BTP : béton ciré premium, mobilier sur mesure et tous corps de métier. France &amp; Belgique.</p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="footer-social" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="tarifs">Tarifs</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Témoignages</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+    <h5>Services</h5>
+    <ul class="footer-links">
+      <li><a href="renovation-complete">Rénovation complète</a></li>
+      <li><a href="salle-de-bain">Salle de bain</a></li>
+      <li><a href="cuisine">Cuisine</a></li>
+      <li><a href="peinture">Peinture</a></li>
+      <li><a href="plomberie">Plomberie</a></li>
+      <li><a href="electricite">Électricité</a></li>
+      <li><a href="carrelage">Carrelage &amp; faïence</a></li>
+      <li><a href="placo-isolation">Placo &amp; isolation</a></li>
+      <li><a href="maconnerie">Maçonnerie</a></li>
+      <li><a href="revetements-de-sol">Revêtements de sol</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Spécialités</h5>
+    <ul class="footer-links">
+      <li><a href="beton-cire">Béton ciré premium</a></li>
+      <li><a href="mobilier-sur-mesure">Mobilier sur mesure</a></li>
+      <li><a href="vasques-sur-mesure">Vasques sur mesure</a></li>
+      <li><a href="nettoyage-fin-de-chantier">Nettoyage fin de chantier</a></li>
+      <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+      <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+      <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
+    </ul>
+  </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">WhatsApp (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@ben-bat.com">contact@ben-bat.com</a></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>60 Rue François 1er, 75008 Paris</span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Sam : 8h–20h</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; <span class="js-year">2026</span> Ben&amp;Bat. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales#cookies" data-cookie-settings>Gérer les cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- @end:footer -->
+  <!-- @shared:sticky -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+    <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." class="btn sticky-phone sticky-whatsapp" target="_blank" rel="noopener" aria-label="Écrire à Ben&amp;Bat sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
+  </div>
+  <!-- @end:sticky -->
+
+  <!-- @shared:scripts -->
+  <script src="js/main.js?v=10" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
+  <!-- @end:scripts -->
+</body>
+</html>

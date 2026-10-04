@@ -1,0 +1,86 @@
+{
+  "slug": "placo-isolation",
+  "nom": "Placo et isolation",
+  "nom_schema": "Cloisons Placo, doublage et faux plafond",
+  "service_type": "Cloisons, doublages isolants et faux plafonds",
+  "estimateur": "placo",
+  "title": "Cloisons Placo, Doublage et Faux Plafond | Ben&Bat",
+  "description_meta": "Cloisons Placo, doublage isolant thermique et phonique, faux plafond : pose soignée, prix indicatifs au m² et devis gratuit sous 24h.",
+  "description": "Cloisons en plaques de plâtre, doublages isolants thermiques et phoniques, faux plafonds et finitions, en France et en Belgique.",
+  "kicker": "Placo et isolation",
+  "h1": "Cloisons Placo, doublage|et faux plafond",
+  "lede": "Cloisons, doublages isolants et faux plafonds : redistribuer une pièce, gagner en confort thermique et phonique, intégrer de l'éclairage, sur des supports prêts à peindre.",
+  "bref": [
+    ["Durée indicative", "2 à 5 jours pour une cloison ou un plafond, selon la surface"],
+    ["Budget indicatif", "Cloisons : {prix:placo:0} HT"],
+    ["Interlocuteur", "Un plaquiste dédié, coordonné avec les autres métiers"],
+    ["Garanties", "Décennale, RC Pro, bilan à 30 jours"]
+  ],
+  "intro": {
+    "h2": "Redessiner un volume,|améliorer son confort",
+    "p": [
+      "Une cloison en plaques de plâtre est la façon la plus rapide de redistribuer un logement : créer une chambre, fermer une cuisine, ouvrir un séjour. Posée sur une ossature métallique, elle peut aussi embarquer de l'isolation et passer des gaines électriques. Sa qualité se juge à la planéité, aux jonctions et à ce qu'elle rend, une fois les bandes enduites, sur le chantier de peinture.",
+      "Nous réalisons des cloisons, des doublages isolants contre les murs extérieurs, des faux plafonds avec éclairage encastré, ainsi que les enduits et ragréages qui préparent les supports. Le choix des plaques et de l'isolant est adapté à la pièce : plaques hydrofuges en pièces humides, laine minérale pour l'acoustique.",
+      "Les cloisons précèdent la [peinture](peinture) et suivent l'[électricité](electricite) et la [plomberie](plomberie). Dans un [chantier complet](renovation-complete), elles sont planifiées en conséquence."
+    ]
+  },
+  "cartes": [
+    {"icon": "border-all", "titre": "Cloisons et distribution", "texte": "Cloisons sur ossature métallique avec isolant intégré. Elles redessinent le logement sans charge supplémentaire sur les planchers.", "liste": ["Cloisons sur ossature", "Isolation phonique intégrée", "Passage des gaines", "Portes et trémies"]},
+    {"icon": "temperature-low", "titre": "Doublage thermique", "texte": "Un doublage isolant contre un mur extérieur améliore le confort et réduit les parois froides. Il se pose sur ossature ou collé, selon le support.", "liste": ["Doublage isolé", "Laine minérale ou isolant rigide", "Traitement des ponts thermiques", "Pare-vapeur si nécessaire"]},
+    {"icon": "lightbulb", "titre": "Faux plafonds", "texte": "Un faux plafond cache des réseaux, améliore l'acoustique et accueille des spots ou des rubans lumineux. Il se pense avec l'éclairage dès le départ.", "liste": ["Faux plafond sur ossature", "Spots et rubans LED encastrés", "Trappes de visite", "Retombées et décaissés"]},
+    {"icon": "layer-group", "titre": "Enduits et ragréages", "texte": "Bandes, enduits et ponçage donnent aux plaques leur surface lisse. Les ragréages mettent les sols de niveau avant la pose des revêtements.", "liste": ["Bandes et enduits", "Ponçage soigné", "Ragréage de sol", "Préparation à la peinture"]}
+  ],
+  "deroule_h2": "Du tracé|à la surface prête à peindre",
+  "deroule_intro": "Chaque ouvrage en plaques passe par les mêmes phases : ossature, isolant, parement, bandes, enduit. La qualité finale se joue dans les jonctions.",
+  "etapes": [
+    {"icon": "route", "titre": "Visite et implantation", "texte": "Nous relevons les cotes, traçons les cloisons au sol et vérifions la hauteur sous plafond, les gaines et les réseaux existants avant de fixer l'implantation."},
+    {"icon": "file-invoice", "titre": "Devis et choix des matériaux", "texte": "Plaques standard, hydrofuges ou acoustiques, isolant, finitions : le devis précise ce qui est posé dans chaque pièce, selon l'usage."},
+    {"icon": "hard-hat", "titre": "Ossature et passage des réseaux", "texte": "Pose de l'ossature métallique, passage des gaines électriques et des réseaux avant fermeture, coordonnés avec les autres métiers."},
+    {"icon": "border-all", "titre": "Isolation et pose des plaques", "texte": "Pose de l'isolant, vissage des plaques en quinconce, traitement des angles et des ouvertures."},
+    {"icon": "key", "titre": "Bandes, enduits et réception", "texte": "Bandes sur les joints, enduits, ponçage et dépoussiérage. Le support est livré prêt à peindre, et nous contrôlons les surfaces en lumière rasante."}
+  ],
+  "tarifs": {
+    "cats": ["placo"],
+    "h2": "Combien coûtent|cloisons et doublages ?",
+    "intro": "Les fourchettes se chiffrent au mètre carré posé. Elles varient selon l'épaisseur, le type d'isolant et la complexité du tracé.",
+    "facteurs": [
+      {"titre": "Dépose de l'existant {coef:depose}", "texte": "Ancienne cloison, doublage ou faux plafond à démolir et à évacuer."},
+      {"titre": "Accès difficile {coef:acces}", "texte": "Étage sans ascenseur, portage de plaques volumineuses."},
+      {"titre": "Support dégradé {coef:support}", "texte": "Murs irréguliers ou humides à reprendre avant le doublage."},
+      {"titre": "Finition premium {coef:premium}", "texte": "Plafonds courbes, décaissés complexes, éclairage intégré."}
+    ]
+  },
+  "conseils": {
+    "eyebrow": "Avant de cloisonner",
+    "h2": "Quatre vérifications|avant de poser",
+    "intro": "Ces points se règlent sur plan et sur place, avant de commander les plaques. Ils conditionnent la durée de vie et le confort de l'ouvrage.",
+    "items": [
+      {"titre": "Vérifier la hauteur sous plafond", "texte": "Un faux plafond fait perdre de la hauteur. La réglementation fixe une hauteur minimale pour les pièces d'habitation : il faut donc vérifier ce qui reste une fois le plafond posé, et ajuster le projet si nécessaire."},
+      {"titre": "Choisir les plaques selon la pièce", "texte": "En salle de bain, en cuisine ou en buanderie, des plaques hydrofuges résistent mieux à l'humidité. Pour des cloisons de chambre, des plaques acoustiques et une laine minérale améliorent nettement l'isolement phonique."},
+      {"titre": "Penser aux fixations futures", "texte": "Un meuble suspendu, un écran ou un radiateur demandent des renforts dans la cloison. Les poser pendant le chantier évite de percer à l'aveugle plus tard."},
+      {"titre": "Traiter l'humidité avant d'isoler", "texte": "Un doublage isolant posé contre un mur humide l'enferme et favorise les moisissures. La cause doit être identifiée et traitée avant la pose. Ce point est vérifié à la visite."}
+    ]
+  },
+  "photos_h2": "Des plafonds et des volumes|travaillés",
+  "photos_texte": "Deux ouvrages de plafond. Retrouvez toutes nos [réalisations](realisations).",
+  "photos": [
+    {"img": "image3", "alt": "Salle de bains avec plafond courbe rétroéclairé et douche à l'italienne à Paris", "legende": "Salle de bains à Paris : plafond courbe rétroéclairé et douche à l'italienne.", "lien": "realisations#rl-beton-cire"},
+    {"img": "image15", "alt": "Cuisine avec îlot et plafond à poutres apparentes à Bruxelles", "legende": "Cuisine à Bruxelles : îlot minimaliste sous un plafond à poutres apparentes.", "lien": "realisations#rl-cuisines"}
+  ],
+  "faq_h2": "Les questions|qu'on nous pose",
+  "faq_intro": "Épaisseur, isolation, faux plafond, délais : ce qu'il faut savoir avant de poser des plaques de plâtre.",
+  "faq": [
+    {"q": "Quelle est la différence entre une cloison et un doublage ?", "r": "Une cloison sépare deux pièces, avec un parement de chaque côté d'une ossature. Un doublage se pose contre un mur existant, souvent un mur extérieur, pour l'isoler et le rendre plan. Les deux utilisent des plaques de plâtre, mais leur rôle est différent."},
+    {"q": "Une cloison en Placo est-elle bien isolante phoniquement ?", "r": "Elle l'est si l'on remplit l'ossature d'un isolant, comme de la laine minérale, et si l'on double les plaques. Une cloison simple sans isolant transmet beaucoup de bruit. Nous adaptons la composition à l'usage de la pièce."},
+    {"q": "Peut-on poser un faux plafond avec des spots ?", "r": "Oui, c'est l'un de ses usages les plus courants. Il faut prévoir l'emplacement des spots, la hauteur du vide nécessaire et le passage des câbles dès la pose de l'ossature. Les spots LED, peu épais, limitent la perte de hauteur."},
+    {"q": "Combien de temps faut-il attendre avant de peindre ?", "r": "Les enduits doivent être secs et poncés, ce qui prend en général un à deux jours selon l'épaisseur et la ventilation. La peinture s'applique ensuite, avec une sous-couche. Nous coordonnons la [peinture](peinture) à la suite de la pose."},
+    {"q": "Doublage isolant : quelles aides ou quel taux de TVA ?", "r": "L'isolation des parois peut bénéficier d'un taux de TVA réduit en France et d'aides pour les travaux d'amélioration énergétique, sous conditions de logement et de matériaux. Ces conditions varient : elles sont à vérifier avec votre devis."},
+    {"q": "Comment estimer mon budget ?", "r": "Mesurez la surface concernée, puis utilisez l'[estimateur de budget](contact?devis=placo#devisEstimator) ou la [grille tarifaire](tarifs). Vous obtenez une fourchette hors taxes, que la visite permet de resserrer."}
+  ],
+  "voir_aussi": [
+    {"slug": "peinture", "label": "Peinture", "texte": "Préparation, peinture et enduits décoratifs."},
+    {"slug": "electricite", "label": "Électricité", "texte": "Gaines, éclairage encastré et tableau."},
+    {"slug": "renovation-complete", "label": "Rénovation complète", "texte": "Les cloisons intégrées à un chantier coordonné."}
+  ],
+  "cta": {"h2": "Un espace|à redessiner ?", "p": "Visite sur site et devis détaillé gratuits. Réponse sous 24h."}
+}

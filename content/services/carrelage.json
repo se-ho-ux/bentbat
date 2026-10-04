@@ -1,0 +1,87 @@
+{
+  "slug": "carrelage",
+  "nom": "Carrelage et faïence",
+  "nom_schema": "Pose de carrelage et de faïence",
+  "service_type": "Pose de carrelage, faïence et mosaïque",
+  "estimateur": "revetements",
+  "title": "Pose de Carrelage et Faïence | Ben&Bat",
+  "description_meta": "Pose de carrelage, faïence et mosaïque, y compris grands formats : préparation du support, joints soignés, prix indicatifs et devis gratuit sous 24h.",
+  "description": "Pose de carrelage, faïence, mosaïque et grands formats sur sols et murs, avec préparation des supports et joints soignés, en France et en Belgique.",
+  "kicker": "Carrelage et faïence",
+  "h1": "Pose de carrelage|et de faïence",
+  "lede": "Carrelage de sol, faïence murale, mosaïque et grands formats : un alignement précis et des joints soignés, sur un support préparé pour durer.",
+  "bref": [
+    ["Durée indicative", "2 à 4 jours pour une salle de bain, 4 à 8 jours pour un séjour"],
+    ["Budget indicatif", "Carrelage : {prix:revetements:0} HT"],
+    ["Interlocuteur", "Un carreleur dédié, coordonné avec les autres métiers"],
+    ["Garanties", "Décennale, RC Pro, bilan à 30 jours"]
+  ],
+  "intro": {
+    "h2": "Un beau carrelage|commence sous le carrelage",
+    "p": [
+      "Un carrelage se juge d'abord à ses alignements et à ses joints, mais sa tenue dans le temps dépend du support. Un sol qui n'est pas plan, une chape trop humide ou une colle mal adaptée entraînent des carreaux creux, des fissures et des joints qui se détachent. C'est pourquoi nous contrôlons la planéité et la nature du support avant d'ouvrir le premier carton.",
+      "Nous posons du carrelage de sol et mural, de la faïence, de la mosaïque et des grands formats, en intérieur comme en extérieur couvert. Nous soignons les coupes, les angles et les raccords avec les plinthes et les menuiseries, ce qui fait souvent la différence entre une pose correcte et une pose irréprochable.",
+      "Le carrelage est le plus souvent posé dans le cadre d'une [salle de bain](salle-de-bain) ou d'une [cuisine](cuisine). Pour une surface continue sans joint, le [béton ciré](beton-cire) peut le remplacer sur les murs comme au sol."
+    ]
+  },
+  "cartes": [
+    {"icon": "th-large", "titre": "Carrelage de sol et mural", "texte": "Pose collée sur support préparé, avec le calepinage défini avant le début pour éviter les coupes disgracieuses en bord de pièce.", "liste": ["Carrelage de sol", "Carrelage mural", "Calepinage et alignements", "Coupes soignées"]},
+    {"icon": "droplet", "titre": "Faïence et pièces d'eau", "texte": "Dans les zones humides, l'étanchéité sous le revêtement est aussi importante que la faïence elle-même. Elle est posée avant le carrelage.", "liste": ["Faïence de salle de bain et de cuisine", "Étanchéité sous carrelage", "Douche à l'italienne", "Crédence de cuisine"]},
+    {"icon": "expand", "titre": "Grands formats", "texte": "Les grands carreaux et les dalles minces demandent un support très plan et un encollage adapté. Ils réduisent le nombre de joints et simplifient l'entretien.", "liste": ["Grands formats et dalles", "Double encollage", "Support très plan", "Joints fins"]},
+    {"icon": "gem", "titre": "Mosaïque et finitions", "texte": "Mosaïque, frises et motifs décoratifs apportent du caractère. Les joints et les profilés de finition sont choisis pour s'accorder au revêtement.", "liste": ["Mosaïque et frises", "Joints colorés ou époxy", "Profilés de finition", "Raccords avec plinthes"]}
+  ],
+  "deroule_h2": "Du support|au dernier joint",
+  "deroule_intro": "Le carrelage est posé en dernier sur un support préparé : chaque couche attend le séchage de la précédente.",
+  "etapes": [
+    {"icon": "route", "titre": "Visite et contrôle du support", "texte": "Nous vérifions la planéité du sol, la solidité de la chape, l'humidité et l'état des murs. Ce contrôle décide si un ragréage ou un primaire est nécessaire."},
+    {"icon": "file-invoice", "titre": "Devis et choix des carreaux", "texte": "Le devis précise le format, la quantité et les finitions. Les carreaux se commandent avec une marge pour les coupes, et sont livrés avant le démarrage."},
+    {"icon": "tools", "titre": "Préparation et étanchéité", "texte": "Ragréage si nécessaire, primaire, étanchéité des zones humides. Nous laissons sécher chaque couche selon les préconisations du fabricant."},
+    {"icon": "th-large", "titre": "Pose et calepinage", "texte": "Traçage du calepinage, pose à la colle adaptée au format et au support, vérification des niveaux au fur et à mesure."},
+    {"icon": "key", "titre": "Joints, finitions et réception", "texte": "Joints après le temps de prise de la colle, nettoyage du voile de ciment, pose des profilés et plinthes. Nous contrôlons le résultat avec vous à la lumière rasante."}
+  ],
+  "tarifs": {
+    "cats": ["revetements"],
+    "only": ["Carrelage", "Faïence"],
+    "h2": "Combien coûte|la pose de carrelage ?",
+    "intro": "La pose se chiffre au mètre carré. Le prix du carrelage lui-même s'ajoute selon le modèle choisi : de quelques dizaines à plusieurs centaines d'euros le mètre carré.",
+    "facteurs": [
+      {"titre": "Dépose de l'existant {coef:depose}", "texte": "Ancien carrelage, faïence ou revêtement à démonter et à évacuer."},
+      {"titre": "Accès difficile {coef:acces}", "texte": "Étage sans ascenseur, portage de grands formats lourds."},
+      {"titre": "Support dégradé {coef:support}", "texte": "Sol non plan à ragréer, chape à reprendre, mur à enduire."},
+      {"titre": "Finition premium {coef:premium}", "texte": "Pierre naturelle, grands formats, mosaïque, motifs complexes."}
+    ]
+  },
+  "conseils": {
+    "eyebrow": "Avant de choisir",
+    "h2": "Quatre choix|qui font la différence",
+    "intro": "Ce sont les questions que nous posons systématiquement avant de commander les carreaux : elles se règlent sur échantillon, pas sur catalogue.",
+    "items": [
+      {"titre": "Commander une marge de carreaux", "texte": "Prévoyez environ dix pour cent de carreaux supplémentaires pour les coupes et la casse. Un carreau manquant plusieurs mois plus tard peut ne plus être disponible dans le même lot de teinte."},
+      {"titre": "Choisir le joint selon l'usage", "texte": "Un joint ciment est économique mais poreux. Un joint époxy est plus résistant aux taches et à l'humidité, ce qui convient aux douches et aux plans de travail. Nous vous montrons les deux sur échantillon."},
+      {"titre": "Penser à l'antidérapant dans les zones humides", "texte": "Un carrelage de douche ou de sol de salle de bain doit offrir une bonne adhérence mouillée. La classe d'antidérapance figure sur la fiche technique du carreau : nous la vérifions avec vous."},
+      {"titre": "Prévoir les joints de fractionnement", "texte": "Sur les grandes surfaces, des joints de dilatation absorbent les mouvements du support. Les ignorer provoque des fissures. Nous les positionnons de façon discrète, au niveau des seuils ou des changements de direction."}
+    ]
+  },
+  "photos_h2": "Des carrelages et des faïences|livrés à Boulogne et à Paris",
+  "photos_texte": "Deux détails de chantiers. Retrouvez toutes nos [réalisations](realisations).",
+  "photos": [
+    {"img": "image8", "alt": "WC suspendu avec faïence effet marbre à Boulogne-Billancourt", "legende": "WC à Boulogne-Billancourt : faïence effet marbre jusqu'au plafond.", "lien": "realisations#rl-salles-de-bains"},
+    {"img": "image1", "alt": "Crédence en terrazzo et évier de cuisine à Paris", "legende": "Cuisine à Paris : crédence en terrazzo et évier encastré.", "lien": "realisations#rl-amenagement"}
+  ],
+  "faq_h2": "Les questions|qu'on nous pose",
+  "faq_intro": "Support, séchage, grands formats, joints : ce qu'il faut savoir avant de faire poser du carrelage.",
+  "faq": [
+    {"q": "Peut-on poser du carrelage sur un ancien carrelage ?", "r": "C'est parfois possible, si l'ancien carrelage est sain, bien adhérent et plan, et que la hauteur supplémentaire ne pose pas de problème aux portes et aux seuils. Nous vérifions l'adhérence et la planéité à la visite. En cas de doute, la dépose reste la solution la plus sûre."},
+    {"q": "Combien de temps avant de marcher sur un carrelage neuf ?", "r": "En général, 24 à 48 heures après la pose, selon la colle utilisée et les conditions de la pièce. Les joints se réalisent après le temps de prise de la colle, et le sol se met en service complètement quelques jours plus tard. Nous précisons les délais sur le chantier."},
+    {"q": "Les grands formats sont-ils plus difficiles à poser ?", "r": "Oui : ils demandent un support très plan, un encollage adapté et une manutention soignée. Mal posés, ils sonnent creux ou se fissurent. Bien posés, ils réduisent les joints et rendent la pièce plus lumineuse et plus simple à entretenir."},
+    {"q": "Peut-on carreler un sol chauffant ?", "r": "Oui, avec une colle et un joint déformables adaptés, et en respectant la montée en température progressive prévue par le fabricant avant la pose. Nous vérifions ces points avec l'installateur du chauffage."},
+    {"q": "Quelle différence entre carrelage et faïence ?", "r": "Le carrelage est conçu pour le sol et supporte le passage. La faïence est destinée aux murs, elle est plus fine et plus fragile. Certains carreaux, comme les grès cérames, s'utilisent indifféremment au sol et au mur."},
+    {"q": "Comment estimer mon budget ?", "r": "Mesurez la surface à carreler, puis utilisez l'[estimateur de budget](contact?devis=revetements#devisEstimator) ou consultez la [grille tarifaire](tarifs). Ces fourchettes concernent la pose, hors fourniture des carreaux."}
+  ],
+  "voir_aussi": [
+    {"slug": "salle-de-bain", "label": "Salle de bain", "texte": "Étanchéité, carrelage, douche à l'italienne."},
+    {"slug": "revetements-de-sol", "label": "Revêtements de sol", "texte": "Parquet, stratifié, résine et sols souples."},
+    {"slug": "beton-cire", "label": "Béton ciré premium", "texte": "Une surface continue, sans joint, pour sols et murs."}
+  ],
+  "cta": {"h2": "Un sol ou des murs|à carreler ?", "p": "Visite sur site et devis détaillé gratuits. Réponse sous 24h."}
+}

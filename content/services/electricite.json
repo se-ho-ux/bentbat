@@ -1,0 +1,86 @@
+{
+  "slug": "electricite",
+  "nom": "Électricité",
+  "nom_schema": "Électricité : rénovation et mise aux normes",
+  "service_type": "Rénovation électrique, tableau, éclairage et domotique",
+  "estimateur": "electricite",
+  "title": "Électricien : Rénovation et Mise aux Normes | Ben&Bat",
+  "description_meta": "Rénovation électrique, tableau, éclairage LED et domotique aux normes NF C 15-100, en France et en Belgique. Prix indicatifs et devis gratuit sous 24h.",
+  "description": "Rénovation et mise aux normes électriques : tableau, circuits, prises, éclairage LED et domotique, coordonnées avec les autres corps de métier, en France et en Belgique.",
+  "kicker": "Électricité",
+  "h1": "Électricité : rénovation|et mise aux normes",
+  "lede": "Tableau électrique, circuits, prises, éclairage LED et domotique : une installation sûre, dimensionnée pour vos usages d'aujourd'hui et facile à faire évoluer.",
+  "bref": [
+    ["Durée indicative", "2 à 8 jours selon la surface et l'état de l'installation existante"],
+    ["Budget indicatif", "Rénovation électrique : {prix:electricite:0} HT"],
+    ["Interlocuteur", "Un électricien dédié, coordonné avec les autres métiers"],
+    ["Garanties", "Décennale, RC Pro, bilan à 30 jours"]
+  ],
+  "intro": {
+    "h2": "Une installation sûre,|pensée pour vos usages",
+    "p": [
+      "Une installation électrique ancienne ne manque pas seulement de prises. Elle peut ne plus être adaptée aux usages actuels : plaque à induction, lave-vaisselle, bornes de recharge, bureau à domicile. Les circuits surchargés chauffent, les disjoncteurs déclenchent sans cesse et, dans les cas extrêmes, la sécurité n'est plus garantie.",
+      "Nous réalisons la rénovation électrique complète ou partielle, le remplacement du tableau, la création de circuits dédiés, l'éclairage intérieur et extérieur, et l'installation de solutions domotiques. L'électricité est coordonnée avec la maçonnerie, la plomberie et la peinture, pour que les saignées soient rebouchées au bon moment.",
+      "En rénovation complète, l'électricité est intégrée au planning d'un [chantier tous corps de métier](renovation-complete). Elle s'accorde aussi aux projets de [cuisine](cuisine) et de [salle de bain](salle-de-bain), où les règles de sécurité sont plus strictes."
+    ]
+  },
+  "cartes": [
+    {"icon": "bolt", "titre": "Tableau et mise aux normes", "texte": "Le tableau est le cœur de l'installation. Nous le remplaçons ou le complétons avec des protections adaptées et un repérage clair de chaque circuit.", "liste": ["Tableau électrique neuf", "Disjoncteurs et différentiels adaptés", "Circuits spécialisés", "Repérage des circuits"]},
+    {"icon": "plug", "titre": "Circuits, prises et interrupteurs", "texte": "Les points d'alimentation sont répartis selon la norme NF C 15-100 et selon vos usages : plans de travail, bureau, recharge, télévision.", "liste": ["Prises et interrupteurs", "Prises de courant faible et réseau", "Circuits dédiés", "Appareillage au choix"]},
+    {"icon": "lightbulb", "titre": "Éclairage intérieur et extérieur", "texte": "Éclairage LED encastré, sous meuble, en miroir ou en applique : l'éclairage se pense avec le plafond et les rangements, avant les finitions.", "liste": ["Spots et rubans LED", "Éclairage de salle de bain", "Éclairage extérieur", "Variateurs et commandes"]},
+    {"icon": "house-signal", "titre": "Domotique et interphonie", "texte": "Volets, éclairage, chauffage ou accès à distance : la domotique se prépare dans les murs, c'est pourquoi elle s'envisage dès la rénovation.", "liste": ["Domotique et home automation", "Volets roulants connectés", "Interphones et vidéophonie", "Préparation de la fibre"]}
+  ],
+  "deroule_h2": "Du diagnostic|à la mise sous tension",
+  "deroule_intro": "Une installation électrique est contrôlée avant d'être mise sous tension. Les saignées ne sont rebouchées qu'après vérification des gaines.",
+  "etapes": [
+    {"icon": "route", "titre": "Visite et diagnostic de l'installation", "texte": "Nous examinons le tableau, les protections, la section des câbles et l'état des prises. Dans l'ancien, nous cherchons les zones où l'installation ne répond plus aux règles actuelles."},
+    {"icon": "file-invoice", "titre": "Plan d'implantation et devis", "texte": "Nous établissons avec vous l'implantation des prises, des points lumineux et des commandes, pièce par pièce, puis un devis détaillé poste par poste."},
+    {"icon": "hard-hat", "titre": "Saignées et passage des gaines", "texte": "Passage des gaines dans les murs et plafonds, pose des boîtes d'encastrement. Cette étape est coordonnée avec la plomberie et la maçonnerie."},
+    {"icon": "plug", "titre": "Tirage des câbles et tableau", "texte": "Tirage des câbles, câblage du tableau, pose des protections et repérage de chaque circuit."},
+    {"icon": "key", "titre": "Appareillage, essais et réception", "texte": "Pose des prises, interrupteurs et luminaires une fois les peintures terminées, essais de chaque circuit, mise sous tension et explication du tableau."}
+  ],
+  "tarifs": {
+    "cats": ["electricite"],
+    "h2": "Combien coûte|l'électricité ?",
+    "intro": "Une rénovation électrique se chiffre au mètre carré, un tableau et un point électrique à l'unité. Les fourchettes dépendent de l'état de départ et de l'accessibilité des murs.",
+    "facteurs": [
+      {"titre": "Dépose de l'existant {coef:depose}", "texte": "Ancien tableau, câblage et appareillage à retirer et à évacuer."},
+      {"titre": "Accès difficile {coef:acces}", "texte": "Gaines étroites, plafonds hauts, passage dans des murs en pierre."},
+      {"titre": "Support dégradé {coef:support}", "texte": "Murs ou cloisons à reprendre pour passer les câbles."},
+      {"titre": "Finition premium {coef:premium}", "texte": "Appareillage haut de gamme, domotique, éclairage architectural."}
+    ]
+  },
+  "conseils": {
+    "eyebrow": "Avant de commencer",
+    "h2": "Quatre points|à ne pas négliger",
+    "intro": "La sécurité électrique repose sur des règles précises. Voici ce que nous contrôlons systématiquement avant de proposer une solution.",
+    "items": [
+      {"titre": "Ne jamais intervenir soi-même sur un tableau", "texte": "Même hors tension, un tableau électrique ancien peut cacher des raccordements non conformes. L'intervention d'un professionnel est la seule façon de garantir une remise en service sûre."},
+      {"titre": "Respecter les volumes de la salle de bain", "texte": "Dans une salle de bain, les équipements autorisés dépendent de leur distance à l'eau. La norme NF C 15-100 définit des volumes de sécurité : prises, luminaires et appareils y sont soumis à des règles strictes, que nous appliquons à chaque projet."},
+      {"titre": "Prévoir plus de prises que nécessaire", "texte": "Le coût d'une prise supplémentaire au moment de la rénovation est faible, alors que l'ajouter plus tard oblige à rouvrir les murs. Nous raisonnons par usage, pièce par pièce."},
+      {"titre": "Anticiper l'attestation de conformité", "texte": "Selon la nature des travaux et le pays, une attestation de conformité de l'installation peut être exigée : en France via le Consuel pour certaines installations neuves ou rénovées, en Belgique par un contrôle réalisé par un organisme agréé. Nous vous informons de ce qui s'applique à votre projet."}
+    ]
+  },
+  "photos_h2": "De la lumière|dans les pièces d'eau",
+  "photos_texte": "Deux pièces d'eau avec éclairage intégré. Retrouvez toutes nos [réalisations](realisations).",
+  "photos": [
+    {"img": "image9", "alt": "Salle de bains avec miroir rétroéclairé et spots encastrés à Lyon", "legende": "Salle de bains à Lyon : miroir rétroéclairé et spots encastrés.", "lien": "realisations#rl-salles-de-bains"},
+    {"img": "image3", "alt": "Salle de bains en béton ciré avec plafond courbe rétroéclairé à Paris", "legende": "Salle de bains à Paris : plafond courbe rétroéclairé au-dessus de la douche.", "lien": "realisations#rl-beton-cire"}
+  ],
+  "faq_h2": "Les questions|qu'on nous pose",
+  "faq_intro": "Normes, tableau, domotique, attestation : les réponses aux questions d'électricité les plus fréquentes.",
+  "faq": [
+    {"q": "Qu'est-ce que la norme NF C 15-100 ?", "r": "C'est la norme française qui fixe les règles de conception et de réalisation des installations électriques en basse tension dans les logements : nombre minimal de prises par pièce, circuits spécialisés, protections, volumes de la salle de bain. Elle s'applique aux installations neuves et sert de référence en rénovation."},
+    {"q": "Faut-il changer le tableau électrique en rénovation ?", "r": "Souvent, quand il est ancien, saturé ou dépourvu de protections modernes comme les différentiels. Un tableau récent et bien dimensionné peut parfois être conservé et complété. Nous en jugeons à la visite, et nous le précisons dans le devis."},
+    {"q": "Peut-on rénover l'électricité sans casser les murs ?", "r": "Dans certains cas, on peut passer les câbles en goulottes ou par les plinthes, mais le rendu est moins discret. Quand les murs sont déjà ouverts pour d'autres travaux, c'est le bon moment pour encastrer les gaines. Nous vous proposons les deux options quand elles sont possibles."},
+    {"q": "La domotique est-elle compliquée à installer ?", "r": "La partie câblage se prépare dans les murs, c'est pourquoi elle est plus simple à l'occasion d'une rénovation. Nous installons des solutions simples et évolutives, sans vous enfermer dans un système unique, et nous vous expliquons le fonctionnement à la réception."},
+    {"q": "Combien coûte un tableau électrique ?", "r": "La [grille tarifaire](tarifs) indique une fourchette à l'unité, selon la taille de l'installation et le nombre de circuits. Le prix exact dépend de ce que le tableau doit alimenter : l'[estimateur de budget](contact?devis=electricite#devisEstimator) permet d'avoir un premier ordre de grandeur."},
+    {"q": "Intervenez-vous seulement en rénovation complète ?", "r": "Non. Nous traitons aussi des interventions ciblées : remplacement d'un tableau, ajout de circuits, mise aux normes d'une pièce, installation d'un éclairage. Pour un [chantier complet](renovation-complete), l'électricité est intégrée au planning."}
+  ],
+  "voir_aussi": [
+    {"slug": "renovation-complete", "label": "Rénovation complète", "texte": "L'électricité intégrée à un chantier coordonné."},
+    {"slug": "cuisine", "label": "Cuisine", "texte": "Circuits dédiés, prises de plan de travail, éclairage."},
+    {"slug": "plomberie", "label": "Plomberie", "texte": "Réseaux d'eau, sanitaires et chauffe-eau."}
+  ],
+  "cta": {"h2": "Une installation|à rénover ?", "p": "Visite sur site et devis détaillé gratuits. Réponse sous 24h."}
+}

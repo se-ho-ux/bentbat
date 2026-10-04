@@ -1,0 +1,87 @@
+{
+  "slug": "revetements-de-sol",
+  "nom": "Revêtements de sol",
+  "nom_schema": "Pose de parquet, stratifié, résine et sols souples",
+  "service_type": "Pose de revêtements de sol : parquet, stratifié, résine, béton ciré, sols souples",
+  "estimateur": "revetements",
+  "title": "Pose de Parquet, Stratifié et Résine | Ben&Bat",
+  "description_meta": "Pose de parquet massif ou contrecollé, stratifié, résine et sols souples sur tous supports. Prix indicatifs au m² et devis gratuit sous 24h.",
+  "description": "Pose de parquet massif et contrecollé, stratifié, résine, béton ciré et sols souples, avec préparation du support, en France et en Belgique.",
+  "kicker": "Revêtements de sol",
+  "h1": "Pose de parquet, stratifié|résine et sols souples",
+  "lede": "Parquet massif ou contrecollé, point de Hongrie, stratifié, résine, sol souple : le revêtement se choisit selon l'usage de la pièce, et se pose sur un support que nous préparons.",
+  "bref": [
+    ["Durée indicative", "2 à 6 jours selon la surface et le type de revêtement"],
+    ["Budget indicatif", "Parquet : {prix:revetements:3} HT"],
+    ["Interlocuteur", "Un poseur dédié, coordonné avec les autres métiers"],
+    ["Garanties", "Décennale, RC Pro, bilan à 30 jours"]
+  ],
+  "intro": {
+    "h2": "Un sol se choisit|pour vivre dessus",
+    "p": [
+      "Le sol est l'élément d'une pièce qui subit le plus : passages, meubles, humidité, variations de température. Le revêtement idéal n'existe pas dans l'absolu, il dépend de la pièce. Un parquet massif réchauffe un séjour mais supporte mal une cuisine très humide. Un sol souple convient à une pièce d'eau. Une résine crée une surface continue durable.",
+      "Nous posons le parquet massif et contrecollé, y compris en motifs comme le point de Hongrie ou le chevron, le stratifié, la résine, le béton ciré et les sols souples. Dans chaque cas, la préparation du support, plan, sec et propre, est la condition d'une pose durable.",
+      "Pour les pièces d'eau, le [carrelage](carrelage) reste la solution de référence. Pour une surface continue sans joint, voyez le [béton ciré](beton-cire), que nous fabriquons dans notre atelier."
+    ]
+  },
+  "cartes": [
+    {"icon": "tree", "titre": "Parquet massif et contrecollé", "texte": "Le parquet apporte chaleur et caractère. Massif, il se rénove plusieurs fois. Contrecollé, il est plus stable et se pose sur sol chauffant.", "liste": ["Parquet massif", "Parquet contrecollé", "Point de Hongrie et chevron", "Pose collée, clouée ou flottante"]},
+    {"icon": "layer-group", "titre": "Stratifié et vinyle", "texte": "Stratifié et sols vinyles imitation bois offrent un bon rapport qualité-prix. La pose flottante sur sous-couche est rapide et réversible.", "liste": ["Stratifié", "Sols vinyles", "Sous-couche acoustique", "Plinthes assorties"]},
+    {"icon": "droplet", "titre": "Résine et béton ciré", "texte": "Surfaces continues, sans joint, pour sols de pièces à vivre, de cuisines ou de salles de bains. Elles se coulent sur un support préparé.", "liste": ["Résine époxy et polyuréthane", "[Béton ciré](beton-cire) pour sols", "Continuité murs et sols", "Protection adaptée à l'usage"]},
+    {"icon": "shoe-prints", "titre": "Sols souples et moquette", "texte": "Sols souples, moquette et liège apportent confort acoustique et chaleur. Ils conviennent aux chambres, aux bureaux et aux pièces de passage.", "liste": ["Sols souples", "Moquette", "Liège", "Seuils et barres de finition"]}
+  ],
+  "deroule_h2": "De la préparation|au dernier seuil",
+  "deroule_intro": "Un revêtement de sol se pose en fin de chantier, sur un support contrôlé. Une pose précipitée sur un support humide ou irrégulier se voit dans les mois qui suivent.",
+  "etapes": [
+    {"icon": "route", "titre": "Visite et contrôle du support", "texte": "Nous vérifions la planéité, l'humidité et la solidité du support, la présence d'un sol chauffant et la hauteur disponible sous les portes. Ces points décident du revêtement possible."},
+    {"icon": "file-invoice", "titre": "Devis et choix du revêtement", "texte": "Le devis précise le revêtement, le mode de pose, la sous-couche et les finitions. Le matériau est livré et stocké dans la pièce quelques jours avant la pose, pour s'acclimater."},
+    {"icon": "tools", "titre": "Préparation du support", "texte": "Ragréage si nécessaire, primaire, sous-couche. Le support est plan, sec et propre avant la pose."},
+    {"icon": "tree", "titre": "Pose du revêtement", "texte": "Pose selon le mode choisi, avec jeu de dilatation en périphérie pour le bois et le stratifié, calepinage des lames et alignement dans le sens de la lumière."},
+    {"icon": "key", "titre": "Plinthes, seuils et réception", "texte": "Pose des plinthes et des barres de seuil, nettoyage, contrôle des raccords avec les portes et les autres revêtements."}
+  ],
+  "tarifs": {
+    "cats": ["revetements"],
+    "only": ["Stratifié", "Parquet", "Résine / béton ciré", "Sol souple"],
+    "h2": "Combien coûte|la pose d'un sol ?",
+    "intro": "La pose se chiffre au mètre carré. Le prix du revêtement lui-même s'ajoute selon le modèle : un parquet massif de qualité peut représenter un budget supérieur à celui de la pose.",
+    "facteurs": [
+      {"titre": "Dépose de l'existant {coef:depose}", "texte": "Ancien parquet, moquette ou carrelage à retirer et à évacuer."},
+      {"titre": "Accès difficile {coef:acces}", "texte": "Étage sans ascenseur, portage de lames ou de rouleaux volumineux."},
+      {"titre": "Support dégradé {coef:support}", "texte": "Plancher non plan, chape fissurée ou humide à reprendre."},
+      {"titre": "Finition premium {coef:premium}", "texte": "Point de Hongrie, chevrons, essences nobles, motifs complexes."}
+    ]
+  },
+  "conseils": {
+    "eyebrow": "Avant de choisir",
+    "h2": "Quatre critères|pour bien choisir",
+    "intro": "Ces questions orientent le choix entre bois, stratifié, résine ou sol souple. Nous les posons toujours avant de proposer un revêtement.",
+    "items": [
+      {"titre": "Contrôler l'humidité du support", "texte": "Un parquet posé sur un support trop humide gonfle, se déforme et finit par se décoller. L'humidité de la chape se contrôle avant la pose, et la pose est repoussée si elle est trop élevée."},
+      {"titre": "Anticiper le sol chauffant", "texte": "Tous les revêtements ne conviennent pas à un sol chauffant : le parquet contrecollé, le carrelage, la résine et certains stratifiés s'y prêtent, le parquet massif épais beaucoup moins. Le fabricant précise les conditions."},
+      {"titre": "Laisser le matériau s'acclimater", "texte": "Le bois travaille avec l'humidité et la température. Le stocker quelques jours dans la pièce avant la pose limite les écarts de dimension après installation."},
+      {"titre": "Choisir selon la pièce, pas seulement selon l'esthétique", "texte": "Cuisine, entrée, chambre d'enfant, bureau : l'usage dicte la résistance nécessaire. Nous vous conseillons sur échantillons, avec les contraintes d'entretien de chaque matériau."}
+    ]
+  },
+  "photos_h2": "Des parquets posés|à Versailles et à Paris",
+  "photos_texte": "Deux intérieurs avec parquet. Retrouvez toutes nos [réalisations](realisations).",
+  "photos": [
+    {"img": "image2", "alt": "Chambre avec parquet point de Hongrie et murs à moulures à Versailles", "legende": "Chambre à Versailles : parquet point de Hongrie et murs à moulures.", "lien": "realisations#rl-amenagement"},
+    {"img": "image13", "alt": "Appartement haussmannien avec parquet, îlot en marbre et bibliothèque en bois", "legende": "Appartement haussmannien : parquet, îlot en marbre et bibliothèque en bois.", "lien": "realisations#rl-amenagement"}
+  ],
+  "faq_h2": "Les questions|qu'on nous pose",
+  "faq_intro": "Support, sol chauffant, durée, entretien : les réponses aux questions de revêtements de sol les plus fréquentes.",
+  "faq": [
+    {"q": "Quelle différence entre parquet massif et contrecollé ?", "r": "Le parquet massif est taillé dans une seule pièce de bois, et peut être poncé plusieurs fois. Le contrecollé associe une couche de bois noble sur un support stable : il est moins sensible aux variations d'humidité et convient mieux aux sols chauffants, mais se rénove moins de fois."},
+    {"q": "Peut-on poser un parquet sur un sol chauffant ?", "r": "Oui, avec un parquet adapté, généralement contrecollé et de faible épaisseur, collé sur le support. La montée en température du sol doit être progressive avant et après la pose. Nous nous alignons sur les préconisations du fabricant et de l'installateur du chauffage."},
+    {"q": "Qu'est-ce qu'un parquet point de Hongrie ?", "r": "C'est un parquet dont les lames, coupées en biseau, forment un motif en zigzag. Il est plus complexe à poser qu'un parquet droit, car chaque lame doit être ajustée avec précision. C'est un motif classique des appartements anciens parisiens."},
+    {"q": "Combien de temps avant de pouvoir remettre les meubles ?", "r": "Un parquet collé demande en général un à trois jours avant le passage, et davantage avant de replacer des meubles lourds. Un stratifié flottant est utilisable immédiatement. Une résine ou un béton ciré demande plusieurs jours de séchage. Nous précisons le délai pour chaque revêtement."},
+    {"q": "Peut-on poser un nouveau sol sans retirer l'ancien ?", "r": "Parfois : un stratifié flottant peut se poser sur un ancien sol plan et sain, et le [béton ciré](beton-cire) sur un carrelage adhérent. La hauteur supplémentaire doit rester compatible avec les portes. Nous vérifions à la visite."},
+    {"q": "Comment estimer mon budget ?", "r": "Mesurez la surface, puis utilisez l'[estimateur de budget](contact?devis=revetements#devisEstimator) ou consultez la [grille tarifaire](tarifs). Ces fourchettes concernent la pose, hors fourniture du revêtement."}
+  ],
+  "voir_aussi": [
+    {"slug": "carrelage", "label": "Carrelage et faïence", "texte": "Sols et murs, pièces d'eau, grands formats."},
+    {"slug": "beton-cire", "label": "Béton ciré premium", "texte": "Un sol continu, sans joint, fabriqué en atelier."},
+    {"slug": "renovation-complete", "label": "Rénovation complète", "texte": "Le sol intégré à un chantier tous corps de métier."}
+  ],
+  "cta": {"h2": "Un sol|à renouveler ?", "p": "Visite sur site et devis détaillé gratuits. Réponse sous 24h."}
+}

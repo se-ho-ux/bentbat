@@ -1,0 +1,88 @@
+{
+  "slug": "mobilier-sur-mesure",
+  "nom": "Mobilier sur mesure",
+  "nom_schema": "Mobilier sur mesure",
+  "service_type": "Conception et fabrication de mobilier sur mesure : bibliothèques, dressings, tables, bancs",
+  "kind": "pilier",
+  "estimateur": "premium",
+  "title": "Mobilier sur Mesure : Bibliothèques, Dressings | Ben&Bat",
+  "description_meta": "Mobilier sur mesure conçu et fabriqué par nos artisans : bibliothèques, dressings, tables, bancs. Prix indicatifs, France et Belgique, devis gratuit.",
+  "description": "Conception et fabrication de mobilier sur mesure par nos artisans : bibliothèques, dressings, tables, bancs, aménagements, en France et en Belgique.",
+  "kicker": "Notre spécialité signature",
+  "h1": "Mobilier sur mesure|conçu et fabriqué par nos artisans",
+  "lede": "Bibliothèques, dressings, tables, bancs, aménagements sous pente ou en niche : du mobilier dessiné aux dimensions exactes de la pièce, fabriqué par nos artisans sans sous-traitance.",
+  "bref": [
+    ["Fabrication", "Par nos artisans, sans sous-traitance"],
+    ["Budget indicatif", "Mobilier sur mesure : {prix:premium:1} HT"],
+    ["Délai", "Précisé au devis, selon la complexité et les matériaux"],
+    ["Zones", "France et Belgique"]
+  ],
+  "intro": {
+    "h2": "Là où le meuble standard|ne rentre pas",
+    "p": [
+      "Dans un appartement ancien, un duplex ou des combles aménagés, les murs ne sont jamais d'équerre, les hauteurs varient et les niches ont leurs propres cotes. Le meuble standard laisse alors des vides, ou ne rentre tout simplement pas. Le mobilier sur mesure remplace ces compromis par des ouvrages qui épousent la pièce et se fondent dans l'architecture.",
+      "Nous concevons et fabriquons des bibliothèques, des dressings, des tables, des bancs, des habillages et des aménagements intégrés. Chaque pièce est dessinée après un relevé précis sur place, puis fabriquée par nos artisans dans notre atelier, ce qui nous permet de tenir la finition d'un projet à l'autre.",
+      "Le mobilier se coordonne avec le reste du chantier : peinture, revêtements, électricité pour l'éclairage intégré. Il peut s'inscrire dans une [rénovation complète](renovation-complete) ou intervenir seul."
+    ]
+  },
+  "cartes": [
+    {"icon": "book", "titre": "Bibliothèques et rangements", "texte": "Bibliothèques pleine hauteur, niches, meubles sous pente : les rangements occupent exactement l'espace disponible, sans jour ni retombée.", "liste": ["Bibliothèques sur mesure", "Meubles sous pente", "Rangements en niche", "Éclairage intégré"]},
+    {"icon": "tshirt", "titre": "Dressings et placards", "texte": "Penderies, tiroirs et étagères répartis selon vos usages, avec des portes battantes ou coulissantes ajustées à la pièce.", "liste": ["Dressings ouverts ou fermés", "Placards sur mesure", "Portes coulissantes ou battantes", "Aménagements intérieurs"]},
+    {"icon": "chair", "titre": "Tables, bancs et habillages", "texte": "Tables à manger, bancs, têtes de lit, habillages de cheminée ou de radiateur : des pièces uniques, dessinées pour votre intérieur.", "liste": ["Tables et bureaux", "Bancs et banquettes", "Têtes de lit", "Habillages sur mesure"]},
+    {"icon": "gem", "titre": "Matériaux et finitions", "texte": "Bois massif, placages, laques, béton ciré : les matériaux sont choisis selon l'usage et l'esthétique, et validés sur échantillon avant fabrication.", "liste": ["Bois massif et placages", "Laques et peintures", "[Béton ciré](beton-cire)", "Quincaillerie de qualité"]}
+  ],
+  "deroule_h2": "Du relevé|à la pose en atelier et sur place",
+  "deroule_intro": "Un meuble sur mesure se joue à la précision du relevé et à la qualité de fabrication. La pose, elle, est rapide quand tout a été bien préparé.",
+  "etapes": [
+    {"icon": "ruler-combined", "titre": "Relevé et échange sur l'usage", "texte": "Nous relevons la pièce, les niches et les contraintes, puis nous discutons de ce que vous voulez y ranger ou y faire. C'est l'usage qui dessine le meuble."},
+    {"icon": "pencil-ruler", "titre": "Conception et plan coté", "texte": "Nous établissons un plan coté de l'ouvrage, avec les matériaux, les finitions et la quincaillerie. Vous le validez avant toute fabrication."},
+    {"icon": "file-invoice", "titre": "Devis détaillé", "texte": "Un devis précis, gratuit et sans engagement. Il détaille la fabrication, les matériaux, la pose et les éventuels travaux associés."},
+    {"icon": "hammer", "titre": "Fabrication en atelier", "texte": "Débit, assemblage, finitions : le meuble est fabriqué par nos artisans dans notre atelier. La finition est contrôlée avant livraison."},
+    {"icon": "key", "titre": "Livraison, pose et réception", "texte": "Pose sur place, ajustements aux irrégularités des murs, raccords et nettoyage. Nous contrôlons chaque tiroir et chaque porte avec vous."}
+  ],
+  "tarifs": {
+    "cats": ["premium"],
+    "only": ["Mobilier sur mesure"],
+    "h2": "Combien coûte|un meuble sur mesure ?",
+    "intro": "Le mobilier sur mesure se chiffre au mètre carré de façade. Le prix varie selon les matériaux, la complexité, la quincaillerie et l'éclairage intégré.",
+    "facteurs": [
+      {"titre": "Dépose de l'existant {coef:depose}", "texte": "Ancien placard, habillage ou meuble à démonter et à évacuer."},
+      {"titre": "Accès difficile {coef:acces}", "texte": "Étage sans ascenseur, escalier étroit, meuble à monter en plusieurs éléments."},
+      {"titre": "Support dégradé {coef:support}", "texte": "Murs très irréguliers ou humides à reprendre avant la pose."},
+      {"titre": "Finition premium {coef:premium}", "texte": "Essences nobles, béton ciré, laques sur mesure, éclairage intégré."}
+    ]
+  },
+  "conseils": {
+    "eyebrow": "Avant de commander",
+    "h2": "Quatre questions|à se poser",
+    "intro": "Ce sont les points que nous abordons au relevé. Bien posés, ils évitent les regrets une fois le meuble installé.",
+    "items": [
+      {"titre": "Partir de l'usage, pas de l'esthétique", "texte": "Un dressing se dessine à partir de ce que vous y rangez : longueur de penderie, nombre de tiroirs, hauteur des étagères. Nous vous demandons de faire l'inventaire avant de dessiner."},
+      {"titre": "Prévoir la lumière dès le départ", "texte": "Un éclairage intégré, un ruban LED dans une niche ou une prise cachée se prévoient dans la fabrication. Les ajouter après est plus cher et moins propre."},
+      {"titre": "Choisir les matériaux selon la pièce", "texte": "Le bois massif réagit à l'humidité, le placage est plus stable, la laque se nettoie facilement. Nous vous conseillons sur échantillon, selon l'exposition et l'usage du meuble."},
+      {"titre": "Mesurer après les finitions", "texte": "Quand c'est possible, le relevé définitif se fait une fois les sols et les murs terminés, pour que le meuble s'ajuste à la pièce telle qu'elle sera réellement."}
+    ]
+  },
+  "photos_h2": "Des bibliothèques et des aménagements|dans des appartements anciens",
+  "photos_texte": "Deux intérieurs avec bibliothèque. Retrouvez toutes nos [réalisations](realisations).",
+  "photos": [
+    {"img": "image10", "alt": "Salon avec bibliothèque en bois, poutres apparentes et parquet point de Hongrie", "legende": "Salon : bibliothèque en bois, poutres apparentes et parquet point de Hongrie.", "lien": "realisations#rl-amenagement"},
+    {"img": "image13", "alt": "Appartement haussmannien avec bibliothèque en bois et îlot en marbre", "legende": "Appartement haussmannien : bibliothèque en bois et îlot en marbre.", "lien": "realisations#rl-amenagement"}
+  ],
+  "faq_h2": "Les questions|qu'on nous pose",
+  "faq_intro": "Délais, matériaux, pose, budget : ce qu'il faut savoir avant de commander un meuble sur mesure.",
+  "faq": [
+    {"q": "Quelle est la différence avec un meuble de catalogue ?", "r": "Un meuble de catalogue est fabriqué en série, à des dimensions standard. Un meuble sur mesure est dessiné pour la pièce : il occupe exactement l'espace, épouse les irrégularités des murs et ne laisse pas de vides. Il est aussi fabriqué dans les matériaux et les finitions que vous choisissez."},
+    {"q": "Combien de temps faut-il prévoir ?", "r": "Cela dépend de la complexité et des matériaux. Le délai comprend la conception, la validation du plan, la fabrication en atelier puis la pose. Nous l'indiquons dans le devis, après le relevé, plutôt que d'annoncer une durée théorique."},
+    {"q": "Fabriquez-vous vous-mêmes ?", "r": "Oui. Nos meubles sont conçus et fabriqués par nos artisans, sans sous-traitance. C'est ce qui nous permet de contrôler la finition de bout en bout."},
+    {"q": "Peut-on intégrer de l'éclairage ou de l'électricité ?", "r": "Oui, c'est même recommandé. Rubans LED, prises cachées et interrupteurs se prévoient à la conception. Nous coordonnons avec notre [électricien](electricite) pour que les raccordements soient prêts à la pose."},
+    {"q": "Réalisez-vous aussi des meubles en béton ciré ?", "r": "Oui : plans de travail, vasques, bancs et plans de toilette en [béton ciré](beton-cire), coulés dans notre atelier. Chaque pièce est unique et sur mesure."},
+    {"q": "Comment estimer mon budget ?", "r": "Mesurez la surface de façade visible, puis utilisez l'[estimateur de budget](contact?devis=premium#devisEstimator) ou la [grille tarifaire](tarifs). La fourchette est hors taxes, et le plan coté permet ensuite de la préciser."}
+  ],
+  "voir_aussi": [
+    {"slug": "vasques-sur-mesure", "label": "Vasques sur mesure", "texte": "Vasques et plans de toilette en béton ciré ou en résine."},
+    {"slug": "beton-cire", "label": "Béton ciré premium", "texte": "Plans de travail, bancs et mobilier en béton ciré."},
+    {"slug": "renovation-complete", "label": "Rénovation complète", "texte": "Le mobilier intégré à un chantier tous corps de métier."}
+  ],
+  "cta": {"h2": "Un meuble|à imaginer ?", "p": "Relevé sur site et devis détaillé gratuits. Réponse sous 24h."}
+}
