@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <!-- @shared:head-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>
@@ -14,6 +15,7 @@
       history.replaceState(null, '', clean + location.search + location.hash);
     }
   </script>
+  <!-- @end:head-meta -->
   <link rel="canonical" href="https://benbat.fr/renovation-appartement-paris">
   <title>Rénovation d'Appartement à Paris — Clé en Main | Ben&amp;Bat</title>
   <meta name="description" content="Rénovation complète d'appartement à Paris : haussmannien, récent, petites surfaces. Interlocuteur unique, tous corps de métier, décennale. Devis sous 24h.">
@@ -25,6 +27,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <!-- @shared:head-assets -->
   <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -78,6 +81,7 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- @end:head-assets -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -274,6 +278,7 @@
   ]
 }
   </script>
+  <!-- @end:schema-business -->
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -401,6 +406,7 @@
   <a href="#main-content" class="skip-link">Passer au contenu principal</a>
 
   <!-- ══════════ HEADER ══════════ -->
+  <!-- @shared:header active=renovation-appartement-paris -->
   <header id="header">
     <div class="nav-wrap">
       <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
@@ -440,6 +446,7 @@
       <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
     </div>
   </div>
+  <!-- @end:header -->
 
   <!-- ══════════ PAGE HERO ══════════ -->
   <section class="page-hero" id="main-content">
@@ -672,6 +679,7 @@
   </section>
 
   <!-- ══════════ FOOTER ══════════ -->
+  <!-- @shared:footer -->
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -698,18 +706,17 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Spécialités</h5>
-          <ul class="footer-links">
-            <li><a href="services#beton-cire">Béton ciré premium</a></li>
-            <li><a href="services#mobilier">Mobilier sur mesure</a></li>
-            <li><a href="services#vasques">Vasques sur mesure</a></li>
-            <li><a href="services#renovation">Rénovation intérieure</a></li>
-            <li><a href="services#nettoyage">Nettoyage de chantier</a></li>
-            <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
-            <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
-            <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
-          </ul>
-        </div>
+    <h5>Spécialités</h5>
+    <ul class="footer-links">
+      <li><a href="services#beton-cire">Béton ciré premium</a></li>
+      <li><a href="services#mobilier">Mobilier sur mesure</a></li>
+      <li><a href="services#vasques">Vasques sur mesure</a></li>
+      <li><a href="services#nettoyage">Nettoyage fin de chantier</a></li>
+      <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+      <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+      <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
+    </ul>
+  </div>
         <div class="footer-col">
           <h5>Contact</h5>
           <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
@@ -735,14 +742,19 @@
       </div>
     </div>
   </footer>
+  <!-- @end:footer -->
 
+  <!-- @shared:sticky -->
   <div class="sticky-cta" id="stickyCta" aria-hidden="true">
     <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
     <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat"><i class="fas fa-phone"></i></a>
     <a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." class="btn sticky-phone sticky-whatsapp" target="_blank" rel="noopener" aria-label="Écrire à Ben&amp;Bat sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
   </div>
+  <!-- @end:sticky -->
 
+  <!-- @shared:scripts -->
   <script src="js/main.js?v=10" defer></script>
   <script src="js/consent.js?v=3" defer></script>
+  <!-- @end:scripts -->
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+  gtag('consent', 'default', {
+    ad_storage: 'denied',
+    ad_user_data: 'denied',
+    ad_personalization: 'denied',
+    analytics_storage: 'denied'
+  });
+  gtag('set', 'ads_data_redaction', true);
+  // Le script Google n'est injecté qu'après acceptation de la mesure
+  // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+  // signaux publicitaires : elle ne charge jamais Google à elle seule.
+  window.benbatApplyConsent = function (c) {
+    var ads = c && c.ads ? 'granted' : 'denied';
+    gtag('consent', 'update', {
+      ad_storage: ads,
+      ad_user_data: ads,
+      ad_personalization: ads
+    });
+    if (!c || !c.analytics || window.benbatGaLoaded) return;
+    window.benbatGaLoaded = true;
+    gtag('consent', 'update', { analytics_storage: 'granted' });
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-RRTBMGWZJT');
+  };
+  try {
+    var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+    if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+    // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+    // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+    if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+    if (c) window.benbatApplyConsent(c);
+  } catch (e) {}
+</script>
+<!-- ──────────────────────────────────────────────────────────────────── -->
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css?v={{v:css}}">
+<!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+     ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+     accompagnent toujours un libellé texte. -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">

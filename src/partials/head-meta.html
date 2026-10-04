@@ -1,0 +1,12 @@
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+  // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+  // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+  // recharger la page (favoris, anciens résultats Google, liens partagés).
+  var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+  if (clean !== location.pathname) {
+    history.replaceState(null, '', clean + location.search + location.hash);
+  }
+</script>

@@ -1,0 +1,103 @@
+{
+ "footer": [
+  {
+   "title": "Services",
+   "items": [
+    {
+     "slug": "renovation-complete",
+     "href": "renovation-complete",
+     "label": "Rénovation complète"
+    },
+    {
+     "slug": "salle-de-bain",
+     "href": "salle-de-bain",
+     "label": "Salle de bain"
+    },
+    {
+     "slug": "cuisine",
+     "href": "cuisine",
+     "label": "Cuisine"
+    },
+    {
+     "slug": "peinture",
+     "href": "peinture",
+     "label": "Peinture"
+    },
+    {
+     "slug": "plomberie",
+     "href": "plomberie",
+     "label": "Plomberie"
+    },
+    {
+     "slug": "electricite",
+     "href": "electricite",
+     "label": "Électricité"
+    },
+    {
+     "slug": "carrelage",
+     "href": "carrelage",
+     "label": "Carrelage &amp; faïence"
+    },
+    {
+     "slug": "placo-isolation",
+     "href": "placo-isolation",
+     "label": "Placo &amp; isolation"
+    },
+    {
+     "slug": "maconnerie",
+     "href": "maconnerie",
+     "label": "Maçonnerie"
+    },
+    {
+     "slug": "revetements-de-sol",
+     "href": "revetements-de-sol",
+     "label": "Revêtements de sol"
+    }
+   ]
+  },
+  {
+   "title": "Spécialités",
+   "items": [
+    {
+     "slug": "beton-cire",
+     "href": "beton-cire",
+     "label": "Béton ciré premium",
+     "fallback": "services#beton-cire"
+    },
+    {
+     "slug": "mobilier-sur-mesure",
+     "href": "mobilier-sur-mesure",
+     "label": "Mobilier sur mesure",
+     "fallback": "services#mobilier"
+    },
+    {
+     "slug": "vasques-sur-mesure",
+     "href": "vasques-sur-mesure",
+     "label": "Vasques sur mesure",
+     "fallback": "services#vasques"
+    },
+    {
+     "slug": "nettoyage-fin-de-chantier",
+     "href": "nettoyage-fin-de-chantier",
+     "label": "Nettoyage fin de chantier",
+     "fallback": "services#nettoyage"
+    },
+    {
+     "slug": "beton-cire-paris",
+     "href": "beton-cire-paris",
+     "label": "Béton ciré à Paris"
+    },
+    {
+     "slug": "beton-cire-bruxelles",
+     "href": "beton-cire-bruxelles",
+     "label": "Béton ciré à Bruxelles"
+    },
+    {
+     "slug": "renovation-appartement-paris",
+     "href": "renovation-appartement-paris",
+     "label": "Rénovation appartement Paris"
+    }
+   ]
+  }
+ ]
+}
