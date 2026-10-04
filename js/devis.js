@@ -1,6 +1,6 @@
 /* Estimation indicative du budget — formulaire de devis (contact.html)
-   Source des prix : tarifs.html. Après toute modification de la grille,
-   mettre à jour TARIFS ci-dessous puis lancer : python3 scripts/check_tarifs.py */
+   Les prix viennent de js/tarifs-data.js, généré depuis tarifs.html :
+   après toute modification de la grille, lancer python3 scripts/sync_tarifs.py */
 (function () {
   'use strict';
 
@@ -19,80 +19,9 @@
     'forfait':   { label: null,                       def: 1 }
   };
 
-  var TARIFS = [
-    { id: 'premium', nom: 'Prestations premium', items: [
-      ['Béton ciré', 'm²', 120, 250],
-      ['Mobilier sur mesure', 'm² façade', 900, 2500],
-      ['Vasque sur mesure', 'unité', 700, 2500]
-    ]},
-    { id: 'renovation', nom: 'Rénovation', hint: 'La rénovation complète inclut déjà les corps de métier : inutile de les ajouter en plus.', items: [
-      ['Rénovation complète', 'm²', 700, 1800],
-      ['Coordination de chantier', 'forfait', 800, 6000]
-    ]},
-    { id: 'peinture', nom: 'Peinture', items: [
-      ['Peinture murs / plafonds', 'm²', 22, 55],
-      ['Préparation des supports', 'm²', 15, 40],
-      ['Enduits décoratifs', 'm²', 70, 180],
-      ['Finitions', 'ml', 12, 60]
-    ]},
-    { id: 'revetements', nom: 'Revêtements de sol & mur', items: [
-      ['Carrelage', 'm²', 45, 95],
-      ['Faïence', 'm²', 45, 110],
-      ['Stratifié', 'm²', 35, 70],
-      ['Parquet', 'm²', 60, 220],
-      ['Résine / béton ciré', 'm²', 90, 250],
-      ['Sol souple', 'm²', 30, 120]
-    ]},
-    { id: 'placo', nom: 'Placo & isolation', items: [
-      ['Cloisons', 'm²', 45, 80],
-      ['Doublage isolé', 'm²', 55, 120],
-      ['Faux plafond', 'm²', 45, 95]
-    ]},
-    { id: 'electricite', nom: 'Électricité', items: [
-      ['Rénovation électrique', 'm²', 70, 150],
-      ['Tableau électrique', 'unité', 900, 3000],
-      ['Point électrique', 'unité', 70, 220],
-      ['Domotique', 'point', 120, 450]
-    ]},
-    { id: 'plomberie', nom: 'Plomberie', items: [
-      ['Réseau de plomberie', 'ml', 35, 80],
-      ['Installation sanitaire', 'unité', 250, 1500],
-      ['Chauffe-eau', 'unité', 900, 4500],
-      ['Dépannage', 'heure', 70, 120]
-    ]},
-    { id: 'cuisine', nom: 'Cuisine', hint: 'La cuisine complète inclut déjà la pose, le plan de travail et l’îlot : ne cochez qu’une des deux options.', items: [
-      ['Pose de cuisine', 'ml', 350, 900],
-      ['Plan de travail', 'ml', 120, 1500],
-      ['Îlot', 'unité', 1800, 7000],
-      ['Cuisine complète', 'm²', 900, 2500]
-    ]},
-    { id: 'salle-de-bain', nom: 'Salle de bain', hint: 'La salle de bain complète inclut déjà douche, baignoire et meuble : ne cochez qu’une des deux options.', items: [
-      ['Douche italienne', 'unité', 2500, 6500],
-      ['Baignoire', 'unité', 700, 2000],
-      ['Meuble vasque', 'unité', 500, 2500],
-      ['Salle de bain complète', 'm²', 1200, 3500]
-    ]},
-    { id: 'maconnerie', nom: 'Maçonnerie', items: [
-      ['Petite maçonnerie', 'm²', 80, 180],
-      ['Dalle béton', 'm²', 80, 180],
-      ['Ouverture de mur porteur', 'unité', 2000, 8000],
-      ['Reprise de structure', 'forfait', 600, 5000]
-    ]},
-    { id: 'nettoyage', nom: 'Nettoyage', items: [
-      ['Nettoyage de fin de chantier', 'm²', 5, 15],
-      ['Nettoyage de façade', 'm²', 8, 25]
-    ]}
-  ];
-
-  var COEFS = [
-    { id: 'depose',  nom: "Dépose de l'existant", pct: 15 },
-    { id: 'acces',   nom: 'Accès difficile',      pct: 10 },
-    { id: 'support', nom: 'Support dégradé',      pct: 20 },
-    { id: 'premium', nom: 'Finition premium',     pct: 30 }
-  ];
-
-  // Exposé pour scripts/check_tarifs.py et les tests
-  window.BENBAT_TARIFS = { tarifs: TARIFS, coefs: COEFS };
+  var DATA = window.BENBAT_TARIFS;
+  if (!DATA) return;
+  var TARIFS = DATA.tarifs, COEFS = DATA.coefs;
 
   var eur = new Intl.NumberFormat('fr-FR', { maximumFractionDigits: 0 });
   var fmt = function (n) { return eur.format(n).replace(/ /g, ' ') + ' €'; };
@@ -206,6 +135,8 @@
       }).join('') + '</ul>' +
       (pct ? '<p class="est-note">Majorations incluses : ' + coefNames.join(', ') + '.</p>' : '') +
       (pending.length ? '<p class="est-note">Quantité manquante, non comptée : ' + pending.join(', ') + '.</p>' : '') +
+      (hi / lo >= 2 ? '<p class="est-note">L’écart est large car il dépend de l’état des supports, de l’accès et du niveau de finition : la visite technique le réduira.</p>' : '') +
+      (lo >= 15000 ? '<p class="est-note">Pour un projet de cette ampleur, une visite sur place est indispensable avant tout chiffrage.</p>' : '') +
       '<p class="est-note">Fourchette hors taxes, non contractuelle. Le prix définitif est arrêté après une visite technique et un devis gratuit.</p>';
   };
 
@@ -224,6 +155,21 @@
     if (on) calc();
   };
   typeSel.addEventListener('change', sync);
-  sync();
+
+  // Lien depuis la page Tarifs : contact?devis=<catégorie>#estimateur
+  var wanted = new URLSearchParams(location.search).get('devis');
+  if (wanted !== null) {
+    typeSel.value = 'devis';
+    var cat = wanted ? box.querySelector('.est-cat[data-cat="' + wanted.replace(/[^a-z\-]/g, '') + '"]') : null;
+    if (cat) cat.open = true;
+    sync();
+    window.addEventListener('load', function () {
+      box.scrollIntoView({ block: 'start' });
+      var target = cat ? cat.querySelector('summary') : box.querySelector('summary');
+      if (target) target.focus({ preventScroll: true });
+    });
+  } else {
+    sync();
+  }
   calc();
 })();
