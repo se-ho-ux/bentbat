@@ -3133,6 +3133,11 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .cookie-banner-actions { width: 100%; }
   .cookie-banner-actions .btn { flex: 1; min-width: 0; padding-inline: 8px; font-size: 0.8125rem; }
 }
+@media (max-width: 380px) {
+  .cookie-banner-actions { flex-wrap: wrap; gap: 8px; }
+  .cookie-banner-actions .btn { flex: 1 1 calc(50% - 4px); }
+  .cookie-banner-actions .btn:last-child { flex-basis: 100%; }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .cookie-banner { transition: none; transform: none; }
