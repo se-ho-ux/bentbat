@@ -15,20 +15,6 @@
   font-style: italic;
   font-display: swap;
 }
-@font-face {
-  font-family: 'Geist Mono';
-  src: url('../fonts/GeistMono.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Geist Mono';
-  src: url('../fonts/GeistMono-Italic.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: italic;
-  font-display: swap;
-}
 
 /* ─────────────────────────────────────────────────────────────
    RESET & BASE
@@ -135,7 +121,7 @@ button { font-family: inherit; }
   --bg-section-alt: #E0E0E0; /* Light grey — sections de contraste */
 
   --font:      'Geist', system-ui, sans-serif;
-  --font-mono: 'Geist Mono', ui-monospace, monospace;
+  --font-mono: var(--font);
   --container: 1280px;
   --header-h:  72px;
   --r-sm:      4px;
@@ -3148,3 +3134,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 @media (prefers-reduced-motion: reduce) {
   .cookie-banner { transition: none; transform: none; }
 }
+
+/* Lignes sans numéro (accueil · Spécialités Signature) */
+.service-row--nonum { grid-template-columns: 40px 1fr; }
+@media (max-width: 900px) { .service-row--nonum { grid-template-columns: 28px 1fr; } }
