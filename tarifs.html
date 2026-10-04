@@ -69,7 +69,7 @@
   <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=12">
+  <link rel="stylesheet" href="css/style.css?v=13">
   <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
        ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
        accompagnent toujours un libellé texte. -->
@@ -382,6 +382,11 @@
         </div>
         <h1>Nos tarifs,<br>en toute transparence</h1>
         <p>Des fourchettes de prix indicatives, hors taxes, pour évaluer votre budget avant même de demander un devis. Le montant définitif est toujours arrêté après une visite technique.</p>
+        <ul class="price-facts">
+          <li><strong>11</strong><span>familles de prestations</span></li>
+          <li><strong>HT</strong><span>fourchettes indicatives</span></li>
+          <li><strong>24 h</strong><span>pour recevoir votre devis</span></li>
+        </ul>
         <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
       </div>
     </div>
@@ -399,8 +404,28 @@
         <p>Ces fourchettes couvrent la majorité des configurations rencontrées sur nos chantiers. Le prix définitif dépend de l'état des lieux, de l'accès et du niveau de finition souhaité : il n'est arrêté qu'après une visite technique et l'établissement d'un devis gratuit.</p>
       </div>
 
+      <nav class="price-nav" aria-label="Catégories de prestations">
+        <a href="#premium">Premium</a><a href="#renovation">Rénovation</a><a href="#peinture">Peinture</a><a href="#revetements">Sols &amp; murs</a><a href="#placo">Placo</a><a href="#electricite">Électricité</a><a href="#plomberie">Plomberie</a><a href="#cuisine">Cuisine</a><a href="#salle-de-bain">Salle de bain</a><a href="#maconnerie">Maçonnerie</a><a href="#nettoyage">Nettoyage</a>
+      </nav>
+
       <div class="price-cats">
-        <div class="price-cat">
+        <div class="price-cat price-cat--featured" id="premium">
+          <div class="price-cat-head">
+            <div class="sr-icon"><i class="fas fa-gem"></i></div>
+            <h3>Prestations premium</h3>
+          </div>
+          <table class="price-table">
+            <thead><tr><th>Prestation</th><th>Fourchette</th></tr></thead>
+            <tbody>
+              <tr><td>Béton ciré<span class="price-unit">/ m²</span></td><td class="price-range">120 € – 250 €</td></tr>
+              <tr><td>Mobilier sur mesure<span class="price-unit">/ m² façade</span></td><td class="price-range">900 € – 2 500 €</td></tr>
+              <tr><td>Vasque sur mesure<span class="price-unit">/ unité</span></td><td class="price-range">700 € – 2 500 €</td></tr>
+            </tbody>
+          </table>
+          <p class="price-note">Notre spécialité signature : détail des réalisations sur <a href="beton-cire-paris">béton ciré à Paris</a> et <a href="beton-cire-bruxelles">à Bruxelles</a>.</p>
+        </div>
+
+        <div class="price-cat" id="renovation">
           <div class="price-cat-head">
             <div class="sr-icon"><i class="fas fa-home"></i></div>
             <h3>Rénovation</h3>
@@ -414,7 +439,7 @@
           </table>
         </div>
 
-        <div class="price-cat">
+        <div class="price-cat" id="peinture">
           <div class="price-cat-head">
             <div class="sr-icon"><i class="fas fa-paint-roller"></i></div>
             <h3>Peinture</h3>
@@ -430,7 +455,7 @@
           </table>
         </div>
 
-        <div class="price-cat">
+        <div class="price-cat" id="revetements">
           <div class="price-cat-head">
             <div class="sr-icon"><i class="fas fa-th-large"></i></div>
             <h3>Revêtements de sol &amp; mur</h3>
@@ -448,7 +473,7 @@
           </table>
         </div>
 
-        <div class="price-cat">
+        <div class="price-cat" id="placo">
           <div class="price-cat-head">
             <div class="sr-icon"><i class="fas fa-layer-group"></i></div>
             <h3>Placo &amp; isolation</h3>
@@ -463,7 +488,7 @@
           </table>
         </div>
 
-        <div class="price-cat">
+        <div class="price-cat" id="electricite">
           <div class="price-cat-head">
             <div class="sr-icon"><i class="fas fa-bolt"></i></div>
             <h3>Électricité</h3>
@@ -479,7 +504,7 @@
           </table>
         </div>
 
-        <div class="price-cat">
+        <div class="price-cat" id="plomberie">
           <div class="price-cat-head">
             <div class="sr-icon"><i class="fas fa-faucet"></i></div>
             <h3>Plomberie</h3>
@@ -495,7 +520,7 @@
           </table>
         </div>
 
-        <div class="price-cat">
+        <div class="price-cat" id="cuisine">
           <div class="price-cat-head">
             <div class="sr-icon"><i class="fas fa-utensils"></i></div>
             <h3>Cuisine</h3>
@@ -511,7 +536,7 @@
           </table>
         </div>
 
-        <div class="price-cat">
+        <div class="price-cat" id="salle-de-bain">
           <div class="price-cat-head">
             <div class="sr-icon"><i class="fas fa-bath"></i></div>
             <h3>Salle de bain</h3>
@@ -527,7 +552,7 @@
           </table>
         </div>
 
-        <div class="price-cat">
+        <div class="price-cat" id="maconnerie">
           <div class="price-cat-head">
             <div class="sr-icon"><i class="fas fa-hammer"></i></div>
             <h3>Maçonnerie</h3>
@@ -543,23 +568,7 @@
           </table>
         </div>
 
-        <div class="price-cat">
-          <div class="price-cat-head">
-            <div class="sr-icon"><i class="fas fa-gem"></i></div>
-            <h3>Prestations premium</h3>
-          </div>
-          <table class="price-table">
-            <thead><tr><th>Prestation</th><th>Fourchette</th></tr></thead>
-            <tbody>
-              <tr><td>Béton ciré<span class="price-unit">/ m²</span></td><td class="price-range">120 € – 250 €</td></tr>
-              <tr><td>Mobilier sur mesure<span class="price-unit">/ m² façade</span></td><td class="price-range">900 € – 2 500 €</td></tr>
-              <tr><td>Vasque sur mesure<span class="price-unit">/ unité</span></td><td class="price-range">700 € – 2 500 €</td></tr>
-            </tbody>
-          </table>
-          <p class="price-note">Notre spécialité signature : détail des réalisations sur <a href="beton-cire-paris">béton ciré à Paris</a> et <a href="beton-cire-bruxelles">à Bruxelles</a>.</p>
-        </div>
-
-        <div class="price-cat">
+        <div class="price-cat" id="nettoyage">
           <div class="price-cat-head">
             <div class="sr-icon"><i class="fas fa-broom"></i></div>
             <h3>Nettoyage</h3>
@@ -579,15 +588,12 @@
           <div class="sr-icon"><i class="fas fa-sliders-h"></i></div>
           <h3>Coefficients d'ajustement</h3>
         </div>
-        <table class="price-table">
-          <thead><tr><th>Situation</th><th>Majoration</th></tr></thead>
-          <tbody>
-            <tr><td>Dépose de l'existant</td><td class="price-range">+ 15 %</td></tr>
-            <tr><td>Accès difficile</td><td class="price-range">+ 10 %</td></tr>
-            <tr><td>Support dégradé</td><td class="price-range">+ 20 %</td></tr>
-            <tr><td>Finition premium</td><td class="price-range">+ 30 %</td></tr>
-          </tbody>
-        </table>
+        <ul class="coef-grid">
+          <li><strong>+&nbsp;15&nbsp;%</strong><span>Dépose de l'existant</span></li>
+          <li><strong>+&nbsp;10&nbsp;%</strong><span>Accès difficile</span></li>
+          <li><strong>+&nbsp;20&nbsp;%</strong><span>Support dégradé</span></li>
+          <li><strong>+&nbsp;30&nbsp;%</strong><span>Finition premium</span></li>
+        </ul>
         <p class="price-coefs-note">Ces majorations s'appliquent au montant obtenu après calcul des prestations. Elles sont cumulables et systématiquement détaillées dans le devis.</p>
       </div>
 
