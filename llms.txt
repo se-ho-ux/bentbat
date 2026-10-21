@@ -1,0 +1,35 @@
+# Ben&Bat
+
+> Entreprise de rénovation intérieure et spécialiste du béton ciré, basée à Paris 8e, intervenant à Paris, en Île-de-France et en Belgique (Bruxelles). Assurance décennale et RC Pro. Devis gratuit sous 24 h.
+
+Coordonnées : 60 Rue François 1er, 75008 Paris. Téléphone France +33 6 58 59 41 47, Belgique +32 465 86 63 72.
+
+## Services
+- [Rénovation complète](https://benbat.fr/renovation-complete)
+- [Salle de bain](https://benbat.fr/salle-de-bain)
+- [Cuisine](https://benbat.fr/cuisine)
+- [Peinture](https://benbat.fr/peinture)
+- [Plomberie](https://benbat.fr/plomberie)
+- [Électricité](https://benbat.fr/electricite)
+- [Carrelage](https://benbat.fr/carrelage)
+- [Placo et isolation](https://benbat.fr/placo-isolation)
+- [Maçonnerie](https://benbat.fr/maconnerie)
+- [Revêtements de sol](https://benbat.fr/revetements-de-sol)
+
+## Spécialités
+- [Béton ciré](https://benbat.fr/beton-cire)
+- [Mobilier sur mesure](https://benbat.fr/mobilier-sur-mesure)
+- [Vasques sur mesure](https://benbat.fr/vasques-sur-mesure)
+- [Nettoyage de fin de chantier](https://benbat.fr/nettoyage-fin-de-chantier)
+
+## Pages locales
+- [Béton ciré à Paris](https://benbat.fr/beton-cire-paris)
+- [Béton ciré à Bruxelles](https://benbat.fr/beton-cire-bruxelles)
+- [Rénovation d'appartement à Paris](https://benbat.fr/renovation-appartement-paris)
+
+## Informations clés
+- [Tarifs indicatifs (HT)](https://benbat.fr/tarifs)
+- [Garanties](https://benbat.fr/garanties)
+- [Réalisations](https://benbat.fr/realisations)
+- [À propos](https://benbat.fr/a-propos)
+- [Demande de devis](https://benbat.fr/contact)
