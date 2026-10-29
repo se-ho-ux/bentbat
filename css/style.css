@@ -129,6 +129,12 @@ button { font-family: inherit; }
   --shadow:    0 4px 32px rgba(23,21,20,0.08);
   --shadow-lg: 0 16px 64px rgba(23,21,20,0.14);
 
+  /* Échelle typographique — fluide, desktop → mobile */
+  --fs-h1:   clamp(1.875rem, 4.6vw, 3.25rem);  /* titres des pages internes : 52 px à 1440 */
+  --fs-hero: clamp(1.875rem, 3vw, 2.75rem);    /* titre du hero d'accueil : 43 px à 1440 */
+  --fs-h2:   clamp(1.625rem, 2.7vw, 2.25rem);   /* titres de section : 36 px à 1440, 26 px minimum */
+  --lh-body: 1.5;                              /* paragraphes courants */
+
   /* Easing — custom curves, never use built-in ease-in for UI */
   --ease:        cubic-bezier(0.25, 0.1, 0.25, 1);
   --ease-out:    cubic-bezier(0.23, 1, 0.32, 1);
@@ -150,12 +156,12 @@ button { font-family: inherit; }
 /* ─────────────────────────────────────────────────────────────
    TYPOGRAPHY
 ───────────────────────────────────────────────────────────── */
-h1, h2, h3, h4 { font-family: var(--font); line-height: 1.05; letter-spacing: -0.04em; color: var(--text); }
-h1 { font-size: clamp(3.25rem, 7vw, 6.5rem);   font-weight: 800; }
-h2 { font-size: clamp(2.25rem, 4.5vw, 4rem);   font-weight: 800; letter-spacing: -0.035em; }
-h3 { font-size: 1.3125rem; font-weight: 700; letter-spacing: -0.025em; line-height: 1.15; }
+h1, h2, h3, h4 { font-family: var(--font); line-height: 1.12; letter-spacing: -0.035em; color: var(--text); }
+h1 { font-size: var(--fs-h1);   font-weight: 800; line-height: 1.1; }
+h2 { font-size: var(--fs-h2);   font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; }
+h3 { font-size: 1.3125rem; font-weight: 700; letter-spacing: -0.025em; line-height: 1.22; }
 h4 { font-size: 1rem;      font-weight: 700; letter-spacing: -0.015em; }
-p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem; }
+p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-size: 1rem; }
 
 .eyebrow {
   display: inline-flex;
@@ -193,8 +199,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: clamp(1.875rem, 3.2vw, 3rem);
-  margin-top: 12px;
+  margin-top: 0;
 }
 .section-head h2 span { display: block !important; }
 .section-head > p, .section-head > div > p.section-head-desc {
@@ -683,9 +688,8 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   z-index: 1;
 }
 .hero-left h1 {
-  /* 3.2vw max → "25 ans de béton ciré" tient sur une ligne dans ~530px de colonne */
-  font-size: clamp(1.875rem, 3.2vw, 3.2rem);
-  line-height: 1.08;
+  font-size: var(--fs-hero);
+  line-height: 1.12;
   color: var(--text);
   margin-bottom: clamp(10px, 1.6vh, 18px);
   position: relative;
@@ -696,7 +700,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   color: var(--text);
   font-weight: 300;
   font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);
-  line-height: 1.3125;
+  line-height: 1.45;
   margin-bottom: clamp(24px, 3.6vh, 44px);
   max-width: 480px;
   position: relative;
@@ -834,7 +838,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   font-size: 0.875rem;
   color: var(--text-muted);
   margin: 0;
-  line-height: 1.3125;
+  line-height: var(--lh-body);
 }
 /* Sous-liste dans les rows (garanties) */
 .sr-list {
@@ -931,7 +935,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   margin-bottom: 4px;
 }
 .specialty-card h3 { color: var(--text); font-size: 1.375rem; }
-.specialty-card p { color: var(--text); font-weight: 300; font-size: 1rem; line-height: 1.3125; }
+.specialty-card p { color: var(--text); font-weight: 300; font-size: 1rem; line-height: var(--lh-body); }
 .specialty-tag {
   display: inline-flex;
   align-items: center;
@@ -974,7 +978,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   overflow: hidden;
 }
 .stat-card {
-  padding: 32px 24px;
+  padding: 32px 28px;
   border-right: 1px solid var(--border);
   transition: background var(--t) var(--ease-out);
 }
@@ -993,7 +997,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 }
 .stat-number .counter { color: var(--accent); }
 .stat-suffix { color: var(--text); }
-.stat-label { font-size: 0.875rem; font-weight: 300; color: var(--text); line-height: 1.3125; }
+.stat-label { font-size: 0.875rem; font-weight: 300; color: var(--text); line-height: var(--lh-body); }
 
 /* ─────────────────────────────────────────────────────────────
    WHY US
@@ -1102,7 +1106,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 }
 .testimonial-card {
   background: var(--bg);
-  padding: 28px 24px;
+  padding: 32px 28px;
   transition: background var(--t) var(--ease-out);
 }
 @media (hover: hover) and (pointer: fine) {
@@ -1113,7 +1117,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   font-size: 0.9375rem;
   font-style: italic;
   color: var(--text);
-  line-height: 1.3125;
+  line-height: var(--lh-body);
   margin-bottom: 18px;
 }
 .t-author { display: flex; align-items: center; gap: 12px; }
@@ -1140,7 +1144,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   gap: 48px;
 }
 .cta-inner h2 { color: var(--text); }
-.cta-inner p { color: var(--text); font-weight: 300; margin-top: 8px; }
+.cta-inner p { color: var(--text); font-weight: 300; margin-top: 12px; }
 .cta-btns { display: flex; gap: 12px; flex-shrink: 0; }
 .cta-section .btn-ghost {
   color: var(--text);
@@ -1372,7 +1376,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   color: var(--text);
 }
 .value-card h4 i { color: var(--accent); }
-.value-card p { font-size: 1rem; font-weight: 300; color: var(--text); line-height: 1.3125; }
+.value-card p { font-size: 1rem; font-weight: 300; color: var(--text); line-height: var(--lh-body); }
 
 .team-grid {
   display: grid;
@@ -1386,7 +1390,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
 }
 .team-card {
   background: var(--bg);
-  padding: 36px 28px;
+  padding: 32px 28px;
   text-align: center;
   transition: background var(--t) var(--ease-out);
 }
@@ -1442,7 +1446,7 @@ p  { color: var(--text); font-weight: 300; line-height: 1.3125; font-size: 1rem;
   color: var(--text);
   text-decoration: none;
   transition: color var(--t) var(--ease-out);
-  line-height: 1.3125;
+  line-height: var(--lh-body);
 }
 .contact-card-text a:hover { color: var(--accent); }
 
@@ -1568,7 +1572,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 .footer-brand p {
   color: #fff;
   font-size: 0.9375rem;
-  line-height: 1.3125;
+  line-height: var(--lh-body);
   margin: 18px 0 28px;
   max-width: 280px;
 }
@@ -1654,7 +1658,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .service-page-card:hover { background: var(--bg-alt); }
 }
 .service-page-card h3 { margin: 20px 0 12px; }
-.service-page-card p { font-size: 1rem; font-weight: 300; color: var(--text); line-height: 1.3125; }
+.service-page-card p { font-size: 1rem; font-weight: 300; color: var(--text); line-height: var(--lh-body); }
 .service-list {
   list-style: none;
   margin-top: 16px;
@@ -1696,7 +1700,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 }
 .signature-card.full { grid-column: 1 / -1; }
 .signature-card h3 { color: var(--text); }
-.signature-card p { color: var(--text); font-weight: 300; font-size: 1rem; line-height: 1.3125; }
+.signature-card p { color: var(--text); font-weight: 300; font-size: 1rem; line-height: var(--lh-body); }
 
 /* ─────────────────────────────────────────────────────────────
    TARIFS — grille de catégories + tableaux de prix
@@ -1791,7 +1795,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .nav-phone { display: none; }
   .hero { grid-template-columns: 1fr; height: auto; min-height: 0; }
   .hero-left { padding: 52px 48px; }
-  .hero-left h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+  .hero-left h1 { font-size: clamp(2.375rem, 4.2vw, 3rem); }
   .hero-right { height: 45vw; }
   .section-head { gap: 40px; }
   .service-row, .list-row { padding: 24px 8px; margin: 0 -8px; }
@@ -1837,7 +1841,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   /* Hero — 1 colonne, hauteur auto sur tablette */
   .hero { grid-template-columns: 1fr; height: auto; min-height: 0; }
   .hero-left { padding: 40px 32px 40px; }
-  .hero-left h1 { font-size: clamp(2rem, 6vw, 3rem); }
+  .hero-left h1 { font-size: clamp(1.875rem, 6.2vw, 2.375rem); }
   .hero-right { height: 45vw; }
   /* Nav — padding symétrique quand seuls logo + hamburger visibles */
   .nav-wrap { padding: 0 20px; }
@@ -1853,7 +1857,6 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .sr-arrow { display: none; }
   .sr-icon { width: 34px; height: 34px; font-size: 0.875rem; }
   .sr-body h3 { font-size: 1rem; }
-  .page-hero h1 { font-size: clamp(1.875rem, 5vw, 2.5rem); }
   .service-page-card { padding: 32px 28px; }
   .services-page-grid { margin-top: 48px; }
   .about-values { grid-template-columns: 1fr; }
@@ -1929,9 +1932,6 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .hero-trust { gap: 6px 14px; }
 
   /* Typography */
-  h1 { font-size: 2rem; }
-  h2 { font-size: 1.75rem; }
-  .hero-left h1 { font-size: clamp(1.875rem, 8vw, 2.5rem); }
   .stat-number { font-size: 1.375rem; margin-bottom: 4px; }
   .nav-logo { font-size: 1.25rem; }
   .breadcrumb { font-size: 0.75rem; }
@@ -2073,7 +2073,6 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .page-hero h1 { font-size: 1.75rem; }
 
   /* Section head — titre plus compact sur petits écrans */
-  .section-head h2 { font-size: 1.5rem; }
   .section-head { padding-bottom: 18px; gap: 8px; }
   .portfolio-header { flex-wrap: wrap; gap: 16px; margin-bottom: 32px; }
   .portfolio-header .btn { width: 100%; justify-content: center; flex-shrink: unset; }
@@ -2135,7 +2134,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 }
 .process-card {
   background: var(--bg);
-  padding: 36px 28px;
+  padding: 32px 28px;
   transition: background var(--t) var(--ease-out);
 }
 @media (hover: hover) and (pointer: fine) {
@@ -2151,7 +2150,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   margin-bottom: 20px;
 }
 .process-card h4 { margin-bottom: 8px; font-size: 1rem; }
-.process-card p { font-size: 1rem; font-weight: 300; color: var(--text); line-height: 1.3125; }
+.process-card p { font-size: 1rem; font-weight: 300; color: var(--text); line-height: var(--lh-body); }
 
 /* Reassurance strip */
 .reassurance-grid {
@@ -2165,7 +2164,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 }
 .reassurance-item {
   background: var(--bg);
-  padding: 32px 24px;
+  padding: 32px 28px;
   transition: background var(--t) var(--ease-out);
 }
 @media (hover: hover) and (pointer: fine) {
@@ -2177,7 +2176,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   margin-bottom: 14px;
 }
 .reassurance-item h4 { font-size: 0.9375rem; margin-bottom: 6px; }
-.reassurance-item p { font-size: 1rem; font-weight: 300; color: var(--text); line-height: 1.3125; }
+.reassurance-item p { font-size: 1rem; font-weight: 300; color: var(--text); line-height: var(--lh-body); }
 
 /* ── Hero trust micro-badges ──────────────────────────────── */
 .hero-trust {
@@ -2469,7 +2468,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 }
 .value-block {
   background: var(--bg);
-  padding: 36px 24px;
+  padding: 32px 28px;
   text-align: center;
   transition: background var(--t) var(--ease-out);
 }
@@ -2482,7 +2481,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   margin-bottom: 16px;
 }
 .value-block h4 { font-size: 1rem; margin-bottom: 8px; }
-.value-block p { font-size: 1rem; font-weight: 300; color: var(--text); line-height: 1.3125; }
+.value-block p { font-size: 1rem; font-weight: 300; color: var(--text); line-height: var(--lh-body); }
 
 /* Garanties page */
 .garanties-grid {
@@ -2513,7 +2512,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   margin-bottom: 24px;
 }
 .garantie-card h3 { margin-bottom: 12px; }
-.garantie-card p { font-size: 1rem; font-weight: 300; color: var(--text); line-height: 1.3125; }
+.garantie-card p { font-size: 1rem; font-weight: 300; color: var(--text); line-height: var(--lh-body); }
 .garantie-card ul {
   margin-top: 16px;
   padding-left: 0;
@@ -2785,9 +2784,8 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .section    { padding: 48px 0; }
   .section-sm { padding: 36px 0; }
 
-  h1 { font-size: 1.75rem; }
-  h2 { font-size: 1.375rem; }
-  .section-head h2 { font-size: 1.375rem; }
+  h2 { font-size: 1.5rem; }
+  .section-head h2 { font-size: 1.5rem; }
 
   .service-row, .list-row { grid-template-columns: 18px 26px 1fr; gap: 0 8px; padding: 13px 0; }
   .sr-icon { width: 26px; height: 26px; font-size: 0.6875rem; }
@@ -2800,7 +2798,6 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .hero-left { padding: 28px 16px; }
   .page-hero h1 { font-size: 1.5rem; }
   .stat-number { font-size: 1.25rem; }
-  .cta-inner h2 { font-size: 1.5rem; }
 }
 
 
@@ -2809,7 +2806,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 .legal-content h3 { margin: 48px 0 16px; font-size: 1.1rem; }
 .legal-content p { margin-bottom: 12px; color: var(--text); font-weight: 300; }
 .legal-content ul { margin: 12px 0 12px 24px; }
-.legal-content ul li { color: var(--text); font-weight: 300; margin-bottom: 6px; line-height: 1.3125; }
+.legal-content ul li { color: var(--text); font-weight: 300; margin-bottom: 6px; line-height: var(--lh-body); }
 .legal-content a { color: var(--accent-h); text-decoration: underline; }
 
 /* ── Prefers reduced motion ─────────────────────────────────────────────── */
