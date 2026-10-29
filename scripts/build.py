@@ -25,7 +25,7 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 PARTIALS = ROOT / 'src' / 'partials'
 SKIP = {'plaquette.html'}  # document autonome, hors gabarit
 
-VERSIONS = {'css': 18, 'main': 10, 'consent': 3, 'reviews': 3}
+VERSIONS = {'css': 19, 'main': 11, 'consent': 3, 'reviews': 3}
 
 MARK = re.compile(r'([ \t]*)<!-- @shared:([\w-]+)([^>]*?)-->\n(.*?)\1<!-- @end:\2 -->', re.S)
 
