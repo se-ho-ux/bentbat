@@ -130,7 +130,7 @@ button { font-family: inherit; }
   --shadow-lg: 0 16px 64px rgba(23,21,20,0.14);
 
   /* Échelle typographique — fluide, desktop → mobile */
-  --fs-h1:   clamp(1.875rem, 4.6vw, 3.25rem);  /* titres des pages internes : 52 px à 1440 */
+  --fs-h1:   clamp(1.875rem, 3.4vw, 2.75rem);  /* titres des pages internes : 44 px à 1440, au niveau du hero */
   --fs-hero: clamp(1.875rem, 3vw, 2.75rem);    /* titre du hero d'accueil : 43 px à 1440 */
   --fs-h2:   clamp(1.625rem, 2.7vw, 2.25rem);   /* titres de section : 36 px à 1440, 26 px minimum */
   --lh-body: 1.5;                              /* paragraphes courants */
