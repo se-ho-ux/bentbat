@@ -1574,6 +1574,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
 .recap-list dt { color: var(--text-muted); }
 .recap-list dd { margin: 0; overflow-wrap: anywhere; white-space: pre-line; }
 @media (max-width: 560px) { .recap-list > div { grid-template-columns: 1fr; gap: 2px; } }
+@media (max-width: 420px) { .est-lines li { flex-direction: column; gap: 2px; } .est-lines li span:last-child { white-space: normal; font-weight: 600; } }
 @media (prefers-reduced-motion: reduce) { .calc-spin { animation: none; } .calc-bar span { transition: none !important; width: 100% !important; } }
 
 /* ─────────────────────────────────────────────────────────────
