@@ -62,6 +62,12 @@
       {"titre": "Prévoir le nettoyage au planning", "texte": "Le nettoyage se glisse entre la fin des travaux et l'emménagement. Le prévoir dès le planning évite de le sacrifier quand le chantier a pris du retard."}
     ]
   },
+  "photos_h2": "Des chantiers livrés|prêts à être occupés",
+  "photos_texte": "Deux fins de chantier. Retrouvez toutes nos [réalisations](realisations).",
+  "photos": [
+    {"img": "image37", "alt": "Sol en résine brillant dans un sous-sol aménagé, en cours de finition", "legende": "Sol en résine d'un sous-sol aménagé, en cours de finition.", "lien": "realisations#rl-amenagement"},
+    {"img": "image38", "alt": "Séjour d'un appartement vide après travaux, parquet et murs propres", "legende": "Séjour d'un appartement après travaux, sol et murs prêts à l'usage.", "lien": "realisations#rl-amenagement"}
+  ],
   "faq_h2": "Les questions|qu'on nous pose",
   "faq_intro": "Contenu de la prestation, durée, façades, zone d'intervention : ce qu'il faut savoir avant de commander un nettoyage de chantier.",
   "faq": [

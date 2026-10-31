@@ -62,10 +62,12 @@
     ]
   },
   "photos_h2": "Des volumes ouverts|et des structures apparentes",
-  "photos_texte": "Deux intérieurs avec poutres et pierre apparentes. Retrouvez toutes nos [réalisations](realisations).",
+  "photos_texte": "Intérieurs avec poutres et pierre apparentes, et chantiers de structure. Retrouvez toutes nos [réalisations](realisations).",
   "photos": [
     {"img": "image13", "alt": "Appartement ancien avec pierre apparente, poutre en bois, parquet et bibliothèque", "legende": "Appartement ancien : pierre apparente, poutre en bois et parquet.", "lien": "realisations#rl-amenagement"},
-    {"img": "image10", "alt": "Salon avec poutres apparentes au plafond et bibliothèque en bois", "legende": "Salon avec poutres apparentes au plafond et bibliothèque en bois.", "lien": "realisations#rl-amenagement"}
+    {"img": "image10", "alt": "Salon avec poutres apparentes au plafond et bibliothèque en bois", "legende": "Salon avec poutres apparentes au plafond et bibliothèque en bois.", "lien": "realisations#rl-amenagement"},
+    {"img": "image35", "alt": "Ossature métallique d'une véranda en cours de montage, avec échelles sur le chantier", "legende": "Ossature d'une véranda en cours de montage.", "lien": "realisations#rl-amenagement"},
+    {"img": "image36", "alt": "Façade en bardage bois peint en vert avec portes-fenêtres blanches", "legende": "Façade en bardage bois peint en vert et menuiseries blanches.", "lien": "realisations#rl-amenagement"}
   ],
   "faq_h2": "Les questions|qu'on nous pose",
   "faq_intro": "Mur porteur, copropriété, étude de structure, durée : les réponses aux questions de maçonnerie les plus fréquentes.",
