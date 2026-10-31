@@ -1,0 +1,14 @@
+name = "benbat-avis-google"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+PLACE_ID = ""                                  # à renseigner : Place ID de la fiche (voir docs/avis-google.md)
+ALLOWED_ORIGINS = "https://benbat.fr,https://www.benbat.fr"
+MAX_CALLS_PER_DAY = "30"                       # 30 x 31 j = 930 appels, sous les 1 000 gratuits du SKU
+
+[[kv_namespaces]]
+binding = "BUDGET"
+id = ""                                        # à renseigner après : npx wrangler kv namespace create BUDGET
+
+# Secret (jamais dans ce fichier) : npx wrangler secret put GOOGLE_PLACES_API_KEY

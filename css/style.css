@@ -1132,6 +1132,20 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
 }
 .t-name { font-size: 0.9375rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
 .t-location { font-size: 0.8125rem; color: var(--text-muted); }
+.t-name { display: block; }
+a.t-name:hover { color: var(--accent-h); }
+.t-avatar-img { object-fit: cover; display: block; }
+.t-clamped { display: -webkit-box; -webkit-line-clamp: 6; -webkit-box-orient: vertical; overflow: hidden; }
+.t-more { display: block; text-align: left; margin: -8px 0 16px; padding: 4px 0; background: none; border: 0; font: inherit; font-size: 0.8125rem; font-weight: 600; color: var(--accent-h); text-decoration: underline; cursor: pointer; }
+.t-note { margin: -10px 0 14px; font-size: 0.75rem; color: var(--text-muted); }
+.t-src { display: inline-block; margin-top: 4px; font-size: 0.8125rem; color: var(--accent-h); text-decoration: underline; }
+.testimonial-card { display: flex; flex-direction: column; }
+.testimonial-card .t-author { margin-top: auto; }
+.reviews-foot { margin-top: 24px; text-align: center; }
+.reviews-note { max-width: 620px; margin: 0 auto 16px; font-size: 0.8125rem; color: var(--text-muted); }
+.reviews-empty-grid { display: block; background: none; border: 0; }
+.reviews-empty { padding: 32px 20px; text-align: center; }
+.reviews-empty p { margin-bottom: 16px; color: var(--text); }
 
 /* ─────────────────────────────────────────────────────────────
    CTA BANNER
