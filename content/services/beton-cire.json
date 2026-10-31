@@ -82,7 +82,7 @@
   "voir_aussi": [
     {"slug": "beton-cire-paris", "label": "Béton ciré à Paris", "texte": "Nos chantiers à Paris et en Île-de-France."},
     {"slug": "beton-cire-bruxelles", "label": "Béton ciré à Bruxelles", "texte": "Nos chantiers à Bruxelles et en Belgique."},
-    {"slug": "vasques-sur-mesure", "label": "Vasques sur mesure", "texte": "Vasques et plans de toilette en béton ciré, pièces uniques."}
+    {"slug": "prix-beton-cire-m2", "label": "Prix du béton ciré au m²", "texte": "Budget, facteurs de prix et exemples chiffrés par surface."}, {"slug": "vasques-sur-mesure", "label": "Vasques sur mesure", "texte": "Vasques et plans de toilette en béton ciré, pièces uniques."}
   ],
   "cta": {"h2": "Un projet|en béton ciré ?", "p": "Échantillon, visite sur site et devis détaillé gratuits. Réponse sous 24h."}
 }

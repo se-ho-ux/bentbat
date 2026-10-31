@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- @shared:head-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
+    }
+  </script>
+  <!-- @end:head-meta -->
+  <link rel="canonical" href="https://benbat.fr/conseils">
+  <title>Conseils rénovation et béton ciré | Ben&amp;Bat</title>
+  <meta name="description" content="Guides de rénovation et de béton ciré par Ben&amp;Bat : prix, supports, budget, avec des fourchettes tirées de notre grille tarifaire. France et Belgique.">
+  <meta property="og:title" content="Conseils rénovation et béton ciré | Ben&amp;Bat">
+  <meta property="og:description" content="Prix, supports et budget : nos guides de rénovation et de béton ciré, avec des fourchettes chiffrées. France et Belgique.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benbat.fr/conseils">
+  <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- @shared:head-assets -->
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
+    } catch (e) {}
+  </script>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=30">
+  <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+       ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+       accompagnent toujours un libellé texte. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- @end:head-assets -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://benbat.fr/#entreprise",
+  "name": "Ben&Bat",
+  "description": "Spécialistes du béton ciré premium et de la rénovation intérieure tous corps de métier. Paris, Île-de-France et toute la Belgique.",
+  "url": "https://benbat.fr/",
+  "sameAs": [
+    "https://www.facebook.com/people/BenBat/61596067080807/",
+    "https://www.instagram.com/benbat.renovation/"
+  ],
+  "telephone": "+33658594147",
+  "email": "contact@benbat.fr",
+  "image": "https://benbat.fr/images/image15.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Rue François 1er",
+    "addressLocality": "Paris",
+    "postalCode": "75008",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8698258,
+    "longitude": 2.3020488
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "15:30"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Paris"
+    },
+    {
+      "@type": "City",
+      "name": "Lyon"
+    },
+    {
+      "@type": "City",
+      "name": "Marseille"
+    },
+    {
+      "@type": "City",
+      "name": "Bordeaux"
+    },
+    {
+      "@type": "City",
+      "name": "Lille"
+    },
+    {
+      "@type": "City",
+      "name": "Neuilly-sur-Seine"
+    },
+    {
+      "@type": "City",
+      "name": "Versailles"
+    },
+    {
+      "@type": "City",
+      "name": "Boulogne-Billancourt"
+    },
+    {
+      "@type": "City",
+      "name": "Bruxelles"
+    },
+    {
+      "@type": "City",
+      "name": "Liège"
+    },
+    {
+      "@type": "City",
+      "name": "Anvers"
+    },
+    {
+      "@type": "City",
+      "name": "Gand"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    },
+    {
+      "@type": "Country",
+      "name": "Belgique"
+    }
+  ],
+  "knowsAbout": [
+    "béton ciré",
+    "rénovation intérieure",
+    "maçonnerie",
+    "plomberie",
+    "électricité",
+    "carrelage",
+    "mobilier sur mesure",
+    "vasques sur mesure",
+    "parquet",
+    "nettoyage de chantier"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services BTP",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Béton ciré décoratif",
+          "description": "Application de béton ciré premium sur sols, murs et plans de travail. Paris, Île-de-France et Belgique."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation intérieure tous corps de métier",
+          "description": "Coordination et réalisation de chantiers de rénovation complète : maçonnerie, électricité, plomberie, finitions."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobilier sur mesure",
+          "description": "Conception et fabrication de mobilier sur mesure pour particuliers et professionnels."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vasques sur mesure",
+          "description": "Création de vasques en béton ciré et matériaux naturels, design exclusif."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pose de parquet et carrelage",
+          "description": "Pose de parquet point de Hongrie, carrelage, faïence et revêtements de sol premium."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Nettoyage fin de chantier",
+          "description": "Nettoyage professionnel de bâtiments et fins de chantier en France et Belgique."
+        }
+      }
+    ]
+  },
+  "priceRange": "€€",
+  "logo": "https://benbat.fr/logos-png/wordmark-noir-transparent.webp",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+33658594147",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": [
+        "fr"
+      ]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+32465866372",
+      "contactType": "customer service",
+      "areaServed": "BE",
+      "availableLanguage": [
+        "fr"
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- @end:schema-business -->
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": "https://benbat.fr/conseils#page",
+      "name": "Conseils de rénovation et de béton ciré",
+      "url": "https://benbat.fr/conseils",
+      "isPartOf": {
+        "@id": "https://benbat.fr/#entreprise"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://benbat.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Conseils",
+          "item": "https://benbat.fr/conseils"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <!-- @shared:header active=conseils -->
+  <header id="header">
+    <div class="nav-wrap">
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="tarifs">Tarifs</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <a href="/">Accueil</a>
+    <a href="services">Services</a>
+    <a href="tarifs">Tarifs</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
+  </div>
+  <!-- @end:header -->
+
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">
+          <a href="/">Accueil</a><span class="sep">/</span><span class="cur">Conseils</span>
+        </div>
+        <h1>Conseils de rénovation<br>et de béton ciré</h1>
+        <p>Prix, supports, budget : des réponses chiffrées, tirées de notre grille tarifaire et de nos chantiers.</p>
+        <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ ARTICLES ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Nos guides</span>
+          <h2>Pour préparer<br>votre projet</h2>
+        </div>
+        <p>Nous publions ces guides au fil de nos chantiers. Chaque prix cité vient de notre <a href="tarifs">grille tarifaire</a>, hors taxes et non contractuel.</p>
+      </div>
+      <div class="related-grid">
+        <a href="prix-beton-cire-m2" class="related-card">
+          <h3>Prix du béton ciré au m² : budget et facteurs</h3>
+          <p>De 120 à 250 € HT le m² selon notre grille : ce qui fait varier le prix, exemples par surface et conseils pour chiffrer juste.</p>
+          <span>Lire le guide <i class="fas fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="section cta-section" id="ctaSection">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Votre projet mérite<br>une réalisation unique</h2>
+          <p>Devis gratuit, réponse sous 24h. France &amp; Belgique.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <!-- @shared:footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.webp" alt="Ben&amp;Bat" width="360" height="120"></a>
+          <p>Béton ciré premium, mobilier sur mesure et tous corps de métier du BTP. France &amp; Belgique.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/people/BenBat/61596067080807/" class="footer-social" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/benbat.renovation/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="tarifs">Tarifs</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Témoignages</a></li>
+            <li><a href="conseils">Conseils</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+    <h5>Services</h5>
+    <ul class="footer-links">
+      <li><a href="renovation-complete">Rénovation complète</a></li>
+      <li><a href="salle-de-bain">Salle de bain</a></li>
+      <li><a href="cuisine">Cuisine</a></li>
+      <li><a href="peinture">Peinture</a></li>
+      <li><a href="plomberie">Plomberie</a></li>
+      <li><a href="electricite">Électricité</a></li>
+      <li><a href="carrelage">Carrelage &amp; faïence</a></li>
+      <li><a href="placo-isolation">Placo &amp; isolation</a></li>
+      <li><a href="maconnerie">Maçonnerie</a></li>
+      <li><a href="revetements-de-sol">Revêtements de sol</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Spécialités</h5>
+    <ul class="footer-links">
+      <li><a href="beton-cire">Béton ciré premium</a></li>
+      <li><a href="mobilier-sur-mesure">Mobilier sur mesure</a></li>
+      <li><a href="vasques-sur-mesure">Vasques sur mesure</a></li>
+      <li><a href="nettoyage-fin-de-chantier">Nettoyage fin de chantier</a></li>
+      <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+      <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+      <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
+    </ul>
+  </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">WhatsApp (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@benbat.fr">contact@benbat.fr</a></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>60 Rue François 1er, 75008 Paris</span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Ven : 8h–18h30 · Sam : 9h–15h30</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; <span class="js-year">2026</span> Ben&amp;Bat. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales#cookies" data-cookie-settings>Gérer les cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- @end:footer -->
+
+  <!-- @shared:sticky -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="contact" class="btn btn-primary sticky-main">Devis gratuit</a>
+    <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat au +33 6 58 59 41 47"><i class="fas fa-phone" aria-hidden="true"></i><span>Appeler</span></a>
+    <a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." class="btn sticky-phone sticky-whatsapp" target="_blank" rel="noopener" aria-label="Écrire à Ben&amp;Bat sur WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+  </div>
+  <!-- @end:sticky -->
+
+  <!-- @shared:scripts -->
+  <script src="js/main.js?v=12" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
+  <!-- @end:scripts -->
+</body>
+</html>

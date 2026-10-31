@@ -72,7 +72,7 @@
   <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=27">
+  <link rel="stylesheet" href="css/style.css?v=30">
   <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
        ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
        accompagnent toujours un libellé texte. -->
@@ -431,6 +431,12 @@
         <div class="form-wrap">
           <h3>Demande de devis ou de contact</h3>
           <p>Remplissez le formulaire, nous vous répondons sous 24 heures ouvrées.</p>
+          <ul class="trust-strip" aria-label="Nos engagements">
+            <li><i class="fas fa-shield-alt" aria-hidden="true"></i> Assurance décennale et RC Pro sur tous nos chantiers</li>
+            <li><i class="fas fa-user-check" aria-hidden="true"></i> Un seul interlocuteur, du relevé à la remise des clés</li>
+            <li><i class="fas fa-redo" aria-hidden="true"></i> Bilan 30 jours après livraison, sans frais</li>
+            <li><i class="fas fa-file-invoice" aria-hidden="true"></i> Devis gratuit, sans engagement. <a href="garanties">Voir nos garanties</a></li>
+          </ul>
           <form id="contactForm" novalidate>
             <div class="form-row">
               <div class="form-group">
@@ -564,6 +570,7 @@
             <li><a href="realisations">Réalisations</a></li>
             <li><a href="a-propos">À propos</a></li>
             <li><a href="a-propos#temoignages">Témoignages</a></li>
+            <li><a href="conseils">Conseils</a></li>
             <li><a href="garanties">Garanties</a></li>
             <li><a href="contact">Contact &amp; Devis</a></li>
           </ul>

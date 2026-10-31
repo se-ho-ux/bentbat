@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- @shared:head-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
+    }
+  </script>
+  <!-- @end:head-meta -->
+  <link rel="canonical" href="https://benbat.fr/prix-beton-cire-m2">
+  <title>Prix du béton ciré au m² : budget | Ben&amp;Bat</title>
+  <meta name="description" content="Prix du béton ciré au m² : de 120 à 250 € HT selon notre grille. Facteurs de prix, exemples par surface et conseils pour chiffrer juste.">
+  <meta property="og:title" content="Prix du béton ciré au m² : budget | Ben&amp;Bat">
+  <meta property="og:description" content="De 120 à 250 € HT le m² : ce qui fait varier le prix du béton ciré, avec exemples chiffrés par surface.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://benbat.fr/prix-beton-cire-m2">
+  <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- @shared:head-assets -->
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
+    } catch (e) {}
+  </script>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=30">
+  <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+       ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+       accompagnent toujours un libellé texte. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- @end:head-assets -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://benbat.fr/#entreprise",
+  "name": "Ben&Bat",
+  "description": "Spécialistes du béton ciré premium et de la rénovation intérieure tous corps de métier. Paris, Île-de-France et toute la Belgique.",
+  "url": "https://benbat.fr/",
+  "sameAs": [
+    "https://www.facebook.com/people/BenBat/61596067080807/",
+    "https://www.instagram.com/benbat.renovation/"
+  ],
+  "telephone": "+33658594147",
+  "email": "contact@benbat.fr",
+  "image": "https://benbat.fr/images/image15.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Rue François 1er",
+    "addressLocality": "Paris",
+    "postalCode": "75008",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8698258,
+    "longitude": 2.3020488
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "15:30"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Paris"
+    },
+    {
+      "@type": "City",
+      "name": "Lyon"
+    },
+    {
+      "@type": "City",
+      "name": "Marseille"
+    },
+    {
+      "@type": "City",
+      "name": "Bordeaux"
+    },
+    {
+      "@type": "City",
+      "name": "Lille"
+    },
+    {
+      "@type": "City",
+      "name": "Neuilly-sur-Seine"
+    },
+    {
+      "@type": "City",
+      "name": "Versailles"
+    },
+    {
+      "@type": "City",
+      "name": "Boulogne-Billancourt"
+    },
+    {
+      "@type": "City",
+      "name": "Bruxelles"
+    },
+    {
+      "@type": "City",
+      "name": "Liège"
+    },
+    {
+      "@type": "City",
+      "name": "Anvers"
+    },
+    {
+      "@type": "City",
+      "name": "Gand"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    },
+    {
+      "@type": "Country",
+      "name": "Belgique"
+    }
+  ],
+  "knowsAbout": [
+    "béton ciré",
+    "rénovation intérieure",
+    "maçonnerie",
+    "plomberie",
+    "électricité",
+    "carrelage",
+    "mobilier sur mesure",
+    "vasques sur mesure",
+    "parquet",
+    "nettoyage de chantier"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services BTP",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Béton ciré décoratif",
+          "description": "Application de béton ciré premium sur sols, murs et plans de travail. Paris, Île-de-France et Belgique."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation intérieure tous corps de métier",
+          "description": "Coordination et réalisation de chantiers de rénovation complète : maçonnerie, électricité, plomberie, finitions."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobilier sur mesure",
+          "description": "Conception et fabrication de mobilier sur mesure pour particuliers et professionnels."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vasques sur mesure",
+          "description": "Création de vasques en béton ciré et matériaux naturels, design exclusif."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pose de parquet et carrelage",
+          "description": "Pose de parquet point de Hongrie, carrelage, faïence et revêtements de sol premium."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Nettoyage fin de chantier",
+          "description": "Nettoyage professionnel de bâtiments et fins de chantier en France et Belgique."
+        }
+      }
+    ]
+  },
+  "priceRange": "€€",
+  "logo": "https://benbat.fr/logos-png/wordmark-noir-transparent.webp",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+33658594147",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": [
+        "fr"
+      ]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+32465866372",
+      "contactType": "customer service",
+      "areaServed": "BE",
+      "availableLanguage": [
+        "fr"
+      ]
+    }
+  ]
+}
+  </script>
+  <!-- @end:schema-business -->
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://benbat.fr/prix-beton-cire-m2#article",
+      "headline": "Prix du béton ciré au m² : budget et facteurs",
+      "description": "De 120 à 250 € HT le m² dans la grille tarifaire Ben&Bat : facteurs de prix, exemples par surface et conseils pour chiffrer juste.",
+      "url": "https://benbat.fr/prix-beton-cire-m2",
+      "mainEntityOfPage": "https://benbat.fr/prix-beton-cire-m2",
+      "datePublished": "2026-10-31",
+      "dateModified": "2026-10-31",
+      "inLanguage": "fr",
+      "author": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "publisher": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "image": "https://benbat.fr/images/og-image.jpg"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://benbat.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Conseils",
+          "item": "https://benbat.fr/conseils"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Prix du béton ciré",
+          "item": "https://benbat.fr/prix-beton-cire-m2"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quel est le prix du béton ciré au m² ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dans notre grille tarifaire, le béton ciré se chiffre de 120 à 250 € HT le m². Le prix exact dépend de l'état du support, de l'accès au chantier, de la complexité des formes et de la finition choisie. Il est précisé sur devis après une visite."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le prix inclut-il la dépose de l'ancien revêtement ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. La dépose de l'existant est une majoration de 15 % de la fourchette, appliquée seulement quand le revêtement en place n'est pas assez sain pour être recouvert. Dans la plupart des cas, le béton ciré se pose sur l'existant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Un sol en béton ciré coûte-t-il plus cher qu'un carrelage ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cela dépend du carrelage choisi et de la préparation du support. L'avantage du béton ciré est de se poser en quelques millimètres sur l'existant lorsqu'il est sain, ce qui évite une dépose. Comparez des devis complets, dépose et finitions comprises."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment obtenir un chiffrage fiable ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mesurez la surface, utilisez l'estimateur de budget de notre formulaire pour une première fourchette, puis demandez un devis gratuit : une visite technique permet de vérifier le support et d'arrêter le prix définitif."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <!-- @shared:header active=conseils -->
+  <header id="header">
+    <div class="nav-wrap">
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="tarifs">Tarifs</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <a href="/">Accueil</a>
+    <a href="services">Services</a>
+    <a href="tarifs">Tarifs</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
+  </div>
+  <!-- @end:header -->
+
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="page-hero" id="main-content">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">
+          <a href="/">Accueil</a><span class="sep">/</span><a href="conseils">Conseils</a><span class="sep">/</span><span class="cur">Prix du béton ciré</span>
+        </div>
+        <h1>Prix du béton ciré au m² :<br>budget et facteurs</h1>
+        <p>De 120 à 250 € HT le m² dans notre grille tarifaire. Voici ce qui fait varier le prix, avec des exemples chiffrés par surface.</p>
+        <p class="svc-meta">Publié le 31 octobre 2026 · Ben&amp;Bat</p>
+        <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EN BREF ══════════ -->
+  <section class="section-sm svc-facts-band">
+    <div class="container">
+      <dl class="svc-facts">
+        <div><dt>Prix indicatif</dt><dd>120 à 250 € HT / m²</dd></div>
+        <div><dt>Épaisseur</dt><dd>Quelques millimètres, sur l'existant dans la plupart des cas</dd></div>
+        <div><dt>Pièces d'eau</dt><dd>Étanchéité traitée sous le revêtement</dd></div>
+        <div><dt>Devis</dt><dd>Gratuit, après visite technique</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══════════ CONTENU ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
+        <div>
+          <span class="eyebrow">La réponse courte</span>
+          <h2>Combien coûte<br>un béton ciré ?</h2>
+        </div>
+        <div class="svc-prose">
+          <p>Dans la grille tarifaire de Ben&amp;Bat, le béton ciré se chiffre de <strong>120 à 250 € HT le m²</strong>. C'est une fourchette, pas un prix fixe : le même mètre carré coûte moins cher sur un support sain et dégagé que sur un support à reprendre, au quatrième étage sans ascenseur.</p>
+          <p>Le prix se calcule à la surface. Il ne comprend pas les travaux annexes éventuels (plomberie, électricité, reprise de maçonnerie), chiffrés à part. La TVA applicable dépend de la situation du logement et figure sur le devis.</p>
+        </div>
+      </div>
+
+      <div class="svc-tips">
+        <div class="svc-tip">
+          <h3>La surface</h3>
+          <p>Le prix se multiplie par la surface. Une grande surface continue se traite plus efficacement qu'une succession de petites pièces, où les raccords et les protections prennent du temps.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>L'état du support</h3>
+          <p>Le béton ciré se pose sur un support sain, propre et adhérent : carrelage, chape, béton ou enduit. Un support fissuré, humide ou irrégulier doit être repris avant l'application : majoration de 20 % dans notre grille.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>La dépose de l'existant</h3>
+          <p>Dans la plupart des cas, aucune dépose n'est nécessaire. Quand le revêtement en place n'est pas assez sain pour être recouvert, il faut le retirer : majoration de 15 %.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>L'accès au chantier</h3>
+          <p>Étage sans ascenseur, accès restreint, livraison compliquée des matériaux : majoration de 10 %. Nous la précisons lors de la visite.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>La finition et la teinte</h3>
+          <p>Teintes composées sur mesure, formes complexes, grandes surfaces sans reprise visible : une finition premium ajoute 30 %. C'est elle qui donne l'aspect continu recherché.</p>
+        </div>
+        <div class="svc-tip">
+          <h3>Les pièces d'eau</h3>
+          <p>Dans une salle de bains ou une douche, l'étanchéité se traite sous le revêtement, avant toute finition. Elle fait partie du chiffrage dès la visite.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EXEMPLES ══════════ -->
+  <section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Exemples chiffrés</span>
+          <h2>Quel budget<br>selon la surface ?</h2>
+        </div>
+        <p>Calculés à partir de la fourchette de base de notre grille. La dernière colonne ajoute 35 % (dépose de l'existant et support dégradé), à titre d'exemple.</p>
+      </div>
+      <div class="price-cat">
+        <table class="price-table">
+          <thead><tr><th>Surface</th><th>Fourchette HT</th><th>Avec dépose et support dégradé (+35 %)</th></tr></thead>
+          <tbody>
+            <tr><td>10 m²</td><td class="price-range">1 200 € – 2 500 €</td><td class="price-range">1 620 € – 3 375 €</td></tr><tr><td>20 m²</td><td class="price-range">2 400 € – 5 000 €</td><td class="price-range">3 240 € – 6 750 €</td></tr><tr><td>40 m²</td><td class="price-range">4 800 € – 10 000 €</td><td class="price-range">6 480 € – 13 500 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="svc-price-note">Fourchettes hors taxes, non contractuelles, issues de notre <a href="tarifs">grille tarifaire</a>. Le prix définitif est arrêté après une visite technique et un devis gratuit.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ CONSEILS ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
+        <div>
+          <span class="eyebrow">Pour chiffrer juste</span>
+          <h2>Trois réflexes<br>avant de demander un devis</h2>
+        </div>
+        <div class="svc-prose">
+          <p><strong>1. Mesurez la surface.</strong> Un relevé simple au mètre suffit pour une première estimation. Notez aussi les pièces d'eau et les escaliers éventuels.</p>
+          <p><strong>2. Décrivez le support.</strong> Carrelage, chape, béton, enduit : indiquez ce qui est en place et son état. Des photos aident beaucoup, nous les acceptons sur WhatsApp.</p>
+          <p><strong>3. Comparez des devis complets.</strong> Vérifiez ce qui est compris : préparation du support, nombre de couches, finition de protection, évacuation des déchets. Un prix bas peut cacher une préparation réduite.</p>
+          <p>Pour une première fourchette immédiate, utilisez l'<a href="contact?devis=premium#devisEstimator">estimateur de budget</a> : elle s'appuie sur la même grille que ce guide. Voir aussi notre page <a href="beton-cire">béton ciré</a> et les <a href="garanties">garanties</a> de nos chantiers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="section" id="faq" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Prix du béton ciré :<br>vos questions</h2>
+        </div>
+        <p>Les réponses que nous donnons le plus souvent avant un devis.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Quel est le prix du béton ciré au m² ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Dans notre grille tarifaire, le béton ciré se chiffre de 120 à 250 € HT le m². Le prix exact dépend de l'état du support, de l'accès au chantier, de la complexité des formes et de la finition choisie. Il est précisé sur devis après une visite.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Le prix inclut-il la dépose de l'ancien revêtement ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Non. La dépose de l'existant est une majoration de 15 % de la fourchette, appliquée seulement quand le revêtement en place n'est pas assez sain pour être recouvert. Dans la plupart des cas, le béton ciré se pose sur l'existant.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Un sol en béton ciré coûte-t-il plus cher qu'un carrelage ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Cela dépend du carrelage choisi et de la préparation du support. L'avantage du béton ciré est de se poser en quelques millimètres sur l'existant lorsqu'il est sain, ce qui évite une dépose. Comparez des devis complets, dépose et finitions comprises.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Comment obtenir un chiffrage fiable ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Mesurez la surface, utilisez l'estimateur de budget de notre formulaire pour une première fourchette, puis demandez un devis gratuit : une visite technique permet de vérifier le support et d'arrêter le prix définitif.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="section cta-section" id="ctaSection">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Votre projet mérite<br>une réalisation unique</h2>
+          <p>Devis gratuit, réponse sous 24h. France &amp; Belgique.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <!-- @shared:footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.webp" alt="Ben&amp;Bat" width="360" height="120"></a>
+          <p>Béton ciré premium, mobilier sur mesure et tous corps de métier du BTP. France &amp; Belgique.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/people/BenBat/61596067080807/" class="footer-social" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/benbat.renovation/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="tarifs">Tarifs</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Témoignages</a></li>
+            <li><a href="conseils">Conseils</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+    <h5>Services</h5>
+    <ul class="footer-links">
+      <li><a href="renovation-complete">Rénovation complète</a></li>
+      <li><a href="salle-de-bain">Salle de bain</a></li>
+      <li><a href="cuisine">Cuisine</a></li>
+      <li><a href="peinture">Peinture</a></li>
+      <li><a href="plomberie">Plomberie</a></li>
+      <li><a href="electricite">Électricité</a></li>
+      <li><a href="carrelage">Carrelage &amp; faïence</a></li>
+      <li><a href="placo-isolation">Placo &amp; isolation</a></li>
+      <li><a href="maconnerie">Maçonnerie</a></li>
+      <li><a href="revetements-de-sol">Revêtements de sol</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Spécialités</h5>
+    <ul class="footer-links">
+      <li><a href="beton-cire">Béton ciré premium</a></li>
+      <li><a href="mobilier-sur-mesure">Mobilier sur mesure</a></li>
+      <li><a href="vasques-sur-mesure">Vasques sur mesure</a></li>
+      <li><a href="nettoyage-fin-de-chantier">Nettoyage fin de chantier</a></li>
+      <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+      <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+      <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
+    </ul>
+  </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">WhatsApp (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@benbat.fr">contact@benbat.fr</a></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>60 Rue François 1er, 75008 Paris</span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Ven : 8h–18h30 · Sam : 9h–15h30</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; <span class="js-year">2026</span> Ben&amp;Bat. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales#cookies" data-cookie-settings>Gérer les cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- @end:footer -->
+
+  <!-- @shared:sticky -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="contact" class="btn btn-primary sticky-main">Devis gratuit</a>
+    <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat au +33 6 58 59 41 47"><i class="fas fa-phone" aria-hidden="true"></i><span>Appeler</span></a>
+    <a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." class="btn sticky-phone sticky-whatsapp" target="_blank" rel="noopener" aria-label="Écrire à Ben&amp;Bat sur WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+  </div>
+  <!-- @end:sticky -->
+
+  <!-- @shared:scripts -->
+  <script src="js/main.js?v=12" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
+  <!-- @end:scripts -->
+</body>
+</html>
