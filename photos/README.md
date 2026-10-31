@@ -4,13 +4,13 @@ Fusion de trois dossiers sources (`photo`, `BENBAT_complet`, `wetransfer_photos_
 
 | Dossier | Contenu |
 |---|---|
-| `01_loft-combles` | Loft sous combles : chantier, salle de bains, cuisine, mezzanine |
+| `01_loft-combles` | Loft sous combles (Nîmes) : chantier, salle de bains, cuisine, mezzanine |
 | `02_salle-reception` | Salle de réception : sol marbré, boiseries, bar |
 | `03_veranda-facade` | Véranda et façade bardage |
 | `04_poncage-sol` | Ponçage de sol |
 | `05_sous-sol-resine` | Sous-sol, sol en résine |
 | `06_appartement-cuisine-sejour` | Appartement : cuisine, séjour, salle de bains, chambres |
-| `07_appartement-meuble-paris` | Appartement meublé (prise de vue professionnelle) |
+| `07_appartement-meuble-saint-denis` | Appartement meublé à Saint-Denis (prise de vue professionnelle) |
 | `08_equipe-atelier` | Équipe devant l'atelier |
 | `09_comparatifs-avant-apres` | Planches avant/après |
 | `10_videos` | Vidéos de chantier |
