@@ -82,10 +82,12 @@
     ]
   },
   "photos_h2": "Des salles de bain|livrées à Paris et Lyon",
-  "photos_texte": "Deux chantiers récents. Les photos sont celles de nos chantiers : retrouvez toutes nos [réalisations](realisations).",
+  "photos_texte": "Chantiers récents. Les photos sont celles de nos chantiers : retrouvez toutes nos [réalisations](realisations).",
   "photos": [
     {"img": "image9", "alt": "Salle de bains rénovée à Lyon avec douche à colonne noire, miroir rétroéclairé et meuble vasque", "legende": "Salle de bains à Lyon : douche à colonne noire, miroir rétroéclairé et meuble vasque suspendu.", "lien": "realisations#rl-salles-de-bains"},
-    {"img": "image3", "alt": "Salle de bains en béton ciré à Paris avec douche à l'italienne et plafond rétroéclairé", "legende": "Salle de bains en béton ciré à Paris : douche à l'italienne sans joint et plafond rétroéclairé.", "lien": "realisations#rl-beton-cire"}
+    {"img": "image3", "alt": "Salle de bains en béton ciré à Paris avec douche à l'italienne et plafond rétroéclairé", "legende": "Salle de bains en béton ciré à Paris : douche à l'italienne sans joint et plafond rétroéclairé.", "lien": "realisations#rl-beton-cire"},
+    {"img": "image18", "alt": "Vasque ronde posée sur un plan bois avec miroir rétroéclairé", "legende": "Vasque ronde sur plan en bois, robinetterie noire et miroir rétroéclairé.", "lien": "realisations#rl-salles-de-bains"},
+    {"img": "image19", "alt": "Douche avec niches de rangement carrelées et robinetterie noire", "legende": "Douche avec niches de rangement carrelées, colonne et robinetterie noire.", "lien": "realisations#rl-salles-de-bains"}
   ],
   "faq_h2": "Les questions|qu'on nous pose",
   "faq_intro": "Durée, douche à l'italienne, béton ciré, copropriété : les points à connaître avant de lancer une rénovation de salle de bain.",

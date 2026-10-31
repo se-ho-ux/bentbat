@@ -63,10 +63,12 @@
     ]
   },
   "photos_h2": "Des parquets posés|à Versailles et à Paris",
-  "photos_texte": "Deux intérieurs avec parquet. Retrouvez toutes nos [réalisations](realisations).",
+  "photos_texte": "Intérieurs avec parquet et sols de chantier. Retrouvez toutes nos [réalisations](realisations).",
   "photos": [
     {"img": "image2", "alt": "Chambre avec parquet point de Hongrie et murs à moulures à Versailles", "legende": "Chambre à Versailles : parquet point de Hongrie et murs à moulures.", "lien": "realisations#rl-amenagement"},
-    {"img": "image13", "alt": "Appartement haussmannien avec parquet, îlot en marbre et bibliothèque en bois", "legende": "Appartement haussmannien : parquet, îlot en marbre et bibliothèque en bois.", "lien": "realisations#rl-amenagement"}
+    {"img": "image13", "alt": "Appartement haussmannien avec parquet, îlot en marbre et bibliothèque en bois", "legende": "Appartement haussmannien : parquet, îlot en marbre et bibliothèque en bois.", "lien": "realisations#rl-amenagement"},
+    {"img": "image23", "alt": "Ponçage mécanique d'un sol de bureaux avant nouveau revêtement", "legende": "Ponçage d'un grand sol de bureaux avant pose du nouveau revêtement.", "lien": "realisations#rl-amenagement"},
+    {"img": "image24", "alt": "Sol en résine brillant dans un sous-sol aménagé", "legende": "Sol en résine brillant dans un sous-sol aménagé.", "lien": "realisations#rl-amenagement"}
   ],
   "faq_h2": "Les questions|qu'on nous pose",
   "faq_intro": "Support, sol chauffant, durée, entretien : les réponses aux questions de revêtements de sol les plus fréquentes.",

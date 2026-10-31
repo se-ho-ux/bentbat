@@ -62,10 +62,12 @@
     ]
   },
   "photos_h2": "Des logements rénovés|de la dépose aux finitions",
-  "photos_texte": "Deux chantiers d'appartements anciens. Retrouvez toutes nos [réalisations](realisations).",
+  "photos_texte": "Chantiers d'appartements. Retrouvez toutes nos [réalisations](realisations).",
   "photos": [
     {"img": "image13", "alt": "Appartement haussmannien rénové avec parquet, îlot en marbre et bibliothèque en bois", "legende": "Appartement haussmannien : parquet, îlot en marbre et bibliothèque en bois.", "lien": "realisations#rl-amenagement"},
-    {"img": "image10", "alt": "Salon avec bibliothèque, poutres apparentes et parquet point de Hongrie", "legende": "Salon avec bibliothèque, poutres apparentes et parquet point de Hongrie.", "lien": "realisations#rl-amenagement"}
+    {"img": "image10", "alt": "Salon avec bibliothèque, poutres apparentes et parquet point de Hongrie", "legende": "Salon avec bibliothèque, poutres apparentes et parquet point de Hongrie.", "lien": "realisations#rl-amenagement"},
+    {"img": "image25", "alt": "Séjour avec canapé moutarde, parquet et fenêtres lumineuses", "legende": "Séjour d'un appartement meublé à Paris : parquet, murs clairs et lumière naturelle.", "lien": "realisations#rl-amenagement"},
+    {"img": "image26", "alt": "Salle à manger avec table ronde et verrière d'atelier", "legende": "Salle à manger avec verrière d'atelier et table ronde.", "lien": "realisations#rl-amenagement"}
   ],
   "faq_h2": "Les questions|qu'on nous pose",
   "faq_intro": "Durée, habitation pendant les travaux, TVA, budget : les points à connaître avant de rénover entièrement un logement.",

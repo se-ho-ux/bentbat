@@ -62,10 +62,12 @@
     ]
   },
   "photos_h2": "Des plafonds et des volumes|travaillés",
-  "photos_texte": "Deux ouvrages de plafond. Retrouvez toutes nos [réalisations](realisations).",
+  "photos_texte": "Ouvrages de plafond et cloisons. Retrouvez toutes nos [réalisations](realisations).",
   "photos": [
     {"img": "image3", "alt": "Salle de bains avec plafond courbe rétroéclairé et douche à l'italienne à Paris", "legende": "Salle de bains à Paris : plafond courbe rétroéclairé et douche à l'italienne.", "lien": "realisations#rl-beton-cire"},
-    {"img": "image15", "alt": "Cuisine avec îlot et plafond à poutres apparentes à Bruxelles", "legende": "Cuisine à Bruxelles : îlot minimaliste sous un plafond à poutres apparentes.", "lien": "realisations#rl-cuisines"}
+    {"img": "image15", "alt": "Cuisine avec îlot et plafond à poutres apparentes à Bruxelles", "legende": "Cuisine à Bruxelles : îlot minimaliste sous un plafond à poutres apparentes.", "lien": "realisations#rl-cuisines"},
+    {"img": "image20", "alt": "Cloisons en plaques de plâtre et huisserie posées sur un chantier", "legende": "Cloisons en plaques de plâtre et huisserie posées, avant finitions.", "lien": "realisations#rl-amenagement"},
+    {"img": "image28", "alt": "Ossature métallique et plaques de plâtre en cours de pose autour d'un bâti de porte", "legende": "Ossature métallique et plaques de plâtre en cours de pose autour d'un bâti de porte.", "lien": "realisations#rl-amenagement"}
   ],
   "faq_h2": "Les questions|qu'on nous pose",
   "faq_intro": "Épaisseur, isolation, faux plafond, délais : ce qu'il faut savoir avant de poser des plaques de plâtre.",

@@ -62,10 +62,12 @@
     ]
   },
   "photos_h2": "Des pièces d'eau|livrées à Lyon et à Boulogne",
-  "photos_texte": "Deux pièces d'eau de nos chantiers. Retrouvez toutes nos [réalisations](realisations).",
+  "photos_texte": "Pièces d'eau et chantiers. Retrouvez toutes nos [réalisations](realisations).",
   "photos": [
     {"img": "image9", "alt": "Salle de bains à Lyon avec douche à colonne noire, meuble vasque et miroir rétroéclairé", "legende": "Salle de bains à Lyon : colonne de douche noire, meuble vasque et robinetterie assortie.", "lien": "realisations#rl-salles-de-bains"},
-    {"img": "image8", "alt": "WC suspendu avec faïence effet marbre et lave-mains à Boulogne-Billancourt", "legende": "WC à Boulogne-Billancourt : cuvette suspendue, lave-mains et faïence effet marbre.", "lien": "realisations#rl-salles-de-bains"}
+    {"img": "image8", "alt": "WC suspendu avec faïence effet marbre et lave-mains à Boulogne-Billancourt", "legende": "WC à Boulogne-Billancourt : cuvette suspendue, lave-mains et faïence effet marbre.", "lien": "realisations#rl-salles-de-bains"},
+    {"img": "image22", "alt": "Bâti-support de WC et évacuations apparentes avant fermeture de la cloison", "legende": "Bâti-support et évacuations posés avant fermeture de la cloison.", "lien": "realisations#rl-salles-de-bains"},
+    {"img": "image19", "alt": "Douche avec niches de rangement carrelées et robinetterie noire", "legende": "Douche avec colonne thermostatique : arrivées d'eau et robinetterie noire.", "lien": "realisations#rl-salles-de-bains"}
   ],
   "faq_h2": "Les questions|qu'on nous pose",
   "faq_intro": "Fuite, chauffe-eau, canalisations anciennes, devis : les réponses aux questions de plomberie les plus fréquentes.",

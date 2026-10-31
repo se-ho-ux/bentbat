@@ -62,10 +62,12 @@
     ]
   },
   "photos_h2": "De la lumière|dans les pièces d'eau",
-  "photos_texte": "Deux pièces d'eau avec éclairage intégré. Retrouvez toutes nos [réalisations](realisations).",
+  "photos_texte": "Pièces d'eau avec éclairage intégré et chantiers. Retrouvez toutes nos [réalisations](realisations).",
   "photos": [
     {"img": "image9", "alt": "Salle de bains avec miroir rétroéclairé et spots encastrés à Lyon", "legende": "Salle de bains à Lyon : miroir rétroéclairé et spots encastrés.", "lien": "realisations#rl-salles-de-bains"},
-    {"img": "image3", "alt": "Salle de bains en béton ciré avec plafond courbe rétroéclairé à Paris", "legende": "Salle de bains à Paris : plafond courbe rétroéclairé au-dessus de la douche.", "lien": "realisations#rl-beton-cire"}
+    {"img": "image3", "alt": "Salle de bains en béton ciré avec plafond courbe rétroéclairé à Paris", "legende": "Salle de bains à Paris : plafond courbe rétroéclairé au-dessus de la douche.", "lien": "realisations#rl-beton-cire"},
+    {"img": "image21", "alt": "Artisans réalisant les saignées électriques d'un chantier", "legende": "Saignées et passages de câbles réalisés avant fermeture des cloisons.", "lien": "realisations#rl-amenagement"},
+    {"img": "image27", "alt": "Entrée d'un appartement avec suspension noire et éclairage soigné", "legende": "Entrée avec suspension et spots, éclairage repris dans un appartement meublé à Paris.", "lien": "realisations#rl-amenagement"}
   ],
   "faq_h2": "Les questions|qu'on nous pose",
   "faq_intro": "Normes, tableau, domotique, attestation : les réponses aux questions d'électricité les plus fréquentes.",

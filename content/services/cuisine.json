@@ -62,10 +62,12 @@
     ]
   },
   "photos_h2": "Des cuisines livrées|à Paris et à Neuilly",
-  "photos_texte": "Deux cuisines de nos chantiers. Retrouvez toutes nos [réalisations](realisations).",
+  "photos_texte": "Cuisines de nos chantiers. Retrouvez toutes nos [réalisations](realisations).",
   "photos": [
     {"img": "image0", "alt": "Cuisine moderne rénovée à Paris avec meubles bleu-gris et plan de travail clair", "legende": "Cuisine rénovée à Paris : meubles bleu-gris, plan de travail clair et crédence assortie.", "lien": "realisations#rl-cuisines"},
-    {"img": "image7", "alt": "Cuisine avec îlot et suspensions à Neuilly-sur-Seine", "legende": "Cuisine avec îlot à Neuilly-sur-Seine : meubles blancs, bois et suspensions.", "lien": "realisations#rl-cuisines"}
+    {"img": "image7", "alt": "Cuisine avec îlot et suspensions à Neuilly-sur-Seine", "legende": "Cuisine avec îlot à Neuilly-sur-Seine : meubles blancs, bois et suspensions.", "lien": "realisations#rl-cuisines"},
+    {"img": "image16", "alt": "Cuisine blanche avec plan de travail bois, crédence carrelage métro et plaques de cuisson", "legende": "Cuisine blanche à plan de travail bois et crédence en carrelage métro, dans un appartement meublé à Paris.", "lien": "realisations#rl-cuisines"},
+    {"img": "image17", "alt": "Cuisine ouverte sur le séjour avec étagères et four encastré", "legende": "Cuisine en angle avec four et micro-ondes encastrés, ouverte sur l'entrée et le séjour.", "lien": "realisations#rl-cuisines"}
   ],
   "faq_h2": "Les questions|qu'on nous pose",
   "faq_intro": "Délais, îlot, plan de travail, électricité : les points à connaître avant de rénover une cuisine.",
