@@ -284,13 +284,44 @@
       btn.disabled = true;
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>&nbsp; Envoi en cours…';
 
-      fetch('https://formspree.io/f/xaqkjnao', {
+      // Estimation affichée après l'envoi : seulement pour une demande de devis chiffrée
+      const estBox = form.querySelector('[data-devis-result] .est-total');
+      const hasEstimate = form.type.value === 'devis' && !!estBox;
+      const estHtml = hasEstimate ? form.querySelector('[data-devis-result]').innerHTML : '';
+      const optText = sel => (sel && sel.selectedIndex > 0 ? sel.options[sel.selectedIndex].text : '');
+
+      const calc = document.getElementById('formCalc');
+      const result = document.getElementById('formResult');
+      const minDelay = new Promise(r => setTimeout(r, hasEstimate ? 2600 : 1400));
+      if (calc) {
+        const steps = hasEstimate
+          ? ['Lecture de votre demande…', 'Application de nos tarifs…', 'Calcul de votre fourchette…']
+          : ['Lecture de votre demande…', 'Enregistrement…'];
+        const stepEl = calc.querySelector('.calc-step');
+        const bar = calc.querySelector('.calc-bar span');
+        calc.querySelector('h3').textContent = hasEstimate ? 'Calcul de votre estimation' : 'Envoi de votre demande';
+        stepEl.textContent = steps[0];
+        bar.style.transition = 'none'; bar.style.width = '0';
+        form.style.display = 'none';
+        calc.hidden = false;
+        calc.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+          bar.style.transition = 'width ' + (hasEstimate ? 2.4 : 1.2) + 's cubic-bezier(.3,.1,.3,1)';
+          bar.style.width = '100%';
+        }));
+        steps.forEach((t, i) => { if (i) setTimeout(() => { stepEl.textContent = t; }, i * (hasEstimate ? 800 : 600)); });
+      }
+
+      const send = fetch('https://formspree.io/f/xaqkjnao', {
         method: 'POST',
         body: new FormData(form),
         headers: { 'Accept': 'application/json' }
-      })
-      .then(res => {
-        if (res.ok) {
+      }).then(res => {
+        if (!res.ok) throw new Error('server');
+      });
+
+      Promise.all([send, minDelay])
+      .then(() => {
           // Conversion GA4 : seulement les listes déroulantes, jamais les
           // coordonnées saisies (pas de données personnelles envoyées à Google).
           if (typeof window.gtag === 'function') {
@@ -302,14 +333,49 @@
             });
           }
           form.style.display = 'none';
+          if (calc) calc.hidden = true;
+
+          if (result) {
+            result.innerHTML = '';
+            if (hasEstimate) {
+              const est = document.createElement('div');
+              est.className = 'est-result form-estimate';
+              est.innerHTML = estHtml;
+              result.appendChild(est);
+            }
+            const rows = [
+              ['Nom', (form.prenom.value + ' ' + form.nom.value).trim()],
+              ['Email', form.email.value],
+              ['Téléphone', form.telephone.value],
+              ['Pays', optText(form.pays)],
+              ['Type de demande', optText(form.type)],
+              ['Service concerné', form.type.value === 'devis' ? '' : optText(form.service)],
+              ['Majorations', form.elements.estimation_coefficients && !form.elements.estimation_coefficients.disabled ? form.elements.estimation_coefficients.value : ''],
+              ['Description du projet', form.message.value.trim()]
+            ].filter(r => r[1]);
+            const h = document.createElement('h4');
+            h.className = 'recap-title';
+            h.textContent = 'Récapitulatif de votre demande';
+            const dl = document.createElement('dl');
+            dl.className = 'recap-list';
+            rows.forEach(([k, v]) => {
+              const d = document.createElement('div');
+              const dt = document.createElement('dt'); dt.textContent = k;
+              const dd = document.createElement('dd'); dd.textContent = v;
+              d.append(dt, dd); dl.appendChild(d);
+            });
+            result.append(h, dl);
+          }
+          const title = success.querySelector('h3');
+          if (title) title.textContent = hasEstimate ? 'Votre estimation est prête' : 'Demande envoyée !';
           success.style.display = 'block';
           success.setAttribute('tabindex', '-1');
           success.focus();
-        } else {
-          throw new Error('server');
-        }
+          success.scrollIntoView({ block: 'start', behavior: 'smooth' });
       })
       .catch(() => {
+        if (calc) calc.hidden = true;
+        form.style.display = '';
         btn.disabled = false;
         btn.innerHTML = 'Envoyer ma demande &nbsp;<i class="fas fa-paper-plane"></i>';
         let errEl = form.querySelector('.form-send-error');

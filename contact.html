@@ -72,7 +72,7 @@
   <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=24">
+  <link rel="stylesheet" href="css/style.css?v=25">
   <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
        ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
        accompagnent toujours un libellé texte. -->
@@ -531,10 +531,17 @@
               <span><i class="fas fa-file-invoice"></i> Devis 100% gratuit</span>
             </div>
           </form>
+          <div class="form-calc" id="formCalc" hidden role="status" aria-live="polite">
+            <span class="calc-spin" aria-hidden="true"></span>
+            <h3>Calcul de votre estimation</h3>
+            <p class="calc-step">Lecture de votre demande…</p>
+            <div class="calc-bar" aria-hidden="true"><span></span></div>
+          </div>
           <div class="form-success" id="formSuccess">
             <i class="fas fa-check-circle"></i>
             <h3>Demande envoyée !</h3>
-            <p>Merci. Nous vous répondrons dans les 24 heures ouvrées à l'adresse ou au numéro indiqué.</p>
+            <p>Merci. Votre demande nous a bien été transmise : nous vous répondrons dans les 24 heures ouvrées à l'adresse ou au numéro indiqué.</p>
+            <div class="form-result" id="formResult"></div>
           </div>
         </div>
 
@@ -622,7 +629,7 @@
   </footer>
   <!-- @end:footer -->
   <!-- @shared:scripts -->
-  <script src="js/main.js?v=11" defer></script>
+  <script src="js/main.js?v=12" defer></script>
   <script src="js/consent.js?v=3" defer></script>
   <!-- @end:scripts -->
   <script src="js/tarifs-data.js?v=1" defer></script>
