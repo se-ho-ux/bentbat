@@ -1011,7 +1011,8 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
 .why-image { position: relative; padding-top: 2rem; }
 .why-image img {
   width: 100%;
-  aspect-ratio: 4/3;
+  height: auto;
+  aspect-ratio: 4/5;
   object-fit: cover;
   border-radius: var(--r-md);
   display: block;
