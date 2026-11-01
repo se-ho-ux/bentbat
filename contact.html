@@ -499,11 +499,11 @@
             <!-- Estimateur : construit par js/devis.js, visible si « Demande de devis » -->
             <fieldset class="estimator" id="devisEstimator" hidden>
               <legend>Estimez votre budget</legend>
-              <p class="est-intro">Choisissez les prestations qui vous intéressent : une fourchette de prix s’affiche, et elle nous est transmise avec votre demande.</p>
+              <p class="est-intro">Choisissez les prestations qui vous intéressent : votre estimation vous sera présentée après l’envoi de la demande, et elle nous est transmise avec celle-ci.</p>
               <div class="est-list" data-devis-list></div>
               <p class="est-sub">Votre chantier présente-t-il l’une de ces situations ?</p>
               <div class="est-coefs" data-devis-coefs></div>
-              <div class="est-result" data-devis-result role="status" aria-live="polite"></div>
+              <div class="est-result" data-devis-result hidden></div>
               <input type="hidden" name="estimation_fourchette_ht">
               <input type="hidden" name="estimation_detail">
               <input type="hidden" name="estimation_coefficients">
