@@ -3183,3 +3183,21 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 .price-cat--featured .price-cat-actions .price-cat-cta { grid-area: auto; }
 .price-cat--featured .price-cat-link { color: var(--text-muted); }
 .price-cat--featured .price-cat-link:hover { color: var(--accent-h); }
+
+/* ─────────────────────────────────────────────────────────────
+   PHOTOS DESKTOP : photo d'en-tête et bande de réalisations
+   (masquées sous 1101 px : la version mobile reste inchangée)
+───────────────────────────────────────────────────────────── */
+.hero-photo, .photo-band { display: none; }
+@media (min-width: 1101px) {
+  .page-hero.has-photo > .container { display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: 64px; align-items: center; }
+  .hero-photo { display: block; margin: 0; aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--r-sm); background: var(--calque); }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo-band { display: block; padding: 8px 0 80px; }
+  .photo-band-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .photo-band-item { margin: 0; }
+  .photo-band-item img { width: 100%; height: 270px; object-fit: cover; display: block; border-radius: var(--r-sm); background: var(--calque); }
+  .photo-band-item figcaption { margin-top: 12px; font-size: 0.875rem; color: var(--text-muted); line-height: 1.5; }
+  .photo-band-more { margin: 24px 0 0; text-align: right; font-size: 0.9375rem; }
+  .photo-band-more a { color: var(--accent-h); }
+}

@@ -23,7 +23,8 @@ CATS = {c['id']: c for c in TARIFS['tarifs']}
 # Photos réelles du site (réalisations). Clé = nom de fichier sans extension.
 IMG_W = {0: 1183, 1: 1183, 2: 911, 3: 903, 7: 960, 8: 1200, 9: 960, 10: 1200, 12: 1024, 13: 1200, 14: 1200, 15: 1408,
          16: 1200, 17: 1200, 18: 1200, 19: 1200, 20: 1200, 21: 1200, 22: 1200, 23: 1200, 24: 1200, 25: 1200, 26: 1200, 27: 1200, 28: 1200,
-         35: 1200, 36: 1200, 37: 1200, 38: 1200}
+         35: 1200, 36: 1200, 37: 1200, 38: 1200,
+         39: 1200, 40: 1200, 41: 1200, 42: 1200, 43: 1200, 44: 1200, 45: 1200, 47: 1200, 48: 1200, 49: 1200, 50: 1200, 51: 1200, 52: 1200, 53: 1200, 55: 1200, 56: 1200, 57: 1200, 59: 1200, 60: 1200, 61: 1200, 62: 1200, 63: 1200, 64: 1200, 65: 1200, 66: 1200}
 
 
 def esc(s):
@@ -98,6 +99,8 @@ def build(c):
     estim = c.get('estimateur') or (c['tarifs']['cats'][0] if c.get('tarifs') else '')
     estim_href = f'contact?devis={estim}#devisEstimator' if estim else 'contact'
     h1 = esc(c['h1']).replace('|', '<br>')
+    hp = c.get('hero_photo')
+    hero_photo = ('\n      <figure class="hero-photo">' + img_tag(hp['img'], hp['alt'], '460px') + '</figure>') if hp else ''
     kind = c.get('kind', 'service')  # service | pilier
     crumb = [('Accueil', '/'), ('Services', 'services')]
 
@@ -274,7 +277,7 @@ def build(c):
   <!-- @end:header -->
 
   <!-- ══════════ HERO ══════════ -->
-  <section class="page-hero" id="main-content">
+  <section class="page-hero{' has-photo' if hero_photo else ''}" id="main-content">
     <div class="container">
       <div class="page-hero-inner">
         <div class="breadcrumb">
@@ -287,7 +290,7 @@ def build(c):
           <a href="contact" class="btn btn-ghost-dark">Devis gratuit</a>
         </div>
         <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
-      </div>
+      </div>{hero_photo}
     </div>
   </section>
 

@@ -72,7 +72,7 @@
   <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=30">
+  <link rel="stylesheet" href="css/style.css?v=31">
   <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
        ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
        accompagnent toujours un libellé texte. -->
@@ -451,7 +451,7 @@
   <!-- @end:header -->
 
   <!-- ══════════ PAGE HERO ══════════ -->
-  <section class="page-hero" id="main-content">
+  <section class="page-hero has-photo" id="main-content">
     <div class="container">
       <div class="page-hero-inner">
         <div class="breadcrumb">
@@ -461,6 +461,7 @@
         <p>Sols sans joint, cuisines et pièces d'eau en béton ciré, à Bruxelles comme à Liège, Anvers ou Gand. Ligne belge dédiée : +32 465 86 63 72.</p>
         <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
       </div>
+      <figure class="hero-photo"><img src="images/image48-640.webp" srcset="images/image48-480.webp 480w, images/image48-640.webp 640w, images/image48-900.webp 900w, images/image48.webp 1200w" sizes="460px" alt="Bar rétroéclairé en pierre veinée et sol en carreaux de ciment" width="1200" height="900" loading="lazy" decoding="async"></figure>
     </div>
   </section>
 
@@ -653,6 +654,18 @@
           <div class="faq-a">Oui, exactement dans les mêmes conditions qu'en France : devis détaillé gratuit et sans engagement, réponse sous 24 heures ouvrées, et visite sur site offerte pour évaluer le projet. Vous pouvez nous joindre directement au +32 465 86 63 72.</div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ══════════ BANDE PHOTOS (desktop) ══════════ -->
+  <section class="photo-band" aria-label="Quelques réalisations Ben&amp;Bat">
+    <div class="container">
+      <div class="photo-band-grid">
+        <figure class="photo-band-item"><img src="images/image55-640.webp" srcset="images/image55-480.webp 480w, images/image55-640.webp 640w, images/image55-900.webp 900w, images/image55.webp 1200w" sizes="(min-width:1101px) 380px, 0px" alt="Sol en résine brillant dans un sous-sol rénové" width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Sol en résine brillant</figcaption></figure>
+        <figure class="photo-band-item"><img src="images/image43-640.webp" srcset="images/image43-480.webp 480w, images/image43-640.webp 640w, images/image43-900.webp 900w, images/image43.webp 1200w" sizes="(min-width:1101px) 380px, 0px" alt="Séjour avec canapé moutarde et table basse dans un appartement meublé" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Appartement meublé, Saint-Denis</figcaption></figure>
+        <figure class="photo-band-item"><img src="images/image64-640.webp" srcset="images/image64-480.webp 480w, images/image64-640.webp 640w, images/image64-900.webp 900w, images/image64.webp 1200w" sizes="(min-width:1101px) 380px, 0px" alt="Mur blanc de combles avec appliques et poutres apparentes" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Peinture des combles, Nîmes</figcaption></figure>
+      </div>
+      <p class="photo-band-more"><a href="realisations">Voir toutes nos réalisations <i class="fas fa-arrow-right"></i></a></p>
     </div>
   </section>
 

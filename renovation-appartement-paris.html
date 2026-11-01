@@ -72,7 +72,7 @@
   <!-- ──────────────────────────────────────────────────────────────────── -->
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <link rel="preload" href="fonts/Geist.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/style.css?v=30">
+  <link rel="stylesheet" href="css/style.css?v=31">
   <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
        ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
        accompagnent toujours un libellé texte. -->
@@ -451,7 +451,7 @@
   <!-- @end:header -->
 
   <!-- ══════════ PAGE HERO ══════════ -->
-  <section class="page-hero" id="main-content">
+  <section class="page-hero has-photo" id="main-content">
     <div class="container">
       <div class="page-hero-inner">
         <div class="breadcrumb">
@@ -461,6 +461,7 @@
         <p>Du rafraîchissement d'une pièce à la rénovation complète : tous les corps de métier coordonnés par un seul interlocuteur, dans le respect des contraintes de copropriété.</p>
         <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
       </div>
+      <figure class="hero-photo"><img src="images/image44-640.webp" srcset="images/image44-480.webp 480w, images/image44-640.webp 640w, images/image44-900.webp 900w, images/image44.webp 1200w" sizes="460px" alt="Chambre avec papier peint feuillage et parquet dans un appartement meublé" width="1200" height="800" loading="lazy" decoding="async"></figure>
     </div>
   </section>
 
@@ -661,6 +662,18 @@
           <div class="faq-a">Tous nos chantiers sont couverts par une assurance décennale et une responsabilité civile professionnelle. Nous ajoutons une garantie post-chantier de 30 jours, avec un bilan réalisé après la livraison. Le détail figure sur notre page garanties.</div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ══════════ BANDE PHOTOS (desktop) ══════════ -->
+  <section class="photo-band" aria-label="Quelques réalisations Ben&amp;Bat">
+    <div class="container">
+      <div class="photo-band-grid">
+        <figure class="photo-band-item"><img src="images/image39-640.webp" srcset="images/image39-480.webp 480w, images/image39-640.webp 640w, images/image39-900.webp 900w, images/image39.webp 1200w" sizes="(min-width:1101px) 380px, 0px" alt="Combles aménagés à Nîmes, poutres apparentes, parquet et murs blancs" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Combles aménagés, Nîmes</figcaption></figure>
+        <figure class="photo-band-item"><img src="images/image50-640.webp" srcset="images/image50-480.webp 480w, images/image50-640.webp 640w, images/image50-900.webp 900w, images/image50.webp 1200w" sizes="(min-width:1101px) 380px, 0px" alt="Cuisine blanche avec plan de travail bois et crédence carrelage métro" width="1200" height="800" loading="lazy" decoding="async"><figcaption>Cuisine, Saint-Denis</figcaption></figure>
+        <figure class="photo-band-item"><img src="images/image59-640.webp" srcset="images/image59-480.webp 480w, images/image59-640.webp 640w, images/image59-900.webp 900w, images/image59.webp 1200w" sizes="(min-width:1101px) 380px, 0px" alt="Douche avec niche de rangement et robinetterie noire" width="1200" height="1800" loading="lazy" decoding="async"><figcaption>Douche avec niche, Saint-Denis</figcaption></figure>
+      </div>
+      <p class="photo-band-more"><a href="realisations">Voir toutes nos réalisations <i class="fas fa-arrow-right"></i></a></p>
     </div>
   </section>
 
