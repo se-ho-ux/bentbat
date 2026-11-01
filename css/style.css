@@ -1,16 +1,16 @@
 /* ─────────────────────────────────────────────────────────────
-   GEIST — variable fonts, self-hosted
+   SWITZER — variable fonts (graisses 100 à 900, romain et italique), self-hosted
 ───────────────────────────────────────────────────────────── */
 @font-face {
-  font-family: 'Geist';
-  src: url('../fonts/Geist.woff2') format('woff2');
+  font-family: 'Switzer';
+  src: url('../fonts/Switzer-Variable.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Geist';
-  src: url('../fonts/Geist-Italic.woff2') format('woff2');
+  font-family: 'Switzer';
+  src: url('../fonts/Switzer-VariableItalic.woff2') format('woff2');
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
@@ -120,7 +120,7 @@ button { font-family: inherit; }
   --border-inv:     rgba(251,249,245,0.10);
   --bg-section-alt: #E8E4DC; /* Calque 50 % sur Papier — teinte intermédiaire des sections de contraste */
 
-  --font:      'Geist', system-ui, sans-serif;
+  --font:      'Switzer', system-ui, sans-serif;
   --font-mono: var(--font);
   --container: 1280px;
   --header-h:  72px;
