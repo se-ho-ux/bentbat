@@ -81,7 +81,7 @@
   ],
   "voir_aussi": [
     {"slug": "renovation-complete", "label": "Rénovation complète", "texte": "Le nettoyage intégré à un chantier tous corps de métier."},
-    {"slug": "realisations", "label": "Nos réalisations", "texte": "Des chantiers livrés à Paris, Lyon, Neuilly et Bruxelles."},
+    {"slug": "realisations", "label": "Nos réalisations", "texte": "Des chantiers livrés à Paris, Neuilly et Bruxelles."},
     {"slug": "peinture", "label": "Peinture", "texte": "Préparation, peinture et enduits décoratifs."}
   ],
   "cta": {"h2": "Un chantier|à remettre en état ?", "p": "Visite sur site et devis détaillé gratuits. Réponse sous 24h."}

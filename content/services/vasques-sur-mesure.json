@@ -83,6 +83,7 @@
   "voir_aussi": [
     {"slug": "salle-de-bain", "label": "Salle de bain", "texte": "Rénovation complète de salle de bain, du plan à la mise en eau."},
     {"slug": "beton-cire", "label": "Béton ciré premium", "texte": "Murs, sols et plans en béton ciré, fabriqués en atelier."},
+    {"slug": "prix-beton-cire-m2", "label": "Prix du béton ciré au m²", "texte": "Budget, facteurs de prix et exemples chiffrés."},
     {"slug": "mobilier-sur-mesure", "label": "Mobilier sur mesure", "texte": "Meubles et aménagements dessinés pour votre intérieur."}
   ],
   "cta": {"h2": "Une vasque|à dessiner ?", "p": "Relevé sur site et devis détaillé gratuits. Réponse sous 24h."}
