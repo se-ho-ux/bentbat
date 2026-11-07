@@ -65,14 +65,24 @@ def eur(n):
     return f'{n:,}'.replace(',', ' ') + ' €'
 
 
+def webp_size(path):
+    """Largeur/hauteur lues dans l'en-tête WebP (VP8, VP8L, VP8X), sans dépendance externe."""
+    d = path.read_bytes()[:40]
+    kind = d[12:16]
+    if kind == b'VP8X':
+        return 1 + int.from_bytes(d[24:27], 'little'), 1 + int.from_bytes(d[27:30], 'little')
+    if kind == b'VP8L':
+        b = int.from_bytes(d[21:25], 'little')
+        return 1 + (b & 0x3FFF), 1 + ((b >> 14) & 0x3FFF)
+    if kind == b'VP8 ':
+        return int.from_bytes(d[26:28], 'little') & 0x3FFF, int.from_bytes(d[28:30], 'little') & 0x3FFF
+    raise ValueError(path)
+
+
 def img_dims(name):
     """width/height de la variante 640 px (évite les décalages de mise en page au chargement)."""
-    try:
-        from PIL import Image
-        with Image.open(ROOT / 'images' / f'{name}-640.webp') as im:
-            return f'width="{im.size[0]}" height="{im.size[1]}" '
-    except Exception:
-        return ''
+    w, h = webp_size(ROOT / 'images' / f'{name}-640.webp')
+    return f'width="{w}" height="{h}" '
 
 
 def img_tag(name, alt, sizes, lazy=True):
