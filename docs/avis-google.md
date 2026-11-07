@@ -38,9 +38,9 @@ Un appel = une visite qui atteint la section Avis. Au-delà de 30 visites par jo
 4. **Relais** (compte Cloudflare gratuit) : dans `workers/avis-google/`, `npx wrangler kv namespace create BUDGET` (reporter l'id dans `wrangler.toml`), renseigner `PLACE_ID`, `npx wrangler secret put GOOGLE_PLACES_API_KEY`, puis `npx wrangler deploy`. Noter l'adresse obtenue (`https://benbat-avis-google.<compte>.workers.dev`).
 5. **Site** (à faire ensuite par Claude Code) : renseigner `ENDPOINT` dans `js/reviews.js`, ajouter l'adresse du relais à `connect-src` dans `src/partials/head-meta.html`, retirer du HTML les témoignages écrits à la main (voir ci-dessous), monter `VERSIONS['reviews']`, lancer `python3 scripts/build.py` et `scripts/qa.py`.
 
-## Témoignages écrits à la main
+## Témoignages écrits à la main (retirés le 07/11/2026)
 
-`index.html` et `a-propos.html` contiennent trois témoignages statiques (Marie Rousseau, Thomas Mercier, Sophie Laurent), ainsi qu'une note « 4,9 · 11 avis ». Tant que le relais n'est pas branché, ils restent affichés. À la mise en service ils sont remplacés par les avis Google réels, ou par le lien vers la fiche si Google ne répond pas. S'ils ne correspondent pas à de vrais clients, les retirer plus tôt.
+Les trois témoignages statiques (Marie Rousseau, Thomas Mercier, Sophie Laurent), la note « 4,9 · 11 avis Google » et le lien « Témoignages » du pied de page ont été retirés d'`index.html`, d'`a-propos.html` et du gabarit : rien ne prouvait qu'ils venaient de vrais clients (risque de pratique commerciale trompeuse). Les sections `reviews-grid-home` et `reviews-grid-apropos` n'existent donc plus : au branchement du relais, il faudra recréer ces deux conteneurs (titre + grille vide) avant de renseigner `ENDPOINT`.
 
 ## Maintenance
 

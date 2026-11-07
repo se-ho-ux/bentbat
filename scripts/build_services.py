@@ -65,12 +65,23 @@ def eur(n):
     return f'{n:,}'.replace(',', ' ') + ' €'
 
 
+def img_dims(name):
+    """width/height de la variante 640 px (évite les décalages de mise en page au chargement)."""
+    try:
+        from PIL import Image
+        with Image.open(ROOT / 'images' / f'{name}-640.webp') as im:
+            return f'width="{im.size[0]}" height="{im.size[1]}" '
+    except Exception:
+        return ''
+
+
 def img_tag(name, alt, sizes, lazy=True):
     n = int(name.replace('image', ''))
     w = IMG_W[n]
     srcs = [f'images/{name}-480.webp 480w', f'images/{name}-640.webp 640w', f'images/{name}-900.webp 900w']
     srcs.append(f'images/{name}.webp {w}w') if w > 900 else None
-    return (f'<img src="images/{name}-640.webp" srcset="{", ".join(srcs)}" sizes="{sizes}" '
+    dims = img_dims(name)
+    return (f'<img src="images/{name}-640.webp" srcset="{", ".join(srcs)}" sizes="{sizes}" {dims}'
             f'alt="{attr(alt)}" loading="{"lazy" if lazy else "eager"}" decoding="async">')
 
 
