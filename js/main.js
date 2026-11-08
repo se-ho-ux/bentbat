@@ -478,121 +478,50 @@
       goTo(0);
     })();
 
-// ── Carrousel & lightbox réalisations (rlTrack) ──────────────────────────────
+// ── Grille & lightbox réalisations (rlTrack) ─────────────────────────────────
 (function() {
-      const btns      = document.querySelectorAll('.pf-btn');
-      const rlTrack   = document.getElementById('rlTrack');
-      const items     = rlTrack ? Array.from(rlTrack.querySelectorAll('.gallery-item')) : [];
-      const rlPrevBtn = document.getElementById('rlPrev');
-      const rlNextBtn = document.getElementById('rlNext');
-      const rlFillEl  = document.getElementById('rlFill');
-      const rlCntEl   = document.getElementById('rlCounter');
-      const RL_GAP    = 12;
-      let rlCurrent   = 0;
-      let rlOffset    = 0;
+      const btns     = document.querySelectorAll('.pf-btn');
+      const grid     = document.getElementById('rlTrack');
+      const items    = grid ? Array.from(grid.querySelectorAll('.gallery-item')) : [];
+      const moreBtn  = document.getElementById('rlMore');
+      const countEl  = document.getElementById('rlCounter');
+      const LIMIT    = 20;      // photos affichées avant « Afficher les autres »
+      let filter     = 'all';
+      let expanded   = false;
 
-      function rlGetVis() { return items.filter(s => !s.classList.contains('rl-hidden')); }
-
-      function rlGoTo(idx) {
-        if (!rlTrack) return;
-        const vis = rlGetVis();
-        if (!vis.length) {
-          rlTrack.style.transform = 'translateX(0)';
-          if (rlPrevBtn) rlPrevBtn.disabled = true;
-          if (rlNextBtn) rlNextBtn.disabled = true;
-          return;
+      function render() {
+        const match = items.filter(i => filter === 'all' || i.dataset.category === filter);
+        items.forEach(i => i.classList.add('rl-hidden'));
+        match.forEach((i, idx) => i.classList.toggle('rl-hidden', !expanded && idx >= LIMIT));
+        if (countEl) countEl.textContent = match.length + ' photo' + (match.length > 1 ? 's' : '');
+        if (moreBtn) {
+          const rest = match.length - LIMIT;
+          moreBtn.hidden = expanded || rest <= 0;
+          moreBtn.textContent = 'Afficher les ' + rest + ' autres photos';
         }
-        const sw  = vis[0].offsetWidth + RL_GAP;
-        const tw  = vis.length * sw - RL_GAP;
-        const cw  = rlTrack.parentElement.offsetWidth;
-        const max = Math.max(0, Math.ceil((tw - cw) / sw));
-        rlCurrent = Math.max(0, Math.min(idx, max));
-        rlOffset  = rlCurrent * sw;
-        rlTrack.style.transition = '';
-        rlTrack.style.transform  = 'translateX(-' + rlOffset + 'px)';
-        if (rlPrevBtn) rlPrevBtn.disabled = rlCurrent === 0;
-        if (rlNextBtn) rlNextBtn.disabled = rlCurrent >= max;
-        if (rlFillEl) {
-          const vf = max === 0 ? 1 : (vis.length - max) / vis.length;
-          rlFillEl.style.width = (max === 0 ? 100 : (vf + (1 - vf) * rlCurrent / max) * 100) + '%';
-        }
-        if (rlCntEl) rlCntEl.textContent = (rlCurrent + 1) + ' / ' + (max + 1);
       }
 
-      // ── Filters ──────────────────────────────────────────────
       btns.forEach(btn => {
         btn.addEventListener('click', () => {
           btns.forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          const f = btn.dataset.filter;
-          items.forEach(item => item.classList.toggle('rl-hidden', f !== 'all' && item.dataset.category !== f));
-          rlGoTo(0);
-          const wrap = rlTrack ? rlTrack.closest('.hp-carousel-wrap') : null;
-          if (wrap) {
-            setTimeout(() => {
-              const rect = wrap.getBoundingClientRect();
-              if (rect.top > window.innerHeight * 0.55 || rect.top < 88) {
-                const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
-                window.scrollTo({ top: rect.top + window.scrollY - 88, behavior });
-              }
-            }, 50);
-          }
+          filter = btn.dataset.filter;
+          expanded = false;
+          render();
+        });
+      });
+      if (moreBtn) moreBtn.addEventListener('click', () => { expanded = true; render(); });
+
+      // Accessibilité clavier : chaque photo s'ouvre avec Entrée ou Espace
+      items.forEach(i => {
+        i.setAttribute('tabindex', '0');
+        i.setAttribute('role', 'button');
+        i.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); i.click(); }
         });
       });
 
-      if (rlPrevBtn) rlPrevBtn.addEventListener('click', () => rlGoTo(rlCurrent - 1));
-      if (rlNextBtn) rlNextBtn.addEventListener('click', () => rlGoTo(rlCurrent + 1));
-
-      let rlTx = 0, rlDragging = false;
-      if (rlTrack) {
-        rlTrack.addEventListener('touchstart', e => {
-          rlTx = e.changedTouches[0].clientX;
-          rlDragging = true;
-          rlTrack.style.transition = 'none';
-        }, { passive: true });
-        rlTrack.addEventListener('touchmove', e => {
-          if (!rlDragging) return;
-          const dx = e.changedTouches[0].clientX - rlTx;
-          rlTrack.style.transform = 'translateX(' + (-rlOffset + dx) + 'px)';
-        }, { passive: true });
-        rlTrack.addEventListener('touchend', e => {
-          if (!rlDragging) return;
-          rlDragging = false;
-          const dx = e.changedTouches[0].clientX - rlTx;
-          rlTrack.style.transition = '';
-          if (Math.abs(dx) > 32) rlGoTo(dx < 0 ? rlCurrent + 1 : rlCurrent - 1);
-          else rlGoTo(rlCurrent);
-        }, { passive: true });
-      }
-
-      window.addEventListener('resize', () => {
-        const vis = rlGetVis();
-        if (!vis.length) return;
-        const sw  = vis[0].offsetWidth + RL_GAP;
-        const max = Math.max(0, Math.ceil((vis.length * sw - RL_GAP - rlTrack.parentElement.offsetWidth) / sw));
-        rlGoTo(Math.min(rlCurrent, max));
-      }, { passive: true });
-
-      // ── Horizontal scroll fluide (trackpad / molette) ────────
-      const rlWrap = rlTrack ? rlTrack.closest('.hp-carousel-wrap') : null;
-      let rlSnapTimer = null;
-      if (rlWrap) {
-        rlWrap.addEventListener('wheel', e => {
-          if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return;
-          e.preventDefault();
-          clearTimeout(rlSnapTimer);
-          const vis = rlGetVis();
-          if (!vis.length) return;
-          const sw     = vis[0].offsetWidth + RL_GAP;
-          const maxOff = Math.max(0, vis.length * sw - RL_GAP - rlTrack.parentElement.offsetWidth);
-          rlOffset = Math.max(0, Math.min(rlOffset + e.deltaX, maxOff));
-          rlTrack.style.transition = 'none';
-          rlTrack.style.transform  = 'translateX(-' + rlOffset + 'px)';
-          rlSnapTimer = setTimeout(() => rlGoTo(Math.round(rlOffset / sw)), 180);
-        }, { passive: false });
-      }
-
-      rlGoTo(0);
+      render();
 
       // ── Lightbox ─────────────────────────────────────────────
       const overlay   = document.getElementById('lightbox');
