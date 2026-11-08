@@ -490,7 +490,7 @@
       let expanded   = false;
 
       function render() {
-        const match = items.filter(i => filter === 'all' || i.dataset.category === filter);
+        const match = items.filter(i => filter === 'all' || i.dataset.category.split(' ').indexOf(filter) !== -1);
         items.forEach(i => i.classList.add('rl-hidden'));
         match.forEach((i, idx) => i.classList.toggle('rl-hidden', !expanded && idx >= LIMIT));
         if (countEl) countEl.textContent = match.length + ' photo' + (match.length > 1 ? 's' : '');
