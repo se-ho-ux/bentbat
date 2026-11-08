@@ -65,10 +65,9 @@
     ]
   },
   "photos_h2": "Des vasques et des plans|dans des salles de bain",
-  "photos_texte": "Deux salles de bain avec vasque sur mesure. Retrouvez toutes nos [réalisations](realisations).",
+  "photos_texte": "Une salle de bain avec vasque sur mesure. Retrouvez toutes nos [réalisations](realisations).",
   "photos": [
-    {"img": "image14", "alt": "Plan vasque en béton ciré foncé avec robinetterie laiton et baignoire îlot", "legende": "Plan vasque en béton ciré foncé, robinetterie laiton et baignoire îlot assortie.", "lien": "realisations#rl-beton-cire"},
-    {"img": "image12", "alt": "Salle de bains avec double vasque sur plan en pierre et baignoire îlot", "legende": "Salle de bains avec double vasque sur plan et baignoire îlot.", "lien": "realisations#rl-salles-de-bains"}
+    {"img": "image14", "alt": "Plan vasque en béton ciré foncé avec robinetterie laiton et baignoire îlot", "legende": "Plan vasque en béton ciré foncé, robinetterie laiton et baignoire îlot assortie.", "lien": "realisations#rl-beton-cire"}
   ],
   "faq_h2": "Les questions|qu'on nous pose",
   "faq_intro": "Matériaux, dimensions, entretien, budget : ce qu'il faut savoir avant de commander une vasque sur mesure.",
