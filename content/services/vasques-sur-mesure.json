@@ -2,18 +2,18 @@
   "slug": "vasques-sur-mesure",
   "nom": "Vasques sur mesure",
   "nom_schema": "Vasques sur mesure",
-  "service_type": "Conception et fabrication de vasques sur mesure en béton ciré, résine ou pierre de synthèse",
+  "service_type": "Conception et fabrication de vasques sur mesure en céramique, béton ciré, résine ou pierre de synthèse",
   "kind": "pilier",
   "estimateur": "premium",
-  "title": "Vasque sur Mesure en Béton Ciré ou Résine | Ben&Bat",
-  "description_meta": "Vasques sur mesure en béton ciré, résine ou pierre de synthèse, dessinées et fabriquées par nos artisans. Pièces uniques, Paris, Marseille et Bruxelles.",
-  "description": "Vasques et plans de toilette sur mesure en béton ciré, résine ou pierre de synthèse, dessinés et réalisés par nos artisans, en France et en Belgique.",
+  "title": "Vasque sur Mesure Céramique, Béton Ciré, Résine | Ben&Bat",
+  "description_meta": "Vasques sur mesure en céramique, béton ciré, résine ou pierre de synthèse, fabriquées par nos artisans. Pièces uniques, Paris, Marseille, Bruxelles.",
+  "description": "Vasques et plans de toilette sur mesure en céramique, béton ciré, résine ou pierre de synthèse, dessinés et réalisés par nos artisans, en France et en Belgique.",
   "kicker": "Notre spécialité signature",
   "hero_photo": {"img": "image66", "alt": "Salle de bains avec vasque, miroir rétroéclairé et robinetterie noire"},
   "h1": "Vasques sur mesure|pièces uniques",
-  "lede": "Vasques et plans de toilette en béton ciré, résine ou pierre de synthèse, dessinés et réalisés par nos artisans aux dimensions exactes de votre salle de bain.",
+  "lede": "Vasques et plans de toilette en céramique, béton ciré, résine ou pierre de synthèse, dessinés et réalisés par nos artisans aux dimensions exactes de votre salle de bain.",
   "bref": [
-    ["Matériaux", "Béton ciré, résine, pierre de synthèse"],
+    ["Matériaux", "Céramique, béton ciré, résine, pierre de synthèse"],
     ["Budget indicatif", "Vasque sur mesure : {prix:premium:2} HT"],
     ["Fabrication", "Par nos artisans, pièce unique"],
     ["Zones", "France et Belgique"]
@@ -22,11 +22,12 @@
     "h2": "Une vasque dessinée|pour une seule salle de bain",
     "p": [
       "Une vasque du commerce impose ses dimensions, ses formes et son rapport au plan. Une vasque sur mesure inverse la logique : c'est la salle de bain qui décide de ses proportions. Longueur, profondeur, forme de la cuve, position de la robinetterie, hauteur du plan : chaque paramètre se règle pour s'accorder à l'usage et à l'architecture.",
-      "Nous dessinons et fabriquons des vasques en béton ciré, en résine ou en pierre de synthèse, simples ou doubles, posées sur plan, intégrées dans un meuble ou suspendues. Chaque vasque est une pièce unique, réalisée par nos artisans dans notre atelier.",
+      "Nous dessinons et fabriquons des vasques en céramique, en béton ciré, en résine ou en pierre de synthèse, simples ou doubles, posées sur plan, intégrées dans un meuble ou suspendues. Chaque vasque est une pièce unique, réalisée par nos artisans dans notre atelier.",
       "La vasque s'intègre à un projet de [salle de bain](salle-de-bain) complet, en continuité avec les murs et le sol, notamment lorsque tout est traité en [béton ciré](beton-cire)."
     ]
   },
   "cartes": [
+    {"icon": "gem", "titre": "Céramique", "texte": "Une vasque en céramique émaillée, à la surface lisse, brillante ou mate, très résistante à l'eau, aux taches et aux produits d'entretien courants. Elle s'adapte à toutes les salles de bain, des plus classiques aux plus contemporaines.", "liste": ["Vasque à poser, encastrée ou suspendue", "Formes et dimensions sur mesure", "Émail brillant ou mat, teinte au choix", "Entretien très simple"]},
     {"icon": "layer-group", "titre": "Béton ciré", "texte": "Une vasque coulée et façonnée dans notre atelier, avec la même teinte que les murs et le sol pour une continuité totale.", "liste": ["Vasque monobloc", "Teinte assortie au revêtement", "Formes sur mesure", "Protection hydrofuge adaptée"]},
     {"icon": "droplet", "titre": "Résine et pierre de synthèse", "texte": "Surfaces lisses et peu poreuses, adaptées à un usage intensif. Elles permettent des cuves fines et des formes précises.", "liste": ["Résine", "Pierre de synthèse", "Cuves fines", "Entretien facile"]},
     {"icon": "ruler-combined", "titre": "Dimensions et formes", "texte": "Simple ou double vasque, cuve ronde, rectangulaire ou ovale, plan long ou court : tout se dessine après le relevé de la pièce.", "liste": ["Simple ou double vasque", "Cuve et plan sur mesure", "Position de la robinetterie", "Hauteur adaptée aux usages"]},
@@ -36,7 +37,7 @@
   "deroule_intro": "Une vasque sur mesure est un ouvrage de précision : chaque cote est relevée sur place et validée avant fabrication.",
   "etapes": [
     {"icon": "ruler-combined", "titre": "Relevé et dessin", "texte": "Nous relevons la pièce, l'emplacement des arrivées et des évacuations, puis nous dessinons la vasque avec vous : taille, forme, hauteur, robinetterie."},
-    {"icon": "palette", "titre": "Choix du matériau et échantillon", "texte": "Béton ciré, résine ou pierre de synthèse : le matériau, la teinte et la finition sont validés sur échantillon avant toute fabrication."},
+    {"icon": "palette", "titre": "Choix du matériau et échantillon", "texte": "Céramique, béton ciré, résine ou pierre de synthèse : le matériau, la teinte et la finition sont validés sur échantillon avant toute fabrication."},
     {"icon": "file-invoice", "titre": "Devis détaillé", "texte": "Un devis gratuit et sans engagement, qui détaille la fabrication, la pose et les raccordements. Le support est renforcé si nécessaire."},
     {"icon": "hammer", "titre": "Fabrication en atelier", "texte": "La vasque est fabriquée et finie dans notre atelier, avec le temps de séchage et de protection nécessaire avant livraison."},
     {"icon": "key", "titre": "Pose et réception", "texte": "Pose sur le support, perçage, raccordement du siphon et de la robinetterie, essais d'eau, nettoyage. Nous vous remettons un protocole d'entretien."}
@@ -72,7 +73,8 @@
   "faq_h2": "Les questions|qu'on nous pose",
   "faq_intro": "Matériaux, dimensions, entretien, budget : ce qu'il faut savoir avant de commander une vasque sur mesure.",
   "faq": [
-    {"q": "Quelle différence entre une vasque en béton ciré et en résine ?", "r": "Le béton ciré offre un aspect minéral et nuancé, avec une teinte assortie aux murs et aux sols. La résine donne une surface plus lisse, fine et uniforme. Les deux sont adaptées aux pièces d'eau avec une finition appropriée. Nous vous montrons des échantillons pour choisir."},
+    {"q": "Faites-vous des vasques en céramique ?", "r": "Oui. Nous réalisons des vasques et des plans de toilette en céramique, à poser, encastrés ou suspendus, aux dimensions et à la forme de votre salle de bain. La céramique émaillée est lisse, très résistante aux taches et aux produits d'entretien courants, et se nettoie d'un simple coup d'éponge. Elle convient aux salles de bain familiales comme aux projets plus décoratifs."},
+    {"q": "Quelle différence entre une vasque en céramique, en béton ciré et en résine ?", "r": "La céramique est émaillée : elle offre une surface brillante ou mate, très facile à entretenir. Le béton ciré offre un aspect minéral et nuancé, avec une teinte assortie aux murs et aux sols. La résine donne une surface plus lisse, fine et uniforme. Les deux sont adaptées aux pièces d'eau avec une finition appropriée. Nous vous montrons des échantillons pour choisir."},
     {"q": "Peut-on faire une double vasque sur mesure ?", "r": "Oui, c'est l'un des usages les plus courants. Nous dessinons le plan à la longueur de votre meuble, avec une ou deux cuves, et nous prévoyons les perçages pour chaque robinetterie."},
     {"q": "Une vasque en béton ciré est-elle étanche ?", "r": "Oui, avec une protection hydrofuge adaptée, appliquée sur toute la surface en contact avec l'eau. Cette protection se renouvelle au fil du temps. Nous remettons un protocole d'entretien à la livraison. Voir notre page [béton ciré](beton-cire)."},
     {"q": "Quel délai prévoir pour une vasque sur mesure ?", "r": "Le délai comprend le dessin, la validation de l'échantillon, la fabrication, le séchage et la pose. Il dépend de la complexité de la pièce et du matériau. Nous l'indiquons dans le devis, après le relevé."},

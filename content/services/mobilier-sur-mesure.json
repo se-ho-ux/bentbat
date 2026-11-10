@@ -81,7 +81,7 @@
     {"q": "Comment estimer mon budget ?", "r": "Mesurez la surface de façade visible, puis utilisez l'[estimateur de budget](contact?devis=premium#devisEstimator) ou la [grille tarifaire](tarifs). La fourchette est hors taxes, et le plan coté permet ensuite de la préciser."}
   ],
   "voir_aussi": [
-    {"slug": "vasques-sur-mesure", "label": "Vasques sur mesure", "texte": "Vasques et plans de toilette en béton ciré ou en résine."},
+    {"slug": "vasques-sur-mesure", "label": "Vasques sur mesure", "texte": "Vasques et plans de toilette en céramique, béton ciré ou résine."},
     {"slug": "beton-cire", "label": "Béton ciré premium", "texte": "Plans de travail, bancs et mobilier en béton ciré."},
     {"slug": "renovation-complete", "label": "Rénovation complète", "texte": "Le mobilier intégré à un chantier tous corps de métier."}
   ],
