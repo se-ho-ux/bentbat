@@ -3,7 +3,7 @@
 
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // ── Header scroll — glass effect ──────────────────────────────────────────
+  // ── Header scroll : glass effect ──────────────────────────────────────────
   const header = document.getElementById('header');
   if (header && !header.classList.contains('solid')) {
     let isScrolled = false;
@@ -21,7 +21,7 @@
     onScroll();
   }
 
-  // ── Mobile menu — with focus trap, Escape, click-outside, focus return ────
+  // ── Mobile menu : with focus trap, Escape, click-outside, focus return ────
   const hamburger   = document.getElementById('hamburger');
   const mobileMenu  = document.getElementById('mobileMenu');
   const mobileClose = document.getElementById('mobileClose');
@@ -162,7 +162,7 @@
   }
 
 
-  // ── Sticky mobile CTA — appears when hero CTA button leaves viewport ─────
+  // ── Sticky mobile CTA : appears when hero CTA button leaves viewport ─────
   const heroDevis = document.getElementById('heroDevis');
   if (stickyCta && heroDevis) {
     const heroObs = new IntersectionObserver(entries => {
@@ -186,7 +186,7 @@
     ctaSecObs.observe(ctaSection);
   }
 
-  // ── Stats counter — respects prefers-reduced-motion ───────────────────────
+  // ── Stats counter : respects prefers-reduced-motion ───────────────────────
   const animateCount = el => {
     if (prefersReducedMotion) {
       el.textContent = el.dataset.target;
@@ -215,7 +215,7 @@
   const statsSec = document.querySelector('.stats-section');
   if (statsSec) statsObs.observe(statsSec);
 
-  // ── Contact form — inline validation + aria-live errors ───────────────────
+  // ── Contact form : inline validation + aria-live errors ───────────────────
   const form    = document.getElementById('contactForm');
   const success = document.getElementById('formSuccess');
 

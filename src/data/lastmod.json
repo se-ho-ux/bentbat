@@ -1,7 +1,7 @@
 {
  "a-propos.html": {
-  "date": "2026-11-08",
-  "hash": "bdc25df72791decda684aff301ceb6b3e25198d8"
+  "date": "2026-11-12",
+  "hash": "6cca3b23863d43eadd77a59b38d32cb7213c9427"
  },
  "beton-cire-bruxelles.html": {
   "date": "2026-11-12",
@@ -28,8 +28,8 @@
   "hash": "f61387f0ac638fb98e33291a1ee81cdb0cf9340d"
  },
  "contact.html": {
-  "date": "2026-11-08",
-  "hash": "0137610a88fc8cb6aff9d50bcd12aae31134c049"
+  "date": "2026-11-12",
+  "hash": "80a3f195ef2c1b648b52464f48e5b995a6057b01"
  },
  "cuisine.html": {
   "date": "2026-11-08",
@@ -89,11 +89,11 @@
  },
  "realisations.html": {
   "date": "2026-11-12",
-  "hash": "9d84232110b8db7edcd197672bb8599b2cb31f0a"
+  "hash": "01be031ab2894c20f64a512b6b9396d78d28c34f"
  },
  "renovation-appartement-paris.html": {
-  "date": "2026-11-06",
-  "hash": "60e4b6791c95f28aa18e69a7413ee49b1b7fa494"
+  "date": "2026-11-12",
+  "hash": "7895d66bc9491c6ba8bced00b1508d98d6b19873"
  },
  "renovation-complete.html": {
   "date": "2026-11-08",
@@ -109,7 +109,7 @@
  },
  "services.html": {
   "date": "2026-11-12",
-  "hash": "8bc03a4ca36c10706db676d5d5113fff21981ea5"
+  "hash": "2d5ac70dbbc73d1f6d3f135812a034ecaf2b53b0"
  },
  "tarifs.html": {
   "date": "2026-11-06",

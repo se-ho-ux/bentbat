@@ -1,4 +1,4 @@
-/* GÉNÉRÉ depuis tarifs.html par scripts/sync_tarifs.py — ne pas modifier à la main. */
+/* GÉNÉRÉ depuis tarifs.html par scripts/sync_tarifs.py : ne pas modifier à la main. */
 window.BENBAT_TARIFS = {
  "tarifs": [
   {

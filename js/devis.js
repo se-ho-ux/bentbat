@@ -1,4 +1,4 @@
-/* Estimation indicative du budget — formulaire de devis (contact.html)
+/* Estimation indicative du budget : formulaire de devis (contact.html)
    Les prix viennent de js/tarifs-data.js, généré depuis tarifs.html :
    après toute modification de la grille, lancer python3 scripts/sync_tarifs.py */
 (function () {

@@ -1,5 +1,5 @@
 /* ─────────────────────────────────────────────────────────────
-   SWITZER — variable fonts (graisses 100 à 900, romain et italique), self-hosted
+   SWITZER - variable fonts (graisses 100 à 900, romain et italique), self-hosted
 ───────────────────────────────────────────────────────────── */
 @font-face {
   font-family: 'Switzer';
@@ -41,7 +41,7 @@ img { display: block; max-width: 100%; }
 a { color: inherit; }
 button { font-family: inherit; }
 
-/* ── Focus visible — keyboard navigation ────────────────── */
+/* ── Focus visible - keyboard navigation ────────────────── */
 :focus { outline: none; }
 :focus-visible {
   outline: 2px solid var(--text);
@@ -55,12 +55,12 @@ button { font-family: inherit; }
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
-/* Inputs use border+shadow as focus indicator — no extra outline */
+/* Inputs use border+shadow as focus indicator - no extra outline */
 .form-group input:focus-visible,
 .form-group select:focus-visible,
 .form-group textarea:focus-visible { outline: none; }
 
-/* ── Skip link — keyboard first-tab ────────────────────── */
+/* ── Skip link - keyboard first-tab ────────────────────── */
 .skip-link {
   position: absolute;
   top: -100%;
@@ -81,7 +81,7 @@ button { font-family: inherit; }
   outline-offset: 3px;
 }
 
-/* ── Touch action — desktop : supprime délai 300ms / mobile : supprime zoom ── */
+/* ── Touch action - desktop : supprime délai 300ms / mobile : supprime zoom ── */
 * { touch-action: manipulation; }
 @media (hover: none) and (pointer: coarse) { * { touch-action: pan-y; } }
 
@@ -102,23 +102,23 @@ button { font-family: inherit; }
 ───────────────────────────────────────────────────────────── */
 :root {
   /* ── Palette Ben&Bat ─────────────────────────────────────── */
-  --bg:             #FBF9F5; /* Papier      — surface claire */
-  --bg-alt:         #F4F0EA; /* Chaux       — surface secondaire */
-  --bg-dark:        #171514; /* Carbone     — fond sombre */
-  --bg-dark-2:      #2D3338; /* Acier       — surfaces tech */
-  --text:           #171514; /* Carbone     — texte principal */
-  --text-muted:     #6B6157; /* Béton foncé — texte secondaire WCAG AA */
-  --text-inv:       #FBF9F5; /* Papier      — texte sur fond sombre */
+  --bg:             #FBF9F5; /* Papier      - surface claire */
+  --bg-alt:         #F4F0EA; /* Chaux       - surface secondaire */
+  --bg-dark:        #171514; /* Carbone     - fond sombre */
+  --bg-dark-2:      #2D3338; /* Acier       - surfaces tech */
+  --text:           #171514; /* Carbone     - texte principal */
+  --text-muted:     #6B6157; /* Béton foncé - texte secondaire WCAG AA */
+  --text-inv:       #FBF9F5; /* Papier      - texte sur fond sombre */
   --text-inv-muted: rgba(251,249,245,0.60);
-  --accent:         #B85C38; /* Terre cuite — accent signature */
-  --accent-h:       #9A4B2D; /* Terre cuite foncée — hover */
-  --accent-light:   #F5E5DC; /* Terre cuite claire — surfaces */
-  --accent-warm:    #C89968; /* Ocre        — accent chaud dark sections */
-  --neutral:        #847A6E; /* Béton       — neutre */
-  --calque:         #D6CFC4; /* Calque      — neutre doux */
-  --border:         #D6CFC4; /* Calque      — bordures */
+  --accent:         #B85C38; /* Terre cuite - accent signature */
+  --accent-h:       #9A4B2D; /* Terre cuite foncée - hover */
+  --accent-light:   #F5E5DC; /* Terre cuite claire - surfaces */
+  --accent-warm:    #C89968; /* Ocre        - accent chaud dark sections */
+  --neutral:        #847A6E; /* Béton       - neutre */
+  --calque:         #D6CFC4; /* Calque      - neutre doux */
+  --border:         #D6CFC4; /* Calque      - bordures */
   --border-inv:     rgba(251,249,245,0.10);
-  --bg-section-alt: #E8E4DC; /* Calque 50 % sur Papier — teinte intermédiaire des sections de contraste */
+  --bg-section-alt: #E8E4DC; /* Calque 50 % sur Papier - teinte intermédiaire des sections de contraste */
 
   --font:      'Switzer', system-ui, sans-serif;
   --font-mono: var(--font);
@@ -129,13 +129,13 @@ button { font-family: inherit; }
   --shadow:    0 4px 32px rgba(23,21,20,0.08);
   --shadow-lg: 0 16px 64px rgba(23,21,20,0.14);
 
-  /* Échelle typographique — fluide, desktop → mobile */
+  /* Échelle typographique - fluide, desktop → mobile */
   --fs-h1:   clamp(1.875rem, 3.4vw, 2.75rem);  /* titres des pages internes : 44 px à 1440, au niveau du hero */
   --fs-hero: clamp(1.875rem, 3vw, 2.75rem);    /* titre du hero d'accueil : 43 px à 1440 */
   --fs-h2:   clamp(1.625rem, 2.7vw, 2.25rem);   /* titres de section : 36 px à 1440, 26 px minimum */
   --lh-body: 1.5;                              /* paragraphes courants */
 
-  /* Easing — custom curves, never use built-in ease-in for UI */
+  /* Easing - custom curves, never use built-in ease-in for UI */
   --ease:        cubic-bezier(0.25, 0.1, 0.25, 1);
   --ease-out:    cubic-bezier(0.23, 1, 0.32, 1);
   --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
@@ -186,7 +186,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
   margin-bottom: 40px;
 }
 .portfolio-header .btn { flex-shrink: 0; }
-/* ── Header éditorial deux colonnes — réutilisable partout ── */
+/* ── Header éditorial deux colonnes - réutilisable partout ── */
 .section-head {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -227,7 +227,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
   text-decoration: none;
   border: 2px solid transparent;
   cursor: pointer;
-  /* Explicit properties only — never transition:all */
+  /* Explicit properties only - never transition:all */
   transition:
     background   var(--t) var(--ease-out),
     color        var(--t) var(--ease-out),
@@ -237,7 +237,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
   white-space: nowrap;
   letter-spacing: -0.01em;
 }
-/* Press feedback on all buttons — instant response */
+/* Press feedback on all buttons - instant response */
 .btn:active { transform: scale(0.97) !important; transition-duration: 80ms !important; }
 
 .btn-primary {
@@ -316,7 +316,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
     box-shadow      var(--t) var(--ease-out);
 }
 
-/* Inner pages — always pinned dark glass */
+/* Inner pages - always pinned dark glass */
 #header.solid {
   background: rgba(23,21,20,0.88);
   backdrop-filter: blur(20px) saturate(160%);
@@ -324,7 +324,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
   border-bottom: 1px solid rgba(255,255,255,0.07);
 }
 
-/* Home page — light frosted glass on scroll */
+/* Home page - light frosted glass on scroll */
 #header.scrolled {
   background: rgba(251,249,245,0.90);
   backdrop-filter: blur(20px) saturate(160%);
@@ -348,7 +348,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
   text-decoration: none;
   line-height: 1;
   flex-shrink: 0;
-  /* Pill glass — fond translucide sur header transparent */
+  /* Pill glass - fond translucide sur header transparent */
   padding: 6px 14px;
   border-radius: 14px;
   background: rgba(251,249,245,0.75);
@@ -362,7 +362,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
     box-shadow     var(--t-md) var(--ease-out),
     backdrop-filter var(--t-md) var(--ease-out);
 }
-/* Pill disparaît quand le header a son propre fond — padding inchangé pour éviter tout décalage */
+/* Pill disparaît quand le header a son propre fond - padding inchangé pour éviter tout décalage */
 #header.scrolled .nav-logo,
 #header.solid    .nav-logo {
   background:        transparent;
@@ -380,7 +380,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
   -webkit-backdrop-filter: none;
   padding:           0;
 }
-/* Logo images — 3-variant swap */
+/* Logo images - 3-variant swap */
 .nav-logo .logo-primary,
 .nav-logo .logo-scrolled {
   height: 34px;
@@ -415,7 +415,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
 }
 #header.solid .nav-links a { color: rgba(255,255,255,0.65); }
 
-/* Underline clip-path reveal — editorial link style */
+/* Underline clip-path reveal - editorial link style */
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -436,7 +436,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
 #header.solid .nav-links a.active { color: #fff; }
 
 .nav-actions { display: flex; align-items: center; gap: 10px; }
-/* CTA nav — forme pill + contenu dans les limites du header */
+/* CTA nav - forme pill + contenu dans les limites du header */
 .nav-actions .btn-primary {
   border-radius: 100px;
   padding: 9px 18px;
@@ -506,7 +506,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
 }
 .mobile-menu.open { transform: translateX(0); }
 
-/* Nav links — stagger entrance + numbered */
+/* Nav links - stagger entrance + numbered */
 .mobile-menu > a {
   counter-increment: menu-nav;
   position: relative;
@@ -550,7 +550,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
   transition: transform 0.22s var(--ease-out);
   border-radius: 0 2px 2px 0;
 }
-/* Open — stagger */
+/* Open - stagger */
 .mobile-menu.open > a { transform: translateX(0); opacity: 1; }
 .mobile-menu.open > a:nth-of-type(1) { transition-delay: 55ms; }
 .mobile-menu.open > a:nth-of-type(2) { transition-delay: 90ms; }
@@ -592,7 +592,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
   background: rgba(255,255,255,0.06);
 }
 
-/* Separator + actions — animated in after links */
+/* Separator + actions - animated in after links */
 .mobile-menu-sep {
   height: 1px;
   background: var(--border-inv);
@@ -619,7 +619,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
   transition-delay: 235ms;
 }
 
-/* Boutons dans les actions — reset des styles hérités de .mobile-menu a */
+/* Boutons dans les actions - reset des styles hérités de .mobile-menu a */
 .mobile-menu-actions .btn {
   display: flex;
   align-items: center;
@@ -634,7 +634,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
 }
 .mobile-menu-actions .btn::before,
 .mobile-menu-actions .btn::after { display: none; }
-/* Phone buttons — visible enclosure on dark background */
+/* Phone buttons - visible enclosure on dark background */
 .mobile-menu-actions .btn-ghost {
   border-color: rgba(251,249,245,0.28);
   background: rgba(251,249,245,0.06);
@@ -649,12 +649,12 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
 }
 
 /* ─────────────────────────────────────────────────────────────
-   HERO — split layout (starts below header, image not behind nav)
+   HERO - split layout (starts below header, image not behind nav)
 ───────────────────────────────────────────────────────────── */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /* Strict viewport fit — tout le contenu doit être visible sans scroll */
+  /* Strict viewport fit - tout le contenu doit être visible sans scroll */
   height: calc(100vh - var(--header-h));
   margin-top: var(--header-h);
   overflow: hidden;
@@ -765,7 +765,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
 /* ─────────────────────────────────────────────────────────────
    SERVICES
 ───────────────────────────────────────────────────────────── */
-/* ── Liste éditorial numérotée — base partagée ── */
+/* ── Liste éditorial numérotée - base partagée ── */
 .services-list { margin-top: 0; }
 
 /* Styles communs aux deux variantes */
@@ -781,12 +781,12 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
   overflow: hidden;
   transition: background var(--t) var(--ease-out);
 }
-/* Lien navigable — avec flèche */
+/* Lien navigable - avec flèche */
 .service-row {
   grid-template-columns: 32px 40px 1fr;
   text-decoration: none;
 }
-/* Informatif — sans flèche */
+/* Informatif - sans flèche */
 .list-row {
   grid-template-columns: 32px 40px 1fr;
 }
@@ -878,7 +878,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
 .services-cta { text-align: center; margin-top: 48px; }
 
 /* ─────────────────────────────────────────────────────────────
-   SECTION DARK — section de contraste (nom historique de la classe) :
+   SECTION DARK - section de contraste (nom historique de la classe) :
    teinte intermédiaire --bg-section-alt, texte et composants par défaut.
 ───────────────────────────────────────────────────────────── */
 .section-dark { background: var(--bg-section-alt); }
@@ -887,7 +887,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
 .section-dark .services-list > * { border-color: rgba(23,21,20,0.12); }
 
 /* ─────────────────────────────────────────────────────────────
-   SPECIALTIES (signature section — legacy)
+   SPECIALTIES (signature section - legacy)
 ───────────────────────────────────────────────────────────── */
 .specialties-section { background: var(--bg-dark); }
 .specialties-header {
@@ -1071,7 +1071,7 @@ p  { color: var(--text); font-weight: 300; line-height: var(--lh-body); font-siz
 /* ─────────────────────────────────────────────────────────────
    TESTIMONIALS
 ───────────────────────────────────────────────────────────── */
-/* Google rating badge — displayed in testimonials section intro */
+/* Google rating badge - displayed in testimonials section intro */
 .google-badge {
   display: inline-flex;
   align-items: center;
@@ -1627,7 +1627,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   margin: 18px 0 28px;
   max-width: 280px;
 }
-/* Footer logo — slightly larger, always dark/inverse */
+/* Footer logo - slightly larger, always dark/inverse */
 .footer-brand .nav-logo { display: inline-flex; margin-bottom: 0; }
 .footer-brand .nav-logo img { height: 32px !important; }
 
@@ -1754,7 +1754,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 .signature-card p { color: var(--text); font-weight: 300; font-size: 1rem; line-height: var(--lh-body); }
 
 /* ─────────────────────────────────────────────────────────────
-   TARIFS — grille de catégories + tableaux de prix
+   TARIFS - grille de catégories + tableaux de prix
 ───────────────────────────────────────────────────────────── */
 .price-nav {
   position: sticky; top: var(--header-h); z-index: 20;
@@ -1842,7 +1842,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 
 /* ── TABLETTE PAYSAGE / PETIT DESKTOP (max-width: 1100px) ── */
 @media (max-width: 1100px) {
-  /* Nav phone hidden — not enough room with logo + links + btn */
+  /* Nav phone hidden - not enough room with logo + links + btn */
   .nav-phone { display: none; }
   .hero { grid-template-columns: 1fr; height: auto; min-height: 0; }
   .hero-left { padding: 52px 48px; }
@@ -1889,12 +1889,12 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .section-sm { padding: 36px 0; }
   .container  { padding: 0 20px; }
 
-  /* Hero — 1 colonne, hauteur auto sur tablette */
+  /* Hero - 1 colonne, hauteur auto sur tablette */
   .hero { grid-template-columns: 1fr; height: auto; min-height: 0; }
   .hero-left { padding: 40px 32px 40px; }
   .hero-left h1 { font-size: clamp(1.875rem, 6.2vw, 2.375rem); }
   .hero-right { height: 45vw; }
-  /* Nav — padding symétrique quand seuls logo + hamburger visibles */
+  /* Nav - padding symétrique quand seuls logo + hamburger visibles */
   .nav-wrap { padding: 0 20px; }
   .nav-links, .nav-actions { display: none; }
   .hamburger { display: flex; }
@@ -1955,7 +1955,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   /* Contact */
   .contact-layout { grid-template-columns: 1fr; gap: 32px; }
 
-  /* Footer — 2 colonnes avec brand en pleine largeur */
+  /* Footer - 2 colonnes avec brand en pleine largeur */
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
@@ -1998,7 +1998,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   /* Gallery */
   .gallery-grid { grid-template-columns: 1fr; }
 
-  /* Savoir-faire — 2 cards per row (service-row grids only) */
+  /* Savoir-faire - 2 cards per row (service-row grids only) */
   .services-list:has(> .service-row) {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2057,7 +2057,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
     border-bottom-color: rgba(23,21,20,0.12);
   }
 
-  /* Grids — single column */
+  /* Grids - single column */
   .specialties-grid { grid-template-columns: 1fr; }
   .specialty-card.featured { flex-direction: column; gap: 24px; }
   .reassurance-grid { grid-template-columns: 1fr; }
@@ -2073,7 +2073,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .contact-col { order: 2; }
   .form-wrap { order: 1; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
-  /* KPI — single row on mobile */
+  /* KPI - single row on mobile */
   .stats-grid { grid-template-columns: repeat(4, 1fr); }
   .stats-grid .stat-card:nth-child(2) { border-right: 1px solid var(--border); }
   .stats-grid .stat-card:nth-child(4) { border-right: none; }
@@ -2090,7 +2090,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .why-badge { display: none; }
   .why-image { display: none; }
 
-  /* Footer — 2 colonnes sur mobile */
+  /* Footer - 2 colonnes sur mobile */
   footer { padding-top: 48px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px 20px; padding-bottom: 40px; }
   .footer-brand { grid-column: 1 / -1; }
@@ -2123,7 +2123,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   .page-hero { padding: 100px 0 48px; }
   .page-hero h1 { font-size: 1.75rem; }
 
-  /* Section head — titre plus compact sur petits écrans */
+  /* Section head - titre plus compact sur petits écrans */
   .section-head { padding-bottom: 18px; gap: 8px; }
   .portfolio-header { flex-wrap: wrap; gap: 16px; margin-bottom: 32px; }
   .portfolio-header .btn { width: 100%; justify-content: center; flex-shrink: unset; }
@@ -2157,9 +2157,9 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   /* Why section points */
   .why-point { gap: 14px; }
 
-  /* Stats — sizes handled in KPI single-row block above */
+  /* Stats - sizes handled in KPI single-row block above */
 
-  /* Trust bar — plus compact */
+  /* Trust bar - plus compact */
   .trust-bar-inner { gap: 12px 20px; }
   .trust-item { font-size: 0.8125rem; gap: 6px; }
 
@@ -2169,7 +2169,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 }
 
 /* ─────────────────────────────────────────────────────────────
-   SCROLL REVEAL — désactivé
+   SCROLL REVEAL - désactivé
 ───────────────────────────────────────────────────────────── */
 
 /* Process steps grid */
@@ -2884,11 +2884,11 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 }
 
 /* ═══════════════════════════════════════════════════════════
-   PREMIUM DESIGN LAYER — frontend-design skill
-   Direction : Industrial Luxury — béton, matière, lumière
+   PREMIUM DESIGN LAYER - frontend-design skill
+   Direction : Industrial Luxury - béton, matière, lumière
 ═══════════════════════════════════════════════════════════ */
 
-/* ── Film grain — texture tactile sur toute la page ──────── */
+/* ── Film grain - texture tactile sur toute la page ──────── */
 .grain-overlay {
   position: fixed;
   inset: 0;
@@ -2901,7 +2901,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   background-size: 160px 160px;
 }
 
-/* ── Hero — voile sur la photo ────── */
+/* ── Hero - voile sur la photo ────── */
 .hero-right-overlay {
   overflow: hidden;
   background: linear-gradient(108deg,
@@ -2911,7 +2911,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
   );
 }
 
-/* ── Service rows — numéro vire à l'accent au survol ─────── */
+/* ── Service rows - numéro vire à l'accent au survol ─────── */
 @media (hover: hover) and (pointer: fine) {
   .service-row:hover .sr-num { color: var(--accent); }
 }
@@ -3037,7 +3037,7 @@ footer { background: var(--bg-dark); padding: 72px 0 0; }
 @media (max-width: 900px) { .service-row--nonum { grid-template-columns: 28px 1fr; } }
 
 /* ─────────────────────────────────────────────────────────────
-   FORMULAIRE — estimateur de budget (js/devis.js)
+   FORMULAIRE - estimateur de budget (js/devis.js)
 ───────────────────────────────────────────────────────────── */
 .estimator { border: 0; margin: 4px 0 18px; padding: 0; min-width: 0; }
 .estimator[hidden] { display: none; }

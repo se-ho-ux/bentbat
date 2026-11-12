@@ -2,7 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
   <defs></defs>
   <rect width="1200" height="600" fill="#f4f0ea"></rect>
-  <text x="48" y="60" class="l" fill="#171514">— BEN &amp; BAT / PALETTE</text>
+  <text x="48" y="60" class="l" fill="#171514">- BEN &amp; BAT / PALETTE</text>
   <text x="48" y="100" class="h" fill="#171514">Couleurs de la maison</text>
   
     <rect x="48" y="150" width="260" height="120" fill="#171514" stroke="#171514" stroke-opacity="0.08"></rect>

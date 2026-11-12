@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════════════
-   Bandeau de consentement cookies — Ben&Bat
+   Bandeau de consentement cookies : Ben&Bat
    ───────────────────────────────────────────────────────────────────────────
    Deux finalités distinctes, chacune soumise à un choix séparé (CNIL) :
    - mesure d'audience (Google Analytics 4) ;

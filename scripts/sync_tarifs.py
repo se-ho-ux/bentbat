@@ -39,7 +39,7 @@ coefs = [{'id': i, 'nom': clean(n), 'pct': int(p)} for i, (p, n) in zip(
     re.findall(r'<li><strong>\+&nbsp;(\d+)&nbsp;%</strong><span>(.*?)</span></li>', html))]
 
 assert len(cats) == 11 and len(coefs) == 4, (len(cats), len(coefs))
-text = ("/* GÉNÉRÉ depuis tarifs.html par scripts/sync_tarifs.py — ne pas modifier à la main. */\n"
+text = ("/* GÉNÉRÉ depuis tarifs.html par scripts/sync_tarifs.py : ne pas modifier à la main. */\n"
         "window.BENBAT_TARIFS = " + json.dumps({'tarifs': cats, 'coefs': coefs}, ensure_ascii=False, indent=1) + ";\n")
 
 if '--check' in sys.argv:
