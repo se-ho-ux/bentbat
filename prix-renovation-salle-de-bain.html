@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- @shared:head-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
+    }
+  </script>
+  <!-- @end:head-meta -->
+  <link rel="canonical" href="https://benbat.fr/prix-renovation-salle-de-bain">
+  <title>Prix d'une rénovation de salle de bain | Ben&amp;Bat</title>
+  <meta name="description" content="Rénovation de salle de bain : de 1 200 à 3 500 € HT le m² dans notre grille. Douche italienne, plomberie, revêtements : où se joue la différence de prix.">
+  <meta property="og:title" content="Prix d'une rénovation de salle de bain | Ben&amp;Bat">
+  <meta property="og:description" content="De 1 200 à 3 500 € HT le m² : ce qui fait varier le prix d'une salle de bain, avec des exemples par surface.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://benbat.fr/prix-renovation-salle-de-bain">
+  <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- @shared:head-assets -->
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
+    } catch (e) {}
+  </script>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="fonts/Switzer-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=38">
+  <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+       ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+       accompagnent toujours un libellé texte. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- @end:head-assets -->
+  <!-- @shared:schema-business -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://benbat.fr/#entreprise",
+  "name": "Ben&Bat",
+  "description": "Spécialistes du béton ciré premium et de la rénovation intérieure tous corps de métier. Paris, Île-de-France, Marseille et Bruxelles.",
+  "url": "https://benbat.fr/",
+  "sameAs": [
+    "https://www.facebook.com/people/BenBat/61596067080807/",
+    "https://www.instagram.com/benbat.renovation/"
+  ],
+  "telephone": "+33658594147",
+  "email": "contact@benbat.fr",
+  "image": "https://benbat.fr/images/image15.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Rue François 1er",
+    "addressLocality": "Paris",
+    "postalCode": "75008",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8698258,
+    "longitude": 2.3020488
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "15:30"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Paris"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Île-de-France"
+    },
+    {
+      "@type": "City",
+      "name": "Marseille"
+    },
+    {
+      "@type": "City",
+      "name": "Neuilly-sur-Seine"
+    },
+    {
+      "@type": "City",
+      "name": "Versailles"
+    },
+    {
+      "@type": "City",
+      "name": "Boulogne-Billancourt"
+    },
+    {
+      "@type": "City",
+      "name": "Bruxelles"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    },
+    {
+      "@type": "Country",
+      "name": "Belgique"
+    }
+  ],
+  "knowsAbout": [
+    "béton ciré",
+    "rénovation intérieure",
+    "maçonnerie",
+    "plomberie",
+    "électricité",
+    "carrelage",
+    "mobilier sur mesure",
+    "vasques sur mesure",
+    "parquet",
+    "nettoyage de chantier"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services BTP",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Béton ciré décoratif",
+          "description": "Application de béton ciré premium sur sols, murs et plans de travail. Paris, Île-de-France et Belgique."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation intérieure tous corps de métier",
+          "description": "Coordination et réalisation de chantiers de rénovation complète : maçonnerie, électricité, plomberie, finitions."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobilier sur mesure",
+          "description": "Conception et fabrication de mobilier sur mesure pour particuliers et professionnels."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vasques sur mesure",
+          "description": "Création de vasques sur mesure en céramique, béton ciré, résine et matériaux naturels, design exclusif."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pose de parquet et carrelage",
+          "description": "Pose de parquet point de Hongrie, carrelage, faïence et revêtements de sol premium."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Nettoyage fin de chantier",
+          "description": "Nettoyage professionnel de bâtiments et fins de chantier en France et Belgique."
+        }
+      }
+    ]
+  },
+  "priceRange": "€€",
+  "logo": "https://benbat.fr/logos-png/wordmark-noir-transparent.webp",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+33658594147",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": [
+        "fr"
+      ]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+32465866372",
+      "contactType": "customer service",
+      "areaServed": "BE",
+      "availableLanguage": [
+        "fr"
+      ]
+    }
+  ]
+  }
+  </script>
+  <!-- @end:schema-business -->
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://benbat.fr/prix-renovation-salle-de-bain#article",
+      "headline": "Rénover une salle de bain :combien prévoir ?",
+      "description": "Rénovation de salle de bain : de 1 200 à 3 500 € HT le m² dans notre grille. Douche italienne, plomberie, revêtements : où se joue la différence de prix.",
+      "url": "https://benbat.fr/prix-renovation-salle-de-bain",
+      "mainEntityOfPage": "https://benbat.fr/prix-renovation-salle-de-bain",
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "inLanguage": "fr",
+      "author": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "publisher": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "image": "https://benbat.fr/images/og-image.jpg"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://benbat.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Conseils",
+          "item": "https://benbat.fr/conseils"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Prix rénovation salle de bain",
+          "item": "https://benbat.fr/prix-renovation-salle-de-bain"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien coûte une salle de bain complète ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dans notre grille, de 1 200 à 3 500 € HT le m², douche, baignoire et meuble compris. Le prix dépend du choix des équipements, de l'état de la plomberie et du revêtement. Il est arrêté sur devis après visite."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Une douche à l'italienne, c'est quel budget ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "De 2 500 à 6 500 € HT l'unité dans notre grille. La taille de la douche, le revêtement, l'évacuation et l'étanchéité font varier le montant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on ne changer que la douche et garder le reste ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. La grille chiffre séparément la douche, la baignoire, le meuble vasque et les revêtements. On fait alors un devis sur le périmètre exact des travaux."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il refaire toute la plomberie ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pas forcément. Tout dépend de l'état des canalisations et de ce que vous déplacez. Nous le vérifions sur place avant de chiffrer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment obtenir un chiffrage fiable ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mesurez la pièce, utilisez l'estimateur de budget de notre formulaire pour une première fourchette, puis demandez un devis gratuit : la visite permet de vérifier l'existant et d'arrêter le prix."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <!-- @shared:header active=conseils -->
+  <header id="header">
+    <div class="nav-wrap">
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="tarifs">Tarifs</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <a href="/">Accueil</a>
+    <a href="services">Services</a>
+    <a href="tarifs">Tarifs</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
+  </div>
+  <!-- @end:header -->
+
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="page-hero has-photo" id="main-content">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">
+          <a href="/">Accueil</a><span class="sep">/</span><a href="conseils">Conseils</a><span class="sep">/</span><span class="cur">Prix rénovation salle de bain</span>
+        </div>
+        <h1>Rénover une salle de bain :<br>combien prévoir ?</h1>
+        <p>De 1 200 à 3 500 € HT le m² pour une salle de bain complète dans notre grille. Voici comment ce chiffre se construit, et où se joue l'écart.</p>
+        <p class="svc-meta">Publié le 12 novembre 2026 · Ben&amp;Bat</p>
+        <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
+      </div>
+      <figure class="hero-photo"><img src="images/image59-640.webp" srcset="images/image59-480.webp 480w, images/image59-640.webp 640w, images/image59-900.webp 900w, images/image59.webp 1200w" sizes="460px" alt="Douche avec niche de rangement et robinetterie noire" width="1200" height="1800" loading="lazy" decoding="async"></figure>
+    </div>
+  </section>
+
+  <section class="section-sm svc-facts-band">
+    <div class="container">
+      <dl class="svc-facts"><div><dt>Prix indicatif</dt><dd>1 200 à 3 500 € HT / m²</dd></div><div><dt>Douche italienne</dt><dd>2 500 à 6 500 € HT</dd></div><div><dt>Étanchéité</dt><dd>Traitée avant la finition</dd></div><div><dt>Devis</dt><dd>Gratuit, après visite</dd></div></dl>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
+        <div>
+          <span class="eyebrow">La réponse courte</span>
+          <h2>Combien coûte<br>une salle de bain ?</h2>
+        </div>
+        <div class="svc-prose"><p>Dans notre grille, une salle de bain complète se chiffre de <strong>1 200 à 3 500 € HT le m²</strong>. L'écart est large parce que deux salles de bain de 5 m² peuvent n'avoir presque rien en commun : l'une garde sa plomberie et reçoit un receveur et un meuble standard, l'autre déplace les arrivées d'eau, passe en douche à l'italienne et pose un meuble sur mesure.</p><p>Ce tarif au m² comprend déjà la douche, la baignoire et le meuble : inutile de les ajouter en plus. Si vous ne refaites qu'une partie de la pièce, la grille chiffre aussi chaque élément séparément (douche, baignoire, meuble vasque, faïence). C'est la bonne entrée quand le projet est ciblé.</p></div>
+      </div>
+      
+      <div class="svc-tips"><div class="svc-tip"><h3>Une petite pièce coûte cher au m²</h3><p>Douche, meuble, plomberie : ces postes existent que la pièce fasse 3 ou 8 m². Sur une petite surface, ils pèsent davantage dans le prix au m². Ne vous étonnez pas de tomber dans le haut de la fourchette pour une salle d'eau compacte.</p></div><div class="svc-tip"><h3>La douche à l'italienne</h3><p>De 2 500 à 6 500 € HT l'unité. Elle remplace le receveur par un sol continu avec une pente et une évacuation, ce qui oblige à reprendre le sol et son étanchéité. Le revêtement choisi et la taille de la douche font ensuite varier le prix.</p></div><div class="svc-tip"><h3>La plomberie en place</h3><p>Tout garder à sa place coûte moins cher que déplacer les arrivées et les évacuations. Le réseau se chiffre de 35 à 80 € HT le mètre linéaire dans notre grille. L'état des canalisations se vérifie lors de la visite, pas sur plan.</p></div><div class="svc-tip"><h3>Faïence, carrelage ou béton ciré</h3><p>Faïence de 45 à 110 € HT le m², carrelage de 45 à 95 €, béton ciré de 120 à 250 €. Le béton ciré coûte plus cher à surface égale, mais il supprime les joints dans la douche. À voir selon le budget et l'entretien que vous voulez.</p></div><div class="svc-tip"><h3>Le support et l'accès</h3><p>Dépose de l'existant : +15 %. Support dégradé : +20 %. Accès difficile (étage sans ascenseur, matériel à monter à pied) : +10 %. Ces majorations sont détaillées ligne par ligne dans le devis.</p></div><div class="svc-tip"><h3>Le meuble vasque</h3><p>De 500 à 2 500 € HT. C'est l'élément où l'on peut le plus facilement monter ou baisser le budget sans toucher à la technique.</p></div></div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Exemples chiffrés</span>
+          <h2>Quel budget<br>selon la surface ?</h2>
+        </div>
+        <p>Calculés à partir de la fourchette d'une salle de bain complète dans notre grille. Ce sont des repères bruts, sans majoration.</p>
+      </div>
+      <div class="price-cat"><table class="price-table"><thead><tr><th>Surface</th><th>Fourchette HT</th></tr></thead><tbody><tr><td>3 m²</td><td class="price-range">3 600 € – 10 500 €</td></tr><tr><td>4 m²</td><td class="price-range">4 800 € – 14 000 €</td></tr><tr><td>6 m²</td><td class="price-range">7 200 € – 21 000 €</td></tr><tr><td>8 m²</td><td class="price-range">9 600 € – 28 000 €</td></tr></tbody></table></div>
+      <p class="svc-price-note">Fourchettes hors taxes, non contractuelles, issues de notre <a href="tarifs">grille tarifaire</a>. Le prix définitif est arrêté après une visite et un devis gratuit.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
+        <div>
+          <span class="eyebrow">Avant le devis</span>
+          <h2>Ce qu'il faut<br>nous dire</h2>
+        </div>
+        <div class="svc-prose"><p><strong>Les dimensions réelles.</strong> Longueur, largeur, et hauteur sous plafond si vous voulez habiller les murs jusqu'en haut.</p><p><strong>Ce que vous gardez.</strong> Baignoire, receveur, emplacement du lavabo. Plus on conserve la plomberie en place, plus le devis baisse.</p><p><strong>Quelques photos.</strong> L'état des murs, le sol, les arrivées d'eau visibles. Nous les acceptons sur WhatsApp.</p><p><strong>Le contexte de l'immeuble.</strong> Copropriété, étage, ascenseur, horaires imposés : ça pèse sur l'organisation du chantier.</p><p>Un point à vérifier sur n'importe quel devis, le nôtre compris : la ligne étanchéité sous le revêtement de la douche. Si elle n'apparaît nulle part, posez la question avant de signer.</p><p>Pour une première fourchette tout de suite, utilisez l'<a href="contact?devis=salle-de-bain#devisEstimator">estimateur de budget</a>. Il repose sur la même grille que cet article. Voir aussi notre page <a href="salle-de-bain">salle de bain</a> et le guide du <a href="prix-beton-cire-m2">béton ciré au m²</a>.</p><p>À lire aussi : <a href="salle-de-bain">Salle de bain</a> · <a href="prix-beton-cire-m2">Prix du béton ciré</a> · <a href="beton-cire-ou-carrelage">Béton ciré ou carrelage</a>.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Salle de bain :<br>vos questions</h2>
+        </div>
+        <p>Ce qu'on nous demande le plus avant un devis.</p>
+      </div>
+      <div class="faq-list"><div class="faq-item"><button class="faq-q" aria-expanded="false">Combien coûte une salle de bain complète ?<i class="fas fa-plus"></i></button><div class="faq-a">Dans notre grille, de 1 200 à 3 500 € HT le m², douche, baignoire et meuble compris. Le prix dépend du choix des équipements, de l'état de la plomberie et du revêtement. Il est arrêté sur devis après visite.</div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Une douche à l'italienne, c'est quel budget ?<i class="fas fa-plus"></i></button><div class="faq-a">De 2 500 à 6 500 € HT l'unité dans notre grille. La taille de la douche, le revêtement, l'évacuation et l'étanchéité font varier le montant.</div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Peut-on ne changer que la douche et garder le reste ?<i class="fas fa-plus"></i></button><div class="faq-a">Oui. La grille chiffre séparément la douche, la baignoire, le meuble vasque et les revêtements. On fait alors un devis sur le périmètre exact des travaux.</div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Faut-il refaire toute la plomberie ?<i class="fas fa-plus"></i></button><div class="faq-a">Pas forcément. Tout dépend de l'état des canalisations et de ce que vous déplacez. Nous le vérifions sur place avant de chiffrer.</div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Comment obtenir un chiffrage fiable ?<i class="fas fa-plus"></i></button><div class="faq-a">Mesurez la pièce, utilisez l'estimateur de budget de notre formulaire pour une première fourchette, puis demandez un devis gratuit : la visite permet de vérifier l'existant et d'arrêter le prix.</div></div></div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="section cta-section" id="ctaSection">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Votre projet mérite<br>une réalisation unique</h2>
+          <p>Devis gratuit, réponse sous 24h. France &amp; Belgique.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <!-- @shared:footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.webp" alt="Ben&amp;Bat" width="360" height="120"></a>
+          <p>Béton ciré premium, mobilier sur mesure et tous corps de métier du BTP. France &amp; Belgique.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/people/BenBat/61596067080807/" class="footer-social" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/benbat.renovation/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="tarifs">Tarifs</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Avis clients</a></li>
+            <li><a href="conseils">Conseils</a></li>
+            <li><a href="prix-beton-cire-m2">Prix du béton ciré</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+    <h5>Services</h5>
+    <ul class="footer-links">
+      <li><a href="renovation-complete">Rénovation complète</a></li>
+      <li><a href="salle-de-bain">Salle de bain</a></li>
+      <li><a href="cuisine">Cuisine</a></li>
+      <li><a href="peinture">Peinture</a></li>
+      <li><a href="plomberie">Plomberie</a></li>
+      <li><a href="electricite">Électricité</a></li>
+      <li><a href="carrelage">Carrelage &amp; faïence</a></li>
+      <li><a href="placo-isolation">Placo &amp; isolation</a></li>
+      <li><a href="maconnerie">Maçonnerie</a></li>
+      <li><a href="revetements-de-sol">Revêtements de sol</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Spécialités</h5>
+    <ul class="footer-links">
+      <li><a href="beton-cire">Béton ciré premium</a></li>
+      <li><a href="mobilier-sur-mesure">Mobilier sur mesure</a></li>
+      <li><a href="vasques-sur-mesure">Vasques sur mesure</a></li>
+      <li><a href="nettoyage-fin-de-chantier">Nettoyage fin de chantier</a></li>
+      <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+      <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+      <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
+    </ul>
+  </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">WhatsApp (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@benbat.fr">contact@benbat.fr</a></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>60 Rue François 1er, 75008 Paris</span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Ven : 8h–18h30 · Sam : 9h–15h30</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; <span class="js-year">2026</span> Ben&amp;Bat. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales#cookies" data-cookie-settings>Gérer les cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- @end:footer -->
+
+  <!-- @shared:sticky -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="contact" class="btn btn-primary sticky-main">Devis gratuit</a>
+    <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat au +33 6 58 59 41 47"><i class="fas fa-phone" aria-hidden="true"></i><span>Appeler</span></a>
+    <a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." class="btn sticky-phone sticky-whatsapp" target="_blank" rel="noopener" aria-label="Écrire à Ben&amp;Bat sur WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+  </div>
+  <!-- @end:sticky -->
+
+  <!-- @shared:scripts -->
+  <script src="js/main.js?v=14" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
+  <!-- @end:scripts -->
+</body>
+</html>

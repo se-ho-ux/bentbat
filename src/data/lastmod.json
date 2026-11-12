@@ -4,24 +4,28 @@
   "hash": "bdc25df72791decda684aff301ceb6b3e25198d8"
  },
  "beton-cire-bruxelles.html": {
-  "date": "2026-11-08",
-  "hash": "ceaed5e8b6281d1532e5b72c9a96449c62665497"
+  "date": "2026-11-12",
+  "hash": "e4b2b701d43401a2da65bbf46444009142d0e7e6"
+ },
+ "beton-cire-ou-carrelage.html": {
+  "date": "2026-11-12",
+  "hash": "8c504bc0c1c7b4d911865291396a500c7548b9c1"
  },
  "beton-cire-paris.html": {
   "date": "2026-11-06",
   "hash": "37ba181b5198476167c24d75062550b0d6a2d9df"
  },
  "beton-cire.html": {
-  "date": "2026-11-08",
-  "hash": "8f2263d3674fbbf82b772d737dea570bb8647ae0"
+  "date": "2026-11-12",
+  "hash": "9c3efcaa34120465918e5e384ec511a7a35902b9"
  },
  "carrelage.html": {
   "date": "2026-11-08",
   "hash": "f807a2b0d30ebb98325f1febb9ecb2e2a2f77714"
  },
  "conseils.html": {
-  "date": "2026-11-08",
-  "hash": "4ce01e4f2bd8c3fdaec6289c5d3947cc71adfe2f"
+  "date": "2026-11-12",
+  "hash": "f61387f0ac638fb98e33291a1ee81cdb0cf9340d"
  },
  "contact.html": {
   "date": "2026-11-08",
@@ -40,8 +44,8 @@
   "hash": "1ab6dc0aef35e2053df279b263d9af937fa6e247"
  },
  "index.html": {
-  "date": "2026-11-08",
-  "hash": "c0283d59f8d4e8eff3d06876b7bc03da8377d47e"
+  "date": "2026-11-12",
+  "hash": "4c9b1753108e21724f8724e8e98f767bdf681e9e"
  },
  "maconnerie.html": {
   "date": "2026-11-08",
@@ -52,8 +56,8 @@
   "hash": "e01653dadc3f248d71fd72d677b8271bcb67e884"
  },
  "mobilier-sur-mesure.html": {
-  "date": "2026-11-08",
-  "hash": "f24a2799a884a23c626e954118495c62e99fb418"
+  "date": "2026-11-12",
+  "hash": "9dde7001fc79757b38d186432a37ced8fba3897e"
  },
  "nettoyage-fin-de-chantier.html": {
   "date": "2026-11-08",
@@ -75,9 +79,17 @@
   "date": "2026-11-06",
   "hash": "ce7cf5d2eec9a1edc043a1dbd501da43b39e488e"
  },
+ "prix-renovation-appartement-m2.html": {
+  "date": "2026-11-12",
+  "hash": "4970125ff20fa23631104df191148a16f6ab98f6"
+ },
+ "prix-renovation-salle-de-bain.html": {
+  "date": "2026-11-12",
+  "hash": "0bf0a93a712db075a7861361e198cc0825937436"
+ },
  "realisations.html": {
-  "date": "2026-11-08",
-  "hash": "34f8996dd41b81acde6822d498faad7b2dc23f9f"
+  "date": "2026-11-12",
+  "hash": "9d84232110b8db7edcd197672bb8599b2cb31f0a"
  },
  "renovation-appartement-paris.html": {
   "date": "2026-11-06",
@@ -96,15 +108,15 @@
   "hash": "c39178e6286b33d4ae3717956ed0b96dc1ca58bd"
  },
  "services.html": {
-  "date": "2026-11-06",
-  "hash": "72012d16544c678c78fd247a1b001a8b96d6188f"
+  "date": "2026-11-12",
+  "hash": "8bc03a4ca36c10706db676d5d5113fff21981ea5"
  },
  "tarifs.html": {
   "date": "2026-11-06",
   "hash": "6b326450d0c34d0b003980da83718cb7e32b7ff0"
  },
  "vasques-sur-mesure.html": {
-  "date": "2026-11-08",
-  "hash": "aa91c58df72ae11c8ec23d8c699fdc2a76a74ac3"
+  "date": "2026-11-12",
+  "hash": "19a422016481597a311bbb67a2e4b61d73e2b9f4"
  }
 }

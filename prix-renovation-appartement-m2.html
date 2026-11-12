@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- @shared:head-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
+    }
+  </script>
+  <!-- @end:head-meta -->
+  <link rel="canonical" href="https://benbat.fr/prix-renovation-appartement-m2">
+  <title>Prix d'une rénovation d'appartement au m² | Ben&amp;Bat</title>
+  <meta name="description" content="Rénovation complète d'appartement : de 700 à 1 800 € HT le m² dans notre grille, corps de métier compris. Ce qui fait monter ou baisser le budget.">
+  <meta property="og:title" content="Prix d'une rénovation d'appartement au m² | Ben&amp;Bat">
+  <meta property="og:description" content="De 700 à 1 800 € HT le m² : budget d'une rénovation d'appartement, facteurs de prix et exemples par surface.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://benbat.fr/prix-renovation-appartement-m2">
+  <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- @shared:head-assets -->
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
+    } catch (e) {}
+  </script>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="fonts/Switzer-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=38">
+  <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+       ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+       accompagnent toujours un libellé texte. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- @end:head-assets -->
+  <!-- @shared:schema-business -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://benbat.fr/#entreprise",
+  "name": "Ben&Bat",
+  "description": "Spécialistes du béton ciré premium et de la rénovation intérieure tous corps de métier. Paris, Île-de-France, Marseille et Bruxelles.",
+  "url": "https://benbat.fr/",
+  "sameAs": [
+    "https://www.facebook.com/people/BenBat/61596067080807/",
+    "https://www.instagram.com/benbat.renovation/"
+  ],
+  "telephone": "+33658594147",
+  "email": "contact@benbat.fr",
+  "image": "https://benbat.fr/images/image15.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Rue François 1er",
+    "addressLocality": "Paris",
+    "postalCode": "75008",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8698258,
+    "longitude": 2.3020488
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "15:30"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Paris"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Île-de-France"
+    },
+    {
+      "@type": "City",
+      "name": "Marseille"
+    },
+    {
+      "@type": "City",
+      "name": "Neuilly-sur-Seine"
+    },
+    {
+      "@type": "City",
+      "name": "Versailles"
+    },
+    {
+      "@type": "City",
+      "name": "Boulogne-Billancourt"
+    },
+    {
+      "@type": "City",
+      "name": "Bruxelles"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    },
+    {
+      "@type": "Country",
+      "name": "Belgique"
+    }
+  ],
+  "knowsAbout": [
+    "béton ciré",
+    "rénovation intérieure",
+    "maçonnerie",
+    "plomberie",
+    "électricité",
+    "carrelage",
+    "mobilier sur mesure",
+    "vasques sur mesure",
+    "parquet",
+    "nettoyage de chantier"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services BTP",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Béton ciré décoratif",
+          "description": "Application de béton ciré premium sur sols, murs et plans de travail. Paris, Île-de-France et Belgique."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation intérieure tous corps de métier",
+          "description": "Coordination et réalisation de chantiers de rénovation complète : maçonnerie, électricité, plomberie, finitions."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobilier sur mesure",
+          "description": "Conception et fabrication de mobilier sur mesure pour particuliers et professionnels."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vasques sur mesure",
+          "description": "Création de vasques sur mesure en céramique, béton ciré, résine et matériaux naturels, design exclusif."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pose de parquet et carrelage",
+          "description": "Pose de parquet point de Hongrie, carrelage, faïence et revêtements de sol premium."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Nettoyage fin de chantier",
+          "description": "Nettoyage professionnel de bâtiments et fins de chantier en France et Belgique."
+        }
+      }
+    ]
+  },
+  "priceRange": "€€",
+  "logo": "https://benbat.fr/logos-png/wordmark-noir-transparent.webp",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+33658594147",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": [
+        "fr"
+      ]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+32465866372",
+      "contactType": "customer service",
+      "areaServed": "BE",
+      "availableLanguage": [
+        "fr"
+      ]
+    }
+  ]
+  }
+  </script>
+  <!-- @end:schema-business -->
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://benbat.fr/prix-renovation-appartement-m2#article",
+      "headline": "Rénover un appartement :quel budget au m² ?",
+      "description": "Rénovation complète d'appartement : de 700 à 1 800 € HT le m² dans notre grille, corps de métier compris. Ce qui fait monter ou baisser le budget.",
+      "url": "https://benbat.fr/prix-renovation-appartement-m2",
+      "mainEntityOfPage": "https://benbat.fr/prix-renovation-appartement-m2",
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "inLanguage": "fr",
+      "author": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "publisher": {
+        "@id": "https://benbat.fr/#entreprise"
+      },
+      "image": "https://benbat.fr/images/og-image.jpg"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://benbat.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Conseils",
+          "item": "https://benbat.fr/conseils"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Prix rénovation appartement",
+          "item": "https://benbat.fr/prix-renovation-appartement-m2"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien coûte la rénovation complète d'un appartement au m² ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Dans notre grille, de 700 à 1 800 € HT le m², corps de métier compris. Le périmètre des travaux, l'état de l'existant et le niveau de finition expliquent l'écart. Le prix exact est donné sur devis."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le prix au m² inclut-il la cuisine et la salle de bain ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cela se précise au devis, ligne par ligne. Nous détaillons ce qui est compris pour que vous puissiez comparer avec d'autres propositions sur le même périmètre."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que la coordination de chantier ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est la planification et l'enchaînement des corps de métier, de la dépose à la livraison. Elle se chiffre au forfait, de 800 à 6 000 € HT dans notre grille, selon la taille du chantier."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on rénover en plusieurs étapes ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. On commence par ce qui est technique (électricité, plomberie, cloisons) et on laisse les finitions pour plus tard. Parlez-en dès la visite pour que l'ordre des travaux soit cohérent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment obtenir un chiffrage fiable ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Relevez la surface, utilisez l'estimateur de budget de notre formulaire, puis demandez un devis gratuit. La visite permet de vérifier l'existant avant d'arrêter un prix."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <!-- @shared:header active=conseils -->
+  <header id="header">
+    <div class="nav-wrap">
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="tarifs">Tarifs</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <a href="/">Accueil</a>
+    <a href="services">Services</a>
+    <a href="tarifs">Tarifs</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
+  </div>
+  <!-- @end:header -->
+
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="page-hero has-photo" id="main-content">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">
+          <a href="/">Accueil</a><span class="sep">/</span><a href="conseils">Conseils</a><span class="sep">/</span><span class="cur">Prix rénovation appartement</span>
+        </div>
+        <h1>Rénover un appartement :<br>quel budget au m² ?</h1>
+        <p>De 700 à 1 800 € HT le m² pour une rénovation complète dans notre grille, corps de métier compris. Ce qui fait monter ou baisser le curseur.</p>
+        <p class="svc-meta">Publié le 12 novembre 2026 · Ben&amp;Bat</p>
+        <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
+      </div>
+      <figure class="hero-photo"><img src="images/image51-640.webp" srcset="images/image51-480.webp 480w, images/image51-640.webp 640w, images/image51-900.webp 900w, images/image51.webp 1200w" sizes="460px" alt="Mezzanine sous charpente avec verrière à Nîmes" width="1200" height="900" loading="lazy" decoding="async"></figure>
+    </div>
+  </section>
+
+  <section class="section-sm svc-facts-band">
+    <div class="container">
+      <dl class="svc-facts"><div><dt>Prix indicatif</dt><dd>700 à 1 800 € HT / m²</dd></div><div><dt>Corps de métier</dt><dd>Inclus dans le prix au m²</dd></div><div><dt>Coordination</dt><dd>800 à 6 000 € HT, forfait</dd></div><div><dt>Devis</dt><dd>Gratuit, après visite</dd></div></dl>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
+        <div>
+          <span class="eyebrow">La réponse courte</span>
+          <h2>Combien coûte<br>une rénovation complète ?</h2>
+        </div>
+        <div class="svc-prose"><p>Dans notre grille, une rénovation complète se chiffre de <strong>700 à 1 800 € HT le m²</strong>. Le prix au m² inclut déjà les corps de métier : on ne leur ajoute pas leur propre ligne en plus.</p><p>Entre 700 et 1 800 €, tout dépend de ce qu'on appelle « complète ». Refaire les sols, la peinture et un peu d'électricité, c'est un chantier. Reprendre les réseaux, les cloisons, la cuisine et la salle de bain en est un autre. Avant de comparer des devis, vérifiez qu'ils portent sur le même périmètre.</p></div>
+      </div>
+      
+      <div class="svc-tips"><div class="svc-tip"><h3>Le périmètre</h3><p>C'est le premier facteur, de loin. Un appartement rafraîchi reste dans le bas de la fourchette. Un appartement dont on reprend les réseaux, les cloisons et les pièces d'eau monte vers le haut.</p></div><div class="svc-tip"><h3>L'électricité</h3><p>La rénovation électrique se chiffre de 70 à 150 € HT le m², le tableau électrique de 900 à 3 000 € HT. Dans un appartement ancien, c'est rarement un poste qu'on peut sauter.</p></div><div class="svc-tip"><h3>La cuisine et la salle de bain</h3><p>Cuisine complète de 900 à 2 500 € HT le m², salle de bain complète de 1 200 à 3 500 € HT le m². Ces deux pièces concentrent une bonne part de la dépense, parce qu'elles cumulent plomberie, revêtements et équipements.</p></div><div class="svc-tip"><h3>Les murs et les cloisons</h3><p>Cloisons de 45 à 80 € HT le m². Ouvrir un mur porteur est un autre ordre de grandeur : de 2 000 à 8 000 € HT l'unité dans notre grille, avec une étude de structure à prévoir.</p></div><div class="svc-tip"><h3>L'accès à l'immeuble</h3><p>Étage élevé sans ascenseur, rue étroite, livraisons compliquées : majoration de 10 %. En copropriété, les horaires et les règles de l'immeuble influencent aussi l'organisation.</p></div><div class="svc-tip"><h3>Le niveau de finition</h3><p>À périmètre égal, un revêtement premium ou un mobilier sur mesure déplace le budget. On s'en rend compte à la fin, d'où l'intérêt d'en parler dès le premier rendez-vous.</p></div></div>
+    </div>
+  </section>
+
+  <section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Exemples chiffrés</span>
+          <h2>Quel budget<br>selon la surface ?</h2>
+        </div>
+        <p>Calculés à partir de la fourchette de rénovation complète de notre grille. Repères bruts, sans majoration ni coordination de chantier.</p>
+      </div>
+      <div class="price-cat"><table class="price-table"><thead><tr><th>Surface</th><th>Fourchette HT</th></tr></thead><tbody><tr><td>40 m²</td><td class="price-range">28 000 € – 72 000 €</td></tr><tr><td>60 m²</td><td class="price-range">42 000 € – 108 000 €</td></tr><tr><td>80 m²</td><td class="price-range">56 000 € – 144 000 €</td></tr><tr><td>100 m²</td><td class="price-range">70 000 € – 180 000 €</td></tr></tbody></table></div>
+      <p class="svc-price-note">Fourchettes hors taxes, non contractuelles, issues de notre <a href="tarifs">grille tarifaire</a>. La coordination de chantier se chiffre à part, au forfait, de 800 à 6 000 € HT.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--prose">
+        <div>
+          <span class="eyebrow">Pour chiffrer juste</span>
+          <h2>Avant de demander<br>un devis</h2>
+        </div>
+        <div class="svc-prose"><p><strong>Listez ce que vous gardez.</strong> Sols en bon état, cuisine récente, salle de bain correcte : tout ce qui reste est autant de budget en moins. Dites-le tout de suite.</p><p><strong>Distinguez l'indispensable du souhaitable.</strong> Mise aux normes électrique et plomberie d'un côté, déco et finitions de l'autre. On peut phaser le second.</p><p><strong>Prévoyez une marge.</strong> Dans un appartement ancien, on découvre parfois des choses derrière un mur ou sous un sol. Mieux vaut y avoir pensé avant la signature.</p><p><strong>Demandez ce que le prix au m² comprend.</strong> Dépose, évacuation des gravats, protections, nettoyage de fin de chantier : tout n'est pas toujours dedans.</p><p>Pour une première fourchette immédiate, passez par l'<a href="contact?devis=renovation#devisEstimator">estimateur de budget</a>. Si vous êtes à Paris, lisez aussi notre guide <a href="renovation-appartement-paris">rénover un appartement à Paris</a> et la page <a href="renovation-complete">rénovation complète</a>.</p><p>À lire aussi : <a href="renovation-complete">Rénovation complète</a> · <a href="renovation-appartement-paris">Rénover un appartement à Paris</a> · <a href="garanties">Garanties et assurances</a>.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Rénovation d'appartement :<br>vos questions</h2>
+        </div>
+        <p>Ce qu'on nous demande le plus avant un devis.</p>
+      </div>
+      <div class="faq-list"><div class="faq-item"><button class="faq-q" aria-expanded="false">Combien coûte la rénovation complète d'un appartement au m² ?<i class="fas fa-plus"></i></button><div class="faq-a">Dans notre grille, de 700 à 1 800 € HT le m², corps de métier compris. Le périmètre des travaux, l'état de l'existant et le niveau de finition expliquent l'écart. Le prix exact est donné sur devis.</div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Le prix au m² inclut-il la cuisine et la salle de bain ?<i class="fas fa-plus"></i></button><div class="faq-a">Cela se précise au devis, ligne par ligne. Nous détaillons ce qui est compris pour que vous puissiez comparer avec d'autres propositions sur le même périmètre.</div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Qu'est-ce que la coordination de chantier ?<i class="fas fa-plus"></i></button><div class="faq-a">C'est la planification et l'enchaînement des corps de métier, de la dépose à la livraison. Elle se chiffre au forfait, de 800 à 6 000 € HT dans notre grille, selon la taille du chantier.</div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Peut-on rénover en plusieurs étapes ?<i class="fas fa-plus"></i></button><div class="faq-a">Oui. On commence par ce qui est technique (électricité, plomberie, cloisons) et on laisse les finitions pour plus tard. Parlez-en dès la visite pour que l'ordre des travaux soit cohérent.</div></div><div class="faq-item"><button class="faq-q" aria-expanded="false">Comment obtenir un chiffrage fiable ?<i class="fas fa-plus"></i></button><div class="faq-a">Relevez la surface, utilisez l'estimateur de budget de notre formulaire, puis demandez un devis gratuit. La visite permet de vérifier l'existant avant d'arrêter un prix.</div></div></div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="section cta-section" id="ctaSection">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Votre projet mérite<br>une réalisation unique</h2>
+          <p>Devis gratuit, réponse sous 24h. France &amp; Belgique.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact" class="btn btn-primary">Devis gratuit <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <!-- @shared:footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.webp" alt="Ben&amp;Bat" width="360" height="120"></a>
+          <p>Béton ciré premium, mobilier sur mesure et tous corps de métier du BTP. France &amp; Belgique.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/people/BenBat/61596067080807/" class="footer-social" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/benbat.renovation/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="tarifs">Tarifs</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Avis clients</a></li>
+            <li><a href="conseils">Conseils</a></li>
+            <li><a href="prix-beton-cire-m2">Prix du béton ciré</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+    <h5>Services</h5>
+    <ul class="footer-links">
+      <li><a href="renovation-complete">Rénovation complète</a></li>
+      <li><a href="salle-de-bain">Salle de bain</a></li>
+      <li><a href="cuisine">Cuisine</a></li>
+      <li><a href="peinture">Peinture</a></li>
+      <li><a href="plomberie">Plomberie</a></li>
+      <li><a href="electricite">Électricité</a></li>
+      <li><a href="carrelage">Carrelage &amp; faïence</a></li>
+      <li><a href="placo-isolation">Placo &amp; isolation</a></li>
+      <li><a href="maconnerie">Maçonnerie</a></li>
+      <li><a href="revetements-de-sol">Revêtements de sol</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Spécialités</h5>
+    <ul class="footer-links">
+      <li><a href="beton-cire">Béton ciré premium</a></li>
+      <li><a href="mobilier-sur-mesure">Mobilier sur mesure</a></li>
+      <li><a href="vasques-sur-mesure">Vasques sur mesure</a></li>
+      <li><a href="nettoyage-fin-de-chantier">Nettoyage fin de chantier</a></li>
+      <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+      <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+      <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
+    </ul>
+  </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">WhatsApp (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@benbat.fr">contact@benbat.fr</a></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>60 Rue François 1er, 75008 Paris</span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Ven : 8h–18h30 · Sam : 9h–15h30</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; <span class="js-year">2026</span> Ben&amp;Bat. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales#cookies" data-cookie-settings>Gérer les cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- @end:footer -->
+
+  <!-- @shared:sticky -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="contact" class="btn btn-primary sticky-main">Devis gratuit</a>
+    <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat au +33 6 58 59 41 47"><i class="fas fa-phone" aria-hidden="true"></i><span>Appeler</span></a>
+    <a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." class="btn sticky-phone sticky-whatsapp" target="_blank" rel="noopener" aria-label="Écrire à Ben&amp;Bat sur WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+  </div>
+  <!-- @end:sticky -->
+
+  <!-- @shared:scripts -->
+  <script src="js/main.js?v=14" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
+  <!-- @end:scripts -->
+</body>
+</html>
