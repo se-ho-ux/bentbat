@@ -1,8 +1,18 @@
 # Ben&Bat
 
-> Entreprise de rénovation intérieure et spécialiste du béton ciré, basée à Paris 8e, intervenant à Paris, en Île-de-France et en Belgique (Bruxelles). Assurance décennale et RC Pro. Devis gratuit sous 24 h.
+> Entreprise de rénovation intérieure tous corps de métier et spécialiste du béton ciré, basée à Paris 8e. Interventions à Paris, en Île-de-France, à Marseille et en Belgique (Bruxelles). Assurance décennale et RC Pro. Devis gratuit sous 24 h.
 
-Coordonnées : 60 Rue François 1er, 75008 Paris. Téléphone France +33 6 58 59 41 47, Belgique +32 465 86 63 72. Fiche Google Maps : https://www.google.com/maps/place/?q=place_id:ChIJYZVmmkZv5kcRFDRAlLKroIE
+## Faits clés
+- Raison sociale : Ben&Bat, SASU. SIRET 99447386600014.
+- Adresse : 60 Rue François 1er, 75008 Paris, France.
+- Téléphone France : +33 6 58 59 41 47. Téléphone Belgique : +32 465 86 63 72. E-mail : contact@benbat.fr.
+- Horaires : lundi au vendredi 8h-18h30, samedi 9h-15h30.
+- Zones d'intervention : Paris, Île-de-France (dont Neuilly-sur-Seine, Versailles, Boulogne-Billancourt), Marseille, Bruxelles.
+- Métiers : béton ciré, rénovation complète, salle de bain, cuisine, peinture, plomberie, électricité, carrelage, placo et isolation, maçonnerie, revêtements de sol, mobilier et vasques sur mesure, nettoyage de fin de chantier.
+- Garanties : assurance décennale et responsabilité civile professionnelle sur tous les chantiers ; attestation fournie sur demande.
+- Devis : gratuit, réponse sous 24 heures ouvrées ; pour un projet nécessitant une visite, devis envoyé sous 48 h après le rendez-vous.
+- Tarifs : indicatifs, hors taxes, détaillés par métier sur https://benbat.fr/tarifs (page de référence ; les montants exacts dépendent du chantier).
+- Fiche Google Maps : https://www.google.com/search?q=Ben%26bat (établissement validé) et https://www.google.com/maps/place/?q=place_id:ChIJYZVmmkZv5kcRFDRAlLKroIE
 
 ## Services
 - [Rénovation complète](https://benbat.fr/renovation-complete)

@@ -1,3 +1,20 @@
+# Robots d'IA : accès explicite au contenu public (le contenu n'est pas protégé)
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+Disallow: /404.html
+Disallow: /BenBat-Plaquette-2026.pdf
+Disallow: /Ben-Bat%20-%20Plaquette%20commerciale_.pdf
+
 User-agent: *
 Allow: /
 Disallow: /404.html
