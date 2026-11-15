@@ -3,7 +3,7 @@ main = "worker.js"
 compatibility_date = "2026-10-01"
 
 [vars]
-PLACE_ID = ""                                  # à renseigner : Place ID de la fiche (voir docs/avis-google.md)
+PLACE_ID = "ChIJYZVmmkZv5kcRFDRAlLKroIE"       # Place ID de la fiche (Place ID Finder, 15/11/2026)
 ALLOWED_ORIGINS = "https://benbat.fr,https://www.benbat.fr"
 MAX_CALLS_PER_DAY = "30"                       # 30 x 31 j = 930 appels, sous les 1 000 gratuits du SKU
 
