@@ -329,7 +329,8 @@
               form_id: 'contactForm',
               project_type: form.type.value,
               service: form.service.value || (form.elements.service_principal ? form.elements.service_principal.value : ''),
-              country: form.pays.value
+              country: form.pays.value,
+              lead_source: form.connu ? form.connu.value : ''
             });
           }
           form.style.display = 'none';
@@ -654,4 +655,15 @@ document.querySelectorAll('.js-year').forEach(el => {
   document.querySelectorAll('input[data-attr]').forEach(input => {
     input.value = src[input.dataset.attr] || '';
   });
+})();
+
+// ── Préremplissage du type de demande (?type=partenariat depuis /partenaires) ──
+(() => {
+  const sel = document.querySelector('#contactForm select[name="type"]');
+  if (!sel) return;
+  const wanted = new URLSearchParams(location.search).get('type');
+  if (wanted && [...sel.options].some(o => o.value === wanted)) {
+    sel.value = wanted;
+    sel.dispatchEvent(new Event('change', { bubbles: true }));
+  }
 })();

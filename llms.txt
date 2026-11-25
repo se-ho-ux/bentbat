@@ -40,6 +40,7 @@
 ## Informations clés
 - [Tarifs indicatifs (HT)](https://benbat.fr/tarifs)
 - [Garanties](https://benbat.fr/garanties)
+- [Partenaires professionnels (architectes, agences, conciergeries)](https://benbat.fr/partenaires)
 - [Réalisations](https://benbat.fr/realisations)
 - [À propos](https://benbat.fr/a-propos)
 - [Demande de devis](https://benbat.fr/contact)

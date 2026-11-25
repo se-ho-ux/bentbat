@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <!-- @shared:head-meta -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://maps.google.com https://www.google.com; base-uri 'self'; form-action 'self' https://formspree.io;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+    // GitHub Pages sert /page, /page.html et / (accueil) comme la même ressource
+    // et ne permet aucune redirection serveur. On normalise l'URL affichée sans
+    // recharger la page (favoris, anciens résultats Google, liens partagés).
+    var clean = location.pathname.replace(/\/index(\.html)?$/, '/').replace(/\.html$/, '');
+    if (clean !== location.pathname) {
+      history.replaceState(null, '', clean + location.search + location.hash);
+    }
+  </script>
+  <!-- @end:head-meta -->
+  <link rel="canonical" href="https://benbat.fr/partenaires">
+  <title>Partenaires : architectes, agences, conciergeries | Ben&amp;Bat</title>
+  <meta name="description" content="Architectes d'intérieur, agences, conciergeries, showrooms : confiez l'exécution de vos chantiers à Ben&amp;Bat. Tous corps de métier, sous décennale.">
+  <meta property="og:title" content="Devenir partenaire de Ben&amp;Bat">
+  <meta property="og:description" content="Une équipe d'exécution tous corps de métier pour les professionnels de l'immobilier et de la décoration. Paris, Île-de-France et Bruxelles.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://benbat.fr/partenaires">
+  <meta property="og:image" content="https://benbat.fr/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- @shared:head-assets -->
+  <!-- ── Consentement & Google Analytics 4 ──────────────────────────────── -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    // Consent Mode v2 : tout est refusé par défaut, avant tout chargement.
+    gtag('consent', 'default', {
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      analytics_storage: 'denied'
+    });
+    gtag('set', 'ads_data_redaction', true);
+    // Le script Google n'est injecté qu'après acceptation de la mesure
+    // d'audience. La finalité « publicité » (Google Ads) n'ouvre que les
+    // signaux publicitaires : elle ne charge jamais Google à elle seule.
+    window.benbatApplyConsent = function (c) {
+      var ads = c && c.ads ? 'granted' : 'denied';
+      gtag('consent', 'update', {
+        ad_storage: ads,
+        ad_user_data: ads,
+        ad_personalization: ads
+      });
+      if (!c || !c.analytics || window.benbatGaLoaded) return;
+      window.benbatGaLoaded = true;
+      gtag('consent', 'update', { analytics_storage: 'granted' });
+      var s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-RRTBMGWZJT';
+      document.head.appendChild(s);
+      gtag('js', new Date());
+      gtag('config', 'G-RRTBMGWZJT');
+    };
+    try {
+      var c = JSON.parse(localStorage.getItem('benbat-consent-v2') || 'null');
+      if (c && !(Date.now() - c.ts < 3.4e10)) c = null; // choix de plus de 13 mois : redemandé
+      // Ancien choix (mesure d'audience seule) : conservé, la publicité reste
+      // refusée tant que le visiteur ne s'est pas prononcé sur cette finalité.
+      if (!c && localStorage.getItem('benbat-consent') === 'granted') c = { analytics: true, ads: false };
+      if (c) window.benbatApplyConsent(c);
+    } catch (e) {}
+  </script>
+  <!-- ──────────────────────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" href="fonts/Switzer-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css?v=38">
+  <!-- Font Awesome hors du chemin critique : la feuille bloquait le rendu
+       ~1 s (connexion cross-origin). Les icônes sont décoratives, elles
+       accompagnent toujours un libellé texte. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous"></noscript>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- @end:head-assets -->
+  <!-- @shared:schema-business -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://benbat.fr/#entreprise",
+  "name": "Ben&Bat",
+  "description": "Spécialistes du béton ciré premium et de la rénovation intérieure tous corps de métier. Paris, Île-de-France, Marseille et Bruxelles.",
+  "url": "https://benbat.fr/",
+  "sameAs": [
+    "https://www.facebook.com/people/BenBat/61596067080807/",
+    "https://www.instagram.com/benbat.renovation/",
+    "https://maps.google.com/?cid=9340654410646172692"
+  ],
+  "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJYZVmmkZv5kcRFDRAlLKroIE",
+  "legalName": "Ben&Bat",
+  "identifier": {
+    "@type": "PropertyValue",
+    "propertyID": "SIRET",
+    "value": "99447386600014"
+  },
+  "telephone": "+33658594147",
+  "email": "contact@benbat.fr",
+  "image": "https://benbat.fr/images/image15.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "60 Rue François 1er",
+    "addressLocality": "Paris",
+    "postalCode": "75008",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.8698258,
+    "longitude": 2.3020488
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:30"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "09:00",
+      "closes": "15:30"
+    }
+  ],
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Paris"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Île-de-France"
+    },
+    {
+      "@type": "City",
+      "name": "Marseille"
+    },
+    {
+      "@type": "City",
+      "name": "Neuilly-sur-Seine"
+    },
+    {
+      "@type": "City",
+      "name": "Versailles"
+    },
+    {
+      "@type": "City",
+      "name": "Boulogne-Billancourt"
+    },
+    {
+      "@type": "City",
+      "name": "Bruxelles"
+    },
+    {
+      "@type": "Country",
+      "name": "France"
+    },
+    {
+      "@type": "Country",
+      "name": "Belgique"
+    }
+  ],
+  "knowsAbout": [
+    "béton ciré",
+    "rénovation intérieure",
+    "maçonnerie",
+    "plomberie",
+    "électricité",
+    "carrelage",
+    "mobilier sur mesure",
+    "vasques sur mesure",
+    "parquet",
+    "nettoyage de chantier"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services BTP",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Béton ciré décoratif",
+          "description": "Application de béton ciré premium sur sols, murs et plans de travail. Paris, Île-de-France et Belgique."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rénovation intérieure tous corps de métier",
+          "description": "Coordination et réalisation de chantiers de rénovation complète : maçonnerie, électricité, plomberie, finitions."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mobilier sur mesure",
+          "description": "Conception et fabrication de mobilier sur mesure pour particuliers et professionnels."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Vasques sur mesure",
+          "description": "Création de vasques sur mesure en céramique, béton ciré, résine et matériaux naturels, design exclusif."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pose de parquet et carrelage",
+          "description": "Pose de parquet point de Hongrie, carrelage, faïence et revêtements de sol premium."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Nettoyage fin de chantier",
+          "description": "Nettoyage professionnel de bâtiments et fins de chantier en France et Belgique."
+        }
+      }
+    ]
+  },
+  "priceRange": "€€",
+  "logo": "https://benbat.fr/logos-png/wordmark-noir-transparent.webp",
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "telephone": "+33658594147",
+      "contactType": "customer service",
+      "areaServed": "FR",
+      "availableLanguage": [
+        "fr"
+      ]
+    },
+    {
+      "@type": "ContactPoint",
+      "telephone": "+32465866372",
+      "contactType": "customer service",
+      "areaServed": "BE",
+      "availableLanguage": [
+        "fr"
+      ]
+    }
+  ]
+  }
+  </script>
+  <!-- @end:schema-business -->
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://benbat.fr/"},
+    {"@type": "ListItem", "position": 2, "name": "Partenaires", "item": "https://benbat.fr/partenaires"}
+  ]
+  }
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Avec quels professionnels travaillez-vous ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Architectes d'intérieur, décorateurs, agents immobiliers, gestionnaires de biens, conciergeries de location meublée, syndics et showrooms (cuisine, salle de bain, revêtements) qui ont besoin d'une équipe d'exécution fiable à Paris, en Île-de-France ou à Bruxelles."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Respectez-vous les plans et les choix de matériaux du concepteur ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Nous exécutons le projet tel qu'il a été conçu et validé avec le client. Toute adaptation technique est proposée au concepteur avant d'être réalisée, jamais décidée seul sur le chantier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qui est l'interlocuteur du client final ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "C'est vous qui décidez. Nous pouvons rester en retrait et ne parler qu'à vous, ou échanger directement avec le client en vous tenant informé à chaque étape."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quels sont les délais pour un devis ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Réponse sous 24 heures ouvrées à toute demande. Lorsque le projet nécessite une visite, le devis détaillé est envoyé sous 48 heures après le rendez-vous."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Les chantiers sont-ils assurés ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tous nos chantiers sont couverts par une assurance décennale et une responsabilité civile professionnelle. Les attestations sont fournies sur demande, avant la signature."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment se définissent les conditions de collaboration ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Elles sont convenues ensemble lors d'un premier échange, selon votre métier et le type de projets que vous nous confiez, puis écrites noir sur blanc."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Passer au contenu principal</a>
+
+  <!-- ══════════ HEADER ══════════ -->
+  <!-- @shared:header active=partenaires -->
+  <header id="header">
+    <div class="nav-wrap">
+      <a href="/" class="nav-logo"><img src="logos-png/wordmark-primaire-transparent.webp" alt="Ben&amp;Bat" class="logo-primary" width="360" height="120"><img src="logos-png/wordmark-noir-transparent.webp" alt="Ben&amp;Bat" class="logo-scrolled" width="360" height="120"></a>
+      <nav aria-label="Navigation principale">
+        <ul class="nav-links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="services">Services</a></li>
+          <li><a href="tarifs">Tarifs</a></li>
+          <li><a href="realisations">Réalisations</a></li>
+          <li><a href="a-propos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+33658594147" class="nav-phone"><i class="fas fa-phone"></i>&nbsp; +33 6 58 59 41 47</a>
+        <a href="contact" class="btn btn-primary">Devis gratuit</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ══════════ MENU MOBILE ══════════ -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation">
+    <button class="mobile-menu-close" id="mobileClose" aria-label="Fermer"><i class="fas fa-times"></i></button>
+    <a href="/">Accueil</a>
+    <a href="services">Services</a>
+    <a href="tarifs">Tarifs</a>
+    <a href="realisations">Réalisations</a>
+    <a href="a-propos">À propos</a>
+    <a href="contact">Contact</a>
+    <div class="mobile-menu-sep"></div>
+    <div class="mobile-menu-actions">
+      <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> France : +33 6 58 59 41 47</a>
+      <a href="tel:+32465866372" class="btn btn-ghost"><i class="fas fa-phone"></i> Belgique : +32 465 86 63 72</a>
+      <a href="contact" class="btn btn-primary" style="justify-content:center;">Devis gratuit</a>
+    </div>
+  </div>
+  <!-- @end:header -->
+
+  <!-- ══════════ PAGE HERO ══════════ -->
+  <section class="page-hero has-photo" id="main-content">
+    <div class="container">
+      <div class="page-hero-inner">
+        <div class="breadcrumb">
+          <a href="/">Accueil</a><span class="sep">/</span><span class="cur">Partenaires</span>
+        </div>
+        <h1>Professionnels de l&#39;immobilier et du design :<br>confiez-nous l&#39;exécution</h1>
+        <p>Une équipe tous corps de métier, assurée en décennale, pour réaliser les projets de vos clients à Paris, en Île-de-France et à Bruxelles.</p>
+        <span id="heroDevis" aria-hidden="true" style="display:block;height:0;"></span>
+      </div>
+      <figure class="hero-photo"><img src="images/image47-640.webp" srcset="images/image47-480.webp 480w, images/image47-640.webp 640w, images/image47-900.webp 900w, images/image47.webp 1200w" sizes="460px" alt="Salle de réception avec vitrines, poutres apparentes et sol marbré" width="1200" height="900" loading="lazy" decoding="async"></figure>
+    </div>
+  </section>
+
+  <!-- ══════════ POUR QUI ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Pour qui</span>
+          <h2>Ceux qui nous confient<br>leurs chantiers</h2>
+        </div>
+        <p>Vous avez le client et le projet. Nous apportons l&#39;équipe, la coordination des métiers et les garanties.</p>
+      </div>
+      <div class="services-list">
+        <div class="list-row">
+          <span class="sr-num">01</span>
+          <span class="sr-icon"><i class="fas fa-drafting-compass"></i></span>
+          <div class="sr-body">
+            <h3>Architectes d&#39;intérieur et décorateurs</h3>
+            <p>Vous concevez, nous exécutons. Une seule équipe pour tous les corps de métier, qui suit vos plans, vos carnets de finitions et vos choix de matériaux.</p>
+            <ul class="sr-list">
+              <li>Respect du projet validé avec votre client</li>
+              <li>Béton ciré, vasques et mobilier fabriqués dans notre atelier</li>
+              <li>Compte rendu photo à chaque étape</li>
+            </ul>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">02</span>
+          <span class="sr-icon"><i class="fas fa-key"></i></span>
+          <div class="sr-body">
+            <h3>Agents immobiliers et gestionnaires de biens</h3>
+            <p>Un acquéreur qui hésite devant des travaux, un bien à remettre en état entre deux locataires : nous chiffrons vite et nous intervenons sans vous mobiliser.</p>
+            <ul class="sr-list">
+              <li>Estimation chiffrée pour rassurer un acheteur</li>
+              <li>Remise en état entre deux locations</li>
+              <li>Accès et clés gérés avec vous</li>
+            </ul>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">03</span>
+          <span class="sr-icon"><i class="fas fa-concierge-bell"></i></span>
+          <div class="sr-body">
+            <h3>Conciergeries et location meublée</h3>
+            <p>Rafraîchir un appartement entre deux saisons, refaire une salle d&#39;eau, reprendre des peintures : des interventions courtes, planifiées pour limiter les nuits perdues.</p>
+            <ul class="sr-list">
+              <li>Créneaux calés sur votre calendrier de réservations</li>
+              <li>Nettoyage de fin de chantier inclus sur demande</li>
+              <li>Un seul contact pour tout le parc</li>
+            </ul>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">04</span>
+          <span class="sr-icon"><i class="fas fa-store"></i></span>
+          <div class="sr-body">
+            <h3>Showrooms, cuisinistes et fournisseurs</h3>
+            <p>Vous vendez la cuisine, la salle de bain ou le revêtement ; vos clients cherchent qui le pose et prépare le support. Nous prenons le relais sur chantier.</p>
+            <ul class="sr-list">
+              <li>Préparation des supports, plomberie et électricité</li>
+              <li>Pose dans les règles de l&#39;art, sous décennale</li>
+              <li>Retour d&#39;information sur chaque chantier</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ COMMENT ══════════ -->
+  <section class="section" style="background: var(--bg-alt);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Fonctionnement</span>
+          <h2>Simple, écrit,<br>sans surprise</h2>
+        </div>
+        <p>Des engagements identiques pour vous et pour vos clients. Voir aussi nos <a href="garanties">garanties</a> et nos <a href="realisations">réalisations</a>.</p>
+      </div>
+      <div class="services-list">
+        <div class="list-row">
+          <span class="sr-num">01</span>
+          <span class="sr-icon"><i class="fas fa-comments"></i></span>
+          <div class="sr-body">
+            <h3>Un premier échange</h3>
+            <p>Vous nous décrivez votre activité et les projets que vous pourriez nous confier. Nous convenons ensemble de la façon de travailler et des conditions de collaboration.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">02</span>
+          <span class="sr-icon"><i class="fas fa-file-invoice"></i></span>
+          <div class="sr-body">
+            <h3>Un devis rapide et détaillé</h3>
+            <p>Pour chaque projet, réponse sous 24 heures ouvrées, visite si nécessaire, devis détaillé par poste sous 48 heures après la visite.</p>
+          </div>
+        </div>
+        <div class="list-row">
+          <span class="sr-num">03</span>
+          <span class="sr-icon"><i class="fas fa-hard-hat"></i></span>
+          <div class="sr-body">
+            <h3>Un chantier suivi</h3>
+            <p>Un interlocuteur unique, un planning tenu, un compte rendu photo régulier, puis un bilan 30 jours après la livraison.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Questions fréquentes</span>
+          <h2>Travailler avec Ben&amp;Bat</h2>
+        </div>
+        <p>Une question qui n&#39;est pas ici ? Écrivez-nous, nous répondons sous 24 heures ouvrées.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Avec quels professionnels travaillez-vous ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Architectes d'intérieur, décorateurs, agents immobiliers, gestionnaires de biens, conciergeries de location meublée, syndics et showrooms (cuisine, salle de bain, revêtements) qui ont besoin d'une équipe d'exécution fiable à Paris, en Île-de-France ou à Bruxelles.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Respectez-vous les plans et les choix de matériaux du concepteur ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Oui. Nous exécutons le projet tel qu'il a été conçu et validé avec le client. Toute adaptation technique est proposée au concepteur avant d'être réalisée, jamais décidée seul sur le chantier.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Qui est l'interlocuteur du client final ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">C'est vous qui décidez. Nous pouvons rester en retrait et ne parler qu'à vous, ou échanger directement avec le client en vous tenant informé à chaque étape.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Quels sont les délais pour un devis ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Réponse sous 24 heures ouvrées à toute demande. Lorsque le projet nécessite une visite, le devis détaillé est envoyé sous 48 heures après le rendez-vous.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Les chantiers sont-ils assurés ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Tous nos chantiers sont couverts par une assurance décennale et une responsabilité civile professionnelle. Les attestations sont fournies sur demande, avant la signature.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Comment se définissent les conditions de collaboration ?
+            <i class="fas fa-plus"></i>
+          </button>
+          <div class="faq-a">Elles sont convenues ensemble lors d'un premier échange, selon votre métier et le type de projets que vous nous confiez, puis écrites noir sur blanc.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="section cta-section" id="ctaSection">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Parlons de vos<br>prochains projets</h2>
+          <p>Premier échange sans engagement. Réponse sous 24 heures ouvrées.</p>
+        </div>
+        <div class="cta-btns">
+          <a href="contact?type=partenariat" class="btn btn-primary">Proposer un partenariat <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+33658594147" class="btn btn-ghost"><i class="fas fa-phone"></i> Nous appeler</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <!-- @shared:footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo"><img src="logos-png/wordmark-blanc-transparent.webp" alt="Ben&amp;Bat" width="360" height="120"></a>
+          <p>Béton ciré premium, mobilier sur mesure et tous corps de métier du BTP. France &amp; Belgique.</p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/people/BenBat/61596067080807/" class="footer-social" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/benbat.renovation/" class="footer-social" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="tarifs">Tarifs</a></li>
+            <li><a href="realisations">Réalisations</a></li>
+            <li><a href="a-propos">À propos</a></li>
+            <li><a href="a-propos#temoignages">Avis clients</a></li>
+            <li><a href="conseils">Conseils</a></li>
+            <li><a href="prix-beton-cire-m2">Prix du béton ciré</a></li>
+            <li><a href="prix-renovation-salle-de-bain">Prix salle de bain</a></li>
+            <li><a href="prix-renovation-appartement-m2">Prix rénovation appartement</a></li>
+            <li><a href="beton-cire-ou-carrelage">Béton ciré ou carrelage</a></li>
+            <li><a href="garanties">Garanties</a></li>
+            <li><a href="partenaires">Partenaires</a></li>
+            <li><a href="contact">Contact &amp; Devis</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+    <h5>Services</h5>
+    <ul class="footer-links">
+      <li><a href="renovation-complete">Rénovation complète</a></li>
+      <li><a href="salle-de-bain">Salle de bain</a></li>
+      <li><a href="cuisine">Cuisine</a></li>
+      <li><a href="peinture">Peinture</a></li>
+      <li><a href="plomberie">Plomberie</a></li>
+      <li><a href="electricite">Électricité</a></li>
+      <li><a href="carrelage">Carrelage &amp; faïence</a></li>
+      <li><a href="placo-isolation">Placo &amp; isolation</a></li>
+      <li><a href="maconnerie">Maçonnerie</a></li>
+      <li><a href="revetements-de-sol">Revêtements de sol</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h5>Spécialités</h5>
+    <ul class="footer-links">
+      <li><a href="beton-cire">Béton ciré premium</a></li>
+      <li><a href="mobilier-sur-mesure">Mobilier sur mesure</a></li>
+      <li><a href="vasques-sur-mesure">Vasques sur mesure</a></li>
+      <li><a href="nettoyage-fin-de-chantier">Nettoyage fin de chantier</a></li>
+      <li><a href="beton-cire-paris">Béton ciré à Paris</a></li>
+      <li><a href="beton-cire-bruxelles">Béton ciré à Bruxelles</a></li>
+      <li><a href="renovation-appartement-paris">Rénovation appartement Paris</a></li>
+    </ul>
+  </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+33658594147">+33 6 58 59 41 47 (France)</a></div>
+          <div class="footer-contact-item"><i class="fab fa-whatsapp"></i><a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." target="_blank" rel="noopener">WhatsApp (France)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+32465866372">+32 465 86 63 72 (Belgique)</a></div>
+          <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:contact@benbat.fr">contact@benbat.fr</a></div>
+          <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>60 Rue François 1er, 75008 Paris</span></div>
+          <div class="footer-contact-item"><i class="fas fa-clock"></i><span>Lun–Ven : 8h–18h30 · Sam : 9h–15h30</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; <span class="js-year">2026</span> Ben&amp;Bat. Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="mentions-legales">Mentions légales</a>
+            <a href="mentions-legales#confidentialite">Politique de confidentialité</a>
+            <a href="mentions-legales#rgpd">Données &amp; RGPD</a>
+            <a href="mentions-legales#cookies" data-cookie-settings>Gérer les cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- @end:footer -->
+
+  <!-- @shared:sticky -->
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="contact" class="btn btn-primary sticky-main">Devis gratuit</a>
+    <a href="tel:+33658594147" class="btn sticky-phone" aria-label="Appeler Ben&amp;Bat au +33 6 58 59 41 47"><i class="fas fa-phone" aria-hidden="true"></i><span>Appeler</span></a>
+    <a href="https://wa.me/33658594147?text=Bonjour%20Ben%26Bat%2C%20je%20souhaite%20un%20devis." class="btn sticky-phone sticky-whatsapp" target="_blank" rel="noopener" aria-label="Écrire à Ben&amp;Bat sur WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a>
+  </div>
+  <!-- @end:sticky -->
+
+  <!-- @shared:scripts -->
+  <script src="js/main.js?v=15" defer></script>
+  <script src="js/consent.js?v=3" defer></script>
+  <!-- @end:scripts -->
+</body>
+</html>
