@@ -1,7 +1,7 @@
 {
  "a-propos.html": {
-  "date": "2026-11-12",
-  "hash": "6cca3b23863d43eadd77a59b38d32cb7213c9427"
+  "date": "2026-11-25",
+  "hash": "ca683249d8f36c3d726c6a324c5aa7795c3c2e38"
  },
  "beton-cire-bruxelles.html": {
   "date": "2026-11-12",
@@ -28,8 +28,8 @@
   "hash": "f61387f0ac638fb98e33291a1ee81cdb0cf9340d"
  },
  "contact.html": {
-  "date": "2026-11-12",
-  "hash": "80a3f195ef2c1b648b52464f48e5b995a6057b01"
+  "date": "2026-11-25",
+  "hash": "ec6299c190ffee67311cd7a51b9ab884dfc67e81"
  },
  "cuisine.html": {
   "date": "2026-11-08",
@@ -44,8 +44,8 @@
   "hash": "1ab6dc0aef35e2053df279b263d9af937fa6e247"
  },
  "index.html": {
-  "date": "2026-11-12",
-  "hash": "4c9b1753108e21724f8724e8e98f767bdf681e9e"
+  "date": "2026-11-25",
+  "hash": "377c8570fbcc1d6f642f829371fdcb87a1b60970"
  },
  "maconnerie.html": {
   "date": "2026-11-08",
@@ -62,6 +62,10 @@
  "nettoyage-fin-de-chantier.html": {
   "date": "2026-11-08",
   "hash": "f9113c84430b1bc84ea8871e95158527796e8377"
+ },
+ "partenaires.html": {
+  "date": "2026-11-25",
+  "hash": "2e715bb8baed4243a2198bd7eb405c394abe145c"
  },
  "peinture.html": {
   "date": "2026-11-08",

@@ -502,6 +502,22 @@
               <label for="message">Description du projet <span class="req">*</span></label>
               <textarea id="message" name="message" placeholder="Décrivez votre projet : adresse ou ville, état du logement, délais souhaités, contraintes…" required></textarea>
             </div>
+            <div class="form-group">
+              <label for="connu">Comment nous avez-vous connu ?</label>
+              <select id="connu" name="connu">
+                <option value="">Optionnel</option>
+                <option value="google-recherche">Recherche Google</option>
+                <option value="google-maps">Google Maps / fiche Google</option>
+                <option value="ia">Assistant IA (ChatGPT, Perplexity…)</option>
+                <option value="instagram">Instagram</option>
+                <option value="bouche-a-oreille">Recommandation d'un proche</option>
+                <option value="professionnel">Architecte, agence ou autre professionnel</option>
+                <option value="ancien-client">Déjà client</option>
+                <option value="annuaire">Annuaire ou plateforme (Houzz, Pages Jaunes…)</option>
+                <option value="chantier">Vu sur un chantier</option>
+                <option value="autre">Autre</option>
+              </select>
+            </div>
             <!-- Source du lead, remplie par js/main.js (attribution interne, jamais envoyée à Google) -->
             <input type="hidden" name="source_page_entree" data-attr="landing">
             <input type="hidden" name="source_referent" data-attr="referrer">
@@ -564,6 +580,7 @@
             <li><a href="prix-renovation-appartement-m2">Prix rénovation appartement</a></li>
             <li><a href="beton-cire-ou-carrelage">Béton ciré ou carrelage</a></li>
             <li><a href="garanties">Garanties</a></li>
+            <li><a href="partenaires">Partenaires</a></li>
             <li><a href="contact">Contact &amp; Devis</a></li>
           </ul>
         </div>
@@ -621,7 +638,7 @@
   </footer>
   <!-- @end:footer -->
   <!-- @shared:scripts -->
-  <script src="js/main.js?v=14" defer></script>
+  <script src="js/main.js?v=15" defer></script>
   <script src="js/consent.js?v=3" defer></script>
   <!-- @end:scripts -->
   <script src="js/tarifs-data.js?v=1" defer></script>
